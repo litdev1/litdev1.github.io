@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDCall"></a><span class="group">LDCall</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Call Functions with arguments, asyncronously from any extension or from a pre-compiled SmallBasic exe.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDCallCallAsync">CallAsync</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallCallComplete">CallComplete</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDCallCallInclude">CallInclude</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDCallCompile">Compile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallFunction">Function</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallFunction2">Function2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDCallFunction3">Function3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallFunction4">Function4</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallFunction5">Function5</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDCallInclude">Include</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDCallLastCall">LastCall</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDCallLastResult">LastResult</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDCallCallAsync"></a><span class="method">CallAsync</span><span class="methodargs">(dll,extension,obj,method,arguments)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call any extension method asynchronously.<br />See example LDCallAsync.<br />If dll, extension, obj and arguments are all "", then method may be a subroutine in your SmallBasic program.</span><br />
+<span class="info">dll</span> <span class="text">The extension dll (e.g. "LitDev.dll" or "SmallBasicLibrary.dll").</span><br />
+<span class="info">extension</span> <span class="text">The extension namespace (usually the same as the dll name, e.g. "LitDev" or "MicroSoft.SmallBasic.Library" for SmallBasicLibrary.dll).</span><br />
+<span class="info">obj</span> <span class="text">The extension object name.</span><br />
+<span class="info">method</span> <span class="text">The extension method name.</span><br />
+<span class="info">arguments</span> <span class="text">An array of arguments or "" for none.  A single argument doesn't have to be in an array.</span><br />
+<span class="info">returns</span> <span class="text">"PENDING" or an error message on failure.</span><br />
+<br />
+<a class="tag" name="LDCallCallComplete"></a><span class="method">CallComplete</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when an asynchronous subroutine method call completes.</span><br />
+<br />
+<a class="tag" name="LDCallCallInclude"></a><span class="method">CallInclude</span><span class="methodargs">(include,method)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a method in an included pre-compiled file.</span><br />
+<span class="info">include</span> <span class="text">The include file name returned by Include method.</span><br />
+<span class="info">method</span> <span class="text">The subroutine name to call in the included exe.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDCallCompile"></a><span class="method">Compile</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Compile a secondary Small Basic file.<br />Assumes that Small Basic is installed in the default location for your OS.</span><br />
+<span class="info">path</span> <span class="text">A Small Basic file to compile (.sb).</span><br />
+<span class="info">returns</span> <span class="text">The path of the compiled file (.exe) or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDCallFunction"></a><span class="method">Function</span><span class="methodargs">(funcName,arg1)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a Small Basic Sub as a function with one input argument.<br /><br />The input arguments(s) will be copied to an array called "args".<br />The result should be put in a variable (may be an array) called "return".<br />The variable "args" should be set to "" at the start of the program.<br />The input parameter(s) are unchanged, while "args" and "return" are set to "" on return.</span><br />
+<span class="info">funcName</span> <span class="text">The Small Basic Sub name.</span><br />
+<span class="info">arg1</span> <span class="text">An input value (may be an array).</span><br />
+<span class="info">returns</span> <span class="text">The result of the function held in optional variable "return" or an error message.</span><br />
+<br />
+<a class="tag" name="LDCallFunction2"></a><span class="method">Function2</span><span class="methodargs">(funcName,arg1,arg2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a Small Basic Sub as a function with two input arguments.<br /><br />See Function for more details.</span><br />
+<span class="info">funcName</span> <span class="text">The Small Basic Sub name.</span><br />
+<span class="info">arg1</span> <span class="text">1st input value (may be an array).</span><br />
+<span class="info">arg2</span> <span class="text">2nd input value (may be an array).</span><br />
+<span class="info">returns</span> <span class="text">The result of the function held in variable "return" or an error message.</span><br />
+<br />
+<a class="tag" name="LDCallFunction3"></a><span class="method">Function3</span><span class="methodargs">(funcName,arg1,arg2,arg3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a Small Basic Sub as a function with three input arguments.<br /><br />See Function for more details.</span><br />
+<span class="info">funcName</span> <span class="text">The Small Basic Sub name.</span><br />
+<span class="info">arg1</span> <span class="text">1st input value (may be an array).</span><br />
+<span class="info">arg2</span> <span class="text">2nd input value (may be an array).</span><br />
+<span class="info">arg3</span> <span class="text">3rd input value (may be an array).</span><br />
+<span class="info">returns</span> <span class="text">The result of the function held in variable "return" or an error message.</span><br />
+<br />
+<a class="tag" name="LDCallFunction4"></a><span class="method">Function4</span><span class="methodargs">(funcName,arg1,arg2,arg3,arg4)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a Small Basic Sub as a function with four input arguments.<br /><br />See Function for more details.</span><br />
+<span class="info">funcName</span> <span class="text">The Small Basic Sub name.</span><br />
+<span class="info">arg1</span> <span class="text">1st input value (may be an array).</span><br />
+<span class="info">arg2</span> <span class="text">2nd input value (may be an array).</span><br />
+<span class="info">arg3</span> <span class="text">3rd input value (may be an array).</span><br />
+<span class="info">arg4</span> <span class="text">4th input value (may be an array).</span><br />
+<span class="info">returns</span> <span class="text">The result of the function held in variable "return" or an error message.</span><br />
+<br />
+<a class="tag" name="LDCallFunction5"></a><span class="method">Function5</span><span class="methodargs">(funcName,arg1,arg2,arg3,arg4,arg5)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a Small Basic Sub as a function with five input arguments.<br /><br />See Function for more details.</span><br />
+<span class="info">funcName</span> <span class="text">The Small Basic Sub name.</span><br />
+<span class="info">arg1</span> <span class="text">1st input value (may be an array).</span><br />
+<span class="info">arg2</span> <span class="text">2nd input value (may be an array).</span><br />
+<span class="info">arg3</span> <span class="text">3rd input value (may be an array).</span><br />
+<span class="info">arg4</span> <span class="text">4th input value (may be an array).</span><br />
+<span class="info">arg5</span> <span class="text">5th input value (may be an array).</span><br />
+<span class="info">returns</span> <span class="text">The result of the function held in variable "return" or an error message.</span><br />
+<br />
+<a class="tag" name="LDCallInclude"></a><span class="method">Include</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reference a previously compiled program to use a subroutine method from.</span><br />
+<span class="info">path</span> <span class="text">The full path to a secondary compiled Small Basic program to use (.exe)</span><br />
+<span class="info">returns</span> <span class="text">A name for the include file or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDCallLastCall"></a><span class="method">LastCall</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last asynchronous call name.</span><br />
+<br />
+<a class="tag" name="LDCallLastResult"></a><span class="method">LastResult</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last asynchronous call return value.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

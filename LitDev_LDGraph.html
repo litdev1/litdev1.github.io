@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDGraph"></a><span class="group">LDGraph</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Graphing utility.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDGraphAddGraph">AddGraph</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphAddSeriesHistogram">AddSeriesHistogram</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphAddSeriesLine">AddSeriesLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphAddSeriesPoints">AddSeriesPoints</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphAutoScale">AutoScale</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphAxesColour">AxesColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphAxesResolution">AxesResolution</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphBorderColour">BorderColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphCreateTrend">CreateTrend</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphDeleteSeries">DeleteSeries</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphExportCSV">ExportCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphGridColour">GridColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphGridLinesX">GridLinesX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphGridLinesY">GridLinesY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphHelp">Help</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphInteriorColour">InteriorColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDGraphRestartEvents">RestartEvents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphScaleAxisX">ScaleAxisX</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphScaleAxisY">ScaleAxisY</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphStopEvents">StopEvents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphTextColour">TextColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDGraphTrendCoef">TrendCoef</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDGraphTrendPointCount">TrendPointCount</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDGraphAddGraph"></a><span class="method">AddGraph</span><span class="methodargs">(xpos,ypos,width,height,title,labelX,labelY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a graph.</span><br />
+<span class="info">xpos</span> <span class="text">The graph left position.</span><br />
+<span class="info">ypos</span> <span class="text">The graph right position.</span><br />
+<span class="info">width</span> <span class="text">The graph width.</span><br />
+<span class="info">height</span> <span class="text">The graph height.</span><br />
+<span class="info">title</span> <span class="text">The graph title.</span><br />
+<span class="info">labelX</span> <span class="text">The X axis label.</span><br />
+<span class="info">labelY</span> <span class="text">The Y axis label.</span><br />
+<span class="info">returns</span> <span class="text">The graph name.</span><br />
+<br />
+<a class="tag" name="LDGraphAddSeriesHistogram"></a><span class="method">AddSeriesHistogram</span><span class="methodargs">(graphName,seriesLabel,data,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a new data series to an existing graph as a histogram.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">seriesLabel</span> <span class="text">The series label.<br />If a series with this label already exists then it is replaced with this series.</span><br />
+<span class="info">data</span> <span class="text">An array holding the X and Y coordinate data.<br /><br />For example, a line with points (0,1) and (2,3) would have<br />data[0] = 1<br />data[2] = 3<br /><br />More generally data[x] = y.</span><br />
+<span class="info">colour</span> <span class="text">The colour of the series data.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphAddSeriesLine"></a><span class="method">AddSeriesLine</span><span class="methodargs">(graphName,seriesLabel,data,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a new data series to an existing graph as a line graph.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">seriesLabel</span> <span class="text">The series label.<br />If a series with this label already exists then it is replaced with this series.</span><br />
+<span class="info">data</span> <span class="text">An array holding the X and Y coordinate data.<br /><br />For example, a line with points (0,1) and (2,3) would have<br />data[0] = 1<br />data[2] = 3<br /><br />More generally data[x] = y.</span><br />
+<span class="info">colour</span> <span class="text">The colour of the series data.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphAddSeriesPoints"></a><span class="method">AddSeriesPoints</span><span class="methodargs">(graphName,seriesLabel,data,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a new data series to an existing graph as points.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">seriesLabel</span> <span class="text">The series label.<br />If a series with this label already exists then it is replaced with this series.</span><br />
+<span class="info">data</span> <span class="text">An array holding the X and Y coordinate data.<br /><br />For example, a line with points (0,1) and (2,3) would have<br />data[0] = 1<br />data[2] = 3<br /><br />More generally data[x] = y.</span><br />
+<span class="info">colour</span> <span class="text">The colour of the series data.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphAutoScale"></a><span class="method">AutoScale</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">AutoScale axes "True" (default) or "False".<br />When set to "False" early version scaling is used.</span><br />
+<br />
+<a class="tag" name="LDGraphAxesColour"></a><span class="method">AxesColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The boundary axes and tick mark colour.</span><br />
+<br />
+<a class="tag" name="LDGraphAxesResolution"></a><span class="method">AxesResolution</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The axes (min and max value) significant figures (default 2).</span><br />
+<br />
+<a class="tag" name="LDGraphBorderColour"></a><span class="method">BorderColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The border colour.</span><br />
+<br />
+<a class="tag" name="LDGraphCreateTrend"></a><span class="method">CreateTrend</span><span class="methodargs">(data,order)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a trend from data.</span><br />
+<span class="info">data</span> <span class="text">An array holding the X and Y coordinate data.<br /><br />For example, a line with points (0,1) and (2,3) would have<br />data[0] = 1<br />data[2] = 3<br /><br />More generally data[x] = y.</span><br />
+<span class="info">order</span> <span class="text">The polynomial order for the trend line.<br />1 is linear.<br />2 is quadratic.</span><br />
+<span class="info">returns</span> <span class="text">A data array holding a trend that may be plotted.</span><br />
+<br />
+<a class="tag" name="LDGraphDeleteSeries"></a><span class="method">DeleteSeries</span><span class="methodargs">(graphName,seriesLabel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete an existing series on existing graph.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">seriesLabel</span> <span class="text">The series label name to delete.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphExportCSV"></a><span class="method">ExportCSV</span><span class="methodargs">(data,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Export data series directly to CSV file (no graphing).</span><br />
+<span class="info">data</span> <span class="text">An array holding the X and Y coordinate data.</span><br />
+<span class="info">fileName</span> <span class="text">The CSV output file name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphGridColour"></a><span class="method">GridColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The internal scale grid lines colour.</span><br />
+<br />
+<a class="tag" name="LDGraphGridLinesX"></a><span class="method">GridLinesX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of X axes tick marks and grid lines (default 10)</span><br />
+<br />
+<a class="tag" name="LDGraphGridLinesY"></a><span class="method">GridLinesY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of Y axes tick marks and grid lines (default 10)</span><br />
+<br />
+<a class="tag" name="LDGraphHelp"></a><span class="method">Help</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">This function is just to display this help.<br /><br />Graphs of data can be plotted as lines, points or histograms.<br /><br />Each series of data is a SmallBasic array with the array index reprenting the (unique) X value and the array value representing the Y value.<br /><br />For example:<br />data[1] = 5<br />data[2] = 8<br />data[3] = 3<br /><br />First create a graph object with AddGraph, then add series with AddSeriesLine, AddSeriesHistogram or AddSeriesPoints.<br /><br />Once a graph is created and plotted, the axes can be grabbed and scrolled where the hand cursor appears.  The legend can also be moved.<br /><br />The graph can be rescaled by using the left mouse button to select a region to zoom, or the mouse wheel can be used to zoom the display.  A double click will reset the scaling to the original default.<br /><br />A right click will bring up a menu with other features like export of image or data, displaying the cursor coordinates, hiding the legend etc.<br /><br />Finally the various parmeters for this method give further control of the plotting colours and behaviour.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphInteriorColour"></a><span class="method">InteriorColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The interior colour.</span><br />
+<br />
+<a class="tag" name="LDGraphRestartEvents"></a><span class="method">RestartEvents</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Restart all the graph left click mouse events.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphScaleAxisX"></a><span class="method">ScaleAxisX</span><span class="methodargs">(graphName,min,interval,max)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the X axis scaling.<br />This over-rides any automatic methods.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">min</span> <span class="text">The X axis minimum value.</span><br />
+<span class="info">interval</span> <span class="text">The grid spacing interval.<br />If this value is 0 then the interval is calculated from the data.</span><br />
+<span class="info">max</span> <span class="text">The X axis maximum value.<br />If this value is equal to min, then the maximum is calculated from the data.<br />If this value is less than min, then both the minimum and maximum are calculated from the data.</span><br />
+<br />
+<a class="tag" name="LDGraphScaleAxisY"></a><span class="method">ScaleAxisY</span><span class="methodargs">(graphName,min,interval,max)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the Y axis scaling.<br />This over-rides any automatic methods.</span><br />
+<span class="info">graphName</span> <span class="text">The graph name.</span><br />
+<span class="info">min</span> <span class="text">The Y axis minimum value.</span><br />
+<span class="info">interval</span> <span class="text">The grid spacing interval.<br />If this value is 0 then the interval is calculated from the data.</span><br />
+<span class="info">max</span> <span class="text">The Y axis maximum value.<br />If this value is equal to min, then the maximum is calculated from the data.<br />If this value is less than min, then both the minimum and maximum are calculated from the data.</span><br />
+<br />
+<a class="tag" name="LDGraphStopEvents"></a><span class="method">StopEvents</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stop all the graph left click mouse events.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDGraphTextColour"></a><span class="method">TextColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The text colour.</span><br />
+<br />
+<a class="tag" name="LDGraphTrendCoef"></a><span class="method">TrendCoef</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the polynomial trend line coefficients for the last calculated trend using CreateTrend.</span><br />
+<span class="info">returns</span> <span class="text">An array 'coef' of the polynomial coefficients for the trend line.<br />The number of coefficients in the array is one larger than the order used to create the trend (order+1) and is indexed from 0.<br />y = coef[0] + coef[1]x + coef[2]x^2 ...</span><br />
+<br />
+<a class="tag" name="LDGraphTrendPointCount"></a><span class="method">TrendPointCount</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set or get the number of points created for a trend line using CreateTrend.<br />Default 50.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

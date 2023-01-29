@@ -1,0 +1,1929 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDControls"></a><span class="group">LDControls</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Controls for the GraphicsWindow.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDControlsAddBrowser">AddBrowser</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddCheckBox">AddCheckBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddComboBox">AddComboBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsAddContextMenu">AddContextMenu</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddDataView">AddDataView</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddDocumentViewer">AddDocumentViewer</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsAddListBox">AddListBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddListView">AddListView</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddMediaPlayer">AddMediaPlayer</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsAddMenu">AddMenu</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddPasswordBox">AddPasswordBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddProgressBar">AddProgressBar</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsAddRadioButton">AddRadioButton</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddRichTextBox">AddRichTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAddSlider">AddSlider</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsAddTreeView">AddTreeView</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsAllowDrop">AllowDrop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsBrowserHistory">BrowserHistory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsBrowserNavigate">BrowserNavigate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsBrowserPageLoaded">BrowserPageLoaded</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsBrowserSetURL">BrowserSetURL</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsCheckBoxChanged">CheckBoxChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsCheckBoxGetState">CheckBoxGetState</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsCheckBoxState">CheckBoxState</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsComboBoxContent">ComboBoxContent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsComboBoxGetSelected">ComboBoxGetSelected</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsComboBoxItemChanged">ComboBoxItemChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsComboBoxSelect">ComboBoxSelect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsContextMenuClicked">ContextMenuClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewAllowSort">DataViewAllowSort</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewAllowUserEntry">DataViewAllowUserEntry</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewButtonClicked">DataViewButtonClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewCellValueChanged">DataViewCellValueChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewClear">DataViewClear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewColAlignment">DataViewColAlignment</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewColumnReadOnly">DataViewColumnReadOnly</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewColumnSort">DataViewColumnSort</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewColumnVisible">DataViewColumnVisible</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewColumnWidths">DataViewColumnWidths</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewDeleteRow">DataViewDeleteRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewGetFocus">DataViewGetFocus</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewGetRow">DataViewGetRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewGetSelected">DataViewGetSelected</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewGetValue">DataViewGetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewReadFromCSV">DataViewReadFromCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewRowColours">DataViewRowColours</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewRowCount">DataViewRowCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewSaveAsCSV">DataViewSaveAsCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewSelectionChanged">DataViewSelectionChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewSetColumnButton">DataViewSetColumnButton</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewSetColumnCheckBox">DataViewSetColumnCheckBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewSetColumnComboBox">DataViewSetColumnComboBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewSetFocus">DataViewSetFocus</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDataViewSetRow">DataViewSetRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsDataViewSetValue">DataViewSetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsDocumentViewerLoadXPS">DocumentViewerLoadXPS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsFileDropped">FileDropped</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastBrowser">LastBrowser</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastBrowserPage">LastBrowserPage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastCheckBox">LastCheckBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastCheckBoxState">LastCheckBoxState</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastComboBox">LastComboBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastComboBoxIndex">LastComboBoxIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastContextControl">LastContextControl</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastContextItem">LastContextItem</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastDataBaseTable">LastDataBaseTable</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastDataView">LastDataView</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastDataViewButtonClicked">LastDataViewButtonClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastDataViewCellValueChanged">LastDataViewCellValueChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastDropFiles">LastDropFiles</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastDropShape">LastDropShape</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastListBox">LastListBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastListBoxIndex">LastListBoxIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastListView">LastListView</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastListViewColumn">LastListViewColumn</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastListViewRow">LastListViewRow</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastMediaPlayer">LastMediaPlayer</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastMenuControl">LastMenuControl</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastMenuItem">LastMenuItem</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastPassword">LastPassword</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastPasswordBox">LastPasswordBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastRadioButton">LastRadioButton</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastRadioButtonGroup">LastRadioButtonGroup</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastRichTextBox">LastRichTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastSlider">LastSlider</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastSliderValue">LastSliderValue</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsLastTreeView">LastTreeView</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsLastTreeViewIndex">LastTreeViewIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsListBoxContent">ListBoxContent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListBoxGetSelected">ListBoxGetSelected</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsListBoxItemChanged">ListBoxItemChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsListBoxSelect">ListBoxSelect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListBoxSelectionMode">ListBoxSelectionMode</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsListViewClear">ListViewClear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListViewColAlignment">ListViewColAlignment</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListViewDeleteRow">ListViewDeleteRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsListViewEdit">ListViewEdit</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListViewGetRow">ListViewGetRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsListViewRowCount">ListViewRowCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsListViewSelectionChanged">ListViewSelectionChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsListViewSetRow">ListViewSetRow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerEnded">MediaPlayerEnded</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsMediaPlayerLoad">MediaPlayerLoad</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerOpened">MediaPlayerOpened</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerPause">MediaPlayerPause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsMediaPlayerPlay">MediaPlayerPlay</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerPlayTime">MediaPlayerPlayTime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerPosition">MediaPlayerPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsMediaPlayerSeek">MediaPlayerSeek</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerSpeed">MediaPlayerSpeed</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerStop">MediaPlayerStop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsMediaPlayerStretch">MediaPlayerStretch</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMediaPlayerVolume">MediaPlayerVolume</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMenuBackground">MenuBackground</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsMenuChecked">MenuChecked</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsMenuClicked">MenuClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsPasswordEntered">PasswordEntered</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsProgressBarValue">ProgressBarValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRadioButtonClicked">RadioButtonClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsRadioButtonGet">RadioButtonGet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRadioButtonSet">RadioButtonSet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxCaseSensitive">RichTextBoxCaseSensitive</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxClear">RichTextBoxClear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxDefault">RichTextBoxDefault</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxFontBackground">RichTextBoxFontBackground</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxFontBold">RichTextBoxFontBold</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxFontFamily">RichTextBoxFontFamily</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxFontForeground">RichTextBoxFontForeground</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxFontItalic">RichTextBoxFontItalic</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxFontSize">RichTextBoxFontSize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxFontUnderline">RichTextBoxFontUnderline</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxGetText">RichTextBoxGetText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxIndentToTab">RichTextBoxIndentToTab</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxLoad">RichTextBoxLoad</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxMargins">RichTextBoxMargins</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxReadOnly">RichTextBoxReadOnly</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxSave">RichTextBoxSave</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxSelection">RichTextBoxSelection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxSetText">RichTextBoxSetText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxTextAlignment">RichTextBoxTextAlignment</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsRichTextBoxTextTyped">RichTextBoxTextTyped</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsRichTextBoxWord">RichTextBoxWord</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsSetButtonStyle">SetButtonStyle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsSetCursorPosition">SetCursorPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsSetCursorToEnd">SetCursorToEnd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsSetSpellCheck">SetSpellCheck</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsSliderChanged">SliderChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsSliderGetValue">SliderGetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsSliderMaximum">SliderMaximum</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDControlsSliderValue">SliderValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsTextBoxReadOnly">TextBoxReadOnly</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsTextBoxTab">TextBoxTab</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsTreeViewContent">TreeViewContent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsTreeViewEdit">TreeViewEdit</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsTreeViewExpand">TreeViewExpand</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsTreeViewGetData">TreeViewGetData</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDControlsTreeViewGetSelected">TreeViewGetSelected</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDControlsTreeViewItemChanged">TreeViewItemChanged</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDControlsTreeViewSelect">TreeViewSelect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDControlsAddBrowser"></a><span class="method">AddBrowser</span><span class="methodargs">(width,height,url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a web browser.</span><br />
+<span class="info">width</span> <span class="text">The browser width.</span><br />
+<span class="info">height</span> <span class="text">The browser height.</span><br />
+<span class="info">url</span> <span class="text">The html pane to load (e.g. <a href="http://smallbasic.com">http://smallbasic.com</a> or www.google.com)</span><br />
+<span class="info">returns</span> <span class="text">The browser control name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddCheckBox"></a><span class="method">AddCheckBox</span><span class="methodargs">(title)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a checkbox dialog control.</span><br />
+<span class="info">title</span> <span class="text">The title of the control.</span><br />
+<span class="info">returns</span> <span class="text">The checkbox shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddComboBox"></a><span class="method">AddComboBox</span><span class="methodargs">(list,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a combobox dialog control.</span><br />
+<span class="info">list</span> <span class="text">An array containing the combobox data.<br /><br />The first index is the row or node number and the value of the array is the display text at the current node.<br /><br />list[1] = "Option 1"<br />list[2] = "Option 2"<br />list[3] = "Option 3"<br />list[4] = "Option 4"</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The drop down height of the control.</span><br />
+<span class="info">returns</span> <span class="text">The combobox shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddContextMenu"></a><span class="method">AddContextMenu</span><span class="methodargs">(shapeName,items,images)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a right click context menu for a control or shape that supports context menus.</span><br />
+<span class="info">shapeName</span> <span class="text">The control or shape name.</span><br />
+<span class="info">items</span> <span class="text">An array of context menu item selection texts.</span><br />
+<span class="info">images</span> <span class="text">Optional array of image icons, any or all may be "".<br />They may be the result of ImageList.LoadImage or local or network image file.</span><br />
+<br />
+<a class="tag" name="LDControlsAddDataView"></a><span class="method">AddDataView</span><span class="methodargs">(width,height,headings)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a dataview control.<br />All rows and columns are indexed from 1.<br />This control always appears on top of all other objects in the GraphicsWindow.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">headings</span> <span class="text">An array of headings for the dataview.</span><br />
+<span class="info">returns</span> <span class="text">The dataview shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddDocumentViewer"></a><span class="method">AddDocumentViewer</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a document viewer dialog control.<br />You can view XPS documents (MS version of PDF) with this.<br />Drag and drop is auto set for this control.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">returns</span> <span class="text">The document viewer shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddListBox"></a><span class="method">AddListBox</span><span class="methodargs">(list,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a listbox dialog control.</span><br />
+<span class="info">list</span> <span class="text">An array containing the listbox data.<br /><br />The first index is the row or node number and the value of the array is the display text at the current node.<br /><br />list[1] = "Option 1"<br />list[2] = "Option 2"<br />list[3] = "Option 3"<br />list[4] = "Option 4"<br /><br />Alternatively, this can be a LDArray or LDList.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">returns</span> <span class="text">The listbox shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddListView"></a><span class="method">AddListView</span><span class="methodargs">(width,height,headings)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a ListView control.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">headings</span> <span class="text">An array of headings for the listview.</span><br />
+<span class="info">returns</span> <span class="text">The listview shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddMediaPlayer"></a><span class="method">AddMediaPlayer</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a media player (to play videos etc).<br />Drag and drop is auto set for this control.</span><br />
+<span class="info">width</span> <span class="text">The media player width.</span><br />
+<span class="info">height</span> <span class="text">The media player height.</span><br />
+<span class="info">returns</span> <span class="text">The media player control name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddMenu"></a><span class="method">AddMenu</span><span class="methodargs">(width,height,menuList,iconList,checkList)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a menu control.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">menuList</span> <span class="text">An array of menu items.  The index is the menu display name and the value is the parent display name.<br />The top level display name should be "Main".  The names should be unique since they will be returned on click event.<br />A separator is "-", "--", "---" etc since they have to be unique and cannot be selected.<br /><br />menuList["File"] = "Main"<br />menuList["Open"] = "File"<br />menuList["-"] = "File"<br />menuList["Exit"] = "File"<br />menuList["Help"] = "Main"<br />menuList["Show Help"] = "Help"</span><br />
+<span class="info">iconList</span> <span class="text">An optional array of icon images (URL or ImageList) or "" for none.<br /><br />iconList["File"] = Program.Directory+"/file.png"</span><br />
+<span class="info">checkList</span> <span class="text">An optional array to identify items as checkable or "" for none.<br />The value is the initial checked state "True" or "False".<br /><br />checkList["Show Help"] = "True"</span><br />
+<span class="info">returns</span> <span class="text">The menu shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddPasswordBox"></a><span class="method">AddPasswordBox</span><span class="methodargs">(width,height,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a password box control (texbox with characters not displayed and PasswordEntered event only when return is pressed).</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">length</span> <span class="text">The maximum number of characters in the password.</span><br />
+<span class="info">returns</span> <span class="text">The password box shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddProgressBar"></a><span class="method">AddProgressBar</span><span class="methodargs">(width,height,orientation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a progress bar control.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">orientation</span> <span class="text">Horizontal or vertical ("H" or "V").</span><br />
+<span class="info">returns</span> <span class="text">The progress bar shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddRadioButton"></a><span class="method">AddRadioButton</span><span class="methodargs">(title,group)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a radio button control.<br />Only one radio button in a group can be set (they are exclusive).</span><br />
+<span class="info">title</span> <span class="text">A text description for the radio button.</span><br />
+<span class="info">group</span> <span class="text">A name to group radio buttons.</span><br />
+<span class="info">returns</span> <span class="text">The radio button shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddRichTextBox"></a><span class="method">AddRichTextBox</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a RichTextBox.<br />Drag and drop is auto set for this control.</span><br />
+<span class="info">width</span> <span class="text">The width of the RichTextBox.</span><br />
+<span class="info">height</span> <span class="text">The height of the RichTextBox.</span><br />
+<span class="info">returns</span> <span class="text">The RichTextBox name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddSlider"></a><span class="method">AddSlider</span><span class="methodargs">(width,height,orientation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a slider control.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">orientation</span> <span class="text">Horizontal or vertical ("H" or "V").</span><br />
+<span class="info">returns</span> <span class="text">The slider shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAddTreeView"></a><span class="method">AddTreeView</span><span class="methodargs">(tree,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a treeview dialog control.</span><br />
+<span class="info">tree</span> <span class="text">A 2D array containing the treeview data.<br /><br />The first index is the row or node number and the second index is the parent node of the current node (0 for top level).<br />The value of the array is the display text at the current node.<br /><br />tree[1][0] = "Level 1"<br />tree[2][1] = "Level 1 1"<br />tree[3][1] = "Level 1 2"<br />tree[4][0] = "Level 2"</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<span class="info">returns</span> <span class="text">The treeview shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsAllowDrop"></a><span class="method">AllowDrop</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape to allow drag and drop.<br />Currently only the following are implemented without using FileDropped event to process the dropped file(s):<br />File path to TextBox (or file paths to MultiLineTextBox).<br />File opened in RichTextBox.<br />XPS file opened in DocumentViewer.<br />Image set in Image or Background.<br />Media for MediaPlayer (only works if valid media is already loaded).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to allow drop or "Background".</span><br />
+<br />
+<a class="tag" name="LDControlsBrowserHistory"></a><span class="method">BrowserHistory</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of the browser history (pages loaded).</span><br />
+<span class="info">shapeName</span> <span class="text">The browser name.</span><br />
+<span class="info">returns</span> <span class="text">The array of urls in the history.</span><br />
+<br />
+<a class="tag" name="LDControlsBrowserNavigate"></a><span class="method">BrowserNavigate</span><span class="methodargs">(shapeName,direction)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Move browser page forward or backwards.</span><br />
+<span class="info">shapeName</span> <span class="text">The browser name.</span><br />
+<span class="info">direction</span> <span class="text">"F" or "B" for forwards or backwards.</span><br />
+<br />
+<a class="tag" name="LDControlsBrowserPageLoaded"></a><span class="method">BrowserPageLoaded</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a browser page is loaded.</span><br />
+<br />
+<a class="tag" name="LDControlsBrowserSetURL"></a><span class="method">BrowserSetURL</span><span class="methodargs">(shapeName,url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a web browser page.</span><br />
+<span class="info">shapeName</span> <span class="text">The browser name.</span><br />
+<span class="info">url</span> <span class="text">The html pane to load (e.g. <a href="http://smallbasic.com">http://smallbasic.com</a> or www.google.com)</span><br />
+<br />
+<a class="tag" name="LDControlsCheckBoxChanged"></a><span class="method">CheckBoxChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a checkbox is clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsCheckBoxGetState"></a><span class="method">CheckBoxGetState</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a checkbox checked state.</span><br />
+<span class="info">shapeName</span> <span class="text">The checkbox to get state.</span><br />
+<span class="info">returns</span> <span class="text">The checkbox checked state.</span><br />
+<br />
+<a class="tag" name="LDControlsCheckBoxState"></a><span class="method">CheckBoxState</span><span class="methodargs">(shapeName,state)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a checkbox checked state.</span><br />
+<span class="info">shapeName</span> <span class="text">The checkbox shape name.</span><br />
+<span class="info">state</span> <span class="text">The checkbox check state ("True" or "False").</span><br />
+<br />
+<a class="tag" name="LDControlsComboBoxContent"></a><span class="method">ComboBoxContent</span><span class="methodargs">(shapeName,list)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Replace a combobox list.</span><br />
+<span class="info">shapeName</span> <span class="text">The combobox shape name.</span><br />
+<span class="info">list</span> <span class="text">An array containing the combobox data.<br /><br />The first index is the row or node number and the value of the array is the display text at the current node.<br /><br />list[1] = "Option 1"<br />list[2] = "Option 2"<br />list[3] = "Option 3"<br />list[4] = "Option 4"</span><br />
+<br />
+<a class="tag" name="LDControlsComboBoxGetSelected"></a><span class="method">ComboBoxGetSelected</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a combobox selected node.</span><br />
+<span class="info">shapeName</span> <span class="text">The combobox to get node.</span><br />
+<span class="info">returns</span> <span class="text">The combobox selected node.</span><br />
+<br />
+<a class="tag" name="LDControlsComboBoxItemChanged"></a><span class="method">ComboBoxItemChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a combobox selection changes or selected item is clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsComboBoxSelect"></a><span class="method">ComboBoxSelect</span><span class="methodargs">(shapeName,node)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Select a node in a combobox.</span><br />
+<span class="info">shapeName</span> <span class="text">The combobox shape name.</span><br />
+<span class="info">node</span> <span class="text">The node to select.</span><br />
+<br />
+<a class="tag" name="LDControlsContextMenuClicked"></a><span class="method">ContextMenuClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a shape or control right click context menu item is selected.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewAllowSort"></a><span class="method">DataViewAllowSort</span><span class="methodargs">(shapeName,allow)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Allow a dataview control to be column sorted by user clicking header.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">allow</span> <span class="text">Allow "True" (default) or disallow "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewAllowUserEntry"></a><span class="method">DataViewAllowUserEntry</span><span class="methodargs">(shapeName,allow)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Allow user to add data in the last row.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">allow</span> <span class="text">Allow user data entry "True" (default) or "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewButtonClicked"></a><span class="method">DataViewButtonClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a dataview button is clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewCellValueChanged"></a><span class="method">DataViewCellValueChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a dataview cell value changes after it is commited, for example by selecting away from the cell.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewClear"></a><span class="method">DataViewClear</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Clear all rows in a dataview.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewColAlignment"></a><span class="method">DataViewColAlignment</span><span class="methodargs">(shapeName,col,alignment)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the alignment for a dataview column.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">alignment</span> <span class="text">"Left", "Center" or "Right"</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewColumnReadOnly"></a><span class="method">DataViewColumnReadOnly</span><span class="methodargs">(shapeName,col,readOnly)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a dataview column to be read only.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">readOnly</span> <span class="text">Set as read only "True" or "False" (default).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewColumnSort"></a><span class="method">DataViewColumnSort</span><span class="methodargs">(shapeName,col,ascending)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sort dataview entries by a column.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number to sort by.</span><br />
+<span class="info">ascending</span> <span class="text">Sort ascending ("True") or descending ("False").</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewColumnVisible"></a><span class="method">DataViewColumnVisible</span><span class="methodargs">(shapeName,col,visible)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a dataview column to be visible or not.<br />This may be used for example to hide an id column of a database.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">visible</span> <span class="text">Set as visible "True" (default) or "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewColumnWidths"></a><span class="method">DataViewColumnWidths</span><span class="methodargs">(shapeName,widths)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the widths of columns.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">widths</span> <span class="text">An array of widths for the columns, "" to reset to auto sizing.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewDeleteRow"></a><span class="method">DataViewDeleteRow</span><span class="methodargs">(shapeName,row)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete a row from a dataview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewGetFocus"></a><span class="method">DataViewGetFocus</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current dataview cell with focus.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">returns</span> <span class="text">A 1D array with the row and column number with focus, or "".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewGetRow"></a><span class="method">DataViewGetRow</span><span class="methodargs">(shapeName,row)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a row of data from a dataview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.</span><br />
+<span class="info">returns</span> <span class="text">An array of values (one for each column) or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewGetSelected"></a><span class="method">DataViewGetSelected</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of all selected cells in a dataview.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">returns</span> <span class="text">A 2D array of rows and columns selected.<br />cells[1][1] = row, cells[1][2] = column.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewGetValue"></a><span class="method">DataViewGetValue</span><span class="methodargs">(shapeName,row,col)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a dataview cell value.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">returns</span> <span class="text">The cell value or "".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewReadFromCSV"></a><span class="method">DataViewReadFromCSV</span><span class="methodargs">(shapeName,fileName,append)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add data from a csv (comma separated values) text file into a dataview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">fileName</span> <span class="text">The full path for the csv file.</span><br />
+<span class="info">append</span> <span class="text">Append to the dataview "True" or "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewRowColours"></a><span class="method">DataViewRowColours</span><span class="methodargs">(shapeName,row,background,foreground)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a row of data background and foreground (pen) colours.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.  If this is set to 0 then all alternating rows are set.</span><br />
+<span class="info">background</span> <span class="text">The background colour.</span><br />
+<span class="info">foreground</span> <span class="text">The foreground colour.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewRowCount"></a><span class="method">DataViewRowCount</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the number of rows in a dataview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">returns</span> <span class="text">The number of rows in the dataview.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSaveAsCSV"></a><span class="method">DataViewSaveAsCSV</span><span class="methodargs">(shapeName,fileName,append)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write an entire dataview to a csv (comma separated values) text file.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">fileName</span> <span class="text">The full path for the csv file.</span><br />
+<span class="info">append</span> <span class="text">Append to the csv file "True" or "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSelectionChanged"></a><span class="method">DataViewSelectionChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a dataview selection changes.<br />This event is not called for dataview button clicks, use DataViewButtonClicked.<br />This event is not called for dataview checkbox or combobox clicks, use DataViewCellValueChanged.</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetColumnButton"></a><span class="method">DataViewSetColumnButton</span><span class="methodargs">(shapeName,col)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Change a dataview column control to be Buttons.<br />This should be set before data is added, after the dataview is created.<br />If the dataview is bound to a database, then set this after LDDataBase.EditTable is set.<br />The data for these cells will be the button title.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetColumnCheckBox"></a><span class="method">DataViewSetColumnCheckBox</span><span class="methodargs">(shapeName,col)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Change a dataview column control to be CheckBoxes.<br />This should be set before data is added, after the dataview is created.<br />If the dataview is bound to a database, then set this after LDDataBase.EditTable is set.<br />The data for these cells should be "True" or "False".</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetColumnComboBox"></a><span class="method">DataViewSetColumnComboBox</span><span class="methodargs">(shapeName,col,data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Change a dataview column control to be ComboBoxes with selectable values.<br />This should be set before data is added, after the dataview is created.<br />If the dataview is bound to a database, then set this after LDDataBase.EditTable is set.<br />The values to get and set for the cells are the labels set with the data parameter.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">data</span> <span class="text">An array of data selections for the combo boxes.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetFocus"></a><span class="method">DataViewSetFocus</span><span class="methodargs">(shapeName,row,col)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the focus to a dataview cell.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetRow"></a><span class="method">DataViewSetRow</span><span class="methodargs">(shapeName,row,values)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a row of data to a dataview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.<br />If the row number is larger than the current number of rows a new row is added, otherwise the row data is over-written.</span><br />
+<span class="info">values</span> <span class="text">An array of values (one for each column).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDataViewSetValue"></a><span class="method">DataViewSetValue</span><span class="methodargs">(shapeName,row,col,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a dataview cell value.</span><br />
+<span class="info">shapeName</span> <span class="text">The dataview control.</span><br />
+<span class="info">row</span> <span class="text">The row number.</span><br />
+<span class="info">col</span> <span class="text">The column number.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsDocumentViewerLoadXPS"></a><span class="method">DocumentViewerLoadXPS</span><span class="methodargs">(shapeName,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Load an XPS file to a document viewer dialog control.</span><br />
+<span class="info">shapeName</span> <span class="text">The document viewer control.</span><br />
+<span class="info">fileName</span> <span class="text">The XPS file to load and view.</span><br />
+<br />
+<a class="tag" name="LDControlsFileDropped"></a><span class="method">FileDropped</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a file is dropped on an object set with AllowDrop.</span><br />
+<br />
+<a class="tag" name="LDControlsLastBrowser"></a><span class="method">LastBrowser</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last browser where a page was loaded.</span><br />
+<br />
+<a class="tag" name="LDControlsLastBrowserPage"></a><span class="method">LastBrowserPage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last browser page loaded (the url).</span><br />
+<br />
+<a class="tag" name="LDControlsLastCheckBox"></a><span class="method">LastCheckBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last checkbox that was clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsLastCheckBoxState"></a><span class="method">LastCheckBoxState</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last checkbox checked state ("True" or "False").</span><br />
+<br />
+<a class="tag" name="LDControlsLastComboBox"></a><span class="method">LastComboBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last combobox where a selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastComboBoxIndex"></a><span class="method">LastComboBoxIndex</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last combobox selection changed index (row number).</span><br />
+<br />
+<a class="tag" name="LDControlsLastContextControl"></a><span class="method">LastContextControl</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The contol or shape of the last right click context menu item selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastContextItem"></a><span class="method">LastContextItem</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The index of the last shape or control right click context menu item selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDataBaseTable"></a><span class="method">LastDataBaseTable</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last database table for which a dataview selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDataView"></a><span class="method">LastDataView</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last dataview where a selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDataViewButtonClicked"></a><span class="method">LastDataViewButtonClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get the cell row, column and value of the last dataview button clicked.<br />This is a 3 element array.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDataViewCellValueChanged"></a><span class="method">LastDataViewCellValueChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get the cell row, column and value of a dataview cell whose value has changed.<br />This is a 3 element array.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDropFiles"></a><span class="method">LastDropFiles</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">An array with the last file(s) that were dropped.</span><br />
+<br />
+<a class="tag" name="LDControlsLastDropShape"></a><span class="method">LastDropShape</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last object a file was dropped on.</span><br />
+<br />
+<a class="tag" name="LDControlsLastListBox"></a><span class="method">LastListBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last listbox where a selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastListBoxIndex"></a><span class="method">LastListBoxIndex</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last listbox selection changed index (row number).</span><br />
+<br />
+<a class="tag" name="LDControlsLastListView"></a><span class="method">LastListView</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last listview where a selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastListViewColumn"></a><span class="method">LastListViewColumn</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last listview selected column number.</span><br />
+<br />
+<a class="tag" name="LDControlsLastListViewRow"></a><span class="method">LastListViewRow</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last listview selected row number.</span><br />
+<br />
+<a class="tag" name="LDControlsLastMediaPlayer"></a><span class="method">LastMediaPlayer</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last media player for which an event occurred.</span><br />
+<br />
+<a class="tag" name="LDControlsLastMenuControl"></a><span class="method">LastMenuControl</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last menu control selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastMenuItem"></a><span class="method">LastMenuItem</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last menu item selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastPassword"></a><span class="method">LastPassword</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last password entered.</span><br />
+<br />
+<a class="tag" name="LDControlsLastPasswordBox"></a><span class="method">LastPasswordBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The password box for which an event occurred.</span><br />
+<br />
+<a class="tag" name="LDControlsLastRadioButton"></a><span class="method">LastRadioButton</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last radio button that was selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastRadioButtonGroup"></a><span class="method">LastRadioButtonGroup</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The group name for the last radio button selected.</span><br />
+<br />
+<a class="tag" name="LDControlsLastRichTextBox"></a><span class="method">LastRichTextBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The rich text box for which an event occurred.</span><br />
+<br />
+<a class="tag" name="LDControlsLastSlider"></a><span class="method">LastSlider</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last slider for which an event occurred.</span><br />
+<br />
+<a class="tag" name="LDControlsLastSliderValue"></a><span class="method">LastSliderValue</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last slider value.</span><br />
+<br />
+<a class="tag" name="LDControlsLastTreeView"></a><span class="method">LastTreeView</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last treeview where a selection changed.</span><br />
+<br />
+<a class="tag" name="LDControlsLastTreeViewIndex"></a><span class="method">LastTreeViewIndex</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last treeview selection changed index (row number).</span><br />
+<br />
+<a class="tag" name="LDControlsListBoxContent"></a><span class="method">ListBoxContent</span><span class="methodargs">(shapeName,list)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Replace a listbox list.</span><br />
+<span class="info">shapeName</span> <span class="text">The listbox shape name.</span><br />
+<span class="info">list</span> <span class="text">An array containing the listbox data.<br /><br />The first index is the row or node number and the value of the array is the display text at the current node.<br /><br />list[1] = "Option 1"<br />list[2] = "Option 2"<br />list[3] = "Option 3"<br />list[4] = "Option 4"<br /><br />Alternatively, this can be a LDArray or LDList.</span><br />
+<br />
+<a class="tag" name="LDControlsListBoxGetSelected"></a><span class="method">ListBoxGetSelected</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a listbox selected node.</span><br />
+<span class="info">shapeName</span> <span class="text">The listbox to get node.</span><br />
+<span class="info">returns</span> <span class="text">The listbox selected node number.<br />If the selection mode is not single (see ListBoxSelectionMode) then an array of nodes is returned.<br />The return is "" for no selected nodes.</span><br />
+<br />
+<a class="tag" name="LDControlsListBoxItemChanged"></a><span class="method">ListBoxItemChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a listbox selection changes or selected item is clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsListBoxSelect"></a><span class="method">ListBoxSelect</span><span class="methodargs">(shapeName,node)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Select a node or nodes in a listbox.</span><br />
+<span class="info">shapeName</span> <span class="text">The listbox shape name.</span><br />
+<span class="info">node</span> <span class="text">The node number to select.<br />This can be an array of nodes if the selection mode is not single (see ListBoxSelectionMode).</span><br />
+<br />
+<a class="tag" name="LDControlsListBoxSelectionMode"></a><span class="method">ListBoxSelectionMode</span><span class="methodargs">(shapeName,mode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the selection mode for listbox control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listbox control name.</span><br />
+<span class="info">mode</span> <span class="text">One of the following:<br />"Single" - single selection (default).<br />"Multiple" - multiple selections using control key.<br />"Extended" - extended selections using control and shift keys.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewClear"></a><span class="method">ListViewClear</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove all rows from a listview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewColAlignment"></a><span class="method">ListViewColAlignment</span><span class="methodargs">(shapeName,col,alignment)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the alignment for a listview column.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<span class="info">col</span> <span class="text">The column number (indexed from 1).</span><br />
+<span class="info">alignment</span> <span class="text">"Left", "Center" or "Right"</span><br />
+<br />
+<a class="tag" name="LDControlsListViewDeleteRow"></a><span class="method">ListViewDeleteRow</span><span class="methodargs">(shapeName,row)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete a row of data from a listview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<span class="info">row</span> <span class="text">The row number (indexed from 1).<br />If the row number is larger than the current number of rows then no action is taken.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewEdit"></a><span class="method">ListViewEdit</span><span class="methodargs">(shapeName,editable)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Change a listview to editable status.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview shape name.</span><br />
+<span class="info">editable</span> <span class="text">"True" with editable TextBoxes or "False" uneditable TextBlocks.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewGetRow"></a><span class="method">ListViewGetRow</span><span class="methodargs">(shapeName,row)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a row of data from a listview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<span class="info">row</span> <span class="text">The row number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">An array of values (one for each column) or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewRowCount"></a><span class="method">ListViewRowCount</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the number of rows in a listview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<span class="info">returns</span> <span class="text">The number of rows in the listview.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewSelectionChanged"></a><span class="method">ListViewSelectionChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a listview selection changes.</span><br />
+<br />
+<a class="tag" name="LDControlsListViewSetRow"></a><span class="method">ListViewSetRow</span><span class="methodargs">(shapeName,row,values)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a row of data to a listview control.</span><br />
+<span class="info">shapeName</span> <span class="text">The listview control.</span><br />
+<span class="info">row</span> <span class="text">The row number (indexed from 1).<br />If the row number is larger than the current number of rows a new row is added, otherwise the row data is over-written.</span><br />
+<span class="info">values</span> <span class="text">An array of values (one for each column).</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerEnded"></a><span class="method">MediaPlayerEnded</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a media player ends playing current media.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerLoad"></a><span class="method">MediaPlayerLoad</span><span class="methodargs">(shapeName,media)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the media for a media player.</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">media</span> <span class="text">The media to load, e.g. an image, music or video file, jp, mp3, mpg, avi, wmv etc.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerOpened"></a><span class="method">MediaPlayerOpened</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a media player opens new media.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerPause"></a><span class="method">MediaPlayerPause</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pause a media player playback (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerPlay"></a><span class="method">MediaPlayerPlay</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Start a media player playback (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerPlayTime"></a><span class="method">MediaPlayerPlayTime</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a media play time (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">returns</span> <span class="text">The media play time in ms.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerPosition"></a><span class="method">MediaPlayerPosition</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a media current position (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">returns</span> <span class="text">The media current position in ms.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerSeek"></a><span class="method">MediaPlayerSeek</span><span class="methodargs">(shapeName,seek)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Position a media player position (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">seek</span> <span class="text">The new play position in ms.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerSpeed"></a><span class="method">MediaPlayerSpeed</span><span class="methodargs">(shapeName,speed)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the playback speed for a media player.</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">speed</span> <span class="text">The speed (0 to 100) default 1 (normal playback).</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerStop"></a><span class="method">MediaPlayerStop</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stop a media player playback (using current loaded media).</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerStretch"></a><span class="method">MediaPlayerStretch</span><span class="methodargs">(shapeName,stretch)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a visual media stretch - how the visual fills its area.</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">stretch</span> <span class="text">The stretch method.  Available stretch options are:<br />"None" (The content preserves its original size).<br />"Uniform" (The content is resized to fit in the destination dimensions while it preserves its native aspect ratio - Default).<br />"Fill" (The content is resized to fill the destination dimensions. The aspect ratio is not preserved).<br />"UniformToFill" (The content is resized to fill the destination dimensions while it preserves its native aspect ratio, clipping as required).</span><br />
+<br />
+<a class="tag" name="LDControlsMediaPlayerVolume"></a><span class="method">MediaPlayerVolume</span><span class="methodargs">(shapeName,volume)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the volume for a media player.</span><br />
+<span class="info">shapeName</span> <span class="text">The media player name.</span><br />
+<span class="info">volume</span> <span class="text">The volume (0 to 1) default 0.5.</span><br />
+<br />
+<a class="tag" name="LDControlsMenuBackground"></a><span class="method">MenuBackground</span><span class="methodargs">(shapeName,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the background colour for sub menus.  <br />The main top menu can be coloured separately with LDShapes.BrushColour.<br />Note that separators are not coloured and it is often best to just colour the top menu.</span><br />
+<span class="info">shapeName</span> <span class="text">The menu shape name.</span><br />
+<span class="info">colour</span> <span class="text">The background colour.</span><br />
+<br />
+<a class="tag" name="LDControlsMenuChecked"></a><span class="method">MenuChecked</span><span class="methodargs">(shapeName,itemName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the check state of a menu item.</span><br />
+<span class="info">shapeName</span> <span class="text">The menu shape name.</span><br />
+<span class="info">itemName</span> <span class="text">The menu item name.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDControlsMenuClicked"></a><span class="method">MenuClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a menu item is selected.</span><br />
+<br />
+<a class="tag" name="LDControlsPasswordEntered"></a><span class="method">PasswordEntered</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a password is entered (Return key pressed).</span><br />
+<br />
+<a class="tag" name="LDControlsProgressBarValue"></a><span class="method">ProgressBarValue</span><span class="methodargs">(shapeName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set progress bar value (progress).</span><br />
+<span class="info">shapeName</span> <span class="text">The progress bar shape name.</span><br />
+<span class="info">value</span> <span class="text">The progress value (0 to 100).</span><br />
+<br />
+<a class="tag" name="LDControlsRadioButtonClicked"></a><span class="method">RadioButtonClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a radio button selection changes (it is clicked).</span><br />
+<br />
+<a class="tag" name="LDControlsRadioButtonGet"></a><span class="method">RadioButtonGet</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a radio button state.</span><br />
+<span class="info">shapeName</span> <span class="text">The radio button to get state.</span><br />
+<span class="info">returns</span> <span class="text">The radio button state.</span><br />
+<br />
+<a class="tag" name="LDControlsRadioButtonSet"></a><span class="method">RadioButtonSet</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a radio button to selected.</span><br />
+<span class="info">shapeName</span> <span class="text">The radio button to set.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxCaseSensitive"></a><span class="method">RichTextBoxCaseSensitive</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Whether word or phrase highlighting is case sensitive "True" or "False" (default).<br />Set this before RichTextBoxWord is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxClear"></a><span class="method">RichTextBoxClear</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Clear all text from the RichTextBox.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxDefault"></a><span class="method">RichTextBoxDefault</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a default font style using the current RichTextBox Properties.<br />Note RichTextBoxFontDecoration not available for this option.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontBackground"></a><span class="method">RichTextBoxFontBackground</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font background colour.<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontBold"></a><span class="method">RichTextBoxFontBold</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font bold style "True" or "False".<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontFamily"></a><span class="method">RichTextBoxFontFamily</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font family e.g. "Century Gothic".<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontForeground"></a><span class="method">RichTextBoxFontForeground</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font foreground colour.<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontItalic"></a><span class="method">RichTextBoxFontItalic</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font italic style "True" or "False".<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontSize"></a><span class="method">RichTextBoxFontSize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font point size.<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxFontUnderline"></a><span class="method">RichTextBoxFontUnderline</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The font underline style "True" or "False".<br />Set this before RichTextBoxSelection, RichTextBoxWord or RichTextBoxDefault is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxGetText"></a><span class="method">RichTextBoxGetText</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get text (unformatted) in a RichTextBox.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">returns</span> <span class="text">The text.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxIndentToTab"></a><span class="method">RichTextBoxIndentToTab</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Convert first character indents to tabs "True" (default) or "False".<br />A tab typed as a first character on a line in a RichTextBox creates an indent unless this is set to "True".</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxLoad"></a><span class="method">RichTextBoxLoad</span><span class="methodargs">(shapeName,fileName,append)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Load text and formatting from a file in rtf format to a RichTextBox.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">fileName</span> <span class="text">File to load the text and formatting from.</span><br />
+<span class="info">append</span> <span class="text">Append to existing text "True" or "False".</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxMargins"></a><span class="method">RichTextBoxMargins</span><span class="methodargs">(left,right,top,bottom)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set margins (in pixels) for RichTextBox paragraphs.<br />A new paragraph is created for each text appended (or created) using RichTextBoxSetText.</span><br />
+<span class="info">left</span> <span class="text">Left margin (default 0).</span><br />
+<span class="info">right</span> <span class="text">Right margin (default 0).</span><br />
+<span class="info">top</span> <span class="text">Top margin (default 0).</span><br />
+<span class="info">bottom</span> <span class="text">Bottom margin (default 0).</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxReadOnly"></a><span class="method">RichTextBoxReadOnly</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The read only state for the RichTextBox "True" or "False.<br />Set this before AddRichTextBox is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxSave"></a><span class="method">RichTextBoxSave</span><span class="methodargs">(shapeName,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save RichTextBox text and formatting to a file in rtf format.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">fileName</span> <span class="text">File to save the text and formatting to.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxSelection"></a><span class="method">RichTextBoxSelection</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a font style of selected RichTextBox text using the current RichTextBox Properties.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxSetText"></a><span class="method">RichTextBoxSetText</span><span class="methodargs">(shapeName,text,append)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set text (unformatted) in a RichTextBox.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">text</span> <span class="text">Text to load.</span><br />
+<span class="info">append</span> <span class="text">Append to existing text "True" or "False".<br />A new paragraph is created if text is appended.  See RichTextBoxMargins to set margins for the paragraph.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxTextAlignment"></a><span class="method">RichTextBoxTextAlignment</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The text alignment "Center" "Left" "Right" or "Justify".<br />Set this before AddRichTextBox is called.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxTextTyped"></a><span class="method">RichTextBoxTextTyped</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when text is typed into a rich text box.</span><br />
+<br />
+<a class="tag" name="LDControlsRichTextBoxWord"></a><span class="method">RichTextBoxWord</span><span class="methodargs">(shapeName,text,mode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a font style of a word or phrase using the current RichTextBox Properties.</span><br />
+<span class="info">shapeName</span> <span class="text">The RichTextBox control.</span><br />
+<span class="info">text</span> <span class="text">The text to change (Case sensitive set by RichTextBoxCaseSensitive parameter).</span><br />
+<span class="info">mode</span> <span class="text">Contol over which instances of the word or phrase to set.<br />0 - All instances<br />1 - First instance<br />2 - Last instance</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDControlsSetButtonStyle"></a><span class="method">SetButtonStyle</span><span class="methodargs">(shapeName,brushUnpressed,brushMouseOver,brushPressed,penUnpressed,penMouseOver,penPressed,radius,shine)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modify the style of a button.</span><br />
+<span class="info">shapeName</span> <span class="text">The button to modify.</span><br />
+<span class="info">brushUnpressed</span> <span class="text">The colour of the unpressed button, may be a gradient brush.</span><br />
+<span class="info">brushMouseOver</span> <span class="text">The colour of the button when the mouse is over it, may be a gradient brush.</span><br />
+<span class="info">brushPressed</span> <span class="text">The colour of the pressed button, may be a gradient brush.</span><br />
+<span class="info">penUnpressed</span> <span class="text">The text font colour of the unpressed button.</span><br />
+<span class="info">penMouseOver</span> <span class="text">The text font colour of the button when the mouse is over it.</span><br />
+<span class="info">penPressed</span> <span class="text">The text font colour of the pressed button.</span><br />
+<span class="info">radius</span> <span class="text">The button corner radius (default 9).</span><br />
+<span class="info">shine</span> <span class="text">Apply a 'shine' effect, "True" (default) or "False".</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDControlsSetCursorPosition"></a><span class="method">SetCursorPosition</span><span class="methodargs">(shapeName,position)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the cursor caret to specified position within a textbox.</span><br />
+<span class="info">shapeName</span> <span class="text">The textbox shape name.</span><br />
+<span class="info">position</span> <span class="text">The cursor character position (0 is before first character or a large value e.g. 1000 will set the cursor to the end).</span><br />
+<br />
+<a class="tag" name="LDControlsSetCursorToEnd"></a><span class="method">SetCursorToEnd</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Scroll the cursor caret to the end of a textbox or richtextbox.<br />This is for multi-line textboxes or richtextboxes.</span><br />
+<span class="info">shapeName</span> <span class="text">The textbox shape name.</span><br />
+<br />
+<a class="tag" name="LDControlsSetSpellCheck"></a><span class="method">SetSpellCheck</span><span class="methodargs">(shapeName,state)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the spell checking for a textbox or richtextbox.</span><br />
+<span class="info">shapeName</span> <span class="text">The textbox or richtextbox shape name.</span><br />
+<span class="info">state</span> <span class="text">"True" or "False"</span><br />
+<br />
+<a class="tag" name="LDControlsSliderChanged"></a><span class="method">SliderChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a slider is changed.</span><br />
+<br />
+<a class="tag" name="LDControlsSliderGetValue"></a><span class="method">SliderGetValue</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get slider value (position).</span><br />
+<span class="info">shapeName</span> <span class="text">The slider shape name.</span><br />
+<span class="info">returns</span> <span class="text">The slider value (0 to 100).</span><br />
+<br />
+<a class="tag" name="LDControlsSliderMaximum"></a><span class="method">SliderMaximum</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The maximum slider value, default is 100, the minimum is always 0.<br />Set this before calling AddSlider.</span><br />
+<br />
+<a class="tag" name="LDControlsSliderValue"></a><span class="method">SliderValue</span><span class="methodargs">(shapeName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set slider value (position).</span><br />
+<span class="info">shapeName</span> <span class="text">The slider shape name.</span><br />
+<span class="info">value</span> <span class="text">The slider value (0 to 100).</span><br />
+<br />
+<a class="tag" name="LDControlsTextBoxReadOnly"></a><span class="method">TextBoxReadOnly</span><span class="methodargs">(shapeName,readOnly)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a textbox readonly state.</span><br />
+<span class="info">shapeName</span> <span class="text">The textbox control.</span><br />
+<span class="info">readOnly</span> <span class="text">"True" or "False" (default).</span><br />
+<br />
+<a class="tag" name="LDControlsTextBoxTab"></a><span class="method">TextBoxTab</span><span class="methodargs">(shapeName,acceptsTab)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set whether a TextBox accepts a tab or uses it to locate the next control.</span><br />
+<span class="info">shapeName</span> <span class="text">The TextBox or RichTextBox name.</span><br />
+<span class="info">acceptsTab</span> <span class="text">"True" or "False" (default).</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewContent"></a><span class="method">TreeViewContent</span><span class="methodargs">(shapeName,tree)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Replace a treeview tree.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview shape name.</span><br />
+<span class="info">tree</span> <span class="text">A 2D array containing the treeview data.<br /><br />The first index is the row or node number and the second index is the parent node of the current node (0 for top level).<br />The value of the array is the display text at the current node.<br /><br />tree[1][0] = "Level 1"<br />tree[2][1] = "Level 1 1"<br />tree[3][1] = "Level 1 2"<br />tree[4][0] = "Level 2"</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewEdit"></a><span class="method">TreeViewEdit</span><span class="methodargs">(shapeName,node,editable)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Change a treeview node editable status.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview shape name.</span><br />
+<span class="info">node</span> <span class="text">The node to select.</span><br />
+<span class="info">editable</span> <span class="text">"True" an editable TextBox or "False" uneditable.</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewExpand"></a><span class="method">TreeViewExpand</span><span class="methodargs">(shapeName,node,expand,recursive)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Expand/collapse nodes in a treeview below input node.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview shape name.</span><br />
+<span class="info">node</span> <span class="text">Node number to expand/collapse, 0 recusively expands/collapses all nodes.</span><br />
+<span class="info">expand</span> <span class="text">Expand or collapse "True" or "False"</span><br />
+<span class="info">recursive</span> <span class="text">Recursively expand/collapse nodes (all children nodes) "True" or "False"</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewGetData"></a><span class="method">TreeViewGetData</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the data from a treeview tree.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview shape name.</span><br />
+<span class="info">returns</span> <span class="text">A 2D array containing the treeview data.<br /><br />The first index is the row or node number and the second index is the parent node of the current node (0 for top level).<br />The value of the array is the display text at the current node.<br /><br />tree[1][0] = "Level 1"<br />tree[2][1] = "Level 1 1"<br />tree[3][1] = "Level 1 2"<br />tree[4][0] = "Level 2"</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewGetSelected"></a><span class="method">TreeViewGetSelected</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a treeview selected node.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview to get node.</span><br />
+<span class="info">returns</span> <span class="text">The treeview selected node.</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewItemChanged"></a><span class="method">TreeViewItemChanged</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a treeview selection changes or selected item is clicked.</span><br />
+<br />
+<a class="tag" name="LDControlsTreeViewSelect"></a><span class="method">TreeViewSelect</span><span class="methodargs">(shapeName,node)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Select a node in a treeview.</span><br />
+<span class="info">shapeName</span> <span class="text">The treeview shape name.</span><br />
+<span class="info">node</span> <span class="text">The node to select.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

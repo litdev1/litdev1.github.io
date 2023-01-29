@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDEncryption"></a><span class="group">LDEncryption</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Encryption and hash methods.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDEncryptionAESDecrypt">AESDecrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionAESEncrypt">AESEncrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionMD5Hash">MD5Hash</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDEncryptionMD5HashFile">MD5HashFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionRSADecrypt">RSADecrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionRSAEncrypt">RSAEncrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDEncryptionRSAPrivateKey">RSAPrivateKey</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDEncryptionRSAPublicKey">RSAPublicKey</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDEncryptionRSAReset">RSAReset</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDEncryptionRSASign">RSASign</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionRSAVerify">RSAVerify</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDEncryptionSHA512Hash">SHA512Hash</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDEncryptionSHA512HashFile">SHA512HashFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDEncryptionAESDecrypt"></a><span class="method">AESDecrypt</span><span class="methodargs">(cypher,password)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrypt an AES encrypted cypher (previously encrypted) using a password key.</span><br />
+<span class="info">cypher</span> <span class="text">The encrypted text (cypher).</span><br />
+<span class="info">password</span> <span class="text">The password key for the encryption.</span><br />
+<span class="info">returns</span> <span class="text">The original unencrypted text or "" if password and cypher don't match.</span><br />
+<br />
+<a class="tag" name="LDEncryptionAESEncrypt"></a><span class="method">AESEncrypt</span><span class="methodargs">(source,password)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypt some text using AES encryption and a password key.<br />The encrypted text can be saved to a file.<br />Note that if you forget the password there is NO WAY to decrypt!</span><br />
+<span class="info">source</span> <span class="text">The text to encrypt.</span><br />
+<span class="info">password</span> <span class="text">The password key for the encryption.</span><br />
+<span class="info">returns</span> <span class="text">The encrypted text (cypher).</span><br />
+<br />
+<a class="tag" name="LDEncryptionMD5Hash"></a><span class="method">MD5Hash</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create an MD5 hash of a text input (<a href="http://wikipedia.org/wiki/MD5">http://wikipedia.org/wiki/MD5</a>).<br />This 32 character hash is recommended where a general or shorter hash is required (password or data integrity).</span><br />
+<span class="info">text</span> <span class="text">A text or password to create a hash.</span><br />
+<span class="info">returns</span> <span class="text">The 32 character hex MD5 Hash.</span><br />
+<br />
+<a class="tag" name="LDEncryptionMD5HashFile"></a><span class="method">MD5HashFile</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create an MD5 hash of a file.<br />This 32 character hash is for file data integrity checks (e.g. a file contents is unchanged).</span><br />
+<span class="info">fileName</span> <span class="text">The full path to a file to get the hash.</span><br />
+<span class="info">returns</span> <span class="text">The 32 character hex MD5 Hash.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSADecrypt"></a><span class="method">RSADecrypt</span><span class="methodargs">(encrypted)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrpyt an RSA message.  <br />Requires a Private key to be set (Only originator can decrypt with private key).<br />If no key is set then one created for this session is used.</span><br />
+<span class="info">encrypted</span> <span class="text">The encypted message.</span><br />
+<span class="info">returns</span> <span class="text">The unencrypted message.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSAEncrypt"></a><span class="method">RSAEncrypt</span><span class="methodargs">(unencrypted)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypt an RSA message.  <br />Requires a Public key to be set (Anyone can encrypt with public key).<br />If no key is set then one created for this session is used.</span><br />
+<span class="info">unencrypted</span> <span class="text">The message to encrypt.</span><br />
+<span class="info">returns</span> <span class="text">The encrypted message.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSAPrivateKey"></a><span class="method">RSAPrivateKey</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get or set a private RSA key.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSAPublicKey"></a><span class="method">RSAPublicKey</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get or set a public RSA key.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSAReset"></a><span class="method">RSAReset</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Randomly reset the private and public keys</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSASign"></a><span class="method">RSASign</span><span class="methodargs">(data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sign an RSA message.  <br />Requires a Private key to be set (Only originator can sign with private key).<br />If no key is set then one created for this session is used.</span><br />
+<span class="info">data</span> <span class="text">The message to sign.</span><br />
+<span class="info">returns</span> <span class="text">The signing for the message.</span><br />
+<br />
+<a class="tag" name="LDEncryptionRSAVerify"></a><span class="method">RSAVerify</span><span class="methodargs">(data,sign)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verify a signed RSA message.  <br />Requires a Public key to be set (Anyone can verify with public key).<br />If no key is set then one created for this session is used.</span><br />
+<span class="info">data</span> <span class="text">The message that was signed.</span><br />
+<span class="info">sign</span> <span class="text">The signing for the message.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDEncryptionSHA512Hash"></a><span class="method">SHA512Hash</span><span class="methodargs">(password)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a SHA2-512 hash of a text input.<br />This 128 character hash is recommended for the most secure password encryption.</span><br />
+<span class="info">password</span> <span class="text">A text to create a hash (often a password).</span><br />
+<span class="info">returns</span> <span class="text">The 128 character hex SHA512 Hash.</span><br />
+<br />
+<a class="tag" name="LDEncryptionSHA512HashFile"></a><span class="method">SHA512HashFile</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create an SHA512 hash of a file.<br />This 128 character hash is for file data integrity checks (e.g. a file contents is unchanged).</span><br />
+<span class="info">fileName</span> <span class="text">The full path to a file to get the hash.</span><br />
+<span class="info">returns</span> <span class="text">The 128 character hex SHA512 Hash.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

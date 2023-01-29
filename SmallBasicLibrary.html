@@ -1,0 +1,2477 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>SmallBasicLibrary API</title>
+ <meta name="description" content="SmallBasic SmallBasicLibrary extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,SmallBasicLibraryextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">SmallBasicLibrary API
+<form action="sphider/search.php" method="get" >
+ <div style="text-align: center" >
+  <input type="text" name="query" id="query" size="40" action="sphider/include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500" />
+  <input type="hidden" value="and" name="type" />
+  <input type="hidden" value="50" name="results" />
+  <input type="hidden" value="1" name="search" />
+  <input type="submit" value=" Search " />
+ </div>
+</form>
+<p class="links">
+&nbsp;<a href="index.html">Return to Main Page</a><br />
+
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="#Array">Array</a>
+</td>
+<td>
+<a href="#Clock">Clock</a>
+</td>
+<td>
+<a href="#Controls">Controls</a>
+</td>
+<td>
+<a href="#Desktop">Desktop</a>
+</td>
+<td>
+<a href="#Dictionary">Dictionary</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#File">File</a>
+</td>
+<td>
+<a href="#Flickr">Flickr</a>
+</td>
+<td>
+<a href="#GraphicsWindow">GraphicsWindow</a>
+</td>
+<td>
+<a href="#ImageList">ImageList</a>
+</td>
+<td>
+<a href="#Math">Math</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#Mouse">Mouse</a>
+</td>
+<td>
+<a href="#Network">Network</a>
+</td>
+<td>
+<a href="#Program">Program</a>
+</td>
+<td>
+<a href="#Shapes">Shapes</a>
+</td>
+<td>
+<a href="#Sound">Sound</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#Stack">Stack</a>
+</td>
+<td>
+<a href="#Text">Text</a>
+</td>
+<td>
+<a href="#TextWindow">TextWindow</a>
+</td>
+<td>
+<a href="#Timer">Timer</a>
+</td>
+<td>
+<a href="#Turtle">Turtle</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="Array"></a><span class="group">Array</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This object provides a way of storing more than one value for a given name. These values can be accessed by another index.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ArrayContainsIndex">ContainsIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayContainsValue">ContainsValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayGetAllIndices">GetAllIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ArrayGetItemCount">GetItemCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayGetValue">GetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayIsArray">IsArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ArrayRemoveValue">RemoveValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArraySetValue">SetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ArrayContainsIndex"></a><span class="method">ContainsIndex</span><span class="methodargs">(array,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not the array contains the specified index.  This is very useful when deciding if the array's index was initialized by some value or not.</span><br />
+<span class="info">array</span> <span class="text">The array to check.</span><br />
+<span class="info">index</span> <span class="text">The index to check.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False" depending on if the index was present in the specified.<br />array.</span><br />
+<br />
+<a class="tag" name="ArrayContainsValue"></a><span class="method">ContainsValue</span><span class="methodargs">(array,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not the array contains the specified value.  This is very useful when deciding if the array's value was stored in some index.</span><br />
+<span class="info">array</span> <span class="text">The array to check.</span><br />
+<span class="info">value</span> <span class="text">The value to check.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False" depending on if the value was present in the specified.<br />array.</span><br />
+<br />
+<a class="tag" name="ArrayGetAllIndices"></a><span class="method">GetAllIndices</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets all the indices for the array, as another array.</span><br />
+<span class="info">array</span> <span class="text">The array whose indices are requested.</span><br />
+<span class="info">returns</span> <span class="text">An array filled with all the indices of the specified array.  The index of the returned array starts from 1.</span><br />
+<br />
+<a class="tag" name="ArrayGetItemCount"></a><span class="method">GetItemCount</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the number of items stored in the array.</span><br />
+<span class="info">array</span> <span class="text">The array for which the count is requested.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the specified array.</span><br />
+<br />
+<a class="tag" name="ArrayGetValue"></a><span class="method">GetValue</span><span class="methodargs">(arrayName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a value for a given array and index.</span><br />
+<span class="info">arrayName</span> <span class="text">The name of the array.</span><br />
+<span class="info">index</span> <span class="text">The name of the index.</span><br />
+<span class="info">returns</span> <span class="text">The value at the specified index of the specified array.</span><br />
+<br />
+<a class="tag" name="ArrayIsArray"></a><span class="method">IsArray</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not a given variable is an array.</span><br />
+<span class="info">array</span> <span class="text">The variable to check.</span><br />
+<span class="info">returns</span> <span class="text">"True" if the specified variable is an array.  "False" otherwise.</span><br />
+<br />
+<a class="tag" name="ArrayRemoveValue"></a><span class="method">RemoveValue</span><span class="methodargs">(arrayName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Removes the array item at the specified index.</span><br />
+<span class="info">arrayName</span> <span class="text">The name of the array.</span><br />
+<span class="info">index</span> <span class="text">The index of the item to remove.</span><br />
+<br />
+<a class="tag" name="ArraySetValue"></a><span class="method">SetValue</span><span class="methodargs">(arrayName,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets a value for a given array and index.</span><br />
+<span class="info">arrayName</span> <span class="text">The name of the array.</span><br />
+<span class="info">index</span> <span class="text">Name of the index.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<br />
+<a class="tag" name="Clock"></a><span class="group">Clock</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This class provides access to the system clock</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ClockDate">Date</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockDay">Day</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockElapsedMilliseconds">ElapsedMilliseconds</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockHour">Hour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockMillisecond">Millisecond</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockMinute">Minute</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockMonth">Month</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockSecond">Second</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockTime">Time</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockWeekDay">WeekDay</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockYear">Year</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ClockDate"></a><span class="method">Date</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current system date.</span><br />
+<br />
+<a class="tag" name="ClockDay"></a><span class="method">Day</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current day of the month.</span><br />
+<br />
+<a class="tag" name="ClockElapsedMilliseconds"></a><span class="method">ElapsedMilliseconds</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the number of milliseconds that have elapsed since 1900.</span><br />
+<br />
+<a class="tag" name="ClockHour"></a><span class="method">Hour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current Hour.</span><br />
+<br />
+<a class="tag" name="ClockMillisecond"></a><span class="method">Millisecond</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current Millisecond.</span><br />
+<br />
+<a class="tag" name="ClockMinute"></a><span class="method">Minute</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current Minute.</span><br />
+<br />
+<a class="tag" name="ClockMonth"></a><span class="method">Month</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current Month.</span><br />
+<br />
+<a class="tag" name="ClockSecond"></a><span class="method">Second</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current Second.</span><br />
+<br />
+<a class="tag" name="ClockTime"></a><span class="method">Time</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current system time.</span><br />
+<br />
+<a class="tag" name="ClockWeekDay"></a><span class="method">WeekDay</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current day of the week.</span><br />
+<br />
+<a class="tag" name="ClockYear"></a><span class="method">Year</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current year.</span><br />
+<br />
+<a class="tag" name="Controls"></a><span class="group">Controls</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Controls object allows you to add, move and interact with controls.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ControlsAddButton">AddButton</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsAddMultiLineTextBox">AddMultiLineTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsAddTextBox">AddTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsButtonClicked">ButtonClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#ControlsGetButtonCaption">GetButtonCaption</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsGetTextBoxText">GetTextBoxText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsHideControl">HideControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsLastClickedButton">LastClickedButton</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ControlsLastTypedTextBox">LastTypedTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsSetButtonCaption">SetButtonCaption</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsSetSize">SetSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsSetTextBoxText">SetTextBoxText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsShowControl">ShowControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsTextTyped">TextTyped</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ControlsAddButton"></a><span class="method">AddButton</span><span class="methodargs">(caption,left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a button to the graphics window with the specified width and height.</span><br />
+<span class="info">caption</span> <span class="text">The caption to display in the button.</span><br />
+<span class="info">left</span> <span class="text">The x co-ordinate of the button.</span><br />
+<span class="info">top</span> <span class="text">The y co-ordinate of the button.</span><br />
+<span class="info">returns</span> <span class="text">The button that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ControlsAddMultiLineTextBox"></a><span class="method">AddMultiLineTextBox</span><span class="methodargs">(left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a multi-line text input box to the graphics window with the specified width and height.</span><br />
+<span class="info">left</span> <span class="text">The x co-ordinate of the text box.</span><br />
+<span class="info">top</span> <span class="text">The y co-ordinate of the text box.</span><br />
+<span class="info">returns</span> <span class="text">The text box that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ControlsAddTextBox"></a><span class="method">AddTextBox</span><span class="methodargs">(left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a text input box to the graphics window with the specified width and height.</span><br />
+<span class="info">left</span> <span class="text">The x co-ordinate of the text box.</span><br />
+<span class="info">top</span> <span class="text">The y co-ordinate of the text box.</span><br />
+<span class="info">returns</span> <span class="text">The text box that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ControlsButtonClicked"></a><span class="method">ButtonClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when any button control is clicked.</span><br />
+<br />
+<a class="tag" name="ControlsGetButtonCaption"></a><span class="method">GetButtonCaption</span><span class="methodargs">(buttonName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the current caption of the specified button.</span><br />
+<span class="info">buttonName</span> <span class="text">The Button whose caption is requested.</span><br />
+<span class="info">returns</span> <span class="text">The current caption of the button.</span><br />
+<br />
+<a class="tag" name="ControlsGetTextBoxText"></a><span class="method">GetTextBoxText</span><span class="methodargs">(textBoxName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the current text of the specified TextBox.</span><br />
+<span class="info">textBoxName</span> <span class="text">The TextBox whose text is requested.</span><br />
+<span class="info">returns</span> <span class="text">The text in the TextBox</span><br />
+<br />
+<a class="tag" name="ControlsHideControl"></a><span class="method">HideControl</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides an already added control.</span><br />
+<span class="info">controlName</span> <span class="text">The name of the control.</span><br />
+<br />
+<a class="tag" name="ControlsLastClickedButton"></a><span class="method">LastClickedButton</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the last Button that was clicked on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ControlsLastTypedTextBox"></a><span class="method">LastTypedTextBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the last TextBox, text was typed into.</span><br />
+<br />
+<a class="tag" name="ControlsMove"></a><span class="method">Move</span><span class="methodargs">(control,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves the control with the specified name to a new position.</span><br />
+<span class="info">control</span> <span class="text">The name of the control to move.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the new position.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the new position.</span><br />
+<br />
+<a class="tag" name="ControlsRemove"></a><span class="method">Remove</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Removes a control from the Graphics Window.</span><br />
+<span class="info">controlName</span> <span class="text">The name of the control that needs to be removed.</span><br />
+<br />
+<a class="tag" name="ControlsSetButtonCaption"></a><span class="method">SetButtonCaption</span><span class="methodargs">(buttonName,caption)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the caption of the specified button.</span><br />
+<span class="info">buttonName</span> <span class="text">The Button whose caption needs to be set.</span><br />
+<span class="info">caption</span> <span class="text">The new caption for the button.</span><br />
+<br />
+<a class="tag" name="ControlsSetSize"></a><span class="method">SetSize</span><span class="methodargs">(control,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the size of the control.</span><br />
+<span class="info">control</span> <span class="text">The name of the control to be resized.</span><br />
+<span class="info">width</span> <span class="text">The width of the control.</span><br />
+<span class="info">height</span> <span class="text">The height of the control.</span><br />
+<br />
+<a class="tag" name="ControlsSetTextBoxText"></a><span class="method">SetTextBoxText</span><span class="methodargs">(textBoxName,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the text of the specified TextBox.</span><br />
+<span class="info">textBoxName</span> <span class="text">The TextBox whose text needs to be set.</span><br />
+<span class="info">text</span> <span class="text">The new text for the TextBox.</span><br />
+<br />
+<a class="tag" name="ControlsShowControl"></a><span class="method">ShowControl</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows a previously hidden control.</span><br />
+<span class="info">controlName</span> <span class="text">The name of the control.</span><br />
+<br />
+<a class="tag" name="ControlsTextTyped"></a><span class="method">TextTyped</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when text is typed into any TextBox control.</span><br />
+<br />
+<a class="tag" name="Desktop"></a><span class="group">Desktop</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This class provides methods to interact with the desktop.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#DesktopHeight">Height</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#DesktopSetWallPaper">SetWallPaper</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DesktopWidth">Width</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="DesktopHeight"></a><span class="method">Height</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the screen height of the primary desktop.</span><br />
+<br />
+<a class="tag" name="DesktopSetWallPaper"></a><span class="method">SetWallPaper</span><span class="methodargs">(fileOrUrl)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the specified picture as the desktop's wallpaper.  This file could be a local file or a network file or even an Internet URL.</span><br />
+<span class="info">fileOrUrl</span> <span class="text">The filename or URL of the picture.</span><br />
+<br />
+<a class="tag" name="DesktopWidth"></a><span class="method">Width</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the screen width of the primary desktop.</span><br />
+<br />
+<a class="tag" name="Dictionary"></a><span class="group">Dictionary</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This class provides access to an online Dictionary service.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#DictionaryGetDefinition">GetDefinition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionInFrench">GetDefinitionInFrench</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="DictionaryGetDefinition"></a><span class="method">GetDefinition</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the definition of a word, in English.</span><br />
+<span class="info">word</span> <span class="text">The word to define.</span><br />
+<span class="info">returns</span> <span class="text">The definition(s) of the specified word.</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionInFrench"></a><span class="method">GetDefinitionInFrench</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the definition of a word, in French.</span><br />
+<span class="info">word</span> <span class="text">The word to define.</span><br />
+<span class="info">returns</span> <span class="text">The definition(s) of the specified word.</span><br />
+<br />
+<a class="tag" name="File"></a><span class="group">File</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The File object provides methods to access, read and write information from and to a file on disk.  Using this object, it is possible to save and open settings across multiple sessions of your program.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#FileAppendContents">AppendContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileCopyFile">CopyFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileCreateDirectory">CreateDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileDeleteDirectory">DeleteDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileDeleteFile">DeleteFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetDirectories">GetDirectories</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileGetFiles">GetFiles</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetSettingsFilePath">GetSettingsFilePath</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetTemporaryFilePath">GetTemporaryFilePath</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileInsertLine">InsertLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileLastError">LastError</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#FileReadContents">ReadContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileReadLine">ReadLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileWriteContents">WriteContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileWriteLine">WriteLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="FileAppendContents"></a><span class="method">AppendContents</span><span class="methodargs">(filePath,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Opens the specified file and appends the contents to the end of the file.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">contents</span> <span class="text">The contents to append to the end of the file.</span><br />
+<span class="info">returns</span> <span class="info">para</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileCopyFile"></a><span class="method">CopyFile</span><span class="methodargs">(sourceFilePath,destinationFilePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Copies the specified source file to the destination file path.  If the destination points to a location that doesn't exist, the method will attempt to create it automatically.</span><br />
+<span class="info">para</span> <span class="text">Existing files will be overwritten.  It is always best to check if the destination file exists if you don't want to overwrite existing files.</span><br />
+<span class="info">sourceFilePath</span> <span class="info">para</span> <span class="text">The full path of the file that needs to be copied.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">destinationFilePath</span> <span class="text">The destination location or the file path.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileCreateDirectory"></a><span class="method">CreateDirectory</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates the specified directory.</span><br />
+<span class="info">directoryPath</span> <span class="text">The full path of the directory to be created.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileDeleteDirectory"></a><span class="method">DeleteDirectory</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Deletes the specified directory.</span><br />
+<span class="info">directoryPath</span> <span class="text">The full path of the directory to be deleted.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileDeleteFile"></a><span class="method">DeleteFile</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Deletes the specified file.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The destination location or the file path.  An example of a full path will be<br />c:\temp\settings.data.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileGetDirectories"></a><span class="method">GetDirectories</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the path of all the directories in the specified directory path.</span><br />
+<span class="info">directoryPath</span> <span class="text">The directory to look for subdirectories.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return the list of directories as an array.  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileGetFiles"></a><span class="method">GetFiles</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the path of all the files in the specified directory path.</span><br />
+<span class="info">directoryPath</span> <span class="text">The directory to look for files.</span><br />
+<span class="info">returns</span> <span class="text">If the operation was successful, this will return the files as an array.  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileGetSettingsFilePath"></a><span class="method">GetSettingsFilePath</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Gets the full path of the settings file for this program.  The settings file name is based on the program's name and is present in the same location as the program.</span><br />
+<span class="info">returns</span> <span class="text">The full path of the settings file specific for this program.</span><br />
+<br />
+<a class="tag" name="FileGetTemporaryFilePath"></a><span class="method">GetTemporaryFilePath</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Creates a new temporary file in a temporary directory and returns the <br />full file path.</span><br />
+<span class="info">returns</span> <span class="text">The full file path of the temporary file.</span><br />
+<br />
+<a class="tag" name="FileInsertLine"></a><span class="method">InsertLine</span><span class="methodargs">(filePath,lineNumber,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Opens the specified file and inserts the contents at the specified line number.</span><br />
+<span class="info">para</span> <span class="text">This operation will not overwrite any existing content at the specified line.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">lineNumber</span> <span class="text">The line number of the text to insert.</span><br />
+<span class="info">contents</span> <span class="text">The contents to insert into the file.</span><br />
+<span class="info">returns</span> <span class="info">para</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileLastError"></a><span class="method">LastError</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="info">para</span> <span class="text">Gets or sets the last encountered file operation based error message.  This property is useful for finding out when some method fails to execute.</span><br />
+<br />
+<a class="tag" name="FileReadContents"></a><span class="method">ReadContents</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Opens a file and reads the entire file's contents.  This method will be fast for small files that are less than an MB in size, but will start to slow down and will be noticeable for files greater than 10MB.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to read.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">returns</span> <span class="text">The entire contents of the file.</span><br />
+<br />
+<a class="tag" name="FileReadLine"></a><span class="method">ReadLine</span><span class="methodargs">(filePath,lineNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Opens the specified file and reads the contents at the specified line number.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">lineNumber</span> <span class="text">The line number of the text to be read.</span><br />
+<span class="info">returns</span> <span class="text">The text at the specified line of the specified file.</span><br />
+<br />
+<a class="tag" name="FileWriteContents"></a><span class="method">WriteContents</span><span class="methodargs">(filePath,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Opens a file and writes the specified contents into it, replacing the original contents with the new content.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to write to.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">contents</span> <span class="text">The contents to write into the specified file.</span><br />
+<span class="info">returns</span> <span class="info">para</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="FileWriteLine"></a><span class="method">WriteLine</span><span class="methodargs">(filePath,lineNumber,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Opens the specified file and write the contents at the specified line number.</span><br />
+<span class="info">para</span> <span class="text">This operation will overwrite any existing content at the specified line.</span><br />
+<span class="info">filePath</span> <span class="info">para</span> <span class="text">The full path of the file to read from.  An example of a full path will be c:\temp\settings.data.</span><br />
+<span class="info">lineNumber</span> <span class="text">The line number of the text to write.</span><br />
+<span class="info">contents</span> <span class="info">para</span> <span class="text">The contents to write at the specified line of the specified file.</span><br />
+<span class="info">returns</span> <span class="info">para</span> <span class="text">If the operation was successful, this will return "SUCCESS".  Otherwise, it will return "FAILED".</span><br />
+<br />
+<a class="tag" name="Flickr"></a><span class="group">Flickr</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This class provides access to Flickr photo services.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#FlickrGetPictureOfMoment">GetPictureOfMoment</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FlickrGetRandomPicture">GetRandomPicture</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="FlickrGetPictureOfMoment"></a><span class="method">GetPictureOfMoment</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the URL for the picture of the moment.</span><br />
+<span class="info">returns</span> <span class="text">A file URL for Flickr's picture of the moment</span><br />
+<br />
+<a class="tag" name="FlickrGetRandomPicture"></a><span class="method">GetRandomPicture</span><span class="methodargs">(tag)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the URL for a random picture tagged with the specified tag.</span><br />
+<span class="info">tag</span> <span class="text">The tag for the requested picture.</span><br />
+<span class="info">returns</span> <span class="text">A file URL for Flickr's random picture</span><br />
+<br />
+<a class="tag" name="GraphicsWindow"></a><span class="group">GraphicsWindow</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The GraphicsWindow provides graphics related input and output functionality.  For example, using this class, it is possible to draw and fill circles and rectangles.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#GraphicsWindowBackgroundColor">BackgroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowBrushColor">BrushColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowCanResize">CanResize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowClear">Clear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawBoundText">DrawBoundText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawEllipse">DrawEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowDrawImage">DrawImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawLine">DrawLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawRectangle">DrawRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowDrawResizedImage">DrawResizedImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawText">DrawText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawTriangle">DrawTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFillEllipse">FillEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFillRectangle">FillRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFillTriangle">FillTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFontBold">FontBold</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFontItalic">FontItalic</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFontName">FontName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFontSize">FontSize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowGetColorFromRGB">GetColorFromRGB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowGetPixel">GetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowGetRandomColor">GetRandomColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowHeight">Height</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowKeyDown">KeyDown</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowKeyUp">KeyUp</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowLastKey">LastKey</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowLastText">LastText</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowLeft">Left</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseDown">MouseDown</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowMouseMove">MouseMove</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseUp">MouseUp</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseX">MouseX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowMouseY">MouseY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowPenColor">PenColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowPenWidth">PenWidth</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowSetPixel">SetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowShowMessage">ShowMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowTextInput">TextInput</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowTitle">Title</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowTop">Top</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowWidth">Width</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="GraphicsWindowBackgroundColor"></a><span class="method">BackgroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Background color of the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowBrushColor"></a><span class="method">BrushColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the brush color to be used to fill shapes drawn on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowCanResize"></a><span class="method">CanResize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Specifies whether or not the Graphics Window can be resized by the user.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowClear"></a><span class="method">Clear</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Clears the window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawBoundText"></a><span class="method">DrawBoundText</span><span class="methodargs">(x,y,width,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws a line of text on the screen at the specified location.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the text start point.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the text start point.</span><br />
+<span class="info">width</span> <span class="text">The maximum available width.  This parameter helps define when the text should wrap.</span><br />
+<span class="info">text</span> <span class="text">The text to draw.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawEllipse"></a><span class="method">DrawEllipse</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws an ellipse on the screen using the selected Pen.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the ellipse.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the ellipse.</span><br />
+<span class="info">width</span> <span class="text">The width of the ellipse.</span><br />
+<span class="info">height</span> <span class="text">The height of the ellipse.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawImage"></a><span class="method">DrawImage</span><span class="methodargs">(imageName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws the specified image from memory on to the screen.</span><br />
+<span class="info">imageName</span> <span class="text">The name of the image to draw.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the point to draw the image at.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the point to draw the image at.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawLine"></a><span class="method">DrawLine</span><span class="methodargs">(x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws a line from one point to another.</span><br />
+<span class="info">x1</span> <span class="text">The x co-ordinate of the first point.</span><br />
+<span class="info">y1</span> <span class="text">The y co-ordinate of the first point.</span><br />
+<span class="info">x2</span> <span class="text">The x co-ordinate of the second point.</span><br />
+<span class="info">y2</span> <span class="text">The y co-ordinate of the second point.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawRectangle"></a><span class="method">DrawRectangle</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws a rectangle on the screen using the selected Pen.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the rectangle.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the rectangle.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawResizedImage"></a><span class="method">DrawResizedImage</span><span class="methodargs">(imageName,x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws the specified image from memory on to the screen, in the specified size.</span><br />
+<span class="info">imageName</span> <span class="text">The name of the image to draw</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the point to draw the image at.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the point to draw the image at.</span><br />
+<span class="info">width</span> <span class="text">The width to draw the image.</span><br />
+<span class="info">height</span> <span class="text">The height to draw the image.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawText"></a><span class="method">DrawText</span><span class="methodargs">(x,y,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws a line of text on the screen at the specified location.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the text start point.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the text start point.</span><br />
+<span class="info">text</span> <span class="text">The text to draw</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawTriangle"></a><span class="method">DrawTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws a triangle on the screen using the selected pen.</span><br />
+<span class="info">x1</span> <span class="text">The x co-ordinate of the first point.</span><br />
+<span class="info">y1</span> <span class="text">The y co-ordinate of the first point.</span><br />
+<span class="info">x2</span> <span class="text">The x co-ordinate of the second point.</span><br />
+<span class="info">y2</span> <span class="text">The y co-ordinate of the second point.</span><br />
+<span class="info">x3</span> <span class="text">The x co-ordinate of the third point.</span><br />
+<span class="info">y3</span> <span class="text">The y co-ordinate of the third point.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillEllipse"></a><span class="method">FillEllipse</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fills an ellipse on the screen using the selected Brush.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the ellipse.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the ellipse.</span><br />
+<span class="info">width</span> <span class="text">The width of the ellipse.</span><br />
+<span class="info">height</span> <span class="text">The height of the ellipse.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillRectangle"></a><span class="method">FillRectangle</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fills a rectangle on the screen using the selected Brush.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the rectangle.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the rectangle.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillTriangle"></a><span class="method">FillTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws and fills a triangle on the screen using the selected brush.</span><br />
+<span class="info">x1</span> <span class="text">The x co-ordinate of the first point.</span><br />
+<span class="info">y1</span> <span class="text">The y co-ordinate of the first point.</span><br />
+<span class="info">x2</span> <span class="text">The x co-ordinate of the second point.</span><br />
+<span class="info">y2</span> <span class="text">The y co-ordinate of the second point.</span><br />
+<span class="info">x3</span> <span class="text">The x co-ordinate of the third point.</span><br />
+<span class="info">y3</span> <span class="text">The y co-ordinate of the third point.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontBold"></a><span class="method">FontBold</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets whether or not the font to be used when drawing text on the Graphics Window, is bold.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontItalic"></a><span class="method">FontItalic</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets whether or not the font to be used when drawing text on the Graphics Window, is italic.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontName"></a><span class="method">FontName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Font Name to be used when drawing text on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontSize"></a><span class="method">FontSize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Font Size to be used when drawing text on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetColorFromRGB"></a><span class="method">GetColorFromRGB</span><span class="methodargs">(red,green,blue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Constructs a color given the Red, Green and Blue values.</span><br />
+<span class="info">red</span> <span class="text">The red component of the Color (0-255).</span><br />
+<span class="info">green</span> <span class="text">The green component of the color (0-255).</span><br />
+<span class="info">blue</span> <span class="text">The blue component of the color (0-255).</span><br />
+<span class="info">returns</span> <span class="text">Returns a color that can be used to set the brush or pen color.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetPixel"></a><span class="method">GetPixel</span><span class="methodargs">(x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the color of the pixel at the specified x and y co-ordinates.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the pixel.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the pixel.</span><br />
+<span class="info">returns</span> <span class="text">The color of the pixel.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetRandomColor"></a><span class="method">GetRandomColor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a valid random color.</span><br />
+<span class="info">returns</span> <span class="text">A valid random color.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowHeight"></a><span class="method">Height</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Height of the graphics window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides the Graphics window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowKeyDown"></a><span class="method">KeyDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when a key is pressed down on the keyboard.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowKeyUp"></a><span class="method">KeyUp</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when a key is released on the keyboard.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLastKey"></a><span class="method">LastKey</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the last key that was pressed or released.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLastText"></a><span class="method">LastText</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the last text that was entered on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLeft"></a><span class="method">Left</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Left Position of the graphics window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseDown"></a><span class="method">MouseDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when the mouse button is clicked down.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseMove"></a><span class="method">MouseMove</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when the mouse is moved around.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseUp"></a><span class="method">MouseUp</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when the mouse button is released.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseX"></a><span class="method">MouseX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the x-position of the mouse relative to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseY"></a><span class="method">MouseY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the y-position of the mouse relative to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowPenColor"></a><span class="method">PenColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the color of the pen used to draw shapes on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowPenWidth"></a><span class="method">PenWidth</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the width of the pen used to draw shapes on the Graphics Window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowSetPixel"></a><span class="method">SetPixel</span><span class="methodargs">(x,y,color)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draws the pixel specified by the x and y co-ordinates using the specified color.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the pixel.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the pixel.</span><br />
+<span class="info">color</span> <span class="text">The color of the pixel to set.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the Graphics window to enable interactions with it.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowShowMessage"></a><span class="method">ShowMessage</span><span class="methodargs">(text,title)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Displays a message box to the user.</span><br />
+<span class="info">text</span> <span class="text">The text to be displayed on the message box.</span><br />
+<span class="info">title</span> <span class="text">The title for the message box.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTextInput"></a><span class="method">TextInput</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when text is entered on the GraphicsWindow.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTitle"></a><span class="method">Title</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the title for the graphics window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTop"></a><span class="method">Top</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Top Position of the graphics window.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowWidth"></a><span class="method">Width</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Width of the graphics window.</span><br />
+<br />
+<a class="tag" name="ImageList"></a><span class="group">ImageList</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This class helps to load and store images in memory.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ImageListGetHeightOfImage">GetHeightOfImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ImageListGetWidthOfImage">GetWidthOfImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ImageListLoadImage">LoadImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ImageListGetHeightOfImage"></a><span class="method">GetHeightOfImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the height of the stored image.</span><br />
+<span class="info">imageName</span> <span class="text">The name of the image in memory.</span><br />
+<span class="info">returns</span> <span class="text">The height of the specified image.</span><br />
+<br />
+<a class="tag" name="ImageListGetWidthOfImage"></a><span class="method">GetWidthOfImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the width of the stored image.</span><br />
+<span class="info">imageName</span> <span class="text">The name of the image in memory.</span><br />
+<span class="info">returns</span> <span class="text">The width of the specified image.</span><br />
+<br />
+<a class="tag" name="ImageListLoadImage"></a><span class="method">LoadImage</span><span class="methodargs">(fileNameOrUrl)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Loads an image from a file or the Internet into memory.</span><br />
+<span class="info">fileNameOrUrl</span> <span class="text">The file name to load the image from.  This could be a local file or a URL to the Internet location.</span><br />
+<span class="info">returns</span> <span class="text">Returns the name of the image that was loaded.</span><br />
+<br />
+<a class="tag" name="Math"></a><span class="group">Math</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Math class provides lots of useful mathematics related methods</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#MathAbs">Abs</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathArcCos">ArcCos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathArcSin">ArcSin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathArcTan">ArcTan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathCeiling">Ceiling</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathCos">Cos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathFloor">Floor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathGetDegrees">GetDegrees</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathGetRadians">GetRadians</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathGetRandomNumber">GetRandomNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathLog">Log</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathMax">Max</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathMin">Min</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathNaturalLog">NaturalLog</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathPi">Pi</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathPower">Power</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathRemainder">Remainder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathRound">Round</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathSin">Sin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathSquareRoot">SquareRoot</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathTan">Tan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="MathAbs"></a><span class="method">Abs</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the absolute value of the given number.  For example, -32.233 will return 32.233.</span><br />
+<span class="info">number</span> <span class="text">The number to get the absolute value for.</span><br />
+<span class="info">returns</span> <span class="text">The absolute value of the given number.</span><br />
+<br />
+<a class="tag" name="MathArcCos"></a><span class="method">ArcCos</span><span class="methodargs">(cosValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the angle in radians, given the cosine value.</span><br />
+<span class="info">cosValue</span> <span class="text">The cosine value whose angle is needed.</span><br />
+<span class="info">returns</span> <span class="text">The angle (in radians) for the given cosine Value.</span><br />
+<br />
+<a class="tag" name="MathArcSin"></a><span class="method">ArcSin</span><span class="methodargs">(sinValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the angle in radians, given the sin value.</span><br />
+<span class="info">sinValue</span> <span class="text">The sine value whose angle is needed.</span><br />
+<span class="info">returns</span> <span class="text">The angle (in radians) for the given sine Value.</span><br />
+<br />
+<a class="tag" name="MathArcTan"></a><span class="method">ArcTan</span><span class="methodargs">(tanValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the angle in radians, given the tangent value.</span><br />
+<span class="info">tanValue</span> <span class="text">The tangent value whose angle is needed.</span><br />
+<span class="info">returns</span> <span class="text">The angle (in radians) for the given tangent Value.</span><br />
+<br />
+<a class="tag" name="MathCeiling"></a><span class="method">Ceiling</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets an integer that is greater than or equal to the specified decimal number.  For example,<br />32.233 will return 33.</span><br />
+<span class="info">number</span> <span class="text">The number whose ceiling is required.</span><br />
+<span class="info">returns</span> <span class="text">The ceiling value of the given number.</span><br />
+<br />
+<a class="tag" name="MathCos"></a><span class="method">Cos</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the cosine of the given angle in radians.</span><br />
+<span class="info">angle</span> <span class="text">The angle whose cosine is needed (in radians).</span><br />
+<span class="info">returns</span> <span class="text">The cosine of the given angle.</span><br />
+<br />
+<a class="tag" name="MathFloor"></a><span class="method">Floor</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets an integer that is less than or equal to the specified decimal number.  For example,<br />32.233 will return 32.</span><br />
+<span class="info">number</span> <span class="text">The number whose floor value is required.</span><br />
+<span class="info">returns</span> <span class="text">The floor value of the given number.</span><br />
+<br />
+<a class="tag" name="MathGetDegrees"></a><span class="method">GetDegrees</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a given angle in radians to degrees.</span><br />
+<span class="info">angle</span> <span class="text">The angle in radians.</span><br />
+<span class="info">returns</span> <span class="text">The converted angle in degrees.</span><br />
+<br />
+<a class="tag" name="MathGetRadians"></a><span class="method">GetRadians</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a given angle in degrees to radians.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees.</span><br />
+<span class="info">returns</span> <span class="text">The converted angle in radians.</span><br />
+<br />
+<a class="tag" name="MathGetRandomNumber"></a><span class="method">GetRandomNumber</span><span class="methodargs">(maxNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a random number between 1 and the specified maxNumber (inclusive).</span><br />
+<span class="info">maxNumber</span> <span class="text">The maximum number for the requested random value.</span><br />
+<span class="info">returns</span> <span class="text">A Random number that is less than or equal to the specified max.</span><br />
+<br />
+<a class="tag" name="MathLog"></a><span class="method">Log</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the logarithm (base 10) value of the given number.</span><br />
+<span class="info">number</span> <span class="text">The number whose logarithm value is required</span><br />
+<span class="info">returns</span> <span class="text">The log value of the given number</span><br />
+<br />
+<a class="tag" name="MathMax"></a><span class="method">Max</span><span class="methodargs">(number1,number2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Compares two numbers and returns the greater of the two.</span><br />
+<span class="info">number1</span> <span class="text">The first of the two numbers to compare.</span><br />
+<span class="info">number2</span> <span class="text">The second of the two numbers to compare.</span><br />
+<span class="info">returns</span> <span class="text">The greater value of the two numbers.</span><br />
+<br />
+<a class="tag" name="MathMin"></a><span class="method">Min</span><span class="methodargs">(number1,number2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Compares two numbers and returns the smaller of the two.</span><br />
+<span class="info">number1</span> <span class="text">The first of the two numbers to compare.</span><br />
+<span class="info">number2</span> <span class="text">The second of the two numbers to compare.</span><br />
+<span class="info">returns</span> <span class="text">The smaller value of the two numbers.</span><br />
+<br />
+<a class="tag" name="MathNaturalLog"></a><span class="method">NaturalLog</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the natural logarithm value of the given number.</span><br />
+<span class="info">number</span> <span class="text">The number whose natural logarithm value is required.</span><br />
+<span class="info">returns</span> <span class="text">The natural log value of the given number.</span><br />
+<br />
+<a class="tag" name="MathPi"></a><span class="method">Pi</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the value of Pi</span><br />
+<br />
+<a class="tag" name="MathPower"></a><span class="method">Power</span><span class="methodargs">(baseNumber,exponent)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Raises the base number to the specified power.</span><br />
+<span class="info">baseNumber</span> <span class="text">The number to be raised to the exponent power.</span><br />
+<span class="info">exponent</span> <span class="text">The power to raise the base number.</span><br />
+<span class="info">returns</span> <span class="text">The base number raised to the specified exponent.</span><br />
+<br />
+<a class="tag" name="MathRemainder"></a><span class="method">Remainder</span><span class="methodargs">(dividend,divisor)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Divides the first number by the second and returns the remainder.</span><br />
+<span class="info">dividend</span> <span class="text">The number to divide.</span><br />
+<span class="info">divisor</span> <span class="text">The number that divides.</span><br />
+<span class="info">returns</span> <span class="text">The remainder after the division.</span><br />
+<br />
+<a class="tag" name="MathRound"></a><span class="method">Round</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rounds a given number to the nearest integer.  For example 32.233 will be rounded to 32.0 while <br />32.566 will be rounded to 33.</span><br />
+<span class="info">number</span> <span class="text">The number whose approximation is required.</span><br />
+<span class="info">returns</span> <span class="text">The rounded value of the given number.</span><br />
+<br />
+<a class="tag" name="MathSin"></a><span class="method">Sin</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the sine of the given angle in radians.</span><br />
+<span class="info">angle</span> <span class="text">The angle whose sine is needed (in radians)</span><br />
+<span class="info">returns</span> <span class="text">The sine of the given angle</span><br />
+<br />
+<a class="tag" name="MathSquareRoot"></a><span class="method">SquareRoot</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the square root of a given number.</span><br />
+<span class="info">number</span> <span class="text">The number whose square root value is needed.</span><br />
+<span class="info">returns</span> <span class="text">The square root value of the given number.</span><br />
+<br />
+<a class="tag" name="MathTan"></a><span class="method">Tan</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the tangent of the given angle in radians.</span><br />
+<span class="info">angle</span> <span class="text">The angle whose tangent is needed (in radians).</span><br />
+<span class="info">returns</span> <span class="text">The tangent of the given angle.</span><br />
+<br />
+<a class="tag" name="Mouse"></a><span class="group">Mouse</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The mouse class provides accessors to get or set the mouse related properties, like the cursor position, pointer, etc.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#MouseHideCursor">HideCursor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MouseIsLeftButtonDown">IsLeftButtonDown</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseIsRightButtonDown">IsRightButtonDown</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MouseMouseX">MouseX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseMouseY">MouseY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseShowCursor">ShowCursor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="MouseHideCursor"></a><span class="method">HideCursor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides the mouse cursor on the screen.</span><br />
+<br />
+<a class="tag" name="MouseIsLeftButtonDown"></a><span class="method">IsLeftButtonDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets whether or not the left button is pressed.</span><br />
+<br />
+<a class="tag" name="MouseIsRightButtonDown"></a><span class="method">IsRightButtonDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets whether or not the right button is pressed.</span><br />
+<br />
+<a class="tag" name="MouseMouseX"></a><span class="method">MouseX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the mouse cursor's x co-ordinate.</span><br />
+<br />
+<a class="tag" name="MouseMouseY"></a><span class="method">MouseY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the mouse cursor's y co-ordinate.</span><br />
+<br />
+<a class="tag" name="MouseShowCursor"></a><span class="method">ShowCursor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the mouse cursors on the screen.</span><br />
+<br />
+<a class="tag" name="Network"></a><span class="group">Network</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This private helper class provides network access methods</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#NetworkDownloadFile">DownloadFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#NetworkGetWebPageContents">GetWebPageContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="NetworkDownloadFile"></a><span class="method">DownloadFile</span><span class="methodargs">(url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Downloads a file from the network to a local temporary file.</span><br />
+<span class="info">url</span> <span class="text">The URL of the file on the network.</span><br />
+<span class="info">returns</span> <span class="text">A local file name that the remote file was downloaded as.</span><br />
+<br />
+<a class="tag" name="NetworkGetWebPageContents"></a><span class="method">GetWebPageContents</span><span class="methodargs">(url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the contents of a specified web page.</span><br />
+<span class="info">url</span> <span class="text">The URL of the web page</span><br />
+<span class="info">returns</span> <span class="text">The contents of the specified web page.</span><br />
+<br />
+<a class="tag" name="Program"></a><span class="group">Program</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Program class provides helpers to control the program execution.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ProgramArgumentCount">ArgumentCount</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ProgramDelay">Delay</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ProgramDirectory">Directory</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ProgramEnd">End</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ProgramGetArgument">GetArgument</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ProgramArgumentCount"></a><span class="method">ArgumentCount</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the number of command-line arguments passed to this program.</span><br />
+<br />
+<a class="tag" name="ProgramDelay"></a><span class="method">Delay</span><span class="methodargs">(milliSeconds)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delays program execution by the specified amount of MilliSeconds.</span><br />
+<span class="info">milliSeconds</span> <span class="text">The amount of delay.</span><br />
+<br />
+<a class="tag" name="ProgramDirectory"></a><span class="method">Directory</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the executing program's directory.</span><br />
+<br />
+<a class="tag" name="ProgramEnd"></a><span class="method">End</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ends the program.</span><br />
+<br />
+<a class="tag" name="ProgramGetArgument"></a><span class="method">GetArgument</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns the specified argument passed to this program.</span><br />
+<span class="info">index</span> <span class="text">Index of the argument.</span><br />
+<span class="info">returns</span> <span class="text">The command-line argument at the specified index.</span><br />
+<br />
+<a class="tag" name="Shapes"></a><span class="group">Shapes</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Shape object allows you to add, move and rotate shapes to the Graphics window.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ShapesAddEllipse">AddEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddImage">AddImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddLine">AddLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesAddRectangle">AddRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddText">AddText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddTriangle">AddTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesAnimate">Animate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesGetLeft">GetLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesGetOpacity">GetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesGetTop">GetTop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesHideShape">HideShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesSetOpacity">SetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesSetText">SetText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesShowShape">ShowShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesZoom">Zoom</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ShapesAddEllipse"></a><span class="method">AddEllipse</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds an ellipse shape with the specified width and height.</span><br />
+<span class="info">width</span> <span class="text">The width of the ellipse shape.</span><br />
+<span class="info">height</span> <span class="text">The height of the ellipse shape.</span><br />
+<span class="info">returns</span> <span class="text">The Ellipse shape that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAddImage"></a><span class="method">AddImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds an image as a shape that can be moved, animated or rotated.</span><br />
+<span class="info">imageName</span> <span class="text">The name of the image to draw.</span><br />
+<span class="info">returns</span> <span class="text">The image that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAddLine"></a><span class="method">AddLine</span><span class="methodargs">(x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a line between the specified points.</span><br />
+<span class="info">x1</span> <span class="text">The x co-ordinate of the first point.</span><br />
+<span class="info">y1</span> <span class="text">The y co-ordinate of the first point.</span><br />
+<span class="info">x2</span> <span class="text">The x co-ordinate of the second point.</span><br />
+<span class="info">y2</span> <span class="text">The y co-ordinate of the second point.</span><br />
+<span class="info">returns</span> <span class="text">The line that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAddRectangle"></a><span class="method">AddRectangle</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a rectangle shape with the specified width and height.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle shape.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle shape.</span><br />
+<span class="info">returns</span> <span class="text">The Rectangle shape that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAddText"></a><span class="method">AddText</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds some text as a shape that can be moved, animated or rotated.</span><br />
+<span class="info">text</span> <span class="text">The text to add.</span><br />
+<span class="info">returns</span> <span class="text">The text shape that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAddTriangle"></a><span class="method">AddTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a triangle shape represented by the specified points.</span><br />
+<span class="info">x1</span> <span class="text">The x co-ordinate of the first point.</span><br />
+<span class="info">y1</span> <span class="text">The y co-ordinate of the first point.</span><br />
+<span class="info">x2</span> <span class="text">The x co-ordinate of the second point.</span><br />
+<span class="info">y2</span> <span class="text">The y co-ordinate of the second point.</span><br />
+<span class="info">x3</span> <span class="text">The x co-ordinate of the third point.</span><br />
+<span class="info">y3</span> <span class="text">The y co-ordinate of the third point.</span><br />
+<span class="info">returns</span> <span class="text">The Triangle shape that was just added to the Graphics Window.</span><br />
+<br />
+<a class="tag" name="ShapesAnimate"></a><span class="method">Animate</span><span class="methodargs">(shapeName,x,y,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Animates a shape with the specified name to a new position.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to move.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the new position.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the new position.</span><br />
+<span class="info">duration</span> <span class="text">The time for the animation, in milliseconds.</span><br />
+<br />
+<a class="tag" name="ShapesGetLeft"></a><span class="method">GetLeft</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the left co-ordinate of the specified shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The left co-ordinate of the shape.</span><br />
+<br />
+<a class="tag" name="ShapesGetOpacity"></a><span class="method">GetOpacity</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the opacity of a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The opacity of the object as a value between 0 and 100.  0 is completely transparent and 100 is completely opaque.</span><br />
+<br />
+<a class="tag" name="ShapesGetTop"></a><span class="method">GetTop</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the top co-ordinate of the specified shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The top co-ordinate of the shape.</span><br />
+<br />
+<a class="tag" name="ShapesHideShape"></a><span class="method">HideShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides an already added shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<br />
+<a class="tag" name="ShapesMove"></a><span class="method">Move</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves the shape with the specified name to a new position.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to move.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the new position.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the new position.</span><br />
+<br />
+<a class="tag" name="ShapesRemove"></a><span class="method">Remove</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Removes a shape from the Graphics Window.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape that needs to be removed.</span><br />
+<br />
+<a class="tag" name="ShapesRotate"></a><span class="method">Rotate</span><span class="methodargs">(shapeName,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotates the shape with the specified name to the specified angle.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to rotate.</span><br />
+<span class="info">angle</span> <span class="text">The angle to rotate the shape.</span><br />
+<br />
+<a class="tag" name="ShapesSetOpacity"></a><span class="method">SetOpacity</span><span class="methodargs">(shapeName,level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets how opaque a shape should render.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">level</span> <span class="text">The opacity level ranging from 0 to 100.  0 is completely transparent and 100 is completely opaque.</span><br />
+<br />
+<a class="tag" name="ShapesSetText"></a><span class="method">SetText</span><span class="methodargs">(shapeName,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the text of a text shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the text shape.</span><br />
+<span class="info">text</span> <span class="text">The new text value to set.</span><br />
+<br />
+<a class="tag" name="ShapesShowShape"></a><span class="method">ShowShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows a previously hidden shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<br />
+<a class="tag" name="ShapesZoom"></a><span class="method">Zoom</span><span class="methodargs">(shapeName,scaleX,scaleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Scales the shape using the specified zoom levels.  Minimum is 0.1 and maximum is 20.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to zoom.</span><br />
+<span class="info">scaleX</span> <span class="text">The x-axis zoom level.</span><br />
+<span class="info">scaleY</span> <span class="text">The y-axis zoom level.</span><br />
+<br />
+<a class="tag" name="Sound"></a><span class="group">Sound</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Sound object provides operations that allow the playback of sounds.  Some sample sounds are provided along with the library.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#SoundPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlay">Play</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayAndWait">PlayAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayBellRing">PlayBellRing</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayBellRingAndWait">PlayBellRingAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChime">PlayChime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayChimeAndWait">PlayChimeAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChimes">PlayChimes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChimesAndWait">PlayChimesAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayClick">PlayClick</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayClickAndWait">PlayClickAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayMusic">PlayMusic</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundStop">Stop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="SoundPause"></a><span class="method">Pause</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pauses playback of an audio file.  If the file was not already playing, this operation will not do anything.</span><br />
+<span class="info">filePath</span> <span class="text">The path for the audio file.  This could either be a local file (e.g.: c:\music\track1.mp3) or a file on the network (e.g.: <a href="http://contoso.com/track01.wma">http://contoso.com/track01.wma</a>).</span><br />
+<br />
+<a class="tag" name="SoundPlay"></a><span class="method">Play</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Plays an audio file.  This could be an mp3 or wav or wma file.  Other file formats may or may not play depending on the audio codecs installed on the user's computer.</span><br />
+<span class="info">para</span> <span class="text">If the file was already paused, this operation will resume from the position where the playback was paused.</span><br />
+<span class="info">filePath</span> <span class="text">The path for the audio file.  This could either be a local file (e.g.: c:\music\track1.mp3) or a file on the network (e.g.: <a href="http://contoso.com/track01.wma">http://contoso.com/track01.wma</a>).</span><br />
+<br />
+<a class="tag" name="SoundPlayAndWait"></a><span class="method">PlayAndWait</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="info">para</span> <span class="text">Plays an audio file and waits until it is finished playing.  This could be an mp3 or wav or wma file. Other file formats may or may not play depending on the audio codecs installed on the user's computer.</span><br />
+<span class="info">para</span> <span class="text">If the file was already paused, this operation will resume from the position where the playback was paused.</span><br />
+<span class="info">filePath</span> <span class="text">The path for the audio file.  This could either be a local file (e.g.: c:\music\track1.mp3) or a file on the network (e.g.: <a href="http://contoso.com/track01.wma">http://contoso.com/track01.wma</a>).</span><br />
+<br />
+<a class="tag" name="SoundPlayBellRing"></a><span class="method">PlayBellRing</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Bell Ring Sound.</span><br />
+<br />
+<a class="tag" name="SoundPlayBellRingAndWait"></a><span class="method">PlayBellRingAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Bell Ring Sound and waits for it to finish.</span><br />
+<br />
+<a class="tag" name="SoundPlayChime"></a><span class="method">PlayChime</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Chime Sound.</span><br />
+<br />
+<a class="tag" name="SoundPlayChimeAndWait"></a><span class="method">PlayChimeAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Chime Sound and waits for it to finish.</span><br />
+<br />
+<a class="tag" name="SoundPlayChimes"></a><span class="method">PlayChimes</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Chimes Sound.</span><br />
+<br />
+<a class="tag" name="SoundPlayChimesAndWait"></a><span class="method">PlayChimesAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Chimes Sound and waits for it to finish.</span><br />
+<br />
+<a class="tag" name="SoundPlayClick"></a><span class="method">PlayClick</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Click Sound.</span><br />
+<br />
+<a class="tag" name="SoundPlayClickAndWait"></a><span class="method">PlayClickAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays the Click Sound and waits for it to finish.</span><br />
+<br />
+<a class="tag" name="SoundPlayMusic"></a><span class="method">PlayMusic</span><span class="methodargs">(notes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays musical notes.</span><br />
+<span class="info">notes</span> <span class="text">A set of musical notes to play.  The format is a subset of the Music Markup Language supported by QBasic.</span><br />
+<span class="info">example</span> <span class="info">code</span> <span class="text">Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")</span><br />
+<br />
+<a class="tag" name="SoundStop"></a><span class="method">Stop</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stops playback of an audio file.  If the file was not already playing, this operation will not do anything.</span><br />
+<span class="info">filePath</span> <span class="text">The path for the audio file.  This could either be a local file (e.g.: c:\music\track1.mp3) or a file on the network (e.g.: <a href="http://contoso.com/track01.wma">http://contoso.com/track01.wma</a>).</span><br />
+<br />
+<a class="tag" name="Stack"></a><span class="group">Stack</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This object provides a way of storing values just like stacking up a plate.  You can push a value to the top of the stack and pop it off. You can only pop the values one by one off the stack and the last pushed value will be the first one to pop out.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#StackGetCount">GetCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#StackPopValue">PopValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#StackPushValue">PushValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="StackGetCount"></a><span class="method">GetCount</span><span class="methodargs">(stackName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the count of items in the specified stack.</span><br />
+<span class="info">stackName</span> <span class="text">The name of the stack.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the specified stack.</span><br />
+<br />
+<a class="tag" name="StackPopValue"></a><span class="method">PopValue</span><span class="methodargs">(stackName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pops the value from the specified stack.</span><br />
+<span class="info">stackName</span> <span class="text">The name of the stack.</span><br />
+<span class="info">returns</span> <span class="text">The value from the stack.</span><br />
+<br />
+<a class="tag" name="StackPushValue"></a><span class="method">PushValue</span><span class="methodargs">(stackName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pushes a value to the specified stack.</span><br />
+<span class="info">stackName</span> <span class="text">The name of the stack.</span><br />
+<span class="info">value</span> <span class="text">The value to push.</span><br />
+<br />
+<a class="tag" name="Text"></a><span class="group">Text</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Text object provides helpful operations for working with Text.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TextAppend">Append</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextConvertToLowerCase">ConvertToLowerCase</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextConvertToUpperCase">ConvertToUpperCase</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextEndsWith">EndsWith</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetCharacter">GetCharacter</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetCharacterCode">GetCharacterCode</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextGetIndexOf">GetIndexOf</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetLength">GetLength</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetSubText">GetSubText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextGetSubTextToEnd">GetSubTextToEnd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextIsSubText">IsSubText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextStartsWith">StartsWith</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TextAppend"></a><span class="method">Append</span><span class="methodargs">(text1,text2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Appends two text inputs and returns the result as another text.  This operation is particularly useful when dealing with unknown text in variables which could accidentally be treated as numbers and get added, instead of getting appended.</span><br />
+<span class="info">text1</span> <span class="text">First part of the text to be appended.</span><br />
+<span class="info">text2</span> <span class="text">Second part of the text to be appended.</span><br />
+<span class="info">returns</span> <span class="text">The appended text containing both the specified parts.</span><br />
+<br />
+<a class="tag" name="TextConvertToLowerCase"></a><span class="method">ConvertToLowerCase</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts the given text to lower case.</span><br />
+<span class="info">text</span> <span class="text">The text to convert to lower case.</span><br />
+<span class="info">returns</span> <span class="text">The lower case version of the given text.</span><br />
+<br />
+<a class="tag" name="TextConvertToUpperCase"></a><span class="method">ConvertToUpperCase</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts the given text to upper case.</span><br />
+<span class="info">text</span> <span class="text">The text to convert to upper case.</span><br />
+<span class="info">returns</span> <span class="text">The upper case version of the given text.</span><br />
+<br />
+<a class="tag" name="TextEndsWith"></a><span class="method">EndsWith</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not a given text ends with the specified subText.</span><br />
+<span class="info">text</span> <span class="text">The larger text to search within.</span><br />
+<span class="info">subText</span> <span class="text">The sub-text to search for.</span><br />
+<span class="info">returns</span> <span class="text">True if the subtext was found at the end of the given text.</span><br />
+<br />
+<a class="tag" name="TextGetCharacter"></a><span class="method">GetCharacter</span><span class="methodargs">(characterCode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Given the Unicode character code, gets the corresponding character, which can then be used with regular text.</span><br />
+<span class="info">characterCode</span> <span class="text">The character code (Unicode based) for the required character.</span><br />
+<span class="info">returns</span> <span class="text">A Unicode character that corresponds to the code specified.</span><br />
+<br />
+<a class="tag" name="TextGetCharacterCode"></a><span class="method">GetCharacterCode</span><span class="methodargs">(character)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Given a Unicode character, gets the corresponding character code.</span><br />
+<span class="info">character</span> <span class="text">The character whose code is requested.</span><br />
+<span class="info">returns</span> <span class="text">A Unicode based code that corresponds to the character specified.</span><br />
+<br />
+<a class="tag" name="TextGetIndexOf"></a><span class="method">GetIndexOf</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Finds the position where a sub-text appears in the specified text.</span><br />
+<span class="info">text</span> <span class="text">The text to search in.</span><br />
+<span class="info">subText</span> <span class="text">The text to search for.</span><br />
+<span class="info">returns</span> <span class="text">The position at which the sub-text appears in the specified text.  If the text doesn't appear, it returns 0.</span><br />
+<br />
+<a class="tag" name="TextGetLength"></a><span class="method">GetLength</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the length of the given text.</span><br />
+<span class="info">text</span> <span class="text">The text whose length is needed.</span><br />
+<span class="info">returns</span> <span class="text">The length of the given text.</span><br />
+<br />
+<a class="tag" name="TextGetSubText"></a><span class="method">GetSubText</span><span class="methodargs">(text,start,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a sub-text from the given text.</span><br />
+<span class="info">text</span> <span class="text">The text to derive the sub-text from.</span><br />
+<span class="info">start</span> <span class="text">Specifies where to start from.</span><br />
+<span class="info">length</span> <span class="text">Specifies the length of the sub text.</span><br />
+<span class="info">returns</span> <span class="text">The requested sub-text</span><br />
+<br />
+<a class="tag" name="TextGetSubTextToEnd"></a><span class="method">GetSubTextToEnd</span><span class="methodargs">(text,start)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a sub-text from the given text from a specified position to the end.</span><br />
+<span class="info">text</span> <span class="text">The text to derive the sub-text from.</span><br />
+<span class="info">start</span> <span class="text">Specifies where to start from.</span><br />
+<span class="info">returns</span> <span class="text">The requested sub-text.</span><br />
+<br />
+<a class="tag" name="TextIsSubText"></a><span class="method">IsSubText</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not a given subText is a subset of the larger text.</span><br />
+<span class="info">text</span> <span class="text">The larger text within which the sub-text will be searched.</span><br />
+<span class="info">subText</span> <span class="text">The sub-text to search for.</span><br />
+<span class="info">returns</span> <span class="text">True if the subtext was found within the given text.</span><br />
+<br />
+<a class="tag" name="TextStartsWith"></a><span class="method">StartsWith</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets whether or not a given text starts with the specified subText.</span><br />
+<span class="info">text</span> <span class="text">The larger text to search within.</span><br />
+<span class="info">subText</span> <span class="text">The sub-text to search for.</span><br />
+<span class="info">returns</span> <span class="text">True if the subtext was found at the start of the given text.</span><br />
+<br />
+<a class="tag" name="TextWindow"></a><span class="group">TextWindow</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The TextWindow provides text-related input and output functionalities.  For example using this class, it is possible to write or read some text or number to and from the text-based text window.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TextWindowBackgroundColor">BackgroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowClear">Clear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowCursorLeft">CursorLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowCursorTop">CursorTop</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowForegroundColor">ForegroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowLeft">Left</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowPauseIfVisible">PauseIfVisible</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowPauseWithoutMessage">PauseWithoutMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowReadKey">ReadKey</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowReadNumber">ReadNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowTitle">Title</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowTop">Top</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowVerifyAccess">VerifyAccess</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowWriteLine">WriteLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TextWindowBackgroundColor"></a><span class="method">BackgroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the background color of the text to be output in the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowClear"></a><span class="method">Clear</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Clears the TextWindow.</span><br />
+<br />
+<a class="tag" name="TextWindowCursorLeft"></a><span class="method">CursorLeft</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the cursor's column position on the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowCursorTop"></a><span class="method">CursorTop</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the cursor's row position on the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowForegroundColor"></a><span class="method">ForegroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the foreground color of the text to be output in the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowLeft"></a><span class="method">Left</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Left position of the Text Window.</span><br />
+<br />
+<a class="tag" name="TextWindowPause"></a><span class="method">Pause</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Waits for user input before returning.</span><br />
+<br />
+<a class="tag" name="TextWindowPauseIfVisible"></a><span class="method">PauseIfVisible</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Waits for user input only when the TextWindow is already open.</span><br />
+<br />
+<a class="tag" name="TextWindowPauseWithoutMessage"></a><span class="method">PauseWithoutMessage</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Waits for user input before returning.</span><br />
+<br />
+<a class="tag" name="TextWindowRead"></a><span class="method">Read</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a line of text from the text window.  This function will not return until the user hits ENTER.</span><br />
+<span class="info">returns</span> <span class="text">The text that was read from the text window</span><br />
+<br />
+<a class="tag" name="TextWindowReadKey"></a><span class="method">ReadKey</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a single character from the text window.</span><br />
+<span class="info">returns</span> <span class="text">The character that was read from the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowReadNumber"></a><span class="method">ReadNumber</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a number from the text window.  This function will not return until the user hits ENTER.</span><br />
+<span class="info">returns</span> <span class="text">The number that was read from the text window</span><br />
+<br />
+<a class="tag" name="TextWindowShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the Text window to enable interactions with it.</span><br />
+<br />
+<a class="tag" name="TextWindowTitle"></a><span class="method">Title</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Title for the text window.</span><br />
+<br />
+<a class="tag" name="TextWindowTop"></a><span class="method">Top</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Top position of the Text Window.</span><br />
+<br />
+<a class="tag" name="TextWindowVerifyAccess"></a><span class="method">VerifyAccess</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verifies if the access to text Window has been made yet</span><br />
+<br />
+<a class="tag" name="TextWindowWrite"></a><span class="method">Write</span><span class="methodargs">(data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes text or number to the text window.  Unlike WriteLine, this will not append a new line character, which means, anything written to the text window after this call will be on the same line.</span><br />
+<span class="info">data</span> <span class="text">The text or number to write to the text window</span><br />
+<br />
+<a class="tag" name="TextWindowWriteLine"></a><span class="method">WriteLine</span><span class="methodargs">(data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes text or number to the text window.  A new line character will be appended to the output, so that the next time something is written to the text window, it will go in a new line.</span><br />
+<span class="info">data</span> <span class="text">The text or number to write to the text window.</span><br />
+<br />
+<a class="tag" name="Timer"></a><span class="group">Timer</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Timer object provides an easy way for doing something repeatedly with a constant interval between.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TimerInterval">Interval</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TimerPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TimerResume">Resume</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TimerTick">Tick</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TimerInterval"></a><span class="method">Interval</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the interval (in milliseconds) specifying how often the timer should raise the Tick event.  This value can range from 10 to 100000000</span><br />
+<br />
+<a class="tag" name="TimerPause"></a><span class="method">Pause</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pauses the timer.  Tick events will not be raised.</span><br />
+<br />
+<a class="tag" name="TimerResume"></a><span class="method">Resume</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resumes the timer from a paused state.  Tick events will now be raised.</span><br />
+<br />
+<a class="tag" name="TimerTick"></a><span class="method">Tick</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Raises an event when the timer ticks.</span><br />
+<br />
+<a class="tag" name="Turtle"></a><span class="group">Turtle</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">The Turtle provides Logo-like functionality to draw shapes by manipulating the properties of a pen and drawing primitives.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TurtleAngle">Angle</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TurtleHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleMoveTo">MoveTo</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtlePenDown">PenDown</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtlePenUp">PenUp</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleSpeed">Speed</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TurtleTurn">Turn</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleTurnLeft">TurnLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleTurnRight">TurnRight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleX">X</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleY">Y</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TurtleAngle"></a><span class="method">Angle</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the current angle of the turtle.  While setting, this will turn the turtle instantly to the new angle.</span><br />
+<br />
+<a class="tag" name="TurtleHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides the Turtle and disables interactions with it.</span><br />
+<br />
+<a class="tag" name="TurtleMove"></a><span class="method">Move</span><span class="methodargs">(distance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves the turtle to a specified distance.  If the pen is down, it will draw a line as it moves.</span><br />
+<span class="info">distance</span> <span class="text">The distance to move the turtle.</span><br />
+<br />
+<a class="tag" name="TurtleMoveTo"></a><span class="method">MoveTo</span><span class="methodargs">(x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Turns and moves the turtle to the specified location.  If the pen is down, it will draw a line as it moves.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the destination point.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the destination point.</span><br />
+<br />
+<a class="tag" name="TurtlePenDown"></a><span class="method">PenDown</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets the pen down to enable the turtle to draw as it moves.</span><br />
+<br />
+<a class="tag" name="TurtlePenUp"></a><span class="method">PenUp</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Lifts the pen up to stop drawing as the turtle moves.</span><br />
+<br />
+<a class="tag" name="TurtleShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the Turtle to enable interactions with it.</span><br />
+<br />
+<a class="tag" name="TurtleSpeed"></a><span class="method">Speed</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Specifies how fast the turtle should move.  Valid values are 1 to 10.  If Speed is set to 10, the turtle moves and rotates instantly.</span><br />
+<br />
+<a class="tag" name="TurtleTurn"></a><span class="method">Turn</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Turns the turtle by the specified angle.  Angle is in degrees and can be either positive or negative.  If the angle is positive, the turtle turns to its right.  If it is negative, the turtle turns to its left.</span><br />
+<span class="info">angle</span> <span class="text">The angle to turn the turtle.</span><br />
+<br />
+<a class="tag" name="TurtleTurnLeft"></a><span class="method">TurnLeft</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Turns the turtle 90 degrees to the left.</span><br />
+<br />
+<a class="tag" name="TurtleTurnRight"></a><span class="method">TurnRight</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Turns the turtle 90 degrees to the right.</span><br />
+<br />
+<a class="tag" name="TurtleX"></a><span class="method">X</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the X location of the Turtle.  While setting, this will move the turtle instantly to the new location.</span><br />
+<br />
+<a class="tag" name="TurtleY"></a><span class="method">Y</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets or sets the Y location of the Turtle.  While setting, this will move the turtle instantly to the new location.</span><br />
+<br />
+<div id="footer">
+<hr style="height: 2px; width: 100%;" />
+<a style="position: relative; float: left;" href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="Website Translation Widget" style="border:0;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" /></script>
+</div>
+</div>
+</div>
+</body>
+<script>
+(function (i, s, o, g, r, a, m) {
+ i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+  (i[r].q = i[r].q || []).push(arguments)
+ }, i[r].l = 1 * new Date(); a = s.createElement(o),
+ m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-28519634-1', 'auto');
+ga('send', 'pageview');
+</script>
+</html>

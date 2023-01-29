@@ -1,0 +1,984 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LD3DView"></a><span class="group">LD3DView</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">3D Visualisation in the GraphicsWindow.<br /><br />Coordinates have the following directions and have no correspondence to the GraphicsWindow coordinates.<br />X - Left(-) to Right(+)<br />Y - Down(-) to Up(+)<br />Z - Far(-) to Near(+)<br /><br />For more details on the underlying methods see <a href="http://msdn.microsoft.com/en-us/library/ms747437%28v=vs.90%29.aspx">http://msdn.microsoft.com/en-us/library/ms747437%28v=vs.90%29.aspx</a><br />Several of the AddShape methods use HelixToolkit (recompiled and slightly modified for SmallBasic) <a href="http://helixToolkit.codeplex.com">http://helixToolkit.codeplex.com</a><br /><br />Also see LDVector for vector algebra methods.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LD3DViewAddAmbientLight">AddAmbientLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddArrow">AddArrow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddBackImage">AddBackImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAddCone">AddCone</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddCube">AddCube</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddDirectionalLight">AddDirectionalLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAddGeometry">AddGeometry</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddIcosahedron">AddIcosahedron</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddImage">AddImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAddPipe">AddPipe</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddPointLight">AddPointLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddPyramid">AddPyramid</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAddRectangle">AddRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddRevolute">AddRevolute</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddSphere">AddSphere</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAddSpotLight">AddSpotLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddTube">AddTube</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAddView">AddView</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAnimateRotation">AnimateRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAnimateRotation2">AnimateRotation2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAnimateTranslation">AnimateTranslation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewAutoControl">AutoControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewAutoControl2">AutoControl2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewBoundingBox">BoundingBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewCameraProperties">CameraProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewCloneObject">CloneObject</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewFreeze">Freeze</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewGetCameraDirection">GetCameraDirection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewGetCameraPosition">GetCameraPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewGetCameraUpDirection">GetCameraUpDirection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewGetPosition">GetPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewHitTest">HitTest</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewLastRotationCompleted">LastRotationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewLastTranslationCompleted">LastTranslationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LD3DViewLoadModel">LoadModel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewModifyObject">ModifyObject</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewMoveCamera">MoveCamera</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewQueuedRotationCompleted">QueuedRotationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LD3DViewQueuedTranslationCompleted">QueuedTranslationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewResetCamera">ResetCamera</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewResetMaterial">ResetMaterial</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewReverseNormals">ReverseNormals</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewRotateGeometry">RotateGeometry</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewRotateGeometry2">RotateGeometry2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewRotateGeometry3">RotateGeometry3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewRotationCompleted">RotationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LD3DViewScaleGeometry">ScaleGeometry</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewSetBackMaterial">SetBackMaterial</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewSetBillBoard">SetBillBoard</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewSetCentre">SetCentre</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewSpecularExponent">SpecularExponent</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DViewSwapUpDirection">SwapUpDirection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewTranslateGeometry">TranslateGeometry</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DViewTranslationCompleted">TranslationCompleted</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LD3DViewAddAmbientLight"></a><span class="method">AddAmbientLight</span><span class="methodargs">(shapeName,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an ambient light source.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">colour</span> <span class="text">The light colour.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Light name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddArrow"></a><span class="method">AddArrow</span><span class="methodargs">(shapeName,length,diameter,arrowLength,arrowDiameter,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an arrow geometry object pointing up starting at (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">length</span> <span class="text">The length of the arrow.</span><br />
+<span class="info">diameter</span> <span class="text">The diameter of the arrow shaft.</span><br />
+<span class="info">arrowLength</span> <span class="text">The length of the arrow head.</span><br />
+<span class="info">arrowDiameter</span> <span class="text">The diameter of the arrow head.</span><br />
+<span class="info">divisions</span> <span class="text">The number of divisions for the arrow (default 18).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddBackImage"></a><span class="method">AddBackImage</span><span class="methodargs">(shapeName,geometryName,textures,imageName,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an image to a back surface of geometry object.<br />A geometry 'skin' may contain several segment images in one image.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">textures</span> <span class="text">A space or colon deliminated list of the texture coordinates for each node.<br />Each node has 2 values between 0 and 1 indicating the x,y image mapping to the node.<br />The may be defaulted to "" if the texture has previously been set.</span><br />
+<span class="info">imageName</span> <span class="text">The image to load to the geometry.<br />Value returned from ImageList.LoadImage or local or network image file.<br />A colour or gradient brush can also be used here.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular - additional specular highlights.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddCone"></a><span class="method">AddCone</span><span class="methodargs">(shapeName,baseRadius,topRadius,height,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a cone geometry object pointing up with base centred at (0,0,0).<br />Note a cylinder is a cone with baseRadius = topRadius.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">baseRadius</span> <span class="text">The radius of the base.</span><br />
+<span class="info">topRadius</span> <span class="text">The radius of the top  if truncated (default 0).</span><br />
+<span class="info">height</span> <span class="text">The height of the cone.</span><br />
+<span class="info">divisions</span> <span class="text">The number of divisions for the cone (default 18).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddCube"></a><span class="method">AddCube</span><span class="methodargs">(shapeName,sideLength,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a cube geometry object centered on (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">sideLength</span> <span class="text">The side length of the cube.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddDirectionalLight"></a><span class="method">AddDirectionalLight</span><span class="methodargs">(shapeName,colour,xDir,yDir,zDir)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a directional light source.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">colour</span> <span class="text">The light colour.</span><br />
+<span class="info">xDir</span> <span class="text">The x direction of the light.</span><br />
+<span class="info">yDir</span> <span class="text">The y direction of the light.</span><br />
+<span class="info">zDir</span> <span class="text">The z direction of the light.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Light name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddGeometry"></a><span class="method">AddGeometry</span><span class="methodargs">(shapeName,points,indices,normals,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a geometry object.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">points</span> <span class="text">A space or colon deliminated list of point coordinates.</span><br />
+<span class="info">indices</span> <span class="text">A space or colon deliminated list of indices for each triangle (counter-clockwise for outward face).</span><br />
+<span class="info">normals</span> <span class="text">An optional space or colon deliminated list of the outward normals for each node or "".</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddIcosahedron"></a><span class="method">AddIcosahedron</span><span class="methodargs">(shapeName,radius,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an icosahedron geometry object centred at (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">radius</span> <span class="text">The radius of the icosahedron.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddImage"></a><span class="method">AddImage</span><span class="methodargs">(shapeName,geometryName,textures,imageName,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an image to a geometry object.<br />A geometry 'skin' may contain several segment images in one image.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">textures</span> <span class="text">A space or colon deliminated list of the texture coordinates for each node.<br />Each node has 2 values between 0 and 1 indicating the x,y image mapping to the node.<br />The may be defaulted to "" if the texture has previously been set.</span><br />
+<span class="info">imageName</span> <span class="text">The image to load to the geometry.<br />Value returned from ImageList.LoadImage or local or network image file.<br />A colour or gradient brush can also be used here.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular - additional specular highlights.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddPipe"></a><span class="method">AddPipe</span><span class="methodargs">(shapeName,length,innerDiameter,outerDiameter,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a pipe geometry object pointing up with base centred at (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">length</span> <span class="text">The length of the pipe.</span><br />
+<span class="info">innerDiameter</span> <span class="text">The inner diameter of the pipe.</span><br />
+<span class="info">outerDiameter</span> <span class="text">The outer diameter of the pipe.</span><br />
+<span class="info">divisions</span> <span class="text">The number of divisions for the pipe (default 18).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddPointLight"></a><span class="method">AddPointLight</span><span class="methodargs">(shapeName,colour,xPos,yPos,zPos,range)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a non-directional point light source.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">colour</span> <span class="text">The light colour.</span><br />
+<span class="info">xPos</span> <span class="text">The x position of the light.</span><br />
+<span class="info">yPos</span> <span class="text">The y position of the light.</span><br />
+<span class="info">zPos</span> <span class="text">The z position of the light.</span><br />
+<span class="info">range</span> <span class="text">The light range.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Light name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddPyramid"></a><span class="method">AddPyramid</span><span class="methodargs">(shapeName,sideLength,height,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a pyramid geometry object pointing up with base centred at (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">sideLength</span> <span class="text">The radius of the base.</span><br />
+<span class="info">height</span> <span class="text">The height of the cone.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddRectangle"></a><span class="method">AddRectangle</span><span class="methodargs">(shapeName,width,height,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a rectangle geometry object centred at (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddRevolute"></a><span class="method">AddRevolute</span><span class="methodargs">(shapeName,path,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a revolute geometry object.  This is a surface starting at (0,0,0) and pointing up.<br />Its shape is defined by a set points (Y,Z) where Y is the vertical distance along the surface from 0 and Z is the radius of revolution.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">path</span> <span class="text">A space or colon deliminated list of 2D point coordinates describing the revolute shape.</span><br />
+<span class="info">divisions</span> <span class="text">The radial divisions, default 10 (affects number of triangles and smoothness).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddSphere"></a><span class="method">AddSphere</span><span class="methodargs">(shapeName,radius,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a sphere geometry object centred on (0,0,0).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">radius</span> <span class="text">The sphere radius.</span><br />
+<span class="info">divisions</span> <span class="text">The sphere divisions, default 10 (affects number of triangles and smoothness).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddSpotLight"></a><span class="method">AddSpotLight</span><span class="methodargs">(shapeName,colour,xPos,yPos,zPos,xDir,yDir,zDir,angle,range)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a directional spot light source.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">colour</span> <span class="text">The light colour.</span><br />
+<span class="info">xPos</span> <span class="text">The x position of the light.</span><br />
+<span class="info">yPos</span> <span class="text">The y position of the light.</span><br />
+<span class="info">zPos</span> <span class="text">The z position of the light.</span><br />
+<span class="info">xDir</span> <span class="text">The x direction of the light.</span><br />
+<span class="info">yDir</span> <span class="text">The y direction of the light.</span><br />
+<span class="info">zDir</span> <span class="text">The z direction of the light.</span><br />
+<span class="info">angle</span> <span class="text">The cone angle the light in degrees.</span><br />
+<span class="info">range</span> <span class="text">The light range.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Light name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddTube"></a><span class="method">AddTube</span><span class="methodargs">(shapeName,path,diameter,divisions,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a tube geometry object.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">path</span> <span class="text">A space or colon deliminated list of 3D point coordinates.</span><br />
+<span class="info">diameter</span> <span class="text">The tube diameter.</span><br />
+<span class="info">divisions</span> <span class="text">The tube radial divisions, default 10 (affects number of triangles and smoothness).</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<span class="info">returns</span> <span class="text">The 3DView Geometry name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAddView"></a><span class="method">AddView</span><span class="methodargs">(width,height,performance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a 3DView (GraphicsWindow shape).</span><br />
+<span class="info">width</span> <span class="text">The width of the 3DView.</span><br />
+<span class="info">height</span> <span class="text">The height of the 3DView.</span><br />
+<span class="info">performance</span> <span class="text">A flag to favour speed over quality "True" or "False".<br />"True" removes visual clipping (clip 3DView to input width and height), hit-testing (unused) and anti-aliasing (not needed).</span><br />
+<span class="info">returns</span> <span class="text">The 3DView viewport3D name.</span><br />
+<br />
+<a class="tag" name="LD3DViewAnimateRotation"></a><span class="method">AnimateRotation</span><span class="methodargs">(shapeName,geometryName,xDir,yDir,zDir,startAngle,endAngle,duration,repeats)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Animate a geometry rotation about an axis vector.<br />This uses the second rotation, the first is still available for another axis rotation.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object to animate.</span><br />
+<span class="info">xDir</span> <span class="text">X direction of vector to rotate about.</span><br />
+<span class="info">yDir</span> <span class="text">Y direction of vector to rotate about.</span><br />
+<span class="info">zDir</span> <span class="text">Z direction of vector to rotate about.</span><br />
+<span class="info">startAngle</span> <span class="text">The starting angle in degrees (e.g. 0).</span><br />
+<span class="info">endAngle</span> <span class="text">The final angle in degrees (e.g. 360).</span><br />
+<span class="info">duration</span> <span class="text">The animation duration (time in sec).</span><br />
+<span class="info">repeats</span> <span class="text">The number of times to repeat the animation (-1 is for ever).</span><br />
+<br />
+<a class="tag" name="LD3DViewAnimateRotation2"></a><span class="method">AnimateRotation2</span><span class="methodargs">(shapeName,geometryName,xDir,yDir,zDir,startAngle,endAngle,duration,repeats)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Animate a geometry rotation about an axis vector.<br />This uses the third rotation, the first is still available for another axis rotation.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object to animate.</span><br />
+<span class="info">xDir</span> <span class="text">X direction of vector to rotate about.</span><br />
+<span class="info">yDir</span> <span class="text">Y direction of vector to rotate about.</span><br />
+<span class="info">zDir</span> <span class="text">Z direction of vector to rotate about.</span><br />
+<span class="info">startAngle</span> <span class="text">The starting angle in degrees (e.g. 0).</span><br />
+<span class="info">endAngle</span> <span class="text">The final angle in degrees (e.g. 360).</span><br />
+<span class="info">duration</span> <span class="text">The animation duration (time in sec).</span><br />
+<span class="info">repeats</span> <span class="text">The number of times to repeat the animation (-1 is for ever).</span><br />
+<br />
+<a class="tag" name="LD3DViewAnimateTranslation"></a><span class="method">AnimateTranslation</span><span class="methodargs">(shapeName,geometryName,x,y,z,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Animate a geometry translation.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object to animate.</span><br />
+<span class="info">x</span> <span class="text">X position to animate to.</span><br />
+<span class="info">y</span> <span class="text">Y position to animate to.</span><br />
+<span class="info">z</span> <span class="text">Z position to animate to.</span><br />
+<span class="info">duration</span> <span class="text">The animation duration (sec).</span><br />
+<br />
+<a class="tag" name="LD3DViewAutoControl"></a><span class="method">AutoControl</span><span class="methodargs">(pitchRoll,shift,keyDistance,speed)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set auto control of the camera.<br />This mode is a general purpose camera control, mainly for moving within a scene (a flyby mode).<br />Move forwards and backwards with mouse wheel (faster with Shift down, slower with Control down).<br />Yaw and Pitch camera moving with left mouse button.<br />Yaw with A,D or Left,Right keys, move forwards and backwards with W,S or Up,Down keys.<br />Roll camera moving with right mouse button.<br />Double left click an object to center it (Centre of rotation).<br />Double right click to reset the up direction to Y.<br />Yaw and Pitch scene moving with Shift and left mouse button after selecting an object to rotate scene about.<br />X, Y, Z keys change the view direction and up direction to face in these directions towards (0,0,0), with Shift then the negative direction.</span><br />
+<span class="info">pitchRoll</span> <span class="text">Allow pitch and roll movement, "True" or "False".</span><br />
+<span class="info">shift</span> <span class="text">Allow the Shift/Control key modifiers for mouse control, "True" or "False".</span><br />
+<span class="info">keyDistance</span> <span class="text">The distance to view the scene from using keys, (0 prevents the X,Y,Z key shortcuts, -1 also prevents the A,D,W,S and arrow keys).</span><br />
+<span class="info">speed</span> <span class="text">Forwards and backwards speed multiplier (default 1).</span><br />
+<br />
+<a class="tag" name="LD3DViewAutoControl2"></a><span class="method">AutoControl2</span><span class="methodargs">(keyDistance,speed)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set auto control of the camera.<br />This mode is mainly to rotate and view a 3D scene rather than move through the scene (an inspection mode).<br />Zoom in or out with mouse wheel (faster with Shift down, slower with Control down).<br />Pan left/right with A,D or Left,Right keys, pan up/down with W,S or Up,Down keys.<br />Double left click an object to center it (Centre of rotation).<br />Double right click to reset the up direction to Y.<br />Yaw and Pitch scene moving with left mouse button after selecting an object to rotate scene about.<br />Roll scene moving with right mouse button.<br />X, Y, Z keys change the view direction and up direction to face in these directions towards selected center, with Shift then the negative direction.</span><br />
+<span class="info">keyDistance</span> <span class="text">The distance to view the scene from using keys, (0 prevents the X,Y,Z key shortcuts).</span><br />
+<span class="info">speed</span> <span class="text">Forwards and backwards speed multiplier (default 1).</span><br />
+<br />
+<a class="tag" name="LD3DViewBoundingBox"></a><span class="method">BoundingBox</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the bounding box extent of a geometry.<br />This is the current position (after any transformations).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">returns</span> <span class="text">An array of dimensions or "FAILED".<br />array[1] = sizeX (width)<br />array[2] = sizeY (height)<br />array[3] = sizeZ (depth)<br />array[4] = X (Xmin)<br />array[5] = Y (Ymin)<br />array[6] = Z (Zmin)</span><br />
+<br />
+<a class="tag" name="LD3DViewCameraProperties"></a><span class="method">CameraProperties</span><span class="methodargs">(shapeName,nearDistance,farDistance,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the angle of view, near and far clipping distances.<br />These are all of the fundamental perspective camera properties.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">nearDistance</span> <span class="text">The near clipping distance (can improve near object e.g. wall hit detection).<br />A negative value is 0.001 (default is 0.125).</span><br />
+<span class="info">farDistance</span> <span class="text">The far clipping distance (can improve performance).<br />A negative value is infinity (default).</span><br />
+<span class="info">angle</span> <span class="text">The view angle cone of the camera in degrees (affects perspective vanishing point).<br />If this is negative, then an Orthographic (no perspective) camera is used with view width set to -angle).</span><br />
+<br />
+<a class="tag" name="LD3DViewCloneObject"></a><span class="method">CloneObject</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a complete copy of a geometry object and all of its properties.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The object to copy's name.</span><br />
+<span class="info">returns</span> <span class="text">The new copied 3DView object name.</span><br />
+<br />
+<a class="tag" name="LD3DViewFreeze"></a><span class="method">Freeze</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Freeze a geometry object to improve performance a bit - it cannot then be modified in any way.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The object to freeze.</span><br />
+<br />
+<a class="tag" name="LD3DViewGetCameraDirection"></a><span class="method">GetCameraDirection</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the camera direction.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">returns</span> <span class="text">An array of the camera direction vector.</span><br />
+<br />
+<a class="tag" name="LD3DViewGetCameraPosition"></a><span class="method">GetCameraPosition</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the camera position.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">returns</span> <span class="text">An array of the camera position coordinates.</span><br />
+<br />
+<a class="tag" name="LD3DViewGetCameraUpDirection"></a><span class="method">GetCameraUpDirection</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the camera up direction.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">returns</span> <span class="text">An array of the camera up direction vector.</span><br />
+<br />
+<a class="tag" name="LD3DViewGetPosition"></a><span class="method">GetPosition</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the transformed (current) center position of an existing geometry.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">returns</span> <span class="text">An array of the transformed position or "FAILED".<br />array[1] = X (Xcen)<br />array[2] = Y (Ycen)<br />array[3] = Z (Zcen)</span><br />
+<br />
+<a class="tag" name="LD3DViewHitTest"></a><span class="method">HitTest</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a hit test in the 3DView.<br />A negative value for the coordinates defaults to the screen centre (camera view).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">x</span> <span class="text">The x coordinate in the GraphicsWindow coordinates within the 3DView.</span><br />
+<span class="info">y</span> <span class="text">The y coordinate in the GraphicsWindow coordinates within the 3DView.</span><br />
+<span class="info">returns</span> <span class="text">An array with the hit object name and its distance or "" for no hit.</span><br />
+<br />
+<a class="tag" name="LD3DViewLastRotationCompleted"></a><span class="method">LastRotationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last completed rotation animation geometry object.</span><br />
+<br />
+<a class="tag" name="LD3DViewLastTranslationCompleted"></a><span class="method">LastTranslationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last completed translation animation geometry object.</span><br />
+<br />
+<a class="tag" name="LD3DViewLoadModel"></a><span class="method">LoadModel</span><span class="methodargs">(shapeName,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Load geometry models from a file.<br />Supported formats include 3ds, lwo, obj, objz, stl and off.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">fileName</span> <span class="text">The file to load.<br />Often image files etc are also required with the same name in the same folder.</span><br />
+<span class="info">returns</span> <span class="text">An array with the added geometry names.</span><br />
+<br />
+<a class="tag" name="LD3DViewModifyObject"></a><span class="method">ModifyObject</span><span class="methodargs">(shapeName,geometryName,action)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform an action on a light or geometry object.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry or light name.</span><br />
+<span class="info">action</span> <span class="text">The action to perform.<br />The allowed actions are:<br />"X" remove<br />"H" hide<br />"S" show</span><br />
+<br />
+<a class="tag" name="LD3DViewMoveCamera"></a><span class="method">MoveCamera</span><span class="methodargs">(shapeName,yaw,pitch,roll,move)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Move the camera view direction and position.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">yaw</span> <span class="text">The Left/Right rotation in degrees (Yaw).</span><br />
+<span class="info">pitch</span> <span class="text">The Up/Down rotation in degrees (Pitch).</span><br />
+<span class="info">roll</span> <span class="text">Spin view about view direction in degrees (Roll).</span><br />
+<span class="info">move</span> <span class="text">The Forward/Backward movement in device coordinates (along the view direction).</span><br />
+<br />
+<a class="tag" name="LD3DViewQueuedRotationCompleted"></a><span class="method">QueuedRotationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of currently queued completed rotation animations.</span><br />
+<br />
+<a class="tag" name="LD3DViewQueuedTranslationCompleted"></a><span class="method">QueuedTranslationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of currently queued completed translation animations.</span><br />
+<br />
+<a class="tag" name="LD3DViewResetCamera"></a><span class="method">ResetCamera</span><span class="methodargs">(shapeName,xPos,yPos,zPos,xDir,yDir,zDir,xUp,yUp,zUp)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset the camera position, view direction and up vector (optional).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">xPos</span> <span class="text">The x position of the camera.</span><br />
+<span class="info">yPos</span> <span class="text">The y position of the camera.</span><br />
+<span class="info">zPos</span> <span class="text">The z position of the camera.</span><br />
+<span class="info">xDir</span> <span class="text">The x direction of the camera.</span><br />
+<span class="info">yDir</span> <span class="text">The y direction of the camera.</span><br />
+<span class="info">zDir</span> <span class="text">The z direction of the camera.</span><br />
+<span class="info">xUp</span> <span class="text">The optional x up direction of the camera or "".</span><br />
+<span class="info">yUp</span> <span class="text">The optional y up direction of the camera or "".</span><br />
+<span class="info">zUp</span> <span class="text">The optional z up direction of the camera or "".</span><br />
+<br />
+<a class="tag" name="LD3DViewResetMaterial"></a><span class="method">ResetMaterial</span><span class="methodargs">(shapeName,geometryName,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset the material for an existing geometry.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<br />
+<a class="tag" name="LD3DViewReverseNormals"></a><span class="method">ReverseNormals</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reverse the outward normals for a geometry.<br />For example, make the inside surface of a sphere the visible surface instead of the outside surface (skydome).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object to reverse outward normals.</span><br />
+<br />
+<a class="tag" name="LD3DViewRotateGeometry"></a><span class="method">RotateGeometry</span><span class="methodargs">(shapeName,geometryName,x,y,z,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate a geometry object about its centre.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">x</span> <span class="text">X direction of vector to rotate about.</span><br />
+<span class="info">y</span> <span class="text">Y direction of vector to rotate about.</span><br />
+<span class="info">z</span> <span class="text">Z direction of vector to rotate about.</span><br />
+<span class="info">angle</span> <span class="text">An angle in degrees to rotate.</span><br />
+<br />
+<a class="tag" name="LD3DViewRotateGeometry2"></a><span class="method">RotateGeometry2</span><span class="methodargs">(shapeName,geometryName,x,y,z,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate a geometry object about its centre (a second rotation).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">x</span> <span class="text">X direction of vector to rotate about.</span><br />
+<span class="info">y</span> <span class="text">Y direction of vector to rotate about.</span><br />
+<span class="info">z</span> <span class="text">Z direction of vector to rotate about.</span><br />
+<span class="info">angle</span> <span class="text">An angle in degrees to rotate.</span><br />
+<br />
+<a class="tag" name="LD3DViewRotateGeometry3"></a><span class="method">RotateGeometry3</span><span class="methodargs">(shapeName,geometryName,x,y,z,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate a geometry object about its centre (a third rotation).</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">x</span> <span class="text">X direction of vector to rotate about.</span><br />
+<span class="info">y</span> <span class="text">Y direction of vector to rotate about.</span><br />
+<span class="info">z</span> <span class="text">Z direction of vector to rotate about.</span><br />
+<span class="info">angle</span> <span class="text">An angle in degrees to rotate.</span><br />
+<br />
+<a class="tag" name="LD3DViewRotationCompleted"></a><span class="method">RotationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a rotation animation is completed.</span><br />
+<br />
+<a class="tag" name="LD3DViewScaleGeometry"></a><span class="method">ScaleGeometry</span><span class="methodargs">(shapeName,geometryName,scaleX,scaleY,scaleZ)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Scale (zoom) a geometry object about its centre.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">scaleX</span> <span class="text">X scale factor.</span><br />
+<span class="info">scaleY</span> <span class="text">Y scale factor.</span><br />
+<span class="info">scaleZ</span> <span class="text">Z scale factor.</span><br />
+<br />
+<a class="tag" name="LD3DViewSetBackMaterial"></a><span class="method">SetBackMaterial</span><span class="methodargs">(shapeName,geometryName,colour,materialType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the back face material for an existing geometry.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">colour</span> <span class="text">A colour or gradient brush for the object.</span><br />
+<span class="info">materialType</span> <span class="text">A material for the object.<br />The available options are:<br />"E" Emmissive - constant brightness.<br />"D" Diffusive - affected by lights.<br />"S" Specular  - specular highlights.</span><br />
+<br />
+<a class="tag" name="LD3DViewSetBillBoard"></a><span class="method">SetBillBoard</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set an object to rotate to always face the camera.<br />This uses the 2nd and 3rd rotations.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<br />
+<a class="tag" name="LD3DViewSetCentre"></a><span class="method">SetCentre</span><span class="methodargs">(shapeName,geometryName,x,y,z,options)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the centre for rotation and scale transformations of a geometry.<br />By default this is the centre of a bounding box for the geometry, often 0,0,0.<br />The centre is defined in the coordinates used to create the geometry.<br />It does not have to be within the geometry.<br />If a coordinate value is set to "", then the default value is used.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">x</span> <span class="text">The x coordinate of the centre.</span><br />
+<span class="info">y</span> <span class="text">The y coordinate of the centre.</span><br />
+<span class="info">z</span> <span class="text">The z coordinate of the centre.</span><br />
+<span class="info">options</span> <span class="text">Options to control centre setting.  Multiples can be set, e.g. "R1R2R3" to set all rotations.<br />"R1" First rotation transformation<br />"R2" Second rotation transformation<br />"R3" Third rotation transformation<br />"S" Scale transformation</span><br />
+<br />
+<a class="tag" name="LD3DViewSpecularExponent"></a><span class="method">SpecularExponent</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get or set the specular exponent used for specular materials (default 5).</span><br />
+<br />
+<a class="tag" name="LD3DViewSwapUpDirection"></a><span class="method">SwapUpDirection</span><span class="methodargs">(shapeName,geometryName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate (swap) the Y and Z direction of a geometry.<br />This can be useful for geometries created with a Z up convention, coverting it to a Y up direction used by this extension.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<br />
+<a class="tag" name="LD3DViewTranslateGeometry"></a><span class="method">TranslateGeometry</span><span class="methodargs">(shapeName,geometryName,dx,dy,dz)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Translate (move) a geometry object.</span><br />
+<span class="info">shapeName</span> <span class="text">The 3DView object.</span><br />
+<span class="info">geometryName</span> <span class="text">The geometry object.</span><br />
+<span class="info">dx</span> <span class="text">X direction translation.</span><br />
+<span class="info">dy</span> <span class="text">Y direction translation.</span><br />
+<span class="info">dz</span> <span class="text">Z direction translation.</span><br />
+<br />
+<a class="tag" name="LD3DViewTranslationCompleted"></a><span class="method">TranslationCompleted</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a translation animation is completed.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

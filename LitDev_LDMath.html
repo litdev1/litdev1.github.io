@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDMath"></a><span class="group">LDMath</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Trig functions with degrees.<br />Other assorted maths functions and calculations.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDMathArcCos">ArcCos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathArcSin">ArcSin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathArcTan">ArcTan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathBase2Decimal">Base2Decimal</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathConvert2Cartesian">Convert2Cartesian</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathConvert2Radial">Convert2Radial</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathCos">Cos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathCosh">Cosh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathDecimal2Base">Decimal2Base</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathE">E</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMathEvaluate">Evaluate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathEvaluate2">Evaluate2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathEvaluate3">Evaluate3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathExp">Exp</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathFixDecimal">FixDecimal</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathFixSigFig">FixSigFig</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathMaxNumber">MaxNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMathMinNumber">MinNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathRandomNumberSeed">RandomNumberSeed</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMathRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathSin">Sin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathSinh">Sinh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathTan">Tan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMathTanh">Tanh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMathTruncate">Truncate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDMathArcCos"></a><span class="method">ArcCos</span><span class="methodargs">(cos)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">ArcCos in degrees.</span><br />
+<span class="info">cos</span> <span class="text">The Cos of the angle.</span><br />
+<span class="info">returns</span> <span class="text">The angle in degrees.</span><br />
+<br />
+<a class="tag" name="LDMathArcSin"></a><span class="method">ArcSin</span><span class="methodargs">(sin)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">ArcSin in degrees.</span><br />
+<span class="info">sin</span> <span class="text">The Sin of the angle.</span><br />
+<span class="info">returns</span> <span class="text">The angle in degrees.</span><br />
+<br />
+<a class="tag" name="LDMathArcTan"></a><span class="method">ArcTan</span><span class="methodargs">(tan)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">ArcTan in degrees.</span><br />
+<span class="info">tan</span> <span class="text">The Tan of the angle.</span><br />
+<span class="info">returns</span> <span class="text">The angle in degrees.</span><br />
+<br />
+<a class="tag" name="LDMathBase2Decimal"></a><span class="method">Base2Decimal</span><span class="methodargs">(number,Base)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a base number to a decimal integer.</span><br />
+<span class="info">number</span> <span class="text">The base number to convert (non negative).</span><br />
+<span class="info">Base</span> <span class="text">The base to convert from (2 binary) (8 octal) (16 hex) or other bases up to 36.</span><br />
+<span class="info">returns</span> <span class="text">The number as a decimal integer or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDMathConvert2Cartesian"></a><span class="method">Convert2Cartesian</span><span class="methodargs">(x1,y1,dist,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculate the coordinates of a point 2, from point 1 and the distance and angle to point 2.</span><br />
+<span class="info">x1</span> <span class="text">The X coordinate of point 1.</span><br />
+<span class="info">y1</span> <span class="text">The Y coordinate of point 1.</span><br />
+<span class="info">dist</span> <span class="text">The distance to point 2.</span><br />
+<span class="info">angle</span> <span class="text">The angle to point 2 in degrees.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the coordinates of point 2.</span><br />
+<br />
+<a class="tag" name="LDMathConvert2Radial"></a><span class="method">Convert2Radial</span><span class="methodargs">(x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculate the distance and angle between two points.</span><br />
+<span class="info">x1</span> <span class="text">The X coordinate of point 1.</span><br />
+<span class="info">y1</span> <span class="text">The Y coordinate of point 1.</span><br />
+<span class="info">x2</span> <span class="text">The X coordinate of point 2.</span><br />
+<span class="info">y2</span> <span class="text">The Y coordinate of point 2.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the distance and the angle in degrees from point 1 to point 2.</span><br />
+<br />
+<a class="tag" name="LDMathCos"></a><span class="method">Cos</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cos of an angle in degrees.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees.</span><br />
+<span class="info">returns</span> <span class="text">The Cos of the angle.</span><br />
+<br />
+<a class="tag" name="LDMathCosh"></a><span class="method">Cosh</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hyperbolic cosine.</span><br />
+<span class="info">angle</span> <span class="text">Angle in radians.</span><br />
+<span class="info">returns</span> <span class="text">Hyperbolic cosine.</span><br />
+<br />
+<a class="tag" name="LDMathDecimal2Base"></a><span class="method">Decimal2Base</span><span class="methodargs">(number,Base)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a decimal integer to another base.</span><br />
+<span class="info">number</span> <span class="text">The decimal integer to convert (non negative).</span><br />
+<span class="info">Base</span> <span class="text">The base to convert to (2 binary) (8 octal) (16 hex) or other bases to 36.</span><br />
+<span class="info">returns</span> <span class="text">The number in the requested base or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDMathE"></a><span class="method">E</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Natural logarithm base.</span><br />
+<br />
+<a class="tag" name="LDMathEvaluate"></a><span class="method">Evaluate</span><span class="methodargs">(expression)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Evaluate a string expression to a number or boolean (if possible).<br />The JScript command 'eval' is used and may therefore allow more complex JScript manipulations (also see LDInline).<br />The TextWindow should be visible prior to using this method if later use of the TextWindow is required.</span><br />
+<span class="info">expression</span> <span class="text">The expression to evaluate, e.g. "(9/6) + 3" or "2.1 > 1.5".</span><br />
+<span class="info">returns</span> <span class="text">The evaluated result.</span><br />
+<br />
+<a class="tag" name="LDMathEvaluate2"></a><span class="method">Evaluate2</span><span class="methodargs">(expression)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Evaluate a string expression to a number (if possible).<br />An alternative to Evaluate that behaves nicely with the TextWindow.</span><br />
+<span class="info">expression</span> <span class="text">The expression to evaluate, e.g. "1e6 + 6/4".</span><br />
+<span class="info">returns</span> <span class="text">The evaluated result.</span><br />
+<br />
+<a class="tag" name="LDMathEvaluate3"></a><span class="method">Evaluate3</span><span class="methodargs">(expression)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Evaluate a string expression to a boolean "True" or "False" (if possible).<br />An alternative to Evaluate that behaves nicely with the TextWindow.</span><br />
+<span class="info">expression</span> <span class="text">The expression to evaluate to a boolean, e.g. "21.3 > 16".</span><br />
+<span class="info">returns</span> <span class="text">The evaluated result ("True" or "False").</span><br />
+<br />
+<a class="tag" name="LDMathExp"></a><span class="method">Exp</span><span class="methodargs">(value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Exponential of a number e^x.</span><br />
+<span class="info">value</span> <span class="text">The value to raise e to the power of.</span><br />
+<span class="info">returns</span> <span class="text">e^x</span><br />
+<br />
+<a class="tag" name="LDMathFixDecimal"></a><span class="method">FixDecimal</span><span class="methodargs">(number,digits)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Round a number to a fixed number of decimal places.  Additional training decimal 0s are added if required.</span><br />
+<span class="info">number</span> <span class="text">The number to change.</span><br />
+<span class="info">digits</span> <span class="text">The number of decimal places.</span><br />
+<span class="info">returns</span> <span class="text">The modified number.</span><br />
+<br />
+<a class="tag" name="LDMathFixSigFig"></a><span class="method">FixSigFig</span><span class="methodargs">(number,digits)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Round a number to a fixed number of significant figures.</span><br />
+<span class="info">number</span> <span class="text">The number to change.</span><br />
+<span class="info">digits</span> <span class="text">The number of significant figures.</span><br />
+<span class="info">returns</span> <span class="text">The modified number.</span><br />
+<br />
+<a class="tag" name="LDMathMaxNumber"></a><span class="method">MaxNumber</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The maximum number that Small Basic can handle.</span><br />
+<br />
+<a class="tag" name="LDMathMinNumber"></a><span class="method">MinNumber</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The minimum number that Small Basic can handle.</span><br />
+<br />
+<a class="tag" name="LDMathRandomNumberSeed"></a><span class="method">RandomNumberSeed</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the seed for random numbers.  The seed should be an integer number and be set before Math.GetRandomNumber is called.<br />The random number sequence will be initialised by the seed and can be used for testing when a repeatable sequence of random numbers is required.</span><br />
+<br />
+<a class="tag" name="LDMathRotate"></a><span class="method">Rotate</span><span class="methodargs">(x1,y1,x2,y2,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate point 2 clockwise about point 1.</span><br />
+<span class="info">x1</span> <span class="text">The X coordinate of point 1.</span><br />
+<span class="info">y1</span> <span class="text">The Y coordinate of point 1.</span><br />
+<span class="info">x2</span> <span class="text">The X coordinate of point 2.</span><br />
+<span class="info">y2</span> <span class="text">The Y coordinate of point 2.</span><br />
+<span class="info">angle</span> <span class="text">The angle to rotate point 2 around point 1 in degrees.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the coordinates of the rotated point 2.</span><br />
+<br />
+<a class="tag" name="LDMathSin"></a><span class="method">Sin</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sin of an angle in degrees.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees.</span><br />
+<span class="info">returns</span> <span class="text">The Sin of the angle.</span><br />
+<br />
+<a class="tag" name="LDMathSinh"></a><span class="method">Sinh</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hyperbolic sine.</span><br />
+<span class="info">angle</span> <span class="text">Angle in radians.</span><br />
+<span class="info">returns</span> <span class="text">Hyperbolic sine.</span><br />
+<br />
+<a class="tag" name="LDMathTan"></a><span class="method">Tan</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Tan of an angle in degrees.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees.</span><br />
+<span class="info">returns</span> <span class="text">The Tan of the angle.</span><br />
+<br />
+<a class="tag" name="LDMathTanh"></a><span class="method">Tanh</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hyperbolic tangent.</span><br />
+<span class="info">angle</span> <span class="text">Angle in radians.</span><br />
+<span class="info">returns</span> <span class="text">Hyperbolic tangent.</span><br />
+<br />
+<a class="tag" name="LDMathTruncate"></a><span class="method">Truncate</span><span class="methodargs">(value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the integral part of a number.</span><br />
+<span class="info">value</span> <span class="text">The number to truncate.</span><br />
+<span class="info">returns</span> <span class="text">The integral part of the number (removing decimal fraction).</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

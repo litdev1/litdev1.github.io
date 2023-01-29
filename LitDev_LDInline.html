@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDInline"></a><span class="group">LDInline</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Include C#, VB or JScript code to use at runtime.  <br />If multiple namespaces or classes are used, then all method, property or event names should be unique.<br />Alternatively a fully qualified namespace.type.name may be used.<br />Can be used to compile extensions.<br />May also be used with other .Net dlls compiled externally.<br />Method, property, event, class and used references can be obtained (public static only).<br /><br />The current application assemblies are auto referenced.<br />Depending on .Net methods used additional assemblies may be required.<br />Additional assemblies are referenced by full dll path.<br />Assembly dlls are often found in the following or similar locations:<br />C:\Windows\Microsoft.NET\Framework\v2.0.50727<br />C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0<br /><br />The TextWindow should be visible prior to using these methods if later use of the TextWindow is required.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDInlineCall">Call</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineEvent">Event</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineGet">Get</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDInlineGetAssemblies">GetAssemblies</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineGetEvents">GetEvents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineGetMethodParameters">GetMethodParameters</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDInlineGetMethods">GetMethods</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineGetProperties">GetProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineGetReferences">GetReferences</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDInlineGetTypes">GetTypes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineIncludeCS">IncludeCS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineIncludeJScript">IncludeJScript</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDInlineIncludeVB">IncludeVB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineLoadDLL">LoadDLL</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDInlineSet">Set</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDInlineCall"></a><span class="method">Call</span><span class="methodargs">(method,args)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Call a previously included method.</span><br />
+<span class="info">method</span> <span class="text">The method name.</span><br />
+<span class="info">args</span> <span class="text">The method arguments, "" for none, a single value or an array for more than 1 value.</span><br />
+<span class="info">returns</span> <span class="text">Any results from the call or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDInlineEvent"></a><span class="method">Event</span><span class="methodargs">(Event,callBack)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a callback subroutine for a previously included event.</span><br />
+<span class="info">Event</span> <span class="text">The event name.</span><br />
+<span class="info">callBack</span> <span class="text">The callback subroutine.</span><br />
+<br />
+<a class="tag" name="LDInlineGet"></a><span class="method">Get</span><span class="methodargs">(property)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a previously included property.</span><br />
+<span class="info">property</span> <span class="text">The property name.</span><br />
+<span class="info">returns</span> <span class="text">The property value or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDInlineGetAssemblies"></a><span class="method">GetAssemblies</span><span class="methodargs">(fullName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline assemblies used.<br />These are the referenced assemblies that are actually used.</span><br />
+<span class="info">fullName</span> <span class="text">Get the fully qualified name (with version, culture and PublicKeyToken) "True" or the basic name "False".</span><br />
+<span class="info">returns</span> <span class="text">Array of assembly names and dll locations.</span><br />
+<br />
+<a class="tag" name="LDInlineGetEvents"></a><span class="method">GetEvents</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline events loaded.</span><br />
+<span class="info">returns</span> <span class="text">Array of event names and handler type.</span><br />
+<br />
+<a class="tag" name="LDInlineGetMethodParameters"></a><span class="method">GetMethodParameters</span><span class="methodargs">(method)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline method loaded parameters (arguments).</span><br />
+<span class="info">method</span> <span class="text">The method name.</span><br />
+<span class="info">returns</span> <span class="text">Array of parameter names and type.</span><br />
+<br />
+<a class="tag" name="LDInlineGetMethods"></a><span class="method">GetMethods</span><span class="methodargs">(fullName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline methods loaded.</span><br />
+<span class="info">fullName</span> <span class="text">Get the full name (namespace.type.method) "True" or just the method name "False".</span><br />
+<span class="info">returns</span> <span class="text">Array of method names and return type.</span><br />
+<br />
+<a class="tag" name="LDInlineGetProperties"></a><span class="method">GetProperties</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline properties loaded.</span><br />
+<span class="info">returns</span> <span class="text">Array of property names and type.</span><br />
+<br />
+<a class="tag" name="LDInlineGetReferences"></a><span class="method">GetReferences</span><span class="methodargs">(fullName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline references added.<br />These are the referenced added, they may or may not be used.</span><br />
+<span class="info">fullName</span> <span class="text">Get the fully qualified name (with version, culture and PublicKeyToken) "True" or the basic name "False".</span><br />
+<span class="info">returns</span> <span class="text">Array of reference names and dll locations.</span><br />
+<br />
+<a class="tag" name="LDInlineGetTypes"></a><span class="method">GetTypes</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of inline class types loaded.</span><br />
+<span class="info">returns</span> <span class="text">Array of class types and namespace.</span><br />
+<br />
+<a class="tag" name="LDInlineIncludeCS"></a><span class="method">IncludeCS</span><span class="methodargs">(source,assemblies,dllName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Include and compile a C# Class(es).  Can be the contents of a file read with File.ReadContents().</span><br />
+<span class="info">source</span> <span class="text">The C# source.</span><br />
+<span class="info">assemblies</span> <span class="text">An array of any additional assemblies required.</span><br />
+<span class="info">dllName</span> <span class="text">An optional path to create a dll (+xml) output, use "" to perform in-memory.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "SUCCESS"</span><br />
+<br />
+<a class="tag" name="LDInlineIncludeJScript"></a><span class="method">IncludeJScript</span><span class="methodargs">(source,assemblies,dllName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Include and compile a JScript Module(s).  Can be the contents of a file read with File.ReadContents().</span><br />
+<span class="info">source</span> <span class="text">The JScript source.</span><br />
+<span class="info">assemblies</span> <span class="text">An array of any additional assemblies required.</span><br />
+<span class="info">dllName</span> <span class="text">An optional path to create a dll output, use "" to perform in-memory.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "SUCCESS"</span><br />
+<br />
+<a class="tag" name="LDInlineIncludeVB"></a><span class="method">IncludeVB</span><span class="methodargs">(source,assemblies,dllName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Include and compile a VB Module(s).  Can be the contents of a file read with File.ReadContents().</span><br />
+<span class="info">source</span> <span class="text">The VB source.</span><br />
+<span class="info">assemblies</span> <span class="text">An array of any additional assemblies required.</span><br />
+<span class="info">dllName</span> <span class="text">An optional path to create a dll (+xml) output, use "" to perform in-memory.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "SUCCESS"</span><br />
+<br />
+<a class="tag" name="LDInlineLoadDLL"></a><span class="method">LoadDLL</span><span class="methodargs">(dllName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Use a previously compiled and saved dll.</span><br />
+<span class="info">dllName</span> <span class="text">The dll path.</span><br />
+<br />
+<a class="tag" name="LDInlineSet"></a><span class="method">Set</span><span class="methodargs">(property,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a previously included property.</span><br />
+<span class="info">property</span> <span class="text">The property name.</span><br />
+<span class="info">value</span> <span class="text">The property value.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1946 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>ESL API</title>
+ <meta name="description" content="SmallBasic ESL extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,ESLextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">ESL Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="#AboutForm">AboutForm</a>
+</td>
+<td>
+<a href="#ESL">ESL</a>
+</td>
+<td>
+<a href="#ESLBB_File">ESLBB_File</a>
+</td>
+<td>
+<a href="#ESLCurrentProcess">ESLCurrentProcess</a>
+</td>
+<td>
+<a href="#ESLEvaluation">ESLEvaluation</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLFile">ESLFile</a>
+</td>
+<td>
+<a href="#ESLMaths">ESLMaths</a>
+</td>
+<td>
+<a href="#ESLNetworking">ESLNetworking</a>
+</td>
+<td>
+<a href="#ESLProcess">ESLProcess</a>
+</td>
+<td>
+<a href="#ESLSecurity">ESLSecurity</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLStorage">ESLStorage</a>
+</td>
+<td>
+<a href="#ESLSystem">ESLSystem</a>
+</td>
+<td>
+<a href="#ESLText">ESLText</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="AboutForm"></a><span class="group">AboutForm</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Interaction logic for AboutForm.xaml</span><br />
+<span class="text">AboutForm</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#AboutFormInitializeComponent">InitializeComponent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESL"></a><span class="group">ESL</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class containing ESL-related functions and properties.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLAbout">About</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLCompileTime">CompileTime</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLNewerVersionAvailable">NewerVersionAvailable</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLUserAgentString">UserAgentString</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLVersion">Version</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLAbout"></a><span class="method">About</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows a dialog box containing information about ESL, and the version number.</span><br />
+<br />
+<a class="tag" name="ESLCompileTime"></a><span class="method">CompileTime</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The date and time this build of ESL was compiled.</span><br />
+<br />
+<a class="tag" name="ESLNewerVersionAvailable"></a><span class="method">NewerVersionAvailable</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks for if a newer version of ESL is available.</span><br />
+<span class="info">returns</span> <span class="text">True if a newer version is available, False if it is not.</span><br />
+<br />
+<a class="tag" name="ESLUserAgentString"></a><span class="method">UserAgentString</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The User Agent string that identifies ESL when it is performing tasks such as web requests.</span><br />
+<br />
+<a class="tag" name="ESLVersion"></a><span class="method">Version</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The version string of ESL.</span><br />
+<br />
+<a class="tag" name="ESLBB_File"></a><span class="group">ESLBB_File</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class containing file-related operations.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLBB_FileBS">BS</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLBB_FileCR">CR</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLBB_FileCreate">Create</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLBB_FileCRLF">CRLF</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLBB_FileDelete">Delete</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileHT">HT</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLBB_FileIdentify">Identify</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileLength">Length</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileLF">LF</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLBB_FileNUL">NUL</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLBB_FileRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileReadBlock">ReadBlock</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLBB_FileReadLine">ReadLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLBB_FileWriteBytes">WriteBytes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLBB_FileWriteDelimited">WriteDelimited</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLBB_FileBS"></a><span class="method">BS</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Backspace character.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileCR"></a><span class="method">CR</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Carriage return.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileCreate"></a><span class="method">Create</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates or overwrites an existing file.</span><br />
+<span class="info">filename</span> <span class="text">File to create.</span><br />
+<span class="info">returns</span> <span class="text">True if it succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileCRLF"></a><span class="method">CRLF</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Carriage return + Linefeed</span><br />
+<br />
+<a class="tag" name="ESLBB_FileDelete"></a><span class="method">Delete</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete the specified file.</span><br />
+<span class="info">filename</span> <span class="text">The file to delete.</span><br />
+<span class="info">returns</span> <span class="text">True if the delete succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileHT"></a><span class="method">HT</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Horizontal tab.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileIdentify"></a><span class="method">Identify</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Identify a file based on its extension.</span><br />
+<span class="info">filename</span> <span class="text">The path of the file to identify.</span><br />
+<span class="info">returns</span> <span class="text">A description of the file type.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileLength"></a><span class="method">Length</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Retrieves the length of the specified file.</span><br />
+<span class="info">filename</span> <span class="text">The file to read the length of.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLBB_FileLF"></a><span class="method">LF</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Linefeed character.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileNUL"></a><span class="method">NUL</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Null character.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileRead"></a><span class="method">Read</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read the full contents of a file.</span><br />
+<span class="info">filename</span> <span class="text">The file to read.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the file.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileReadBlock"></a><span class="method">ReadBlock</span><span class="methodargs">(filename,buffer,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a specified length of text from a file.</span><br />
+<span class="info">filename</span> <span class="text">The file to read.</span><br />
+<span class="info">buffer</span> <span class="text">Where to begin reading from.</span><br />
+<span class="info">length</span> <span class="text">For how long, in characters, to read.</span><br />
+<span class="info">returns</span> <span class="text">The block of text selected.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileReadLine"></a><span class="method">ReadLine</span><span class="methodargs">(filename,lineNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a single line from a file.</span><br />
+<span class="info">filename</span> <span class="text">File to read.</span><br />
+<span class="info">lineNumber</span> <span class="text">Line number to read.</span><br />
+<span class="info">returns</span> <span class="text">Contents of the specified line number.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileWrite"></a><span class="method">Write</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write a string of characters to a file.</span><br />
+<span class="info">filename</span> <span class="text">The file path of the file to write.</span><br />
+<span class="info">contents</span> <span class="text">The contents of the file.</span><br />
+<span class="info">returns</span> <span class="text">True if it succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileWriteBytes"></a><span class="method">WriteBytes</span><span class="methodargs">(filename,bytes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes bytes, separated by commas, to a file.</span><br />
+<span class="info">filename</span> <span class="text">The file to write to.</span><br />
+<span class="info">bytes</span> <span class="text">The bytes to write, separated by commas. For example, "65,66,67"</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLBB_FileWriteDelimited"></a><span class="method">WriteDelimited</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write several lines of text to a file, delimited by a semicolon.</span><br />
+<span class="info">filename</span> <span class="text">The file to write to.</span><br />
+<span class="info">contents</span> <span class="text">The contents to write to the file.</span><br />
+<span class="info">returns</span> <span class="text">True if it succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcess"></a><span class="group">ESLCurrentProcess</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that allows basic control of the current process (this application's process).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLCurrentProcessCurrentMemoryUsage">CurrentMemoryUsage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessCurrentPagedMemoryUsage">CurrentPagedMemoryUsage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessCurrentVirtualMemoryUsage">CurrentVirtualMemoryUsage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLCurrentProcessIs64bitProcess">Is64bitProcess</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessKillProcess">KillProcess</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessProcessId">ProcessId</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLCurrentProcessProcessName">ProcessName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessRestart">Restart</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLCurrentProcessRestartAsAdministrator">RestartAsAdministrator</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLCurrentProcessCurrentMemoryUsage"></a><span class="method">CurrentMemoryUsage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">How much, in megabytes, physical memory the current process is using.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessCurrentPagedMemoryUsage"></a><span class="method">CurrentPagedMemoryUsage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The amount of paged memory, in megabytes, that the current process is using.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessCurrentVirtualMemoryUsage"></a><span class="method">CurrentVirtualMemoryUsage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The amount of virtual memory, in megabytes, that the current process is using.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessIs64bitProcess"></a><span class="method">Is64bitProcess</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Determines whether the current process is a 32- or 64-bit process.</span><br />
+<span class="info">returns</span> <span class="text">True if the process is 64-bit, False if it isn't.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessKillProcess"></a><span class="method">KillProcess</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ends the current application's process.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessProcessId"></a><span class="method">ProcessId</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The ID of the current process.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessProcessName"></a><span class="method">ProcessName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The name of the current process.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessRestart"></a><span class="method">Restart</span><span class="methodargs">(arguments)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Restarts the current process.</span><br />
+<span class="info">arguments</span> <span class="text">Arguments, if any, to pass to the process.</span><br />
+<br />
+<a class="tag" name="ESLCurrentProcessRestartAsAdministrator"></a><span class="method">RestartAsAdministrator</span><span class="methodargs">(arguments)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Restarts the program, requesting administrator permissions when doing so.</span><br />
+<span class="info">arguments</span> <span class="text">Arguments to pass to the process upon start.</span><br />
+<br />
+<a class="tag" name="ESLEvaluation"></a><span class="group">ESLEvaluation</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that provides logical evaluation of Boolean values.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLEvaluationAND">AND</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLEvaluationNAND">NAND</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLEvaluationNOR">NOR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLEvaluationNOT">NOT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLEvaluationOR">OR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLEvaluationXNOR">XNOR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLEvaluationXOR">XOR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLEvaluationAND"></a><span class="method">AND</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical AND operation on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  B  Z<br />    0  0  0<br />    0  1  0<br />    1  0  0<br />    1  1  1</span><br />
+<br />
+<a class="tag" name="ESLEvaluationNAND"></a><span class="method">NAND</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical NOT-AND operation on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  B  Z<br />    0  0  1<br />    0  1  1<br />    1  0  1<br />    1  1  0</span><br />
+<br />
+<a class="tag" name="ESLEvaluationNOR"></a><span class="method">NOR</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical NOT-OR on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  B  Z<br />    0  0  1<br />    0  1  0<br />    1  0  0<br />    1  1  0</span><br />
+<br />
+<a class="tag" name="ESLEvaluationNOT"></a><span class="method">NOT</span><span class="methodargs">(A)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical inversion on the provided Boolean.</span><br />
+<span class="info">A</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  Z<br />    0  1<br />    1  0</span><br />
+<br />
+<a class="tag" name="ESLEvaluationOR"></a><span class="method">OR</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical OR operation on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  B  Z<br />    0  0  0<br />    0  1  1<br />    1  0  1<br />    1  1  1</span><br />
+<br />
+<a class="tag" name="ESLEvaluationXNOR"></a><span class="method">XNOR</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical Exclusive-NOT-OR operation on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br /><br />    A  B  Z<br />    0  0  0<br />    0  1  1<br />    1  0  1<br />    1  1  0</span><br />
+<br />
+<a class="tag" name="ESLEvaluationXOR"></a><span class="method">XOR</span><span class="methodargs">(A,B)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a logical exclusive-OR operation on the provided Booleans.</span><br />
+<span class="info">A</span> <span class="info">B</span> <span class="info">returns</span> <span class="text">The following is the truth-table for this operation.<br />    <br />    A  B  Z<br />    0  0  1<br />    0  1  0<br />    1  0  0<br />    1  1  0</span><br />
+<br />
+<a class="tag" name="ESLFile"></a><span class="group">ESLFile</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that allows interaction with files.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLFileAppend">Append</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileAppendBytes">AppendBytes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileAppendDelimited">AppendDelimited</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLFileCompress">Compress</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileCreate">Create</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileDecompress">Decompress</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLFileDelete">Delete</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileIdentify">Identify</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileLength">Length</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLFileRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileReadBlock">ReadBlock</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileReadLine">ReadLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLFileWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileWriteBytes">WriteBytes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLFileWriteDelimited">WriteDelimited</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLFileAppend"></a><span class="method">Append</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Append text to a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to append text to.</span><br />
+<span class="info">contents</span> <span class="text">The contents to write to the file.</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileAppendBytes"></a><span class="method">AppendBytes</span><span class="methodargs">(filename,bytes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Append a series of bytes to a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to append to.</span><br />
+<span class="info">bytes</span> <span class="text">The bytes to append, separated by commas. For example, "65,66,67"</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileAppendDelimited"></a><span class="method">AppendDelimited</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Append several lines of text to a file. Lines are separated by semicolons. For example, "ABC;DEF;GHI"</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to append to.</span><br />
+<span class="info">contents</span> <span class="text">The contents to append to the file.</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileCompress"></a><span class="method">Compress</span><span class="methodargs">(infile,outfile)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Compresses a file using GZip compression.</span><br />
+<span class="info">infile</span> <span class="text">The file to compress.</span><br />
+<span class="info">outfile</span> <span class="text">The file to save the compressed content into.</span><br />
+<span class="info">returns</span> <span class="text">True for success, False for failure.</span><br />
+<br />
+<a class="tag" name="ESLFileCreate"></a><span class="method">Create</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a new file, or overwrites an existing one.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to create.</span><br />
+<span class="info">returns</span> <span class="text">True if the creation succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileDecompress"></a><span class="method">Decompress</span><span class="methodargs">(infile,outfile)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decompresses a file that has been compressed with GZip compression.</span><br />
+<span class="info">infile</span> <span class="text">The file to decompress.</span><br />
+<span class="info">outfile</span> <span class="text">The file to save decompressed contents into.</span><br />
+<span class="info">returns</span> <span class="text">True for success, False for failure.</span><br />
+<br />
+<a class="tag" name="ESLFileDelete"></a><span class="method">Delete</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to delete.</span><br />
+<span class="info">returns</span> <span class="text">True if the delete succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileIdentify"></a><span class="method">Identify</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Identifies a file by file extension.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to identify.</span><br />
+<span class="info">returns</span> <span class="text">A description of the file type.</span><br />
+<br />
+<a class="tag" name="ESLFileLength"></a><span class="method">Length</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Retrieves the length of a file.</span><br />
+<span class="info">filename</span> <span class="text">The file to read the length of.</span><br />
+<span class="info">returns</span> <span class="text">The length of the specified file, in bytes.</span><br />
+<br />
+<a class="tag" name="ESLFileRead"></a><span class="method">Read</span><span class="methodargs">(filename)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read the contents of a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to read.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the file.</span><br />
+<br />
+<a class="tag" name="ESLFileReadBlock"></a><span class="method">ReadBlock</span><span class="methodargs">(filename,buffer,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a block of text from a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to read.</span><br />
+<span class="info">buffer</span> <span class="text">How many characters in to start, from zero.</span><br />
+<span class="info">length</span> <span class="text">How many characters to read.</span><br />
+<span class="info">returns</span> <span class="text">The specified block of text.</span><br />
+<br />
+<a class="tag" name="ESLFileReadLine"></a><span class="method">ReadLine</span><span class="methodargs">(filename,lineNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a line of text from a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to read.</span><br />
+<span class="info">lineNumber</span> <span class="text">The line number to read, from one.</span><br />
+<span class="info">returns</span> <span class="text">The specified line of text.</span><br />
+<br />
+<a class="tag" name="ESLFileWrite"></a><span class="method">Write</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes a string of characters to a file. The file must already exist.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to write to.</span><br />
+<span class="info">contents</span> <span class="text">The contents to write to the file.</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it does not.</span><br />
+<br />
+<a class="tag" name="ESLFileWriteBytes"></a><span class="method">WriteBytes</span><span class="methodargs">(filename,bytes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes a series of bytes to a file.</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to write to.</span><br />
+<span class="info">bytes</span> <span class="text">The bytes to write, separated by commas. For example, "65,66,67"</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLFileWriteDelimited"></a><span class="method">WriteDelimited</span><span class="methodargs">(filename,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes several lines of text to a file. Lines are separated by semicolons. For example, "ABC;DEF;GHI"</span><br />
+<span class="info">filename</span> <span class="text">The name or path of the file to write to.</span><br />
+<span class="info">contents</span> <span class="text">The contents to write to the file.</span><br />
+<span class="info">returns</span> <span class="text">True if the write succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLMaths"></a><span class="group">ESLMaths</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class containing mathematical functions.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLMathsBinaryAdd">BinaryAdd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBinaryDivide">BinaryDivide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBinaryFromInteger">BinaryFromInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsBinaryMultiply">BinaryMultiply</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBinarySub">BinarySub</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBinaryToInteger">BinaryToInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsBitShiftLeft">BitShiftLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBitShiftRight">BitShiftRight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBitwiseAND">BitwiseAND</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsBitwiseOR">BitwiseOR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsBitwiseXOR">BitwiseXOR</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsConcatenate">Concatenate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsCube">Cube</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathse">e</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLMathsExponent">Exponent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsFibonacci">Fibonacci</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsGoldenRatio">GoldenRatio</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLMathsHexAdd">HexAdd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsHexDivide">HexDivide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsHexFromInteger">HexFromInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsHexMultiply">HexMultiply</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsHexSub">HexSub</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsHexToInteger">HexToInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsHyperexponentiate">Hyperexponentiate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsOctalAdd">OctalAdd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsOctalDivide">OctalDivide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsOctalFromInteger">OctalFromInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsOctalMultiply">OctalMultiply</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsOctalSub">OctalSub</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsOctalToInteger">OctalToInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsPi">Pi</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLMathsPower">Power</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsPrimality">Primality</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsSquare">Square</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsSquareRoot">SquareRoot</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsSumOfZtoN">SumOfZtoN</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsTernaryAdd">TernaryAdd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsTernaryDivide">TernaryDivide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsTernaryFromInteger">TernaryFromInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLMathsTernaryMultiply">TernaryMultiply</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsTernarySub">TernarySub</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLMathsTernaryToInteger">TernaryToInteger</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLMathsBinaryAdd"></a><span class="method">BinaryAdd</span><span class="methodargs">(binA,binB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds two binary values.</span><br />
+<span class="info">binA</span> <span class="text">A binary value to add.</span><br />
+<span class="info">binB</span> <span class="text">A binary value to add.</span><br />
+<span class="info">returns</span> <span class="text">The result of the addition, in binary.</span><br />
+<br />
+<a class="tag" name="ESLMathsBinaryDivide"></a><span class="method">BinaryDivide</span><span class="methodargs">(binA,binB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a division using two binary values.</span><br />
+<span class="info">binA</span> <span class="text">The numerator.</span><br />
+<span class="info">binB</span> <span class="text">The denominator.</span><br />
+<span class="info">returns</span> <span class="text">The numerator divided by the denominator, in binary.</span><br />
+<br />
+<a class="tag" name="ESLMathsBinaryFromInteger"></a><span class="method">BinaryFromInteger</span><span class="methodargs">(dec)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a decimal value to a binary string.</span><br />
+<span class="info">dec</span> <span class="text">The decimal string, e.g. 23</span><br />
+<span class="info">returns</span> <span class="text">The binary value of the decimal integer (e.g. 23 = 10111)</span><br />
+<br />
+<a class="tag" name="ESLMathsBinaryMultiply"></a><span class="method">BinaryMultiply</span><span class="methodargs">(binA,binB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiplies two binary values.</span><br />
+<span class="info">binA</span> <span class="text">A binary value to multiply.</span><br />
+<span class="info">binB</span> <span class="text">A binary value to multiply.</span><br />
+<span class="info">returns</span> <span class="text">The result of the multiplication, in binary.</span><br />
+<br />
+<a class="tag" name="ESLMathsBinarySub"></a><span class="method">BinarySub</span><span class="methodargs">(binA,binB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Subtracts one binary value from another.</span><br />
+<span class="info">binA</span> <span class="text">The binary value to subtract from.</span><br />
+<span class="info">binB</span> <span class="text">The binary value to subtract.</span><br />
+<span class="info">returns</span> <span class="text">The result of the subtraction, in binary.</span><br />
+<br />
+<a class="tag" name="ESLMathsBinaryToInteger"></a><span class="method">BinaryToInteger</span><span class="methodargs">(bin)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a binary string to a decimal value.</span><br />
+<span class="info">bin</span> <span class="text">The binary string, e.g. 62</span><br />
+<span class="info">returns</span> <span class="text">The decimal value of the binary string (e.g. 62 = 111110)</span><br />
+<br />
+<a class="tag" name="ESLMathsBitShiftLeft"></a><span class="method">BitShiftLeft</span><span class="methodargs">(number,bits)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shift an integer left by the specified number of bits.</span><br />
+<span class="info">number</span> <span class="text">The number to shift.</span><br />
+<span class="info">bits</span> <span class="text">The number of bits to shift by.</span><br />
+<span class="info">returns</span> <span class="text">The number shifted by the provided number of bits left.</span><br />
+<br />
+<a class="tag" name="ESLMathsBitShiftRight"></a><span class="method">BitShiftRight</span><span class="methodargs">(number,bits)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shift an integer right by the specified number of bits.</span><br />
+<span class="info">number</span> <span class="text">The number to shift.</span><br />
+<span class="info">bits</span> <span class="text">The number of bits to shift by.</span><br />
+<span class="info">returns</span> <span class="text">The number shifted by the provided number of bits left.</span><br />
+<br />
+<a class="tag" name="ESLMathsBitwiseAND"></a><span class="method">BitwiseAND</span><span class="methodargs">(numberA,numberB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a Logical-AND operation on two integers.</span><br />
+<span class="info">numberA</span> <span class="text">The first number.</span><br />
+<span class="info">numberB</span> <span class="text">The second number.</span><br />
+<span class="info">returns</span> <span class="text">The first number LOGICAL-AND the second number.</span><br />
+<br />
+<a class="tag" name="ESLMathsBitwiseOR"></a><span class="method">BitwiseOR</span><span class="methodargs">(numberA,numberB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a Logical-OR operation on two integers.</span><br />
+<span class="info">numberA</span> <span class="text">The first number.</span><br />
+<span class="info">numberB</span> <span class="text">The second number.</span><br />
+<span class="info">returns</span> <span class="text">The first number LOGICAL-OR the second number.</span><br />
+<br />
+<a class="tag" name="ESLMathsBitwiseXOR"></a><span class="method">BitwiseXOR</span><span class="methodargs">(numberA,numberB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a XOR operation on the provided numbers.</span><br />
+<span class="info">numberA</span> <span class="text">The first number.</span><br />
+<span class="info">numberB</span> <span class="text">The second number.</span><br />
+<span class="info">returns</span> <span class="text">The first number XOR the second number.</span><br />
+<br />
+<a class="tag" name="ESLMathsConcatenate"></a><span class="method">Concatenate</span><span class="methodargs">(numberA,numberB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cocatenates two 32-bit integers.</span><br />
+<span class="info">numberA</span> <span class="info">numberB</span> <span class="info">returns</span> <span class="text">A 64-bit integer containing both 32-bit integers cocatenated.</span><br />
+<br />
+<a class="tag" name="ESLMathsCube"></a><span class="method">Cube</span><span class="methodargs">(basenum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cubes a number.</span><br />
+<span class="info">basenum</span> <span class="text">The number to cube.</span><br />
+<span class="info">returns</span> <span class="text">The number provided cubed.</span><br />
+<br />
+<a class="tag" name="ESLMathse"></a><span class="method">e</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The mathematical constant e to 28 decimal places.</span><br />
+<br />
+<a class="tag" name="ESLMathsExponent"></a><span class="method">Exponent</span><span class="methodargs">(basenum,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiply a number by 10 to the specified power.</span><br />
+<span class="info">basenum</span> <span class="text">The base number.</span><br />
+<span class="info">index</span> <span class="text">The power of 10 to multiply by.</span><br />
+<span class="info">returns</span> <span class="text">The base number multiplied by 10 to the specified power.</span><br />
+<br />
+<a class="tag" name="ESLMathsFibonacci"></a><span class="method">Fibonacci</span><span class="methodargs">(n)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates a Fibonacci number</span><br />
+<span class="info">n</span> <span class="text">The Fibonacci number to calculate.</span><br />
+<span class="info">remarks</span> <span class="text">The largest number that can be calculated is n = 138.</span><br />
+<br />
+<a class="tag" name="ESLMathsGoldenRatio"></a><span class="method">GoldenRatio</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The Golden Ratio (Phi) to 28 decimal places.</span><br />
+<br />
+<a class="tag" name="ESLMathsHexAdd"></a><span class="method">HexAdd</span><span class="methodargs">(hexA,hexB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds two hexadecimal values.</span><br />
+<span class="info">hexA</span> <span class="text">A hexadecimal value to add.</span><br />
+<span class="info">hexB</span> <span class="text">A hexadecimal value to add.</span><br />
+<span class="info">returns</span> <span class="text">The result of the addition, in hexadecimal.</span><br />
+<br />
+<a class="tag" name="ESLMathsHexDivide"></a><span class="method">HexDivide</span><span class="methodargs">(hexA,hexB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Divides two hexadecimal values.</span><br />
+<span class="info">hexA</span> <span class="text">The numerator.</span><br />
+<span class="info">hexB</span> <span class="text">The denominator.</span><br />
+<span class="info">returns</span> <span class="text">The numerator divided by the denominator, in hexadecimal.</span><br />
+<br />
+<a class="tag" name="ESLMathsHexFromInteger"></a><span class="method">HexFromInteger</span><span class="methodargs">(dec)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a decimal value to a hexadecimal string.</span><br />
+<span class="info">dec</span> <span class="text">The decimal string, e.g. 39619</span><br />
+<span class="info">returns</span> <span class="text">The hexadecimal value of the decimal integer (e.g. 39619 = 9AC3)</span><br />
+<br />
+<a class="tag" name="ESLMathsHexMultiply"></a><span class="method">HexMultiply</span><span class="methodargs">(hexA,hexB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiplies two hexadecimal values.</span><br />
+<span class="info">hexA</span> <span class="text">A hexadecimal value to multiply.</span><br />
+<span class="info">hexB</span> <span class="text">A hexadecimal value to multiply.</span><br />
+<span class="info">returns</span> <span class="text">The result of the multiplication, in hexadecimal.</span><br />
+<br />
+<a class="tag" name="ESLMathsHexSub"></a><span class="method">HexSub</span><span class="methodargs">(hexA,hexB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Subtracts one hexadecimal value from another.</span><br />
+<span class="info">hexA</span> <span class="text">The hexadecimal value to subtract from.</span><br />
+<span class="info">hexB</span> <span class="text">The hexadecimal value to subtract.</span><br />
+<span class="info">returns</span> <span class="text">The result of the subtraction, in hexadecimal.</span><br />
+<br />
+<a class="tag" name="ESLMathsHexToInteger"></a><span class="method">HexToInteger</span><span class="methodargs">(hex)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a hexadecimal string to a decimal integer.</span><br />
+<span class="info">hex</span> <span class="text">The hexadecimal string, e.g. FF</span><br />
+<span class="info">returns</span> <span class="text">The decimal value of the hexadecimal string (e.g. FF = 255)</span><br />
+<br />
+<a class="tag" name="ESLMathsHyperexponentiate"></a><span class="method">Hyperexponentiate</span><span class="methodargs">(basenum,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hyperexponentiates the provided number to the provided power.</span><br />
+<span class="info">basenum</span> <span class="text">The number to raise.</span><br />
+<span class="info">index</span> <span class="text">The power to hyperexponentiate to.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLMathsOctalAdd"></a><span class="method">OctalAdd</span><span class="methodargs">(octA,octB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds two octal values.</span><br />
+<span class="info">octA</span> <span class="text">An octal value to add.</span><br />
+<span class="info">octB</span> <span class="text">An octal value to add.</span><br />
+<span class="info">returns</span> <span class="text">The result of the addition, in octal.</span><br />
+<br />
+<a class="tag" name="ESLMathsOctalDivide"></a><span class="method">OctalDivide</span><span class="methodargs">(octA,octB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Divides one octal value by another.</span><br />
+<span class="info">octA</span> <span class="text">The numerator.</span><br />
+<span class="info">octB</span> <span class="text">The denominator.</span><br />
+<span class="info">returns</span> <span class="text">The numerator divided by the denominator, in octal.</span><br />
+<br />
+<a class="tag" name="ESLMathsOctalFromInteger"></a><span class="method">OctalFromInteger</span><span class="methodargs">(dec)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts an integer to its octal representation.</span><br />
+<span class="info">dec</span> <span class="text">The integer to convert.</span><br />
+<span class="info">returns</span> <span class="text">An octal representation of the provided integer.</span><br />
+<br />
+<a class="tag" name="ESLMathsOctalMultiply"></a><span class="method">OctalMultiply</span><span class="methodargs">(octA,octB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiplies two octal value.</span><br />
+<span class="info">octA</span> <span class="text">An octal value to multiply.</span><br />
+<span class="info">octB</span> <span class="text">An octal value to multiply.</span><br />
+<span class="info">returns</span> <span class="text">The result of the multiplication, in octal.</span><br />
+<br />
+<a class="tag" name="ESLMathsOctalSub"></a><span class="method">OctalSub</span><span class="methodargs">(octA,octB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Subtracts one octal value from another.</span><br />
+<span class="info">octA</span> <span class="text">The octal value to subtract from.</span><br />
+<span class="info">octB</span> <span class="text">The octal value to subtract.</span><br />
+<span class="info">returns</span> <span class="text">The result of the subtraction, in octal.</span><br />
+<br />
+<a class="tag" name="ESLMathsOctalToInteger"></a><span class="method">OctalToInteger</span><span class="methodargs">(oct)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts an octal string to its decimal representation.</span><br />
+<span class="info">oct</span> <span class="text">The octal string to convert.</span><br />
+<span class="info">returns</span> <span class="text">A decimal representation of the provided octal string.</span><br />
+<br />
+<a class="tag" name="ESLMathsPi"></a><span class="method">Pi</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number Pi to 28 decimal places.</span><br />
+<br />
+<a class="tag" name="ESLMathsPower"></a><span class="method">Power</span><span class="methodargs">(basenum,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Use powers on numbers.</span><br />
+<span class="info">basenum</span> <span class="text">The base number.</span><br />
+<span class="info">index</span> <span class="text">The power of the base number.</span><br />
+<span class="info">returns</span> <span class="text">The base number to the provided power.</span><br />
+<br />
+<a class="tag" name="ESLMathsPrimality"></a><span class="method">Primality</span><span class="methodargs">(n)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks the primality of a number (whether it is prime).</span><br />
+<span class="info">n</span> <span class="info">returns</span> <span class="text">True if the number is prime, false if it is not.</span><br />
+<br />
+<a class="tag" name="ESLMathsSquare"></a><span class="method">Square</span><span class="methodargs">(basenum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Squares a number.</span><br />
+<span class="info">basenum</span> <span class="text">The number to square.</span><br />
+<span class="info">returns</span> <span class="text">The number provided squared.</span><br />
+<br />
+<a class="tag" name="ESLMathsSquareRoot"></a><span class="method">SquareRoot</span><span class="methodargs">(num)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a fast square-root based on the Quake 3 method. Accurate to 3 decimal places.</span><br />
+<span class="info">num</span> <span class="text">The number to find the square root of.</span><br />
+<span class="info">returns</span> <span class="text">The square root of the provided number.</span><br />
+<br />
+<a class="tag" name="ESLMathsSumOfZtoN"></a><span class="method">SumOfZtoN</span><span class="methodargs">(n)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates the sum of all numbers from zero to the provided number.</span><br />
+<span class="info">n</span> <span class="text">The number to calculate the sum of all numbers between it and zero.</span><br />
+<span class="info">returns</span> <span class="text">The sum of all whole numbers 0 to n.</span><br />
+<span class="info">example</span> <span class="text">SumOfZtoN(10) = 55 = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10</span><br />
+<br />
+<a class="tag" name="ESLMathsTernaryAdd"></a><span class="method">TernaryAdd</span><span class="methodargs">(terA,terB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds two ternary values.</span><br />
+<span class="info">terA</span> <span class="text">A ternary value to add.</span><br />
+<span class="info">terB</span> <span class="text">A ternary value to add.</span><br />
+<span class="info">returns</span> <span class="text">The result of the addition, in ternary.</span><br />
+<br />
+<a class="tag" name="ESLMathsTernaryDivide"></a><span class="method">TernaryDivide</span><span class="methodargs">(terA,terB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Divides one ternary value by another.</span><br />
+<span class="info">terA</span> <span class="text">The numerator.</span><br />
+<span class="info">terB</span> <span class="text">The denominator.</span><br />
+<span class="info">returns</span> <span class="text">The numerator divided by the denominator, in ternary.</span><br />
+<br />
+<a class="tag" name="ESLMathsTernaryFromInteger"></a><span class="method">TernaryFromInteger</span><span class="methodargs">(dec)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a decimal value into a ternary value.</span><br />
+<span class="info">dec</span> <span class="text">The decimal value to represent.</span><br />
+<span class="info">returns</span> <span class="text">The provided decimal value's ternary representation.</span><br />
+<br />
+<a class="tag" name="ESLMathsTernaryMultiply"></a><span class="method">TernaryMultiply</span><span class="methodargs">(terA,terB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiplies two ternary values.</span><br />
+<span class="info">terA</span> <span class="text">A ternary value to multiply.</span><br />
+<span class="info">terB</span> <span class="text">A ternary value to multiply.</span><br />
+<span class="info">returns</span> <span class="text">The result of the multiplication, in ternary.</span><br />
+<br />
+<a class="tag" name="ESLMathsTernarySub"></a><span class="method">TernarySub</span><span class="methodargs">(terA,terB)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Subtracts one ternary value from another.</span><br />
+<span class="info">terA</span> <span class="text">The ternary value to subtract from.</span><br />
+<span class="info">terB</span> <span class="text">The ternary value to subtract.</span><br />
+<span class="info">returns</span> <span class="text">The result of the subtraction, in ternary.</span><br />
+<br />
+<a class="tag" name="ESLMathsTernaryToInteger"></a><span class="method">TernaryToInteger</span><span class="methodargs">(ter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a ternary value to a decimal value.</span><br />
+<span class="info">ter</span> <span class="text">The ternary value to convert.</span><br />
+<span class="info">returns</span> <span class="text">The decimal representation of the provided ternary value.</span><br />
+<br />
+<a class="tag" name="ESLNetworking"></a><span class="group">ESLNetworking</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that allows web interaction.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLNetworkingDownloadFile">DownloadFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingDownloadString">DownloadString</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingExternalIPAddress">ExternalIPAddress</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLNetworkingGETRequest">GETRequest</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingInternalIPAddress">InternalIPAddress</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingInternetConnectionAvailable">InternetConnectionAvailable</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLNetworkingPing">Ping</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingPOSTRequest">POSTRequest</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLNetworkingResolveHost">ResolveHost</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLNetworkingResolveIP">ResolveIP</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLNetworkingDownloadFile"></a><span class="method">DownloadFile</span><span class="methodargs">(URL,filepath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Download a file to the specified location.</span><br />
+<span class="info">URL</span> <span class="text">The URL of the file to download.</span><br />
+<span class="info">filepath</span> <span class="text">The name or path to save to file with or to.</span><br />
+<span class="info">returns</span> <span class="text">True if the download succeeds, False if it fails.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingDownloadString"></a><span class="method">DownloadString</span><span class="methodargs">(URL)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Download text or the contents of a web-page.</span><br />
+<span class="info">URL</span> <span class="text">The web page to download the contents of.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the web page.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingExternalIPAddress"></a><span class="method">ExternalIPAddress</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns the external IP address of the current computer.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLNetworkingGETRequest"></a><span class="method">GETRequest</span><span class="methodargs">(URL,arguments)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Makes an HTTP GET request to the specified website.</span><br />
+<span class="info">URL</span> <span class="text">The URL of the website to make a request to.</span><br />
+<span class="info">arguments</span> <span class="text">The arguments to pass to the website.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the web-page's response.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingInternalIPAddress"></a><span class="method">InternalIPAddress</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns the internal IP address of the current computer.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLNetworkingInternetConnectionAvailable"></a><span class="method">InternetConnectionAvailable</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks whether an Internet connection is currently available.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLNetworkingPing"></a><span class="method">Ping</span><span class="methodargs">(hostName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Measures the time taken to connect to a host.</span><br />
+<span class="info">hostName</span> <span class="text">The URL or IP address of the host to ping.</span><br />
+<span class="info">returns</span> <span class="text">The time taken to ping, in milliseconds.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingPOSTRequest"></a><span class="method">POSTRequest</span><span class="methodargs">(URL,arguments)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Makes an HTTP POST request to the specified website.</span><br />
+<span class="info">URL</span> <span class="text">The URL of the website to make a request to.</span><br />
+<span class="info">arguments</span> <span class="text">The arguments to pass to the website.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the web-page's response.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingResolveHost"></a><span class="method">ResolveHost</span><span class="methodargs">(hostname)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resolves a hostname into an IP address via the DNS system.</span><br />
+<span class="info">hostname</span> <span class="text">The hostname, e.g. www.google.co.uk</span><br />
+<span class="info">returns</span> <span class="text">The IP address for this domain.</span><br />
+<br />
+<a class="tag" name="ESLNetworkingResolveIP"></a><span class="method">ResolveIP</span><span class="methodargs">(ipAddr)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resolves an IP address into an associated domain via the DNS system.</span><br />
+<span class="info">ipAddr</span> <span class="text">The IP address to resolve, <br />e.g. 127.0.0.1 (IPv4 loopback) or ::1 (IPv6 loopback)</span><br />
+<span class="info">returns</span> <span class="text">The hostname associated with this IP address.</span><br />
+<br />
+<a class="tag" name="ESLProcess"></a><span class="group">ESLProcess</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that allows basic interaction with processes.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLProcessKillProcessById">KillProcessById</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLProcessKillProcessByName">KillProcessByName</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLProcessStartProcess">StartProcess</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLProcessKillProcessById"></a><span class="method">KillProcessById</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Kill a process using its ID.</span><br />
+<span class="info">id</span> <span class="text">The ID of the process to kill.</span><br />
+<span class="info">returns</span> <span class="text">True if the process is killed, False if it is not.</span><br />
+<br />
+<a class="tag" name="ESLProcessKillProcessByName"></a><span class="method">KillProcessByName</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Kill a process using its name.</span><br />
+<span class="info">name</span> <span class="text">The name of the process to kill.</span><br />
+<span class="info">returns</span> <span class="text">True if the process is killed successfully, False if it is not.</span><br />
+<br />
+<a class="tag" name="ESLProcessStartProcess"></a><span class="method">StartProcess</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Start a process.</span><br />
+<span class="info">name</span> <span class="text">The name of the file to open. For example, "notepad.exe"</span><br />
+<span class="info">returns</span> <span class="text">True if the process starts, False if it does not.</span><br />
+<br />
+<a class="tag" name="ESLSecurity"></a><span class="group">ESLSecurity</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class with security and cryptography related functions.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLSecurityAESDecrypt">AESDecrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityAESEncrypt">AESEncrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityBase64Decode">Base64Decode</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityBase64Encode">Base64Encode</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityCRC32">CRC32</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityCRC64">CRC64</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityDESDecrypt">DESDecrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityDESEncrypt">DESEncrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityHMACSHA1">HMACSHA1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityHMACSHA256">HMACSHA256</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityHMACSHA384">HMACSHA384</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityHMACSHA512">HMACSHA512</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityMD5">MD5</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityRC2Decrypt">RC2Decrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityRC2Encrypt">RC2Encrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityRIPEMD160">RIPEMD160</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecuritySHA1">SHA1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecuritySHA256">SHA256</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecuritySHA384">SHA384</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecuritySHA512">SHA512</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLSecurityXTEADecrypt">XTEADecrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSecurityXTEAEncrypt">XTEAEncrypt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLSecurityAESDecrypt"></a><span class="method">AESDecrypt</span><span class="methodargs">(cipher,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrypts a string encrypted with the AES algorithm.</span><br />
+<span class="info">cipher</span> <span class="text">The text to decrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-, 24-, or 32-character key for decryption.</span><br />
+<span class="info">vector</span> <span class="text">The 16-character vector for decryption.</span><br />
+<span class="info">returns</span> <span class="text">A decrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityAESEncrypt"></a><span class="method">AESEncrypt</span><span class="methodargs">(plain,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypts a string using the AES algorithm.</span><br />
+<span class="info">plain</span> <span class="text">The text to encrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-, 24-, or 32-character key for encryption.</span><br />
+<span class="info">vector</span> <span class="text">The 16-character vector for encryption.</span><br />
+<span class="info">returns</span> <span class="text">A Base64-encoded encrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityBase64Decode"></a><span class="method">Base64Decode</span><span class="methodargs">(encoded)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decodes a Base64-encoded string of bytes.</span><br />
+<span class="info">encoded</span> <span class="text">The bytes to decode.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityBase64Encode"></a><span class="method">Base64Encode</span><span class="methodargs">(plain)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encodes a string of bytes in Base64 encoding format.</span><br />
+<span class="info">plain</span> <span class="text">The bytes to encode.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityCRC32"></a><span class="method">CRC32</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a CRC32 checksum from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a checksum from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityCRC64"></a><span class="method">CRC64</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a CRC64 checksum from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a checksum from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityDESDecrypt"></a><span class="method">DESDecrypt</span><span class="methodargs">(cipher,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrypts a string encrypted with the DES algorithm.</span><br />
+<span class="info">cipher</span> <span class="text">The text to decrypt.</span><br />
+<span class="info">key</span> <span class="text">The 8-character key for decryption.</span><br />
+<span class="info">vector</span> <span class="text">The 8-character vector for decryption.</span><br />
+<span class="info">returns</span> <span class="text">A decrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityDESEncrypt"></a><span class="method">DESEncrypt</span><span class="methodargs">(plain,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypts a string using the DES algorithm.</span><br />
+<span class="info">plain</span> <span class="text">The text to encrypt.</span><br />
+<span class="info">key</span> <span class="text">The 8-character key for encryption.</span><br />
+<span class="info">vector</span> <span class="text">The 8-character vector for encryption.</span><br />
+<span class="info">returns</span> <span class="text">A Base64-encoded encrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityHMACSHA1"></a><span class="method">HMACSHA1</span><span class="methodargs">(plain,salt,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a Hash-based message authentication code using SHA1.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">salt</span> <span class="text">The key to use when hashing.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityHMACSHA256"></a><span class="method">HMACSHA256</span><span class="methodargs">(plain,salt,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a hash-based message authentication code using SHA256.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">salt</span> <span class="text">The key to use when hashing.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityHMACSHA384"></a><span class="method">HMACSHA384</span><span class="methodargs">(plain,salt,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a hash-based message authentication code using SHA384.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">salt</span> <span class="text">The key to use when hashing.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityHMACSHA512"></a><span class="method">HMACSHA512</span><span class="methodargs">(plain,salt,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a hash-based message authentication code using SHA512.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">salt</span> <span class="text">The key to use when hashing.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityMD5"></a><span class="method">MD5</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates an MD5 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityRC2Decrypt"></a><span class="method">RC2Decrypt</span><span class="methodargs">(cipher,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrypts a string encrypted with the RC2 algorithm.</span><br />
+<span class="info">cipher</span> <span class="text">The text to decrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-character key for decryption.</span><br />
+<span class="info">vector</span> <span class="text">The 8-character vector for decryption.</span><br />
+<span class="info">returns</span> <span class="text">A decrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityRC2Encrypt"></a><span class="method">RC2Encrypt</span><span class="methodargs">(plain,key,vector)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypts a string using the RC2 algorithm.</span><br />
+<span class="info">plain</span> <span class="text">The text to encrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-character key for encryption.</span><br />
+<span class="info">vector</span> <span class="text">The 8-character vector for encryption.</span><br />
+<span class="info">returns</span> <span class="text">A Base64-encoded encrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityRIPEMD160"></a><span class="method">RIPEMD160</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a RIPE MD160 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecuritySHA1"></a><span class="method">SHA1</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a SHA1 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecuritySHA256"></a><span class="method">SHA256</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a SHA256 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecuritySHA384"></a><span class="method">SHA384</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a SHA384 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecuritySHA512"></a><span class="method">SHA512</span><span class="methodargs">(plain,encode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Generates a SHA512 hash from the provided text.</span><br />
+<span class="info">plain</span> <span class="text">The text to generate a hash from.</span><br />
+<span class="info">encode</span> <span class="text">Whether the output should be Base64-encoded.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLSecurityXTEADecrypt"></a><span class="method">XTEADecrypt</span><span class="methodargs">(cipher,key)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Decrypts a string encrypted with the XTEA algorithm.</span><br />
+<span class="info">cipher</span> <span class="text">The text to decrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-character key for decryption.</span><br />
+<span class="info">returns</span> <span class="text">A decrypted string.</span><br />
+<br />
+<a class="tag" name="ESLSecurityXTEAEncrypt"></a><span class="method">XTEAEncrypt</span><span class="methodargs">(plain,key)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Encrypts a string using the XTEA algorithm.</span><br />
+<span class="info">plain</span> <span class="text">The text to encrypt.</span><br />
+<span class="info">key</span> <span class="text">The 16-character key for encryption.</span><br />
+<span class="info">returns</span> <span class="text">A Base64-encoded encrypted string.</span><br />
+<br />
+<a class="tag" name="ESLStorage"></a><span class="group">ESLStorage</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class providing access to storage in the form of an array.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLStorageClearArrayValue">ClearArrayValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLStorageInitialiseDimension">InitialiseDimension</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLStorageMaxNumberOfArrays">MaxNumberOfArrays</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLStorageNumberOfArrays">NumberOfArrays</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLStorageReadFromArray">ReadFromArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLStorageWriteToArray">WriteToArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLStorageClearArrayValue"></a><span class="method">ClearArrayValue</span><span class="methodargs">(dimension,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Clears the value of the specified array item.</span><br />
+<span class="info">dimension</span> <span class="text">The array ID to select.</span><br />
+<span class="info">index</span> <span class="text">The item within the array to clear.</span><br />
+<span class="info">returns</span> <span class="text">True or false, depending on success or failure.</span><br />
+<br />
+<a class="tag" name="ESLStorageInitialiseDimension"></a><span class="method">InitialiseDimension</span><span class="methodargs">(items)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Initialises a new dimension of the storage array.</span><br />
+<span class="info">items</span> <span class="text">The number of items the array should contain.</span><br />
+<span class="info">returns</span> <span class="text">If successful, returns the ID of the array.<br />If the maximum number of arrays are reached, returns -1.<br />If another error occurs, returns -100;</span><br />
+<br />
+<a class="tag" name="ESLStorageMaxNumberOfArrays"></a><span class="method">MaxNumberOfArrays</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The maximum number of arrays that can be initialised.</span><br />
+<br />
+<a class="tag" name="ESLStorageNumberOfArrays"></a><span class="method">NumberOfArrays</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The current number of initialised arrays.</span><br />
+<br />
+<a class="tag" name="ESLStorageReadFromArray"></a><span class="method">ReadFromArray</span><span class="methodargs">(dimension,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a value from an array.</span><br />
+<span class="info">dimension</span> <span class="text">The ID of the array to read from.</span><br />
+<span class="info">index</span> <span class="text">The item in that array to read.</span><br />
+<span class="info">returns</span> <span class="text">The value of the item specified.</span><br />
+<br />
+<a class="tag" name="ESLStorageWriteToArray"></a><span class="method">WriteToArray</span><span class="methodargs">(dimension,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes a value to an array.</span><br />
+<span class="info">dimension</span> <span class="text">The ID of the array to write to.</span><br />
+<span class="info">index</span> <span class="text">The item in the array to write to.</span><br />
+<span class="info">value</span> <span class="text">The value to write to the array item.</span><br />
+<span class="info">returns</span> <span class="text">True or false, depending on whether it succeeds or fails.</span><br />
+<br />
+<a class="tag" name="ESLSystem"></a><span class="group">ESLSystem</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class that provides information about the user's system.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLSystemDesktopHeight">DesktopHeight</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemDesktopWidth">DesktopWidth</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemGraphicsCardDriver">GraphicsCardDriver</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemGraphicsCardID">GraphicsCardID</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemGraphicsCardManufacturer">GraphicsCardManufacturer</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemGraphicsCardMemory">GraphicsCardMemory</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemGraphicsCardName">GraphicsCardName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemGraphicsCardRefreshRate">GraphicsCardRefreshRate</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemNTBuildNumber">NTBuildNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemNTMajorVersion">NTMajorVersion</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemNTMinorVersion">NTMinorVersion</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemNTVersionString">NTVersionString</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemProcessorBaseClock">ProcessorBaseClock</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorClockSpeed">ProcessorClockSpeed</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorCores">ProcessorCores</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemProcessorCPUID">ProcessorCPUID</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorL2CacheSize">ProcessorL2CacheSize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorL3CacheSize">ProcessorL3CacheSize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemProcessorManufacturer">ProcessorManufacturer</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorName">ProcessorName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemProcessorThreads">ProcessorThreads</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLSystemProcessorWidth">ProcessorWidth</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLSystemUsername">Username</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLSystemDesktopHeight"></a><span class="method">DesktopHeight</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The height, in pixels, of the user's desktop.</span><br />
+<br />
+<a class="tag" name="ESLSystemDesktopWidth"></a><span class="method">DesktopWidth</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The width, in pixels, of the user's desktop.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardDriver"></a><span class="method">GraphicsCardDriver</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The version of the graphics card driver installed on the user's system.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardID"></a><span class="method">GraphicsCardID</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The identifier for the graphics card in the user's system.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardManufacturer"></a><span class="method">GraphicsCardManufacturer</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The manufacturer of the graphics card in the user's system.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardMemory"></a><span class="method">GraphicsCardMemory</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The video RAM, in megabytes, that the user's graphics card has. May be inaccurate for integrated cards.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardName"></a><span class="method">GraphicsCardName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The name of the graphics card in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemGraphicsCardRefreshRate"></a><span class="method">GraphicsCardRefreshRate</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The rate at which the user's graphics card is drawing the image on their monitor, in hertz.</span><br />
+<br />
+<a class="tag" name="ESLSystemNTBuildNumber"></a><span class="method">NTBuildNumber</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The build number of the NT kernel used in the user's Windows installation.</span><br />
+<br />
+<a class="tag" name="ESLSystemNTMajorVersion"></a><span class="method">NTMajorVersion</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The major version of the NT kernel used in the user's Windows installation.</span><br />
+<br />
+<a class="tag" name="ESLSystemNTMinorVersion"></a><span class="method">NTMinorVersion</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The minor version of the NT kernel used in the user's Windows installation.</span><br />
+<br />
+<a class="tag" name="ESLSystemNTVersionString"></a><span class="method">NTVersionString</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The version string of the version of NT kernel used in the user's Windows installation.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorBaseClock"></a><span class="method">ProcessorBaseClock</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The base clock of the processor in the user's computer, in Megahertz.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorClockSpeed"></a><span class="method">ProcessorClockSpeed</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The clock speed, in Megahertz, of the processor in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorCores"></a><span class="method">ProcessorCores</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of cores in the processor in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorCPUID"></a><span class="method">ProcessorCPUID</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The identification string of the processor in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorL2CacheSize"></a><span class="method">ProcessorL2CacheSize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The size, in megabytes, of the L2 cache in the user's processor.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorL3CacheSize"></a><span class="method">ProcessorL3CacheSize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The size, in megabytes, of the L3 cache in the user's processor.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorManufacturer"></a><span class="method">ProcessorManufacturer</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The manufacturer of the processor in the user's computer. "GenuineIntel" for Intel, "AuthenticAMD" for AMD.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorName"></a><span class="method">ProcessorName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The name of the processor in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorThreads"></a><span class="method">ProcessorThreads</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The number of threads in the processor in the user's computer.</span><br />
+<br />
+<a class="tag" name="ESLSystemProcessorWidth"></a><span class="method">ProcessorWidth</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The address width of the user's processor. Usually 32-bit or 64-bit.</span><br />
+<br />
+<a class="tag" name="ESLSystemUsername"></a><span class="method">Username</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The username of the current Window's user.</span><br />
+<br />
+<a class="tag" name="ESLText"></a><span class="group">ESLText</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A class containing text-related tools.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ESLTextBS">BS</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLTextConvertToHexadecimal">ConvertToHexadecimal</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLTextCR">CR</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLTextCRLF">CRLF</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLTextExtractRange">ExtractRange</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLTextHT">HT</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLTextLength">Length</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLTextLF">LF</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ESLTextNUL">NUL</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLTextRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLTextReverse">Reverse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ESLTextToLower">ToLower</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ESLTextToUpper">ToUpper</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ESLTextBS"></a><span class="method">BS</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A backspace character.</span><br />
+<br />
+<a class="tag" name="ESLTextConvertToHexadecimal"></a><span class="method">ConvertToHexadecimal</span><span class="methodargs">(str)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a string of characters into hexadecimal.</span><br />
+<span class="info">str</span> <span class="text">The string to convert.</span><br />
+<span class="info">returns</span> <span class="text">The hexadecimal equivalent of the string.</span><br />
+<br />
+<a class="tag" name="ESLTextCR"></a><span class="method">CR</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A carriage return character. Usually the same as the character inserted when the user presses ENTER.</span><br />
+<br />
+<a class="tag" name="ESLTextCRLF"></a><span class="method">CRLF</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Carriage return and linefeed characters.</span><br />
+<br />
+<a class="tag" name="ESLTextExtractRange"></a><span class="method">ExtractRange</span><span class="methodargs">(str,offset,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Extracts a range of characters from a string.</span><br />
+<span class="info">str</span> <span class="text">The string to extract from.</span><br />
+<span class="info">offset</span> <span class="text">The zero-based location of the character to start from.</span><br />
+<span class="info">length</span> <span class="text">The number of characters to extract.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLTextHT"></a><span class="method">HT</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A horizontal tab character. Usually the same as the character inserted when pressing the TAB key.</span><br />
+<br />
+<a class="tag" name="ESLTextLength"></a><span class="method">Length</span><span class="methodargs">(str)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Retrieves the length of a string.</span><br />
+<span class="info">str</span> <span class="text">The string to find the length of.</span><br />
+<span class="info">returns</span> <span class="text">The length, in characters, of the string.</span><br />
+<br />
+<a class="tag" name="ESLTextLF"></a><span class="method">LF</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A linefeed character, used for a new line.</span><br />
+<br />
+<a class="tag" name="ESLTextNUL"></a><span class="method">NUL</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A null character.</span><br />
+<br />
+<a class="tag" name="ESLTextRemove"></a><span class="method">Remove</span><span class="methodargs">(str,offset,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Removes the selected number of characters from a string.</span><br />
+<span class="info">str</span> <span class="text">The string to remove from.</span><br />
+<span class="info">offset</span> <span class="text">The zero-based index of the character to start from.</span><br />
+<span class="info">length</span> <span class="text">The number of characters to remove.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="ESLTextReverse"></a><span class="method">Reverse</span><span class="methodargs">(str)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reverses the order of characters in a string.</span><br />
+<span class="info">str</span> <span class="text">The string to reverse.</span><br />
+<span class="info">returns</span> <span class="text">A reversed string. For example, abcd -> dcba</span><br />
+<br />
+<a class="tag" name="ESLTextToLower"></a><span class="method">ToLower</span><span class="methodargs">(str)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a string to lowercase.</span><br />
+<span class="info">str</span> <span class="text">The string to convert.</span><br />
+<span class="info">returns</span> <span class="text">A lowercase string. For example, AbCD -> abcd</span><br />
+<br />
+<a class="tag" name="ESLTextToUpper"></a><span class="method">ToUpper</span><span class="methodargs">(str)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts a string to uppercase.</span><br />
+<span class="info">str</span> <span class="text">The string to convert.</span><br />
+<span class="info">returns</span> <span class="text">An uppercase string. For example, abCd -> ABCD</span><br />
+<br />
+<div id="footer">
+<hr style="height: 2px; width: 100%;" />
+</div>
+</div>
+</div>
+</body>
+</html>

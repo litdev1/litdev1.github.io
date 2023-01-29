@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFastShapes"></a><span class="group">LDFastShapes</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Shape methods which are faster than standard Small Basic Shape operations.<br />This is primarily for shape movement when there are a large number of shapes updated in a game loop.<br />Only the main Shapes commands are supported since these are the ones that are commonly repeated many times.<br />The shape must first be created, then registered (ShapeIndex) and the returned integer index used with the other methods.<br />The visual update of the changes made does not happen until (Update) is called when all changes are processed together.<br />Performance improvements come from both integer indexing and batch update.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDFastShapesGetLeft">GetLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesGetOpacity">GetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesGetTop">GetTop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastShapesHideShape">HideShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastShapesSetOpacity">SetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesShapeIndex">ShapeIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesShowShape">ShowShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastShapesUpdate">Update</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastShapesZoom">Zoom</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFastShapesGetLeft"></a><span class="method">GetLeft</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the left co-ordinate of the specified shape.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The left co-ordinate of the shape.</span><br />
+<br />
+<a class="tag" name="LDFastShapesGetOpacity"></a><span class="method">GetOpacity</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the opacity of a shape.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The opacity of the object as a value between 0 and 100.  0 is completely transparent and 100 is completely opaque.</span><br />
+<br />
+<a class="tag" name="LDFastShapesGetTop"></a><span class="method">GetTop</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the top co-ordinate of the specified shape.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The top co-ordinate of the shape.</span><br />
+<br />
+<a class="tag" name="LDFastShapesHideShape"></a><span class="method">HideShape</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides an already added shape.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<br />
+<a class="tag" name="LDFastShapesMove"></a><span class="method">Move</span><span class="methodargs">(index,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves the shape with the specified name to a new position.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape to move.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the new position.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the new position.</span><br />
+<br />
+<a class="tag" name="LDFastShapesRotate"></a><span class="method">Rotate</span><span class="methodargs">(index,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotates the shape with the specified name to the specified angle.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">angle</span> <span class="text">The angle to rotate the shape.</span><br />
+<br />
+<a class="tag" name="LDFastShapesSetOpacity"></a><span class="method">SetOpacity</span><span class="methodargs">(index,level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sets how opaque a shape should render.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">level</span> <span class="text">The opacity level ranging from 0 to 100.  0 is completely transparent and 100 is completely opaque.</span><br />
+<br />
+<a class="tag" name="LDFastShapesShapeIndex"></a><span class="method">ShapeIndex</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Register a shape for use with this object.<br />This command is potentially slow, so should be called before time critical visual updates occur.<br />i.e. Create and register all shapes before motion is simulated.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the created shape.</span><br />
+<span class="info">returns</span> <span class="text">An index to use in the other methods in this object.<br />The index is an integer starting at 1, incremented for each shape registered.<br />-1 for an error.</span><br />
+<br />
+<a class="tag" name="LDFastShapesShowShape"></a><span class="method">ShowShape</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows a previously hidden shape.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<br />
+<a class="tag" name="LDFastShapesUpdate"></a><span class="method">Update</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Update all of the properties of shapes set by this object that have been modifed since the last update.<br />The shapes are not visually updated until this method is called.</span><br />
+<br />
+<a class="tag" name="LDFastShapesZoom"></a><span class="method">Zoom</span><span class="methodargs">(index,scaleX,scaleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Scales the shape using the specified zoom levels.</span><br />
+<span class="info">index</span> <span class="text">The index (returned by ShapeIndex) of the shape.</span><br />
+<span class="info">scaleX</span> <span class="text">The x-axis zoom level.</span><br />
+<span class="info">scaleY</span> <span class="text">The y-axis zoom level.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

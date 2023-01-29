@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDUnits"></a><span class="group">LDUnits</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A general editable unit conversion system.<br />All units and dimensions are case sensitive.<br />A base unit consists of a single dimension and name, and are all independent.<br />A derived unit consists of a description, name and units definition consisting of base or other derived units, and optional additive term, usually 0.<br />A unit is parsed by separting . / + - and *, then recursively resolving derived unit conversions, bracketed () terms first.<br />Values (especially those with a decimal point '.' or minus '-') should be contained in ().<br />A unit may be prefixed by a prefix or number value (e.g. m is mili 0.001, K is kilo 1000 etc).<br />Any unit may be postfixed by a power.<br />A typical unit may be "mile/hr", "m/s2" or "MJ/day" etc and can be any combination of base and derived units.<br />Any pair of unis that are dimensionally the same can be converted.<br />An additive value is only used for non-compound unit conversions (e.g. C to F).<br />To avoid obscure prefix unit conflicts use a full prefix name (e.g. min could be 60 seconds or 0.001 inches, the latter should be milliin).  <br />Currency conversions are updated daily.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDUnitsAddBaseUnit">AddBaseUnit</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsAddConstant">AddConstant</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsAddDerivedUnit">AddDerivedUnit</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUnitsConvert">Convert</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsExport">Export</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsGetBaseUnits">GetBaseUnits</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUnitsGetConstants">GetConstants</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsGetDerivedUnits">GetDerivedUnits</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsGetDimensions">GetDimensions</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUnitsGetErrors">GetErrors</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsGetPrefixes">GetPrefixes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUnitsImport">Import</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDUnitsAddBaseUnit"></a><span class="method">AddBaseUnit</span><span class="methodargs">(dimension,name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a base unit to the system.</span><br />
+<span class="info">dimension</span> <span class="text">The base unit dimension (e.g. TEMPERATURE).</span><br />
+<span class="info">name</span> <span class="text">The unit name (be careful it doesn't confict with existing unit names).</span><br />
+<br />
+<a class="tag" name="LDUnitsAddConstant"></a><span class="method">AddConstant</span><span class="methodargs">(description,name,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a dimensionless constant to the system.</span><br />
+<span class="info">description</span> <span class="text">An optional long name or description of the constant.</span><br />
+<span class="info">name</span> <span class="text">The constant name (be careful it doesn't confict with existing constant names).</span><br />
+<span class="info">value</span> <span class="text">The derived constant value.</span><br />
+<br />
+<a class="tag" name="LDUnitsAddDerivedUnit"></a><span class="method">AddDerivedUnit</span><span class="methodargs">(description,name,units,add)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a derived unit to the system.</span><br />
+<span class="info">description</span> <span class="text">An optional long name or description of the derived unit.</span><br />
+<span class="info">name</span> <span class="text">The unit name (be careful it doesn't confict with existing unit names).</span><br />
+<span class="info">units</span> <span class="text">The derived unit definition.</span><br />
+<span class="info">add</span> <span class="text">An optional addition term.</span><br />
+<br />
+<a class="tag" name="LDUnitsConvert"></a><span class="method">Convert</span><span class="methodargs">(value,fromUnit,toUnit)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a value from one unit to another.</span><br />
+<span class="info">value</span> <span class="text">The value to convert.</span><br />
+<span class="info">fromUnit</span> <span class="text">The units to convert from.</span><br />
+<span class="info">toUnit</span> <span class="text">The units to convert to.</span><br />
+<span class="info">returns</span> <span class="text">The converted value or "FAILED" (usually non-existant unit or inconsistant dimensions).</span><br />
+<br />
+<a class="tag" name="LDUnitsExport"></a><span class="method">Export</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Export the current unit system to a file (units.txt in the current program folder).</span><br />
+<br />
+<a class="tag" name="LDUnitsGetBaseUnits"></a><span class="method">GetBaseUnits</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of current base units.</span><br />
+<span class="info">returns</span> <span class="text">An array of available base units, indexed by unit dimension.<br />The array values are the base unit names.</span><br />
+<br />
+<a class="tag" name="LDUnitsGetConstants"></a><span class="method">GetConstants</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of current constants.</span><br />
+<span class="info">returns</span> <span class="text">An array of available constants, indexed by constant name with (description).<br />The array values are the constant values.</span><br />
+<br />
+<a class="tag" name="LDUnitsGetDerivedUnits"></a><span class="method">GetDerivedUnits</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of current derived units.</span><br />
+<span class="info">returns</span> <span class="text">An array of available derived units, indexed by unit name with (description).<br />The array values are the base (or derived units) used for conversion.</span><br />
+<br />
+<a class="tag" name="LDUnitsGetDimensions"></a><span class="method">GetDimensions</span><span class="methodargs">(unit)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of dimensions for a unit.</span><br />
+<span class="info">unit</span> <span class="text">The unit to get dimensins of.</span><br />
+<span class="info">returns</span> <span class="text">An array indexed by dimension and value of the dimension power or "".</span><br />
+<br />
+<a class="tag" name="LDUnitsGetErrors"></a><span class="method">GetErrors</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of error messages if a Convert fails or conflicts are found for added units or constants.</span><br />
+<span class="info">returns</span> <span class="text">Array of error messages or "".</span><br />
+<br />
+<a class="tag" name="LDUnitsGetPrefixes"></a><span class="method">GetPrefixes</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of current prefixes.</span><br />
+<span class="info">returns</span> <span class="text">An array of available prefices, indexed by prefix name.<br />The array value is the prefix value.</span><br />
+<br />
+<a class="tag" name="LDUnitsImport"></a><span class="method">Import</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Import a unit system from a file (units.txt in the current program folder).</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

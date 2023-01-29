@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDList"></a><span class="group">LDList</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This object provides a way of storing values like an array that reorders itself as items are added or removed.<br />A list is an efficient array store (much faster than SmallBasic arrays) that can be indexed by integers and perform various other operations.<br />The indexing is automatically updated (indexed from 1) as the list changes.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDListAdd">Add</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListAppend">Append</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListClear">Clear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListContains">Contains</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListCopy">Copy</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListCount">Count</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListCreateFromIndices">CreateFromIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListCreateFromValues">CreateFromValues</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListDistinct">Distinct</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListExcept">Except</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListFind">Find</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListFindIndices">FindIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListGetAt">GetAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListIndexOf">IndexOf</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListInsertAt">InsertAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListIntersect">Intersect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListPrint">Print</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListRemoveAt">RemoveAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListReverse">Reverse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListSetAt">SetAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListSortByNumber">SortByNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListSortByText">SortByText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListSubList">SubList</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListToArray">ToArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDListUnion">Union</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDListWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDListAdd"></a><span class="method">Add</span><span class="methodargs">(listName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Adds a value to the end of a specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">value</span> <span class="text">The value to add.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListAppend"></a><span class="method">Append</span><span class="methodargs">(listName1,listName2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Appends a second list to the end of a first list.</span><br />
+<span class="info">listName1</span> <span class="text">The name of the first list.</span><br />
+<span class="info">listName2</span> <span class="text">The name of the second list to append to listName1.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListClear"></a><span class="method">Clear</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove all values from a specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListContains"></a><span class="method">Contains</span><span class="methodargs">(listName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Check if a value is present within the specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">value</span> <span class="text">The value to check.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDListCopy"></a><span class="method">Copy</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy a list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">A copy of the list.</span><br />
+<br />
+<a class="tag" name="LDListCount"></a><span class="method">Count</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the count of items in the specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListCreateFromIndices"></a><span class="method">CreateFromIndices</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy a SmallBasic array indices to a list.</span><br />
+<span class="info">sbArray</span> <span class="text">The SmallBasic array.</span><br />
+<span class="info">returns</span> <span class="text">The created list.</span><br />
+<br />
+<a class="tag" name="LDListCreateFromValues"></a><span class="method">CreateFromValues</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy a SmallBasic array to a list.<br />The array indices are ignored by the list.</span><br />
+<span class="info">sbArray</span> <span class="text">The SmallBasic array.</span><br />
+<span class="info">returns</span> <span class="text">The created list.</span><br />
+<br />
+<a class="tag" name="LDListDistinct"></a><span class="method">Distinct</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list of unique values from the specified list.<br />The text comparison is case insensitive.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The sub list.</span><br />
+<br />
+<a class="tag" name="LDListExcept"></a><span class="method">Except</span><span class="methodargs">(listName1,listName2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list of non-shared values between two specified lists.<br />The text comparison is case insensitive.</span><br />
+<span class="info">listName1</span> <span class="text">The name of the first list.</span><br />
+<span class="info">listName2</span> <span class="text">The name of the second list.</span><br />
+<span class="info">returns</span> <span class="text">The except list.</span><br />
+<br />
+<a class="tag" name="LDListFind"></a><span class="method">Find</span><span class="methodargs">(listName,match,exact)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list from the specified list where a text match is found.<br />The text match is case insensitive.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">match</span> <span class="text">The match text.</span><br />
+<span class="info">exact</span> <span class="text">An exact match (case insensitive) "True" or the match text is contained in the list "False".</span><br />
+<span class="info">returns</span> <span class="text">The sub list.</span><br />
+<br />
+<a class="tag" name="LDListFindIndices"></a><span class="method">FindIndices</span><span class="methodargs">(listName,match,exact)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list of indices from the specified list where a text match is found.<br />The text match is case insensitive.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">match</span> <span class="text">The match text.</span><br />
+<span class="info">exact</span> <span class="text">An exact match (case insensitive) "True" or the match text is contained in the list "False".</span><br />
+<span class="info">returns</span> <span class="text">The sub list of indices in the list where a match is found.</span><br />
+<br />
+<a class="tag" name="LDListGetAt"></a><span class="method">GetAt</span><span class="methodargs">(listName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a value from a specified list by index (starting from 1).</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">index</span> <span class="text">The value index to get.</span><br />
+<span class="info">returns</span> <span class="text">The list value.</span><br />
+<br />
+<a class="tag" name="LDListIndexOf"></a><span class="method">IndexOf</span><span class="methodargs">(listName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the index (starting from 1) of the first occurance of a value from the specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">value</span> <span class="text">The value to get index of (0 for not found).</span><br />
+<span class="info">returns</span> <span class="text">The value index or 0.</span><br />
+<br />
+<a class="tag" name="LDListInsertAt"></a><span class="method">InsertAt</span><span class="methodargs">(listName,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Insert a value in a specified list by index (starting from 1).</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">index</span> <span class="text">The index to insert at.</span><br />
+<span class="info">value</span> <span class="text">The value to insert.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListIntersect"></a><span class="method">Intersect</span><span class="methodargs">(listName1,listName2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list of shared values between two specified lists.<br />The text comparison is case insensitive.</span><br />
+<span class="info">listName1</span> <span class="text">The name of the first list.</span><br />
+<span class="info">listName2</span> <span class="text">The name of the second list.</span><br />
+<span class="info">returns</span> <span class="text">The intersection list.</span><br />
+<br />
+<a class="tag" name="LDListPrint"></a><span class="method">Print</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Print a list to the TextWindow.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListRead"></a><span class="method">Read</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a list from a file.</span><br />
+<span class="info">filePath</span> <span class="text">The full path to read the list from.</span><br />
+<span class="info">returns</span> <span class="text">The list if the operation was successful, otherwise "".</span><br />
+<br />
+<a class="tag" name="LDListRemove"></a><span class="method">Remove</span><span class="methodargs">(listName,match,exact)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove all occurances from the specified list where a text match is found.<br />The text match is case insensitive.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">match</span> <span class="text">The match text.</span><br />
+<span class="info">exact</span> <span class="text">An exact match (case insensitive) "True" or the match text is contained in the list "False".</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListRemoveAt"></a><span class="method">RemoveAt</span><span class="methodargs">(listName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove a value from a specified list by index (starting from 1).</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">index</span> <span class="text">The value index to remove.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListReverse"></a><span class="method">Reverse</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reverse the order of values in the specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListSetAt"></a><span class="method">SetAt</span><span class="methodargs">(listName,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set (replace) a value in a specified list by index (starting from 1).</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">index</span> <span class="text">The index to set.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListSortByNumber"></a><span class="method">SortByNumber</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sort a specified list with values treated as numbers.<br />All values must be numbers.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListSortByText"></a><span class="method">SortByText</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sort a specified list with values treated as text strings (lexical sort).<br />The sort is case insensitive.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+<a class="tag" name="LDListSubList"></a><span class="method">SubList</span><span class="methodargs">(listName,start,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list from the specified list.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">start</span> <span class="text">The first index of the sub list.</span><br />
+<span class="info">length</span> <span class="text">The length of the sub list.</span><br />
+<span class="info">returns</span> <span class="text">The sub list.</span><br />
+<br />
+<a class="tag" name="LDListToArray"></a><span class="method">ToArray</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a list to a SmallBasic array.<br />Not advised for large lists.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">returns</span> <span class="text">The Small Basic array.</span><br />
+<br />
+<a class="tag" name="LDListUnion"></a><span class="method">Union</span><span class="methodargs">(listName1,listName2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a sub list of combined values (duplicates single counted) between two specified lists.<br />The text comparison is case insensitive.</span><br />
+<span class="info">listName1</span> <span class="text">The name of the first list.</span><br />
+<span class="info">listName2</span> <span class="text">The name of the second list.</span><br />
+<span class="info">returns</span> <span class="text">The union list.</span><br />
+<br />
+<a class="tag" name="LDListWrite"></a><span class="method">Write</span><span class="methodargs">(listName,filePath,append)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save a list to file.<br />One line per list value is used.</span><br />
+<span class="info">listName</span> <span class="text">The name of the list.</span><br />
+<span class="info">filePath</span> <span class="text">The full path to save the list to.</span><br />
+<span class="info">append</span> <span class="text">Append to end of existing file "True" or create a new file "False".</span><br />
+<span class="info">returns</span> <span class="text">The number of items in the list or -1 on failure.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

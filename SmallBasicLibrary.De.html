@@ -1,0 +1,2696 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>SmallBasic 1.2 API DE API</title>
+ <meta name="description" content="SmallBasic SmallBasic 1.2 API DE extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,SmallBasic 1.2 API DEextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">SmallBasic 1.2 API DE Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="#Array">Array</a>
+</td>
+<td>
+<a href="#Clock">Clock</a>
+</td>
+<td>
+<a href="#Controls">Controls</a>
+</td>
+<td>
+<a href="#Desktop">Desktop</a>
+</td>
+<td>
+<a href="#Dictionary">Dictionary</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#File">File</a>
+</td>
+<td>
+<a href="#Flickr">Flickr</a>
+</td>
+<td>
+<a href="#GraphicsWindow">GraphicsWindow</a>
+</td>
+<td>
+<a href="#ImageList">ImageList</a>
+</td>
+<td>
+<a href="#Math">Math</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#Mouse">Mouse</a>
+</td>
+<td>
+<a href="#Network">Network</a>
+</td>
+<td>
+<a href="#Program">Program</a>
+</td>
+<td>
+<a href="#Shapes">Shapes</a>
+</td>
+<td>
+<a href="#Sound">Sound</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#Stack">Stack</a>
+</td>
+<td>
+<a href="#Text">Text</a>
+</td>
+<td>
+<a href="#TextWindow">TextWindow</a>
+</td>
+<td>
+<a href="#Timer">Timer</a>
+</td>
+<td>
+<a href="#Turtle">Turtle</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="Array"></a><span class="group">Array</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ein Array ermöglicht das Speichern mehrerer Werte unter einem angegebenen Name. Auf die Werte kann dann mit zusätzlichem Index zugegriffen werden.<br />Werte können (SMP)Strings, Zahlen, Arrays, Images (von ImageList.LoadImage) oder Controls/Shapes sein.<br />Indizes können -/0/+ (rationale) Zahlen, "Strings" oder Variablen sein, auch gemischt.<br />Indizes unterscheiden nicht zwischen GROß-/kleinschreibung, Werte schon.<br />Direktdefinition als String, zB.<br />arr = "id1=wert1;id2=wert2;..;" nur mit Konstanten oder Strings (keine Variablennamen, \ für Escape zB. arr="1=\;;2=\=;3=\\;").<br />Merkliche Geschwindigkeitsverluste bei großen Arrays (ab 100 Elemente).<br />Arrays können mit File.WriteContents/-Line gespeichert und mit File.ReadContents/-Line eingelesen werden.<br />Für Arraysortierung s. 'LDSort'.</span><br />
+<span class="info">example</span> <span class="text">'Stringdefinition "1=3;2=4;3=5;"<br />arr = "1=3;2="+ Math.Abs(-4) +";3="+ Text.GetLength("hallo") '+";"<br />'Ungültig in Datei-/Ordnername<br />inv = "1=\\;2=/;3=:;4=*;5=?;6=<;7=>;8=|;9="+ Text.GetCharacter(34) '+";"<br /><br />'Array arr kopieren<br />arr2 = arr<br /><br />'Index i abschneiden/löschen<br />arr[i] = ""<br />TextWindow.Write(arr[i]) ' ""<br /><br />'Dimension dim von arr (regulär)<br />While Array.IsArray(arr)<br />  dim = dim+1<br />  ids = Array.GetAllIndices(arr)<br />  arr = arr[ids[1]]<br />EndWhile<br />TextWindow.WriteLine(dim)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ArrayContainsIndex">ContainsIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayContainsValue">ContainsValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayGetAllIndices">GetAllIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ArrayGetItemCount">GetItemCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayGetValue">GetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArrayIsArray">IsArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ArrayRemoveValue">RemoveValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ArraySetValue">SetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ArrayContainsIndex"></a><span class="method">ContainsIndex</span><span class="methodargs">(array,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob ein Array den angegebenen Index enthält. Nützlich, um herausfinden, ob dieser Index bereits mit einem Wert belegt wurde.<br />SB Arrays können keine leeren Indizes (Index mit Leerwert "") enthalten.<br />(Nicht für Arrays die mittels Array.SetValue erstellt wurden.)</span><br />
+<span class="info">array</span> <span class="text">Der Name des Arrays.</span><br />
+<span class="info">index</span> <span class="text">Der zu suchende Index (GROß-/kleinschreibung egal, exakte Länge).</span><br />
+<span class="info">returns</span> <span class="text">"True" oder "False", je nachdem ob der Index im angegebenen Array gefunden wurde.</span><br />
+<br />
+<a class="tag" name="ArrayContainsValue"></a><span class="method">ContainsValue</span><span class="methodargs">(array,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob ein Array den angegebenen Wert buchstabengetreu enthält. Dies ist nützlich, um herauszufinden, ob der Wert im Array bereits unter einem Index gespeichert wurde.<br />(Nicht für Arrays die mittels Array.SetValue erstellt wurden.)</span><br />
+<span class="info">array</span> <span class="text">Der Name des Arrays.</span><br />
+<span class="info">value</span> <span class="text">Der zu suchende Wert (buchstabengetreu und exakte Länge) oder direkte Unterarray für 2D Array.</span><br />
+<span class="info">returns</span> <span class="text">"True" oder "False", je nachdem ob der Wert buchstabengetreu im angegebenen Array gefunden wurde.</span><br />
+<br />
+<a class="tag" name="ArrayGetAllIndices"></a><span class="method">GetAllIndices</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt alle Indizes für den angegebenen Array als neuen Array. (Nicht für Arrays die mittels Array.SetValue erstellt wurden.)</span><br />
+<span class="info">array</span> <span class="text">Der Name des Arrays.</span><br />
+<span class="info">returns</span> <span class="text">Ein Array (ab 1) mit allen Indizes des angegebenen Arrays (selbe Elementreihenfolge).</span><br />
+<br />
+<a class="tag" name="ArrayGetItemCount"></a><span class="method">GetItemCount</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Anzahl der im Array enthaltenen Indizes/Elemente bzw. Unterarrays für 2D Array. (Nicht für Arrays die mittels Array.SetValue erstellt wurden.)</span><br />
+<span class="info">array</span> <span class="text">Der Name des Arrays (bzw. Variable).</span><br />
+<span class="info">returns</span> <span class="text">Die Anzahl der Werte im angegebenen Array, 0 bei ungültigem Array (Zahl, "Text", "").</span><br />
+<span class="info">example</span> <span class="text">arr = ""<br />Array.GetItemCount(arr) '0<br />Array.IsArray(arr) ' "False"<br /><br />arr = "1=1;2=2;"<br />Array.GetItemCount(arr) '>0 (2)<br />Array.IsArray(arr) ' "True"<br /><br />'Array aufbauen:<br />For v = 1 To 10<br />  'arr[Array.GetItemCount(arr)] = v 'ab 0<br />  arr[Array.GetItemCount(arr)+1] = v 'ab 1<br />EndFor</span><br />
+<br />
+<a class="tag" name="ArrayGetValue"></a><span class="method">GetValue</span><span class="methodargs">(arrayName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Arraywert am angegebenen Index. Nur für Arrays/Werte die mittels Array.SetValue erstellt wurden (Ausgeblendet in IntelliSense).<br />Diese Methode ist bedeutend schneller als die herkömmliche Methode val = arr[i].</span><br />
+<span class="info">arrayName</span> <span class="text">Der Name des Arrays (in "" oder zuvor definiert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">index</span> <span class="text">Der Index des abzurufenden Wertes (zB. -3, 0, "i", var). Exakte Schreibweise einhalten.</span><br />
+<span class="info">returns</span> <span class="text">Der Arraywert (auch Leerwerte "" möglich) bei Erfolg, sonst "".</span><br />
+<span class="info">example</span> <span class="text">val = Array.GetValue("arr", 0)<br />v2 = Array.GetValue(123, "i")</span><br />
+<br />
+<a class="tag" name="ArrayIsArray"></a><span class="method">IsArray</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob eine Variable ein Array (mit mind. 1 Element) ist. (Nicht für Arrays die mittels Array.SetValue erstellt wurden.)</span><br />
+<span class="info">array</span> <span class="text">Der Name des Arrays (bzw. Variable).</span><br />
+<span class="info">returns</span> <span class="text">"True", wenn die angegebene Variable ein Array ist, sonst "False" (zB. "", "1=;", Zahl, String).</span><br />
+<span class="info">example</span> <span class="text">arr = ""<br />Array.IsArray(arr) ' "False"<br />Array.GetItemCount(arr) '0<br /><br />arr = "1=1;2=2;"<br />Array.IsArray(arr) ' "True"<br />Array.GetItemCount(arr) '>0 (2)</span><br />
+<br />
+<a class="tag" name="ArrayRemoveValue"></a><span class="method">RemoveValue</span><span class="methodargs">(arrayName,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Entfernt den Arraywert am angegebenen Index. Nur für Arrays/Werte die mittels Array.SetValue erstellt wurden (Ausgeblendet in IntelliSense).</span><br />
+<span class="info">arrayName</span> <span class="text">Der Name des Arrays (in "" oder zuvor definiert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">index</span> <span class="text">Der Index des zu entfernenden Arraywertes (zB. -3, 0, "i", var). Exakte Schreibweise einhalten.</span><br />
+<span class="info">example</span> <span class="text">Array.RemoveValue("arr", 0)<br />Array.RemoveValue(123, "i")</span><br />
+<br />
+<a class="tag" name="ArraySetValue"></a><span class="method">SetValue</span><span class="methodargs">(arrayName,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt den Arraywert am angegebenen Index. Hiermit gesetzte Werte müssen mittels Array.GetValue ermittelt bzw. mit Array.RemoveValue entfernt werden (Ausgeblendet in IntelliSense).<br />Diese Methode ist bedeutend schneller als die herkömmliche Methode arr[i] = val.</span><br />
+<span class="info">arrayName</span> <span class="text">Der Name des Arrays (in "" oder zuvor definiert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">index</span> <span class="text">Der Index des zu setzenden Wertes (zB. -3, 0, "i", var). Exakte Schreibweise einhalten.</span><br />
+<span class="info">value</span> <span class="text">Der zu setzende Arraywert (auch Leerwerte "" möglich).</span><br />
+<span class="info">example</span> <span class="text">'als Stringname<br />Array.SetValue("arr", 0,5)<br />'als Variablenname<br />arr = 123<br />Array.SetValue(arr, "i","+-*/")</span><br />
+<br />
+<a class="tag" name="Clock"></a><span class="group">Clock</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Bietet Zugriff auf die Systemuhr zum Ermitteln von Datums- und Zeitangaben.<br />Manche Formate sind abhängig von aktuellen Systemeinstellungen ('Region und Sprache').</span><br />
+<span class="info">example</span> <span class="text">'2-stellig für 1-9<br />hh = Text.GetSubText(Text.Append("0",h),Text.GetLength(h),2)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ClockDate">Date</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockDay">Day</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockElapsedMilliseconds">ElapsedMilliseconds</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockHour">Hour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockMillisecond">Millisecond</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockMinute">Minute</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockMonth">Month</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockSecond">Second</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockTime">Time</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ClockWeekDay">WeekDay</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ClockYear">Year</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ClockDate"></a><span class="method">Date</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt das aktuelle kurze Systemdatum als TT.MM.JJ (zB. 27.08.14). Führende '0' vor Werten von 0-9.</span><br />
+<br />
+<a class="tag" name="ClockDay"></a><span class="method">Day</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den aktuellen Monatstag (1-31, einstellig für 1-9).</span><br />
+<br />
+<a class="tag" name="ClockElapsedMilliseconds"></a><span class="method">ElapsedMilliseconds</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die Anzahl vergangener Millisekunden seit 1900 (mit 2 Dezimalen).</span><br />
+<span class="info">example</span> <span class="text">'1. Bildrate in Hauptschleife<br />bps = 40 '[Bilder/s]<br />ms = 1000/bps '25 [ms/Bild]<br /><br />While "True"<br />  start = Clock.ElapsedMilliseconds<br />  ANIMATION()<br />  dt = ms - (Clock.ElapsedMilliseconds-start)<br />  If dt > 0 Then<br />    Program.Delay(dt)<br />  EndIf<br />EndWhile<br /><br />'2. Konst. Bildrate in Sub<br />dt = Clock.ElapsedMilliseconds<br />While "True"<br />  ANIMATION()<br />  Bildrate()<br />EndWhile<br /><br />Sub Bildrate<br />  While (Clock.ElapsedMilliseconds - dt) < ms<br />    Program.Delay(5)<br />  EndWhile<br />  dt = Clock.ElapsedMilliseconds<br />EndSub<br /><br />'3. Konst. Bildrate2 in Sub<br />While "True"<br />  ANIMATION()<br />  Bildrate2()<br />EndWhile<br /><br />Sub Bildrate2<br />  While Clock.ElapsedMilliseconds < dt<br />    Program.Delay(5)<br />  EndWhile<br />  dt = Clock.ElapsedMilliseconds + ms<br />EndSub</span><br />
+<br />
+<a class="tag" name="ClockHour"></a><span class="method">Hour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Tagesstunde (0-23, einstellig für 0-9).</span><br />
+<br />
+<a class="tag" name="ClockMillisecond"></a><span class="method">Millisecond</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Millisekunde (3-stellig).</span><br />
+<br />
+<a class="tag" name="ClockMinute"></a><span class="method">Minute</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Minute der Stunde (0-59, einstellig für 0-9).</span><br />
+<br />
+<a class="tag" name="ClockMonth"></a><span class="method">Month</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Monatsnummer (1-12, einstellig für 1-9).</span><br />
+<br />
+<a class="tag" name="ClockSecond"></a><span class="method">Second</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Sekunde der Minute (0-59, einstellig für 0-9).</span><br />
+<br />
+<a class="tag" name="ClockTime"></a><span class="method">Time</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Systemzeit als HH:mm:ss (24h Format, zB. 21:04:07). Führende '0' bei Werten von 0-9.</span><br />
+<br />
+<a class="tag" name="ClockWeekDay"></a><span class="method">WeekDay</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den Name des aktuellen Wochentags (deutsch, zB. Montag).</span><br />
+<br />
+<a class="tag" name="ClockYear"></a><span class="method">Year</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die aktuelle Jahreszahl (zB. 2014).</span><br />
+<br />
+<a class="tag" name="Controls"></a><span class="group">Controls</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Hinzufügen, Positionieren und Interaktion für Steuerelemente im GraphicsWindow.<br />Funktioniert zT. auch für Shapes (Controls sind Shapes in SB. Interne Namensverarbeitung für Objekte).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ControlsAddButton">AddButton</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsAddMultiLineTextBox">AddMultiLineTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsAddTextBox">AddTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsButtonClicked">ButtonClicked</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#ControlsGetButtonCaption">GetButtonCaption</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsGetTextBoxText">GetTextBoxText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsHideControl">HideControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsLastClickedButton">LastClickedButton</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ControlsLastTypedTextBox">LastTypedTextBox</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsSetButtonCaption">SetButtonCaption</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsSetSize">SetSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsSetTextBoxText">SetTextBoxText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ControlsShowControl">ShowControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ControlsTextTyped">TextTyped</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ControlsAddButton"></a><span class="method">AddButton</span><span class="methodargs">(caption,left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt eine Schaltfläche an der angegebenen Position im GraphicsWindow hinzu (Mindestbreite: 12, Standardhöhe: 26/25/24/23 (bei FontSize 12/11/10/9); Intern: Button#).<br />Texteigenschaften bestimmbar durch vorangehendes BrushColor, FontName,-Size,-Bold,-Italic.<br />Erlaubt Tasten Space und Return/Enter.</span><br />
+<span class="info">caption</span> <span class="text">Der auf der Schaltfläche anzuzeigende Text. Für senkrechten Text, zwischen den Buchstaben lf bzw. Text.GetCharacter(10) einfügen.</span><br />
+<span class="info">left</span> <span class="text">Die x-Koordinate des Button.</span><br />
+<span class="info">top</span> <span class="text">Die y-Koordinate des Button.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des Button.</span><br />
+<br />
+<a class="tag" name="ControlsAddMultiLineTextBox"></a><span class="method">AddMultiLineTextBox</span><span class="methodargs">(left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein mehrzeiliges Texteingabefeld an der angegebenen Position im GraphicsWindow hinzu (Standardbreite: 200, -höhe: 80; Intern: TextBox#).<br />Texteigenschaften bestimmbar durch vorangehendes BrushColor, FontName,-Size,-Bold,-Italic.<br />Linksbündige Ausrichtung für alle Einträge.<br />Bei Bedarf rechte/untere Scrollleiste (Breite: 18).</span><br />
+<span class="info">left</span> <span class="text">Die x-Position der MultiLineTextBox (Standard: 0).</span><br />
+<span class="info">top</span> <span class="text">Die y-Position der MultiLineTextBox (Standard: 0).</span><br />
+<span class="info">returns</span> <span class="text">Der Name der MultiLineTextBox.</span><br />
+<br />
+<a class="tag" name="ControlsAddTextBox"></a><span class="method">AddTextBox</span><span class="methodargs">(left,top)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein Texteingabefeld an der angegebenen Position im GraphicsWindow hinzu (Standardbreite: 160, -höhe: 22/21/20/19 (bei FontSize 12/11/10/9); Intern: TextBox#).<br />Texteigenschaften bestimmbar durch vorangehendes BrushColor, FontName,-Size,-Bold,-Italic.<br />Linksbündige Ausrichtung für alle Einträge.</span><br />
+<span class="info">left</span> <span class="text">Die x-Position der TextBox (Standard: 0).</span><br />
+<span class="info">top</span> <span class="text">Die y-Position der TextBox (Standard: 0).</span><br />
+<span class="info">returns</span> <span class="text">Der Name der TextBox.</span><br />
+<br />
+<a class="tag" name="ControlsButtonClicked"></a><span class="method">ButtonClicked</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf wenn ein Button geklickt oder "Space"/"Return"-Taste (Buttonwahl mit Tab,Up,Down,Left,Right) gedrückt wurde (erst beim Loslassen, MouseDown/-Up Ereignis wird dabei nicht ausgelöst).</span><br />
+<br />
+<a class="tag" name="ControlsGetButtonCaption"></a><span class="method">GetButtonCaption</span><span class="methodargs">(buttonName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Text auf einem angegebenen Button.</span><br />
+<span class="info">buttonName</span> <span class="text">Der Name des Button.</span><br />
+<span class="info">returns</span> <span class="text">Der angezeigte Buttontext.</span><br />
+<br />
+<a class="tag" name="ControlsGetTextBoxText"></a><span class="method">GetTextBoxText</span><span class="methodargs">(textBoxName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Text in einer angegebenen (MultiLine)TextBox (Standard ANSI, sonst UTF8).</span><br />
+<span class="info">textBoxName</span> <span class="text">Der Name der (MultiLine)TextBox.</span><br />
+<span class="info">returns</span> <span class="text">Der Text in der (MultiLine)TextBox oder "".</span><br />
+<br />
+<a class="tag" name="ControlsHideControl"></a><span class="method">HideControl</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet ein bereits hinzugefügtes Steuerelement aus (s. Shapes.HideShape, Elementposition bleibt unverändert, andere Methoden funktionieren weiterhin).</span><br />
+<span class="info">controlName</span> <span class="text">Der Name des Steuerelements.</span><br />
+<br />
+<a class="tag" name="ControlsLastClickedButton"></a><span class="method">LastClickedButton</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den Name des Button, der zuletzt gedrückt wurde.</span><br />
+<br />
+<a class="tag" name="ControlsLastTypedTextBox"></a><span class="method">LastTypedTextBox</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den Name der (MultiLine)TextBox, in der zuletzt Text geschrieben/eingefügt/geändert wurde.</span><br />
+<br />
+<a class="tag" name="ControlsMove"></a><span class="method">Move</span><span class="methodargs">(control,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verschiebt ein angegebenes Steuerelement (bzw. Shape) an eine neue Position im GraphicsWindow.</span><br />
+<span class="info">control</span> <span class="text">Der Name des Steuerelements/Shapes.</span><br />
+<span class="info">x</span> <span class="text">Die neue x-Position im GraphicsWindow.</span><br />
+<span class="info">y</span> <span class="text">Die neue y-Position im GraphicsWindow.</span><br />
+<br />
+<a class="tag" name="ControlsRemove"></a><span class="method">Remove</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Entfernt ein Steuerelement aus dem GraphicsWindow (Interne # bleibt unverändert).</span><br />
+<span class="info">controlName</span> <span class="text">Der Name des zu entfernenden Steuerelements.</span><br />
+<br />
+<a class="tag" name="ControlsSetButtonCaption"></a><span class="method">SetButtonCaption</span><span class="methodargs">(buttonName,caption)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt den Text auf einem angegebenen Button.</span><br />
+<span class="info">buttonName</span> <span class="text">Der Name des Button.</span><br />
+<span class="info">caption</span> <span class="text">Der neue Buttontext.</span><br />
+<br />
+<a class="tag" name="ControlsSetSize"></a><span class="method">SetSize</span><span class="methodargs">(control,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt eine neue Größe für ein Steuerelement oder Shape (zB. Bild-/Textshape). S.a. LDShapes.SetSize bzw. ReSize, Schriftgröße in Textshape nicht, Ankerpunkt (l.o) bleibt unverändert.<br />Standard Bildshape wird proportional skaliert (UI-Eigenschaft: Stretch=Uniform, Seitenverhältnis konstant).</span><br />
+<span class="info">control</span> <span class="text">Der Name des Steuerelements/Shape.</span><br />
+<span class="info">width</span> <span class="text">Die neue Breite (>=0).</span><br />
+<span class="info">height</span> <span class="text">Die neue Höhe (>=0).</span><br />
+<br />
+<a class="tag" name="ControlsSetTextBoxText"></a><span class="method">SetTextBoxText</span><span class="methodargs">(textBoxName,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt den Text in einer angegebenen (MultiLine)TextBox (Standard UTF8, ev. Anzeigeproblem von ANSI). Bei Inhaltsänderung wird auch 'TextTyped' Event ausgelöst.<br />Linksbündige Ausrichtung für alle Einträge.</span><br />
+<span class="info">textBoxName</span> <span class="text">Der Name der (MultiLine)TextBox.</span><br />
+<span class="info">text</span> <span class="text">Der neue Text für die (MultiLine)TextBox oder "".</span><br />
+<br />
+<a class="tag" name="ControlsShowControl"></a><span class="method">ShowControl</span><span class="methodargs">(controlName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt ein zuvor ausgeblendetes Steuerelement an der zuletzt definierten Position wieder an (s. Shapes.ShowShape).</span><br />
+<span class="info">controlName</span> <span class="text">Der Name des Steuerelements.</span><br />
+<br />
+<a class="tag" name="ControlsTextTyped"></a><span class="method">TextTyped</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf wenn Text in einer (MultiLine)TextBox eingegeben oder geändert wurde.<br />Nicht bei Mausklick, Cursortasten, Pos1/Ende usw. Jedoch bei 'Back'(Space), Ausschneiden/Einfügen.</span><br />
+<br />
+<a class="tag" name="Desktop"></a><span class="group">Desktop</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Funktionen zur Interaktion mit der Desktop Anzeige.<br />PxlPos x/y: 0 bis Desktop.Width-1 bzw. Desktop.Height-1.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#DesktopHeight">Height</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#DesktopSetWallPaper">SetWallPaper</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DesktopWidth">Width</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="DesktopHeight"></a><span class="method">Height</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die Bildschirmhöhe des primären Desktops.<br />(zB. Standard: 768)<br /><br />2-zeilige Taskbarhöhe: 60</span><br />
+<br />
+<a class="tag" name="DesktopSetWallPaper"></a><span class="method">SetWallPaper</span><span class="methodargs">(fileOrUrl)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt das angegebene Bild als Hintergrundbild für den Desktop. Dies kann eine lokale, Netzwerkdatei oder Web-Url sein.</span><br />
+<span class="info">fileOrUrl</span> <span class="text">Der volle Dateipfad oder die Url des Bildes.</span><br />
+<br />
+<a class="tag" name="DesktopWidth"></a><span class="method">Width</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die Bildschirmbreite des primären Desktops.<br />(zB. Standard: 1366)</span><br />
+<br />
+<a class="tag" name="Dictionary"></a><span class="group">Dictionary</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ermöglicht den Zugriff auf einen Online Lexikon-Dienst zur Wortdefinition und Übersetzung.<br />(Bei Fehler s. LDDictionary)</span><br />
+<span class="info">example</span> <span class="text"><a href="http://rr.office.microsoft.com/Research/query.asmx">http://rr.office.microsoft.com/Research/query.asmx</a> (Research WebService)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#DictionaryGetDefinition">GetDefinition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToEnglish">GetDefinitionEnglishToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToFrench">GetDefinitionEnglishToFrench</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToGerman">GetDefinitionEnglishToGerman</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToItalian">GetDefinitionEnglishToItalian</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToJapanese">GetDefinitionEnglishToJapanese</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToKorean">GetDefinitionEnglishToKorean</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToSimplifiedChinese">GetDefinitionEnglishToSimplifiedChinese</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToSpanish">GetDefinitionEnglishToSpanish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#DictionaryGetDefinitionEnglishToTraditionalChinese">GetDefinitionEnglishToTraditionalChinese</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionFrenchToEnglish">GetDefinitionFrenchToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionGermanToEnglish">GetDefinitionGermanToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#DictionaryGetDefinitionItalianToEnglish">GetDefinitionItalianToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionJapaneseToEnglish">GetDefinitionJapaneseToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionKoreanToEnglish">GetDefinitionKoreanToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#DictionaryGetDefinitionSimplifiedChineseToEnglish">GetDefinitionSimplifiedChineseToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionSpanishToEnglish">GetDefinitionSpanishToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#DictionaryGetDefinitionTraditionalChineseToEnglish">GetDefinitionTraditionalChineseToEnglish</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="DictionaryGetDefinition"></a><span class="method">GetDefinition</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Englisch (wie GetDefinitionEnglishToEnglish).<br />Bei Fehler s. LDDictionary.GetDefinition)</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToEnglish"></a><span class="method">GetDefinitionEnglishToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Englisch (wie GetDefinition).</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToFrench"></a><span class="method">GetDefinitionEnglishToFrench</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Französisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Französisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToGerman"></a><span class="method">GetDefinitionEnglishToGerman</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Deutsch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Deutsch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToItalian"></a><span class="method">GetDefinitionEnglishToItalian</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Italienisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Italienisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToJapanese"></a><span class="method">GetDefinitionEnglishToJapanese</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Japanisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Japanisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToKorean"></a><span class="method">GetDefinitionEnglishToKorean</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Koreanisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Koreanisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToSimplifiedChinese"></a><span class="method">GetDefinitionEnglishToSimplifiedChinese</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in vereinfachtem Chinesisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in vereinfachtem Chinesisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToSpanish"></a><span class="method">GetDefinitionEnglishToSpanish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in Spanisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in Spanisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionEnglishToTraditionalChinese"></a><span class="method">GetDefinitionEnglishToTraditionalChinese</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Definition(en) zu einem Wort in traditionellem Chinesisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Englisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Definition(en) zum angegebenen Begriff in traditionellem Chinesisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionFrenchToEnglish"></a><span class="method">GetDefinitionFrenchToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Französisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Französisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionGermanToEnglish"></a><span class="method">GetDefinitionGermanToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Deutsch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Deutsch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionItalianToEnglish"></a><span class="method">GetDefinitionItalianToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Italienisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Italienisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionJapaneseToEnglish"></a><span class="method">GetDefinitionJapaneseToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Japanisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Japanisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionKoreanToEnglish"></a><span class="method">GetDefinitionKoreanToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Koreanisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Koreanisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionSimplifiedChineseToEnglish"></a><span class="method">GetDefinitionSimplifiedChineseToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von vereinfachtem Chinesisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in einfachem Chinesisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionSpanishToEnglish"></a><span class="method">GetDefinitionSpanishToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von Spanisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in Spanisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="DictionaryGetDefinitionTraditionalChineseToEnglish"></a><span class="method">GetDefinitionTraditionalChineseToEnglish</span><span class="methodargs">(word)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Übersetzt ein Wort von traditionellem Chinesisch zu Englisch.</span><br />
+<span class="info">word</span> <span class="text">Das zu definierende Wort in traditionellem Chinesisch.</span><br />
+<span class="info">returns</span> <span class="text">Die Übersetzung für den angegebenen Begriff in Englisch bei Erfolg, sonst "".</span><br />
+<br />
+<a class="tag" name="File"></a><span class="group">File</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Methoden zum Lese- und Schreibzugriff für Dateien auf einem Datenträger. Dies ermöglicht, Einstellungen über mehrere Programmsitzungen hinweg zu speichern.<br />Ungültige Zeichen in Ordner-/Dateiname sind  \/:*?"<>|<br />Unterstützt "\" (Root), "." (CurrDir), ".." (ParentDir) relative Pfade und %PFADE%.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#FileAppendContents">AppendContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileCopyFile">CopyFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileCreateDirectory">CreateDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileDeleteDirectory">DeleteDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileDeleteFile">DeleteFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetDirectories">GetDirectories</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileGetFiles">GetFiles</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetSettingsFilePath">GetSettingsFilePath</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileGetTemporaryFilePath">GetTemporaryFilePath</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileInsertLine">InsertLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileLastError">LastError</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#FileReadContents">ReadContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#FileReadLine">ReadLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileWriteContents">WriteContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FileWriteLine">WriteLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="FileAppendContents"></a><span class="method">AppendContents</span><span class="methodargs">(filePath,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet die angegebene Datei und hängt Textinhalt am Ende der Datei an (+Zeilenvorschub, Standard ANSI, sonst UTF8).</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data"). Eine nicht existierende Datei wird erstellt.</span><br />
+<span class="info">contents</span> <span class="text">Der an das Dateiende anzuhängende Text, Array oder "" für eine Leerzeile.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileCopyFile"></a><span class="method">CopyFile</span><span class="methodargs">(sourceFilePath,destinationFilePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Kopiert die angegebene Quelldatei in den Zieldateipfad. Falls der Zielpfad nicht existiert, wird versucht diesen automatisch zu erstellen.<br />Eine bereits existierende Zieldatei wird ohne Nachfrage überschrieben. Es empfiehlt sich, die Existenz einer Zieldatei zu überprüfen, um ein Überschreiben zu vermeiden.</span><br />
+<span class="info">sourceFilePath</span> <span class="text">Der volle Pfad der zu kopierenden Datei (zB. "C:\Temp\settings.data").</span><br />
+<span class="info">destinationFilePath</span> <span class="text">Der Zielordner oder Zieldateipfad (ev. gleichzeitige Umbenennung des Dateiname).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileCreateDirectory"></a><span class="method">CreateDirectory</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Erstellt ein angegebenes Verzeichnis bzw. Ordnerstruktur (incl. fehlender übergeordneter Elternordner).</span><br />
+<span class="info">directoryPath</span> <span class="text">Der volle Pfad des zu erstellenden Verzeichnisses (mit oder ohne abschließendem '\').</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg (auch wenn der Ordner bereits besteht), sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileDeleteDirectory"></a><span class="method">DeleteDirectory</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Löscht das angegebene Verzeichnis (incl. gesamtem Inhalt) ohne Rückfrage von der Festplatte.</span><br />
+<span class="info">directoryPath</span> <span class="text">Der volle Pfad des zu löschenden Verzeichnisses (mit oder ohne abschließendem '\', nicht für Junction 'L' Attr.).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileDeleteFile"></a><span class="method">DeleteFile</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Löscht eine angegebene Datei ohne Rückfrage von der Festplatte.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Pfad der zu löschenden Datei (zB. "C:\Temp\settings.data").</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileGetDirectories"></a><span class="method">GetDirectories</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die vollen Pfade aller direkten Unterordner im angegebenen Ordnerpfad.</span><br />
+<span class="info">directoryPath</span> <span class="text">Das Verzeichnis in dem Unterordner zu ermitteln sind (mit oder ohne abschließendem '\', nicht für Junction 'L' Attr.).<br />"\"	C-Root<br />"." , ".\"	akt. Startordner<br />".." , "..\"	akt. Elternordner</span><br />
+<span class="info">returns</span> <span class="text">Die vollen Ordnerpfade als Array (alphabetisch sortiert) oder "" bei Erfolg, sonst "FAILED".<br />Bei relativem Eingabepfad werden auch relative Pfade zurückgegeben.</span><br />
+<br />
+<a class="tag" name="FileGetFiles"></a><span class="method">GetFiles</span><span class="methodargs">(directoryPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Pfade aller direkten Dateien im angegebenen Ordnerpfad.</span><br />
+<span class="info">directoryPath</span> <span class="text">Das Verzeichnis in dem Dateien zu ermitteln sind (mit oder ohne abschließendem '\', nicht für Junction 'L' Attr.).<br />"\"	C-Root<br />"." , ".\"	akt. Startordner<br />".." , "..\"	akt. Elternordner</span><br />
+<span class="info">returns</span> <span class="text">Die vollen Dateipfade als Array (alphabetisch sortiert) oder "" bei Erfolg, sonst "FAILED".<br />Bei relativem Eingabepfad werden auch relative Pfade zurückgegeben.</span><br />
+<br />
+<a class="tag" name="FileGetSettingsFilePath"></a><span class="method">GetSettingsFilePath</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den vollen Pfad der Einstellungsdatei für das aktuelle Programm. Der Name der Einstellungsdatei basiert auf dem aktuellen Programmname mit Erweiterung .settings und befindet sich im selben Verzeichnis wie das Programm (ANSI Textdatei).<br />Die Einstellungsdatei selbst wird dabei nicht erstellt.</span><br />
+<span class="info">returns</span> <span class="text">Der volle Pfad der Einstellungsdatei für dieses Programm.</span><br />
+<br />
+<a class="tag" name="FileGetTemporaryFilePath"></a><span class="method">GetTemporaryFilePath</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Erstellt eine neue temporäre Datei im Benutzer TEMP-Ordner (%TEMP%\tmp????.tmp) und gibt deren vollen Dateipfad zurück.</span><br />
+<span class="info">returns</span> <span class="text">Der volle Pfad der temporären Datei (zB. C:\Users\NAME\AppData\Local\Temp\tmp3B80.tmp).</span><br />
+<br />
+<a class="tag" name="FileInsertLine"></a><span class="method">InsertLine</span><span class="methodargs">(filePath,lineNumber,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet die angegebene Datei und fügt Textinhalt in/ab der Zeile mit der angegebenen Zeilennummer ein (+Zeilenvorschub, Standard ANSI, sonst UTF8).<br />Diese Methode überschreibt keinen bestehenden Inhalt in der angegebenen Datei. Höhere Zeilennummern als im bestehenden Text vorhanden, werden nach letzter vorhandenen Zeile angefügt (ev. dazwischenliegende Leerzeilen werden ignoriert).</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data"). Eine nicht existierende Datei wird erstellt.</span><br />
+<span class="info">lineNumber</span> <span class="text">Die Zeilennummer für den einzufügenden Text ab 1 (0 ergibt keine Änderung).</span><br />
+<span class="info">contents</span> <span class="text">Der in angegebene Zeile einzufügende Text, Array oder "" für eine Leerzeile.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<br />
+<a class="tag" name="FileLastError"></a><span class="method">LastError</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die letzte, auf einem Dateivorgang basierende Fehlermeldung. Diese Eigenschaft hilft herauszufinden, wenn eine File Methode nicht ausgeführt werden konnte.<br />(Standard: ""). Für AppendContents, CopyFile, CreateDirectory, DeleteDirectory, DeleteFile, GetDirectories, GetFiles, InsertLine, WriteContents.</span><br />
+<br />
+<a class="tag" name="FileReadContents"></a><span class="method">ReadContents</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet eine lokale Datei und liest den gesamten Textinhalt/Einzelarray (Standard UTF8, ev. Anzeigeproblem bei ANSI, s. dazu LDFile.ReadANSI).<br />Diese Methode ist schnell bei Dateien unter 1MB, wird aber deutlich langsamer bei größeren Dateien, besonders über 10MB.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data").</span><br />
+<span class="info">returns</span> <span class="text">Der gesamte Textinhalt der Datei bzw. "" wenn Datei fehlt oder leer ist.</span><br />
+<span class="info">example</span> <span class="text">'Einzelnen Array laden<br />arr = File.ReadContents(File.GetSettingsFilePath())</span><br />
+<br />
+<a class="tag" name="FileReadLine"></a><span class="method">ReadLine</span><span class="methodargs">(filePath,lineNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet die angegebene Datei und liest Textinhalt/Array der angegebenen Zeilennummer (Standard UTF8, ev. Anzeigeproblem bei ANSI, s. dazu LDFile.ReadANSI).</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data").</span><br />
+<span class="info">lineNumber</span> <span class="text">Die Zeilennummer für den einzulesenden Text ab 1 (0 liest die erste Zeile).</span><br />
+<span class="info">returns</span> <span class="text">Der Textinhalt der angegebenen Zeile. "" für Leerzeile oder wenn Datei oder Zeilennummer (zB. Leerdatei) nicht existiert.</span><br />
+<span class="info">example</span> <span class="text">'Array aus Zeile 1 einlesen<br />arr = File.ReadLine(File.GetSettingsFilePath(), 1)</span><br />
+<br />
+<a class="tag" name="FileWriteContents"></a><span class="method">WriteContents</span><span class="methodargs">(filePath,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet eine Datei und schreibt angegebenen Textinhalt/Einzelarray hinein (ohne Zeilenvorschub, Standard ANSI, sonst UTF8). Bestehende Inhalte werden durch den neuen Inhalt ersetzt.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data"). Eine nicht existierende Datei wird erstellt.</span><br />
+<span class="info">contents</span> <span class="text">Der in die angegebene Datei zu schreibende Text oder Array. "" löscht einen bereits bestehenden Inhalt oder erstellt eine Leerdatei.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<span class="info">example</span> <span class="text">'Einzelnen Array speichern<br />File.WriteContents(File.GetSettingsFilePath(), arr)</span><br />
+<br />
+<a class="tag" name="FileWriteLine"></a><span class="method">WriteLine</span><span class="methodargs">(filePath,lineNumber,contents)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Öffnet die angegebene Datei und schreibt Textinhalt/Array in die Zeile mit der angegebenen Zeilennummer (+Zeilenvorschub, Standard ANSI, sonst UTF8).<br />Diese Methode überschreibt den bestehenden Inhalt in der angegebenen Zeile. Höhere Zeilennmmern als im bestehenden Text vorhanden, werden nach letzter vorhandenen Zeile angefügt (ev. dazwischenliegende Leerzeilen werden ignoriert).</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Dateipfad (zB. "C:\Temp\settings.data"). Eine nicht existierende Datei wird erstellt.</span><br />
+<span class="info">lineNumber</span> <span class="text">Die Zeilennummer für den zu schreibenden Text ab 1 (0 schreibt in die erste Zeile).</span><br />
+<span class="info">contents</span> <span class="text">Der in angegebene Zeile zu schreibende Text, Array oder "" für Leerzeile.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" bei Erfolg, sonst "FAILED".</span><br />
+<span class="info">example</span> <span class="text">'Array in Zeile 1 speichern<br />File.WriteLine(File.GetSettingsFilePath(), 1,arr)<br /><br />'Zeile z in (leere) Datei schreiben<br />z = 11<br />len = LDFile.Length(path)<br /><br />If len < 0 Then<br />  File.WriteLine(path, i,"")<br />EndIf<br />For i = len To z-1<br />  File.WriteLine(path, i,lf)<br />EndFor<br />File.WriteLine(path, z,"Text")</span><br />
+<br />
+<a class="tag" name="Flickr"></a><span class="group">Flickr</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Bietet Zugang zum 'Flickr' Fotodienst.<br />(Bei Fehler als Fix zuvor einmalig s. LDUtilities.FixFlickr() aufrufen)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#FlickrGetPictureOfMoment">GetPictureOfMoment</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#FlickrGetRandomPicture">GetRandomPicture</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="FlickrGetPictureOfMoment"></a><span class="method">GetPictureOfMoment</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Webadresse für ein aktuelles 'Flickr' Bild. (Bei Fehler zuvor einmalig s. LDUtilities.FixFlickr() aufrufen)</span><br />
+<span class="info">returns</span> <span class="text">Die Web-Url für das 'Flickr' Bild.</span><br />
+<br />
+<a class="tag" name="FlickrGetRandomPicture"></a><span class="method">GetRandomPicture</span><span class="methodargs">(tag)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Webadresse für ein zufälliges 'Flickr' Bild zum angegebenen Thema. (Bei Fehler zuvor einmalig s. LDUtilities.FixFlickr() aufrufen)</span><br />
+<span class="info">tag</span> <span class="text">Das Thema für das gewünschte Zufallsbild.</span><br />
+<span class="info">returns</span> <span class="text">Die Web-Url für das 'Flickr' Bild (Zufallsauswahl).</span><br />
+<br />
+<a class="tag" name="GraphicsWindow"></a><span class="group">GraphicsWindow</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Graphische Benutzeroberfläche (GUI) mit Ein- und Ausgabefunktionen. Hier können zB. Kreise und Rechtecke gezeichnet und ausgefüllt werden.<br />PxlPos x,y: 0 bis GW.Width-1 bzw. GW.Height-1.<br />Die meisten enthaltenen Methoden initialisieren das GW auch ohne vorheriges GraphicsWindow.Show (GetColorFromRGB, GetRandomColor, Font.. nicht).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#GraphicsWindowBackgroundColor">BackgroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowBrushColor">BrushColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowCanResize">CanResize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowClear">Clear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawBoundText">DrawBoundText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawEllipse">DrawEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowDrawImage">DrawImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawLine">DrawLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawRectangle">DrawRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowDrawResizedImage">DrawResizedImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawText">DrawText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowDrawTriangle">DrawTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFillEllipse">FillEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFillRectangle">FillRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFillTriangle">FillTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFontBold">FontBold</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFontItalic">FontItalic</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowFontName">FontName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowFontSize">FontSize</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowGetColorFromRGB">GetColorFromRGB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowGetPixel">GetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowGetRandomColor">GetRandomColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowHeight">Height</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowKeyDown">KeyDown</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowKeyUp">KeyUp</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowLastKey">LastKey</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowLastText">LastText</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowLeft">Left</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseDown">MouseDown</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowMouseMove">MouseMove</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseUp">MouseUp</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowMouseX">MouseX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowMouseY">MouseY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowPenColor">PenColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowPenWidth">PenWidth</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowSetPixel">SetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#GraphicsWindowShowMessage">ShowMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowTextInput">TextInput</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#GraphicsWindowTitle">Title</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#GraphicsWindowTop">Top</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#GraphicsWindowWidth">Width</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="GraphicsWindowBackgroundColor"></a><span class="method">BackgroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Hintergrundfarbe des GraphicsWindow (bzw. Anpassen der Transparenz für s. LDUtilities.TransparentGW).<br />Standard: #FFFFFF dh. 'White'. Fehler oder "" gibt #000000 dh. 'Black'. "#00FFFFFF" ist 'Transparent'.</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx">http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx</a><br /><a href="http://i.msdn.microsoft.com/dynimg/IC24340.png">http://i.msdn.microsoft.com/dynimg/IC24340.png</a></span><br />
+<br />
+<a class="tag" name="GraphicsWindowBrushColor"></a><span class="method">BrushColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Pinselfarbe, mit welcher Formen ausgefüllt bzw. Text in GraphicsWindow, Controls und Textshapes angezeigt wird.<br />(Standard: #6A5ACD dh. 'SlateBlue'; Fehler oder "" gibt #000000 dh. 'Black').<br />#AARRGGBB mit AA<>FF setzt Transparenz für Shapes und Zeichnungen (FF deckend, 00 transparent).</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx">http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx</a><br /><a href="http://i.msdn.microsoft.com/dynimg/IC24340.png">http://i.msdn.microsoft.com/dynimg/IC24340.png</a></span><br />
+<br />
+<a class="tag" name="GraphicsWindowCanResize"></a><span class="method">CanResize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt ob die Größe des GraphicsWindow mittels Mauszeiger angepasst werden kann. Setzen VOR GW.Width/-Height.<br />Änderung der Fenstergröße ist weiterhin möglich mittels GW.Width und GW.Height.<br />(Standard: "True", sonstiges wie "False", "", 0, 1, -1 usw. fixiert Fenstergröße und erhöht Standardwerte für GW.Width/-Height um 10 auf 634/452)<br />Min. GW.Width/Height: 126/10<br />"True"	Min+Max Felder (LDGraphicsWindow.Resize 1)<br />"False"	nur 'X' Feld (LDGraphicsWindow.Resize 2)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowClear"></a><span class="method">Clear</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Löscht alle Inhalte im GraphicsWindow wie: Bilder, Zeichnungen, Text, Controls und Shapes (außer Turtle).<br />Bestehende Shape# werden geleert (""). ImageList#, Schrift- und Farbeinstellungen (BackgroundColor) bleiben erhalten.<br />Alternativ GW (-Bereich) mit FillRectangle (in BrushColor) überzeichnen (nur für GW.Draw../Fill.., außer für Turtle/-Linie, Shapes, Controls).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawBoundText"></a><span class="method">DrawBoundText</span><span class="methodargs">(x,y,width,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Schreibt eine Textzeile an der angegebenen Stelle (mit BrushColor, Font..).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate für den Ankerpunkt (l.o.) des Textes.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate für den Ankerpunkt (l.o.) des Textes (je nach FontSize sind Standardbuchstaben runter versetzt).</span><br />
+<span class="info">width</span> <span class="text">Die maximal verfügbare Textbreite [Pxl] (0 volle Textlänge ohne Umbruch, s. DrawText). Bestimmt wo der Textumbruch (an Leerzeichen) stattfindet.</span><br />
+<span class="info">text</span> <span class="text">Der anzuzeigende Text. Bei kleineren Werten für Textbreite nur oder endende '...' in Ausgabezeile.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawEllipse"></a><span class="method">DrawEllipse</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet eine Ellipse mit dem gewählten Stift (PenColor/-Width). Koordinaten beziehen sich auf die Mitte der PenWidth Linienbreite.</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate der Ellipse.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate der Ellipse.</span><br />
+<span class="info">width</span> <span class="text">Die Breite der Ellipse (-/0/+ Werte, <0 kippt um y-Achse nach links).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe der Ellipse (-/0/+ Werte, <0 kippt um x-Achse nach oben).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawImage"></a><span class="method">DrawImage</span><span class="methodargs">(imageName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt ein (ImageList) Bild in Originalgröße im GraphicsWindow (in gleicher Ebene wie gefüllte Formen). Keine Anzeige wenn "ImageList#" leer "" ist. Keine Gif-Animation.</span><br />
+<span class="info">imageName</span> <span class="text">Der ImageList-Name oder voller (Web)Dateipfad des anzuzeigenden Bildes (BMP, gif, ico, jp(e)g, PNG, tiff).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Bildes im GraphicsWindow.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Bildes im GraphicsWindow.</span><br />
+<span class="info">example</span> <span class="text">GraphicsWindow.DrawImage("<a href="http://microsoft.com/favicon.ico">http://microsoft.com/favicon.ico</a>", 0,0)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawLine"></a><span class="method">DrawLine</span><span class="methodargs">(x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet eine Linie zwischen 2 Punkten mit dem gewählten Stift (PenColor/-Width). Koordinaten beziehen sich auf die Mitte der PenWidth Linienbreite.</span><br />
+<span class="info">x1</span> <span class="text">Die x-Koordinate von Punkt 1.</span><br />
+<span class="info">y1</span> <span class="text">Die y-Koordinate von Punkt 1.</span><br />
+<span class="info">x2</span> <span class="text">Die x-Koordinate von Punkt 2.</span><br />
+<span class="info">y2</span> <span class="text">Die y-Koordinate von Punkt 2.</span><br />
+<span class="info">example</span> <span class="text">'Gerade von x1,y1 nach y2 im Winkel deg<br />rad = Math.GetRadians(180-deg)<br />x2 = x1 + (y2-y1)/Math.Tan(rad)<br />GraphicsWindow.DrawLine(x1,y1, x2,y2)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawRectangle"></a><span class="method">DrawRectangle</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet ein Rechteck mit dem gewählten Stift (PenColor/-Width). Koordinaten beziehen sich auf die Mitte der PenWidth Linienbreite.</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Rechtecks.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Rechtecks.</span><br />
+<span class="info">width</span> <span class="text">Die Breite des Rechtecks (0/+ Werte).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe des Rechtecks (0/+ Werte).</span><br />
+<span class="info">example</span> <span class="text">'Einzelpunkt in PenWidth<br />DrawRectangle(10,10, 0,0)<br />'horiz. Linie in PenWidth<br />DrawRectangle(10,10, 10,0)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawResizedImage"></a><span class="method">DrawResizedImage</span><span class="methodargs">(imageName,x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt ein (ImageList) Bild in den angegebenen Abmessungen im GraphicsWindow (Ansicht wird ev. gestaucht, in gleicher Ebene wie gefüllte Formen). Keine Anzeige wenn "ImageList#" leer "" ist. Keine Gif-Animation.</span><br />
+<span class="info">imageName</span> <span class="text">Der ImageList-Name oder voller (Web)Dateipfad des anzuzeigenden Bildes (BMP, gif, ico, jp(e)g, PNG, tiff).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Bildes im GraphicsWindow.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Bildes im GraphicsWindow.</span><br />
+<span class="info">width</span> <span class="text">Die Anzeigebreite des Bildes (0/+ Werte, 0 gibt keine Anzeige).</span><br />
+<span class="info">height</span> <span class="text">Die Anzeigehöhe des Bildes (0/+ Werte, 0 gibt keine Anzeige).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawText"></a><span class="method">DrawText</span><span class="methodargs">(x,y,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Schreibt eine Textzeile an der angegebenen Stelle (mit BrushColor, Font..).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate für den Ankerpunkt (l.o.) des Textes.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate für den Ankerpunkt (l.o.) des Textes (je nach FontSize sind Standardbuchstaben runter versetzt).</span><br />
+<span class="info">text</span> <span class="text">Der anzuzeigende Text.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowDrawTriangle"></a><span class="method">DrawTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet ein Dreieck mit dem gewählten Stift (PenColor/-Width). Koordinaten beziehen sich auf die Mitte der PenWidth Linienbreite.</span><br />
+<span class="info">x1</span> <span class="text">Die x-Koordinate von Punkt 1.</span><br />
+<span class="info">y1</span> <span class="text">Die y-Koordinate von Punkt 1.</span><br />
+<span class="info">x2</span> <span class="text">Die x-Koordinate von Punkt 2.</span><br />
+<span class="info">y2</span> <span class="text">Die y-Koordinate von Punkt 2.</span><br />
+<span class="info">x3</span> <span class="text">Die x-Koordinate von Punkt 3.</span><br />
+<span class="info">y3</span> <span class="text">Die y-Koordinate von Punkt 3.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillEllipse"></a><span class="method">FillEllipse</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet eine gefüllte Ellipse (mit BrushColor).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate der Ellipse.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate der Ellipse.</span><br />
+<span class="info">width</span> <span class="text">Die Breite der Ellipse (-/0/+ Werte, 0 gibt keine Anzeige, <0 kippt um y-Achse nach links).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe der Ellipse (-/0/+ Werte, 0 gibt keine Anzeige, <0 kippt um x-Achse nach oben).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillRectangle"></a><span class="method">FillRectangle</span><span class="methodargs">(x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet ein gefülltes Rechteck (mit BrushColor).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Rechtecks.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Rechtecks.</span><br />
+<span class="info">width</span> <span class="text">Die Breite des Rechtecks (0/+ Werte, 0 gibt keine Anzeige).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe des Rechtecks (0/+ Werte, 0 gibt keine Anzeige).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFillTriangle"></a><span class="method">FillTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet ein gefülltes Dreieck (mit BrushColor).</span><br />
+<span class="info">x1</span> <span class="text">Die x-Koordinate von Punkt 1.</span><br />
+<span class="info">y1</span> <span class="text">Die y-Koordinate von Punkt 1.</span><br />
+<span class="info">x2</span> <span class="text">Die x-Koordinate von Punkt 2.</span><br />
+<span class="info">y2</span> <span class="text">Die y-Koordinate von Punkt 2.</span><br />
+<span class="info">x3</span> <span class="text">Die x-Koordinate von Punkt 3.</span><br />
+<span class="info">y3</span> <span class="text">Die y-Koordinate von Punkt 3.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontBold"></a><span class="method">FontBold</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt Text als Fettdruck im GraphicsWindow, Controls und Textshapes.<br />(Standard: "True")</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontItalic"></a><span class="method">FontItalic</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt Text als Kursivdruck im GraphicsWindow, Controls und Textshapes.<br />(Standard: "False")</span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontName"></a><span class="method">FontName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt den Name der Schriftart für Text im GraphicsWindow, Controls und Textshapes.<br />(Standard: Tahoma, Systemstandard: Segoe UI, 9)<br />FixedWidthFonts zB: Consolas, Courier New, Digital-7 Mono, Liberation Mono, Lucida Console, Lucida Sans Typewriter<br />Symbole zB: Cambria Math, Lucida Console, Segoe UI Symbol, Symbol(a), Webdings, Wingdings( 2,3)</span><br />
+<span class="info">example</span> <span class="text">FontName = "(#)Schriftname(, ErsatzFont1, ..)"<br />FontName = "(file:///)Ordnerpfad\#Schriftname"<br />s. FontFallback, CompositeFonts:<br /><a href="http://msdn.microsoft.com/library/system.windows.media.fontfamily.aspx">http://msdn.microsoft.com/library/system.windows.media.fontfamily.aspx</a><br /><a href="http://msdn.microsoft.com/library/ms602323.aspx">http://msdn.microsoft.com/library/ms602323.aspx</a></span><br />
+<br />
+<a class="tag" name="GraphicsWindowFontSize"></a><span class="method">FontSize</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Schriftgröße von Text im GraphicsWindow, Controls und Textshapes (bei FixedWidthFont: Breite = 0.6*Höhe).<br />(Standard: 12)</span><br />
+<span class="info">example</span> <span class="text">8,9,10,11,12, 14,16,18,20,22,24,26,28, 36,48,72</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetColorFromRGB"></a><span class="method">GetColorFromRGB</span><span class="methodargs">(red,green,blue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Hex-Farbwert (#RRGGBB) aus den angegebenen Rot-, Grün- und Blauwerten einer Farbe.</span><br />
+<span class="info">red</span> <span class="text">Der Rotanteil der Farbe (0-255).</span><br />
+<span class="info">green</span> <span class="text">Der Grünanteil der Farbe (0-255).</span><br />
+<span class="info">blue</span> <span class="text">Der Blauanteil der Farbe (0-255).</span><br />
+<span class="info">returns</span> <span class="text">Der Hex-Farbwert als #RRGGBB. Dieser kann zum Setzen der Pinsel- oder Stiftfarbe verwendet werden (zB. #808080).</span><br />
+<span class="info">example</span> <span class="text">'Pinselfarbe als R,G,B setzen<br />GraphicsWindows.BrushColor = GraphicsWindow.GetColorFromRGB(R,G,B)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetPixel"></a><span class="method">GetPixel</span><span class="methodargs">(x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Farbe eines Pixels an den gegebenen Koordinaten im GW (als #RRGGBB, für Draw.. Zeichnungen, Text, Images. NICHT für BackgroundColor oder Shapes).<br />(Standard: #000000, leeres GW)</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Pixels (>=0, <GraphicsWindow.Width).</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Pixels (>=0, <GraphicsWindow.Height).</span><br />
+<span class="info">returns</span> <span class="text">Die Farbe des Pixels als #RRGGBB.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowGetRandomColor"></a><span class="method">GetRandomColor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt einen gültigen Zufalls-Farbwert (GW wird nicht initialisiert).</span><br />
+<span class="info">returns</span> <span class="text">Ein gültiger zufälliger Farbwert als #RRGGBB.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowHeight"></a><span class="method">Height</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Höhe des GraphicsWindow (Klientbereich).<br />(Standard: 442 (452 bei CanResize=False), Fensterhöhe = gh +2*7 (Rand) +22 (Titelleiste); 2-zeilige Taskbarhöhe 60. Kein Rand bei CanResize=False.)<br />Nicht ermittelbar nach GW.Hide am Beginn. Minimalwert: -38</span><br />
+<span class="info">example</span> <span class="text">tbh = 60 'Taskbarhöhe<br />ghMax = Desktop.Height -tbh-38 'zB. 670</span><br />
+<br />
+<a class="tag" name="GraphicsWindowHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet das GraphicsWindow aus (auch wenn zuvor noch nicht initialisiert, dann bleibt jedoch 'Maximieren' Feld deaktivert).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowKeyDown"></a><span class="method">KeyDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Drücken einer beliebigen Taste (wenn Mauszeiger im GraphicsWindow).<br />Für weitere Tastaturereignisse s. LDTextWindow.KeyDown und .KeyUp (mit .LastKey, LowLevel für GW u/o TW dh. auch OHNE Fensterfokus).<br />Für Zeichentasten wird auch 'GW.TextInput' ausgelöst.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowKeyUp"></a><span class="method">KeyUp</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Loslassen einer Taste (Mauszeiger im GraphicsWindow).<br />Für weitere Tastaturereignisse s. LDTextWindow.KeyDown und .KeyUp (mit .LastKey, LowLevel für GW u/o TW dh. auch OHNE Fensterfokus).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLastKey"></a><span class="method">LastKey</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die zuletzt gedrückte/losgelassene Taste im GW (Tastencode für Buchstaben in Großbuchstaben zB. "A"). Bei Abfrage exakte Schreibweise einhalten.<br />(Standard: None)</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/system.windows.input.key.aspx">http://msdn.microsoft.com/library/system.windows.input.key.aspx</a><br />D0-D9		0-9<br />NumPad0-NumPad9	0-9 ZiffBl.<br />F1-F12		Funktion 1-12<br />Space		Leertaste<br />Left-,RightShift  Umschalt<br />Left-,RightCtrl	Strg<br />System,RightAlt	Alt<br />Return		Eingabe<br />Tab		Tabulator<br />Insert		Einfg<br />Delete		Entf<br />Home		Pos1<br />End		Ende<br />PageUp,Next	BildAuf/-Ab<br />Left,Right,Down,Up  ←,→,↓,↑<br />Add,Subtract	+,-´ZiffBl.<br />Multiply,Divide	*,/ ZiffBl.<br />OemOpenBrackets	ß,?<br />OemQuotes	ä,Ä<br />Oem3,Oem1	ö,Ö, ü,Ü<br />OemPlus,OemMinus	+,*, -,_<br />OemQuestion	#,'</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLastText"></a><span class="method">LastText</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt das Schriftzeichen (Nummer, Buchstabe, Sonderzeichen), das zuletzt im GraphicsWindow eingegeben wurde. Unterscheidet zwischen GROß-/kleinbuchstaben.<br />Aufruf mittels 'TextInput' Ereignis und Sub (Standard: null).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowLeft"></a><span class="method">Left</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die linke Position des GraphicsWindow (linker Fensterrand) am Desktop.<br />(Standard: 29 bis 145)</span><br />
+<span class="info">example</span> <span class="text">'GW Klientbereich links oben<br />GraphicsWindow.Left = -8<br />GraphicsWindow.Top = -30<br /><br />'GW Klientbereich zentriert<br />GraphicsWindow.Left = (DT.Width-GW.Width)/2 -8<br />GraphicsWindow.Top = (DT.Height-GW.Height)/2 -30</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseDown"></a><span class="method">MouseDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Drücken einer Maustaste (Links, Mitte/Rad oder Rechts) im GraphicsWindow (bzw. Shape). Linke Maustaste nicht für Controls und rechte auch nicht für (MultiLine)TextBox.<br />Ereignisaufruf für mittlere Maustaste/-rad ergibt sich aus 'Links NOr Rechts'.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseMove"></a><span class="method">MouseMove</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Bewegung des Mauszeigers (manuell oder programmgesteuert) im GraphicsWindow.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseUp"></a><span class="method">MouseUp</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Loslassen einer Maustaste (Links, Mitte/Rad oder Rechts) im GraphicsWindow (bzw. Shape). Linke Maustaste nicht für Controls.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseX"></a><span class="method">MouseX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die x-Position des Mauszeigers im GraphicsWindow (0 bis GW.Width-1). Keine Aktualisierung außerhalb des GW (gibt 0 oder letzte bekannte Pos).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowMouseY"></a><span class="method">MouseY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die y-Position des Mauszeigers im GraphicsWindow (0 bis GW.Height-1). Keine Aktualisierung außerhalb des GW (gibt 0 oder letzte bekannte Pos).</span><br />
+<br />
+<a class="tag" name="GraphicsWindowPenColor"></a><span class="method">PenColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Stiftfarbe, die verwendet wird für Linienzeichnungen im GW, Shapes-Umrandungen und Turtle-Spur (Intern: "_turtleLine#").<br />(Standard: #000000 dh. 'Black' od. "")</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx">http://msdn.microsoft.com/library/System.Windows.Media.Colors.aspx</a><br /><a href="http://i.msdn.microsoft.com/dynimg/IC24340.png">http://i.msdn.microsoft.com/dynimg/IC24340.png</a></span><br />
+<br />
+<a class="tag" name="GraphicsWindowPenWidth"></a><span class="method">PenWidth</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Stiftbreite (Linienzeichnungen im GW, Shapes-Umrandungen und Turtle-Linie). Für Shapes ohne Umrandung (in PenColor) auf 0 setzen. (Standard: 2)<br /><2  hellere Doppellinie<br /><=0.18  Einzellinie  >=0.07<br /><0.07  keine Linie</span><br />
+<br />
+<a class="tag" name="GraphicsWindowSetPixel"></a><span class="method">SetPixel</span><span class="methodargs">(x,y,color)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeichnet ein Pixel an den angegebenen Koordinaten des GW in der gewählten Farbe (unabhängig von Pen-/BrushColor).</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Pixels (>=0).</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Pixels (>=0).</span><br />
+<span class="info">color</span> <span class="text">Die Farbe des Pixels (zB. "Red" oder "#(AA)RRGGBB" bzw. #(A)RGB, "" für "#000000" bzw. "Black").</span><br />
+<br />
+<a class="tag" name="GraphicsWindowShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt das interaktionsbereite GraphicsWindow (wieder) an.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowShowMessage"></a><span class="method">ShowMessage</span><span class="methodargs">(text,title)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt ein (dem GW untergeordnetes) Meldungsfenster (zentriert am Desktop) und hält die Programmausführung an, bis 'OK' Button, "Space", "Escape" oder Eingabetaste gedrückt wurde. Max. Breite 480 Pxl bzw. ca. 39-61 Zeichen.<br />Schrifteigenschaften unveränderlich.</span><br />
+<span class="info">text</span> <span class="text">Der im Meldungsfenster anzuzeigende Text.</span><br />
+<span class="info">title</span> <span class="text">Der Titel des Meldungsfensters.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTextInput"></a><span class="method">TextInput</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf bei Drücken einer Zeichentaste (Nummer, Buchstabe, Sonderzeichen) im GraphicsWindow. Nicht für Steuer-/Funktionstasten. Gemeinsam mit 'GW.KeyDown' Event.</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTitle"></a><span class="method">Title</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt den Titel des GraphicsWindow (Tab funktioniert nicht, Systemstandard für Schrifteigenschaften, keine Symbole).<br />(Standard: Small Basic Graphics Window)</span><br />
+<br />
+<a class="tag" name="GraphicsWindowTop"></a><span class="method">Top</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die obere Position des GraphicsWindow (Fenster, Oberkante Titelleiste) am Desktop.<br />(Standard: 29 bis 145)</span><br />
+<span class="info">example</span> <span class="text">'GW Klientbereich links oben<br />GraphicsWindow.Left = -8<br />GraphicsWindow.Top = -30<br /><br />'GW Klientbereich zentriert<br />GraphicsWindow.Left = (DT.Width-GW.Width)/2 -8<br />GraphicsWindow.Top = (DT.Height-GW.Height)/2 -30</span><br />
+<br />
+<a class="tag" name="GraphicsWindowWidth"></a><span class="method">Width</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Breite des GraphicsWindow (Klientbereich).<br />Min. Anzeigebreite: 116 (bei GW.Hide/CanResize: 132/126) bei 0, "" oder ungültiger Angabe.<br />(Standard: 624 (634 bei CanResize=False), Fensterbreite = gw +2*7 Rand. Kein Rand bei CanResize=False.)<br />Nicht ermittelbar nach GW.Hide am Beginn.</span><br />
+<span class="info">example</span> <span class="text">gwMax = Desktop.Width -2*7 'zB. 1352</span><br />
+<br />
+<a class="tag" name="ImageList"></a><span class="group">ImageList</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ermöglicht das Laden von Bilddateien in den Arbeitspeicher. Benötigt kein GW.<br />Transparenz in ImageList ist #D3D3D3 bzw. 'LightGray'.<br />pxlPos x/y: 0 bis GetWidthOfImage-1 bzw. 0 bis GetHeightOfImage-1.<br />Kopieren mittels img2 = img1 (behält gleiche ImageList#).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ImageListClipImage">ClipImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ImageListGetHeightOfImage">GetHeightOfImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ImageListGetWidthOfImage">GetWidthOfImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ImageListLoadImage">LoadImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ImageListClipImage"></a><span class="method">ClipImage</span><span class="methodargs">(imageName,left,top,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Erstellt einen Ausschnitt eines angegebenen Bildes und liefert ein neues Bild mit diesem Ausschnitt (Entfernt in Code und IntelliSense, s. LDImage.Crop).</span><br />
+<span class="info">imageName</span> <span class="text">Das Originalbild von dem der Ausschnitt erstellt wird.</span><br />
+<span class="info">left</span> <span class="text">Die x-Koordinate des Ausschnittsrechtecks.</span><br />
+<span class="info">top</span> <span class="text">Die y-Koordinate des Ausschnittsrechtecks.</span><br />
+<span class="info">width</span> <span class="text">Die Breite des Ausschnittsrechtecks.</span><br />
+<span class="info">height</span> <span class="text">Die Höhe des Ausschnittsrechtecks.</span><br />
+<span class="info">returns</span> <span class="text">Der rechteckige Bildausschnitt.</span><br />
+<br />
+<a class="tag" name="ImageListGetHeightOfImage"></a><span class="method">GetHeightOfImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Höhe eines angegebenen Bildes (ImageList oder Datei).</span><br />
+<span class="info">imageName</span> <span class="text">Der Name des Bildes in ImageList, ImageList# oder voller Dateipfad.</span><br />
+<span class="info">returns</span> <span class="text">Die Höhe des Bildes [Pxl] oder 0.</span><br />
+<br />
+<a class="tag" name="ImageListGetWidthOfImage"></a><span class="method">GetWidthOfImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Breite eines angegebenen Bildes (ImageList oder Datei).</span><br />
+<span class="info">imageName</span> <span class="text">Der Name des Bildes in ImageList, ImageList# oder voller Dateipfad.</span><br />
+<span class="info">returns</span> <span class="text">Die Breite des Bildes [Pxl] oder 0.</span><br />
+<br />
+<a class="tag" name="ImageListLoadImage"></a><span class="method">LoadImage</span><span class="methodargs">(fileNameOrUrl)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Lädt eine lokale oder Netzwerk Bilddatei in den Arbeitsspeicher (Intern: ImageList#+1).<br />ImageListName = "" entfernt das Bild aus ImageList, nicht jedoch die ImageList#.<br />Bei ICO Dateien mit mehreren Symbolen wird das größte Bild daraus geladen. Nicht für CUR Dateien. Keine Gif-Animation.</span><br />
+<span class="info">fileNameOrUrl</span> <span class="text">Der volle Dateipfad des Bildes als lokale oder Netzwerkdatei (BMP, (anim)gif, ico, jp(e)g, PNG, tiff).</span><br />
+<span class="info">returns</span> <span class="text">Der Name des neu geladenen ImageList Bildes, sonst "" (wenn fileNameOrUrl "").</span><br />
+<span class="info">example</span> <span class="text">ImageList.LoadImage("") erstellt KEINE neue/leere ImageList#.<br />ImageList.LoadImage(" ") oder nichtexistenter Bildpfad erstellt neue/leere ImageList#+1, aber kein verwendbares Bild.</span><br />
+<br />
+<a class="tag" name="Math"></a><span class="group">Math</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Hilfreiche mathematische Methoden.<br />Wissenschaftliche Notation in der Form "-num.dezE-exp", zB:<br />555 - "1e3"	'-445<br />"-.5E02" * 3	'-150<br />1 / "500E-2"	'0.2<br />TextWindow.Write(0+"7.9228e28") '~maxNum</span><br />
+<span class="info">example</span> <span class="text">Dezimalausgabe zwar mit Komma ',' aber intern wird Dezimalpunkt '.' verwendet.<br />s. <a href="http://social.technet.microsoft.com/wiki/contents/articles/19330.small-basic-parameter-or-return-value-range-for-math-function.aspx">http://social.technet.microsoft.com/wiki/contents/articles/19330.small-basic-parameter-or-return-value-range-for-math-function.aspx</a></span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#MathAbs">Abs</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathArcCos">ArcCos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathArcSin">ArcSin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathArcTan">ArcTan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathCeiling">Ceiling</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathCos">Cos</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathFloor">Floor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathGetDegrees">GetDegrees</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathGetRadians">GetRadians</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathGetRandomNumber">GetRandomNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathLog">Log</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathMax">Max</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathMin">Min</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathNaturalLog">NaturalLog</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathPi">Pi</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathPower">Power</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathRemainder">Remainder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathRound">Round</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MathSin">Sin</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathSquareRoot">SquareRoot</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MathTan">Tan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="MathAbs"></a><span class="method">Abs</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Absolutwert einer Zahl, zB. gibt -32.233 den Wert 32.233 zurück.<br />Entfernt endende Nullen von Dezimalzahlen (s. Math.Power).</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren Absolutwert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der absolute Wert der Zahl.</span><br />
+<span class="info">example</span> <span class="text">'Endende Nullen entfernen<br />Math.Abs(-0.12300) '0.123<br /><br />'Vorzeichen Funktion sgn(n)<br />If n = 0 Then<br />  sgn = 0<br />Else<br />  sgn = n/Math.Abs(n)<br />EndIf<br /><br />'FlipFlop 0<->1<br />n = 1-Math.Abs(n) = Math.Abs(n-1) = Math.Abs(1-n)<br />'FlipFlop 0<->-1<br />n = Math.Abs(n)-1 = -Math.Abs(n+1)</span><br />
+<br />
+<a class="tag" name="MathArcCos"></a><span class="method">ArcCos</span><span class="methodargs">(cosValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Bogenmaßwinkel aus dem Cosinuswert, [°] = [rad] * 180/pi.</span><br />
+<span class="info">cosValue</span> <span class="text">Der Cosinuswert dessen Winkel zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Bogenmaßwinkel [rad] für den angegebenen Cosinuswert (0 bis pi).</span><br />
+<span class="info">example</span> <span class="text">https://en.wikipedia.org/wiki/Inverse_trigonometric_functions</span><br />
+<br />
+<a class="tag" name="MathArcSin"></a><span class="method">ArcSin</span><span class="methodargs">(sinValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Bogenmaßwinkel aus dem Sinuswert, [°] = [rad] * 180/pi.</span><br />
+<span class="info">sinValue</span> <span class="text">Der Sinuswert dessen Winkel zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Bogenmaßwinkel [rad] für den angegebenen Sinuswert (-pi/2 bis pi/2).</span><br />
+<br />
+<a class="tag" name="MathArcTan"></a><span class="method">ArcTan</span><span class="methodargs">(tanValue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Bogenmaßwinkel aus dem Tangenswert, [°] = [rad] * 180/pi.</span><br />
+<span class="info">tanValue</span> <span class="text">Der Tangenswert dessen Winkel zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Bogenmaßwinkel [rad] für den angegebenen Tangenswert (-pi/2 bis pi/2).</span><br />
+<span class="info">example</span> <span class="text">ArcTan(-x) = -ArcTan(x)<br />ArcTan(1/x) = pi/2 - ArcTan(x)<br />ATan2(y,x) = ArcTan(y/x) 'x>0<br />ArcCot(x) = ArcTan(1/x) 'x>0<br />ArcCot(x) = pi/2 - ArcTan(x)</span><br />
+<br />
+<a class="tag" name="MathCeiling"></a><span class="method">Ceiling</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt eine Ganzzahl, mit dem gleichen Wert wie die angegebene Dezimalzahl oder größer als diese. zB. gibt 32.233 den Wert 33 zurück (-32.233 gibt -32).<br />Aufrunden zur nächst höheren Ganzzahl (Gegenstück zu Math.Floor).</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren größter Wert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der größte Wert der angegebenen Zahl.</span><br />
+<span class="info">example</span> <span class="text">'Aufrunden zu max. 2 Dezimalen<br />Ceiling(100*n)/100 'zB. 123<br />'Aufrunden IMMER zu 2 Dezimalen (auch Ganzzahl)<br />Ceiling(100*n)*0.01 'zB. 123.00</span><br />
+<br />
+<a class="tag" name="MathCos"></a><span class="method">Cos</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Cosinus (Ak/Hy) des angegebenen Winkels im Bogenmaß, [rad] = [°] * pi/180.</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel [rad] dessen Cosinuswert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Cosinus des angegebenen Winkels [-1,1] (x im Einheitskreis).</span><br />
+<span class="info">example</span> <span class="text">Cos(-w) = Cos(w)<br />Cos(w) = -Cos(w+pi)<br />Cos(w) = Sin(pi/2 - w)<br />Cos²(w) = 1 - Sin²(w)</span><br />
+<br />
+<a class="tag" name="MathFloor"></a><span class="method">Floor</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt eine Ganzzahl, mit dem gleichen Wert wie die angegebene Dezimalzahl oder kleiner als diese. zB. gibt 32.233 den Wert 32 zurück (-32.233 gibt -33).<br />Abrunden zur nächst niedrigeren Ganzzahl (Gaußklammer, Gegenstück zu Math.Ceiling).</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren kleinster Wert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der kleinste Wert der angegebenen Zahl.</span><br />
+<span class="info">example</span> <span class="text">'Abrunden zu max. 2 Dezimalen<br />Floor(100*n)/100 'zB. 123<br />'Abrunden IMMER zu 2 Dezimalen (auch Ganzzahl)<br />Floor(100*n)*0.01 'zB. 123.00<br />'n oder nächste Geradzahl<br />2 * Math.Floor((n+1)/2)<br />'n oder vorige Geradzahl<br />2 * Math.Ceiling((n-1)/2)<br />'n oder nächste UNgeradzahl<br />2 * Math.Ceiling((n-1)/2) +1<br />'n oder vorige UNgeradzahl<br />2 * Math.Floor((n+1)/2) -1</span><br />
+<br />
+<a class="tag" name="MathGetDegrees"></a><span class="method">GetDegrees</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Umrechnung eines Winkels vom Bogenmaß zum Gradmaß, [°] = [rad] * 180/pi.</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel im Bogenmaß [rad].</span><br />
+<span class="info">returns</span> <span class="text">Der umgewandelte Winkel [°].</span><br />
+<span class="info">example</span> <span class="text">'1rad = 180/pi [°]<br />Math.GetDegrees(1) '= 180/pi ~57.3°<br />rad2deg = 57.295779513082379939</span><br />
+<br />
+<a class="tag" name="MathGetRadians"></a><span class="method">GetRadians</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Umrechnung eines Winkels vom Gradmaß zum Bogenmaß, [rad] = [°] * pi/180.</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel [°].</span><br />
+<span class="info">returns</span> <span class="text">Der umgewandelte Winkel im Bogenmaß [rad].</span><br />
+<span class="info">example</span> <span class="text">Math.GetRadians(1) '= pi/180 ~11/630 [1/°]<br />deg2rad = 0.017453292519943295</span><br />
+<br />
+<a class="tag" name="MathGetRandomNumber"></a><span class="method">GetRandomNumber</span><span class="methodargs">(maxNumber)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt eine Zufallszahl zwischen 1 und der gegebenen Zahl (inkl.), 1<=Rand<=max.</span><br />
+<span class="info">maxNumber</span> <span class="text">Die Obergrenze für die ermittelte Zufallszahl (<= 2147483647 = Int32.MaxValue, <=1 ergibt 1).</span><br />
+<span class="info">returns</span> <span class="text">Eine Zufallszahl >=1, die kleiner oder gleich der angegebenen Zahl ist.</span><br />
+<span class="info">example</span> <span class="text">'min <= rnd <= max<br />rnd = min-1 + Math.GetRandomNumber(max-min+1)<br />'A - Z (65-90)<br />n = 64 + Math.GetRandomNumber(26)<br />chr = Text.GetCharacter(n)<br />'Zahl zw. 0.001 und 0.999<br />Math.GetRandomNumber(999)/1000<br />'Ausgabe -1 oder +1<br />2*Math.GetRandomNumber(2) - 3<br />'Ausgabe [-r,+r] (incl. 0)<br />Math.GetRandomNumber(2*r+1) -r-1<br />'Ausgabe [-r,+r] (ohne 0)<br />2*Math.GetRandomNumber(r+1) -r-2</span><br />
+<br />
+<a class="tag" name="MathLog"></a><span class="method">Log</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den dekadischen Logarithmus (Basis 10) der angegebenen Zahl.</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren Logarithmus zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der dekadische Logarithmus der angegebenen Zahl.</span><br />
+<span class="info">example</span> <span class="text">log(a*b) = log(a) + log(b)<br />log(a/b) = log(a) - log(b)<br />log(a^b) = b * log(a)<br />log(a^(1/b)) = log(a) / b<br />'lg(n) zur Basis B<br />lgB(n) = log(n)/log(B)</span><br />
+<br />
+<a class="tag" name="MathMax"></a><span class="method">Max</span><span class="methodargs">(number1,number2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Vergleicht zwei Zahlen und gibt die größere der beiden zurück.</span><br />
+<span class="info">number1</span> <span class="text">Die erste der beiden Vergleichszahlen.</span><br />
+<span class="info">number2</span> <span class="text">Die zweite der beiden Vergleichszahlen.</span><br />
+<span class="info">returns</span> <span class="text">Die größere der beiden Zahlen.</span><br />
+<br />
+<a class="tag" name="MathMin"></a><span class="method">Min</span><span class="methodargs">(number1,number2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Vergleicht zwei Zahlen und gibt die kleinere der beiden zurück.</span><br />
+<span class="info">number1</span> <span class="text">Die erste der beiden Vergleichszahlen.</span><br />
+<span class="info">number2</span> <span class="text">Die zweite der beiden Vergleichszahlen.</span><br />
+<span class="info">returns</span> <span class="text">Die kleinere der beiden Zahlen.</span><br />
+<br />
+<a class="tag" name="MathNaturalLog"></a><span class="method">NaturalLog</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den natürlichen Logarithmus (Basis e) der angegebenen Zahl.</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren natürlicher Logarithmus zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der natürliche Logarithmus der angegebenen Zahl.</span><br />
+<span class="info">example</span> <span class="text">ln(a*b) = ln(a) + ln(b)<br />ln(a/b) = ln(a) - ln(b)<br />ln(a^b) = b * ln(a)<br />ln(a^(1/b)) = ln(a)/b<br />'lg(n) zur Basis B<br />lgB(n) = ln(n)/ln(B)<br />e = n^(1/ln(n)) 'n>1</span><br />
+<br />
+<a class="tag" name="MathPi"></a><span class="method">Pi</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den Wert der Zahl Pi mit 14 Dezimalstellen (3.14159265358979).</span><br />
+<br />
+<a class="tag" name="MathPower"></a><span class="method">Power</span><span class="methodargs">(baseNumber,exponent)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die angegebene Potenz der Zahl baseNumber.<br />Math.Power(dezZahl,1) entfernt endende Nullen von Dezimalzahlen (s. Math.Abs).<br />Math.Power(base,-n) fügt endende Nullen an (Dezimalstellen).</span><br />
+<span class="info">baseNumber</span> <span class="text">Die Zahl deren Potenz zu ermitteln ist (>=0 bei dezimalem exponent).</span><br />
+<span class="info">exponent</span> <span class="text">Der Exponent zu dem die Basis potenziert wird.</span><br />
+<span class="info">returns</span> <span class="text">Die angebenene Potenz der Zahl baseNumber.</span><br />
+<span class="info">example</span> <span class="text">Math.Power(64, 1/3) 'pos. Kubikwurzel<br />'Entfernen endender Nullen<br />Math.Power(-0.12300,1) '-0.123<br />'Wissensch. Notation (Dezimalen)<br />1000 * Math.Power(10,-2) '10.00<br />1000 * "1E-2" '10.00</span><br />
+<br />
+<a class="tag" name="MathRemainder"></a><span class="method">Remainder</span><span class="methodargs">(dividend,divisor)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Teilt den Zähler z durch den Nenner n und gibt den +/- Rest r zurück:<br />r = sgn(z) * (|z| - |n| * floor(|z|/|n|))</span><br />
+<span class="info">dividend</span> <span class="text">Die zu teilende Zahl (Zähler z).</span><br />
+<span class="info">divisor</span> <span class="text">Die Zahl durch die geteilt wird (Nenner, n<>0).</span><br />
+<span class="info">returns</span> <span class="text">Der +/- Divisionsrest (Modulo, z % n) mit dem Vorzeichen des Zählers z (- n-1 ..0.. + n-1).</span><br />
+<span class="info">example</span> <span class="text">Math.Remainder(9,10) '9<br />Math.Remainder(10,10) '0<br />Math.Remainder(11,10) '1<br /><br />'Dezimalteil von n<br />dez = Math.Remainder(n, 1)<br /><br />'Zyklus durch Intervall<br />i = Math.Remainder(i, n)+1 '[1,n]<br />i = Math.Remainder(i+1, n) '[1..n,0]<br />i = Math.Remainder(1-i, n) '[1,0,1,0,..]<br /><br />'Bidirekt. Zyklus durch Intervall [a,z]<br />n = a 'bis z<br />d = 1 '-/+ delta<br />n = Remainder(z+ Remainder(n+d -z-a, z-a+1), z-a+1)+a<br /><br />'0,1,..,9 zu 10,1,..,9<br />n = Math.Max(Math.Remainder(n+10,11),n)</span><br />
+<br />
+<a class="tag" name="MathRound"></a><span class="method">Round</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rundet eine gegebene Zahl auf die nächstliegende Ganzzahl. 32.23 wird zB. auf 32 abgerundet,<br />während 32.56 auf 33 aufgerundet wird (-32.23 wird auf -32 aufgerundet und -32.56 zu -33 abgerundet).<br />'Banker Rundung' in Richtung Geradzahl dh.: 32.5 zu 32 aber 33.5 zu 34 (-32.5 zu -32, -33.5 zu -34).</span><br />
+<span class="info">number</span> <span class="text">Die Zahl deren Näherungswert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der gerundete Wert der angegebenen Zahl.</span><br />
+<span class="info">example</span> <span class="text">'Runden zu max. 2 Dezimalen<br />Round(100*n)/100 'zB. 123<br />'Runden IMMER zu 2 Dezimalen (auch Ganzzahl)<br />Round(100*n)*0.01 'zB. 123.00<br />'n runden auf Vielfache von x<br />Round(n/x) * x</span><br />
+<br />
+<a class="tag" name="MathSin"></a><span class="method">Sin</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Sinus (Gk/Hy) des angegebenen Winkels im Bogenmaß, [rad] = [°] * pi/180.</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel [rad] dessen Sinuswert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Sinus des angegebenen Winkels [-1,1] (y im Einheitskreis).</span><br />
+<span class="info">example</span> <span class="text">Sin(-w) = -Sin(w)<br />Sin(w) = -Sin(w+pi)<br />Sin(w) = Cos(pi/2-w)<br />Sin²(w) = 1 - Cos²(w)</span><br />
+<br />
+<a class="tag" name="MathSquareRoot"></a><span class="method">SquareRoot</span><span class="methodargs">(number)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Quadratwurzel einer angegebenen positiven Zahl.</span><br />
+<span class="info">number</span> <span class="text">Die positive Zahl deren Quadratwurzel zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Die Quadratwurzel der gegebenen Zahl bei Erfolg, sonst 0 (zB. -4, "").</span><br />
+<br />
+<a class="tag" name="MathTan"></a><span class="method">Tan</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Tangens (Gk/Ak, Sin/Cos) des angegebenen Winkels im Bogenmaß, [rad] = [°] * pi/180.</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel [rad] dessen Tangenswert zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der Tangens des angegebenen Winkels (Steigung y/x im Einheitskreis).</span><br />
+<span class="info">example</span> <span class="text">Tan(-w) = -Tan(w)<br />Tan(w) = Tan(w+pi)<br />Cot(w) = 1/Tan(w) = Tan(pi/2-w)</span><br />
+<br />
+<a class="tag" name="Mouse"></a><span class="group">Mouse</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ermöglicht den Zugriff auf Mauseigenschaften wie Zeigerkoordinaten, Zeigersymbol usw. Je nach Funktion für gesamten Desktop oder nur GW.<br />GW.MouseDown Ereignis für mittlere Maustaste/-rad ergibt sich aus 'Links NOr Rechts'.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#MouseHideCursor">HideCursor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#MouseIsLeftButtonDown">IsLeftButtonDown</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseIsRightButtonDown">IsRightButtonDown</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#MouseMouseX">MouseX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseMouseY">MouseY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#MouseShowCursor">ShowCursor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="MouseHideCursor"></a><span class="method">HideCursor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet den Mauszeiger aus (nur GW).</span><br />
+<br />
+<a class="tag" name="MouseIsLeftButtonDown"></a><span class="method">IsLeftButtonDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt ob die linke Maustaste gedrückt ist (gesamter Desktop, Standard: "False").<br />Status für mittlere Maustaste/-rad ergibt sich aus 'Links NOr Rechts' im Ereignisaufruf.</span><br />
+<br />
+<a class="tag" name="MouseIsRightButtonDown"></a><span class="method">IsRightButtonDown</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt ob die rechte Maustaste gedrückt ist (gesamter Desktop, Standard: "False").<br />Status für mittlere Maustaste/-rad ergibt sich aus 'Links NOr Rechts' im Ereignisaufruf.</span><br />
+<br />
+<a class="tag" name="MouseMouseX"></a><span class="method">MouseX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die x-Position des Mauszeigers (gesamter Desktop, 0 bis Desktop.Width-1).<br />Bei Positionsänderung im GW wird auch 'GW.MouseMove' Event ausgelöst.</span><br />
+<br />
+<a class="tag" name="MouseMouseY"></a><span class="method">MouseY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die y-Position des Mauszeigers (gesamter Desktop, 0 bis Desktop.Height-1).<br />Bei Positionsänderung im GW wird auch 'GW.MouseMove' Event ausgelöst.</span><br />
+<br />
+<a class="tag" name="MouseShowCursor"></a><span class="method">ShowCursor</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Macht den Mauszeiger sichtbar (nur GW).</span><br />
+<br />
+<a class="tag" name="Network"></a><span class="group">Network</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Bietet Zugriff auf Netzwerkmethoden.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#NetworkDownloadFile">DownloadFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#NetworkGetWebPageContents">GetWebPageContents</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="NetworkDownloadFile"></a><span class="method">DownloadFile</span><span class="methodargs">(url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Download einer Netzwerkdatei in eine lokale temporäre Datei (%TEMP%\tmp????.tmp).</span><br />
+<span class="info">url</span> <span class="text">Die Url der Netzwerkdatei (<a href="http://..">http://..</a>). Ein bestehender lokaler Dateipfad wird nach temp. Pfad kopiert.</span><br />
+<span class="info">returns</span> <span class="text">Der lokale Dateipfad unter dem die Netzwerkdatei gespeichert wurde bei Erfolg, sonst "".<br />Datum der gespeicherten Downloaddatei wird auf aktuelles Datum gesetzt.</span><br />
+<br />
+<a class="tag" name="NetworkGetWebPageContents"></a><span class="method">GetWebPageContents</span><span class="methodargs">(url)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den Textinhalt einer angegebenen Webseite (auch für Binärdateien, jedoch nur sinnvoll für textbasierte Dateien) oder lokalen Textdatei.</span><br />
+<span class="info">url</span> <span class="text">Die Url der Webseite (http://)www... oder lokaler Dateipfad (zB. lokale Heimnetzwerk IPAdresse 192.168.1.99, <a href="http://familiePC">http://familiePC</a>).</span><br />
+<span class="info">returns</span> <span class="text">Der Textinhalt (Quelltext) der angegebenen Webseite oder lokalen Textdatei.</span><br />
+<br />
+<a class="tag" name="Program"></a><span class="group">Program</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Funktionen zur Kontrolle der Programmausführung.<br />SB unterstützt auch "." (CurrDir), ".." (ParentDir), relative Pfade und %PFADE%.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ProgramArgumentCount">ArgumentCount</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#ProgramDelay">Delay</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ProgramDirectory">Directory</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ProgramEnd">End</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ProgramGetArgument">GetArgument</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ProgramArgumentCount"></a><span class="method">ArgumentCount</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt die Anzahl der Befehlszeilenargumente, die an das Programm übergeben wurden. (Standard: 0)</span><br />
+<br />
+<a class="tag" name="ProgramDelay"></a><span class="method">Delay</span><span class="methodargs">(milliSeconds)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verzögert die Programmausführung um die angegebene Anzahl Millisekunden. Möglichst nicht innerhalb von Event-Subs oder daraus aufgerufenen Subs, sondern in Hauptschleife.</span><br />
+<span class="info">milliSeconds</span> <span class="text">Die Dauer der Verzögerung [ms].</span><br />
+<br />
+<a class="tag" name="ProgramDirectory"></a><span class="method">Directory</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt den Ordnerpfad für die aktuell ausgeführte Programmdatei.<br />SB unterstützt auch "." (CurrDir), ".." (ParentDir), relative Pfade und %PFADE%.</span><br />
+<span class="info">example</span> <span class="text">Program.Directory +"\Datei.ext" ' ".\Datei.ext"</span><br />
+<br />
+<a class="tag" name="ProgramEnd"></a><span class="method">End</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Beendet das aktuelle Programm.</span><br />
+<br />
+<a class="tag" name="ProgramGetArgument"></a><span class="method">GetArgument</span><span class="methodargs">(index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt das angegebene Argument, das an dieses Programm übergeben wurde (max. Gesamtlänge 8191 Zeichen).</span><br />
+<span class="info">index</span> <span class="text">Der Index des Arguments (1 bis 'ArgumentCount').</span><br />
+<span class="info">returns</span> <span class="text">Das Befehlszeilenargument am angegebenen Index oder "" wenn dieses nicht existiert.</span><br />
+<br />
+<a class="tag" name="Shapes"></a><span class="group">Shapes</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ermöglicht das Hinzufügen, Bewegen und Rotieren von Formen (Geometrie-, Bild- oder TextShapes) im GraphicsWindow. Funktioniert zT. auch für Controls (Interne Namensverarbeitung).<br />Gegen Flackern, die Shape(s) bei verstecktem GW hinzufügen oder als transparente Geometrie-/Bildshape bzw. leere TextShape ("") oder leeres Rectangle/Ellipse (0) oder Triangle/Line außerhalb des GW (<0, >gw).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#ShapesAddEllipse">AddEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddImage">AddImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddLine">AddLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesAddRectangle">AddRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddText">AddText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesAddTriangle">AddTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesAnimate">Animate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesGetLeft">GetLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesGetOpacity">GetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesGetTop">GetTop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesHideShape">HideShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesSetOpacity">SetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#ShapesSetText">SetText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesShowShape">ShowShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#ShapesZoom">Zoom</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="ShapesAddEllipse"></a><span class="method">AddEllipse</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt eine gefüllte Ellipse der angegebenen Breite und Höhe hinzu (Intern: Ellipse#).</span><br />
+<span class="info">width</span> <span class="text">Die Breite der Ellipse (0/+ Werte, 0 gibt keine Anzeige, LeerEllipse).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe der Ellipse (0/+ Werte, 0 gibt keine Anzeige, LeerEllipse).</span><br />
+<span class="info">returns</span> <span class="text">Der Shapename der Ellipse.</span><br />
+<br />
+<a class="tag" name="ShapesAddImage"></a><span class="method">AddImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein Bild als Bildshape hinzu, das bewegt, rotiert oder als Animation ausgeführt werden kann (Intern: Image#).<br />Die Abmessungen der Bildshape entsprechen der Bildgröße (s. ImageList.Get..OfImage) und können mit Controls.SetSize geändert werden.<br />ImageList Bild kann danach aus ImageList entfernt werden (LDImage.Remove).<br />Bild kann nach LDControls.AllowDrop per Drag&Drop geändert werden.</span><br />
+<span class="info">imageName</span> <span class="text">Der Bildname in ImageList oder (Web)Dateipfad des anzuzeigenden Bildes (BMP, gif, ico, jp(e)g, PNG, tiff).</span><br />
+<span class="info">returns</span> <span class="text">Der Name der Bildshape.</span><br />
+<span class="info">example</span> <span class="text">Leershape erstellbar mit transparentem png Bild.<br />Shapes.AddImage("") 'erstellt neue leere Image# aber keine verwendbare Bildshape.</span><br />
+<br />
+<a class="tag" name="ShapesAddLine"></a><span class="method">AddLine</span><span class="methodargs">(x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt eine Gerade zwischen den angegebenen Punkten in PenColor hinzu (Intern: Line#).</span><br />
+<span class="info">x1</span> <span class="text">Die x-Koordinate von Punkt 1 (-/0/+).</span><br />
+<span class="info">y1</span> <span class="text">Die y-Koordinate von Punkt 1 (-/0/+).</span><br />
+<span class="info">x2</span> <span class="text">Die x-Koordinate von Punkt 2 (-/0/+).</span><br />
+<span class="info">y2</span> <span class="text">Die y-Koordinate von Punkt 2 (-/0/+).</span><br />
+<span class="info">returns</span> <span class="text">Der Shapename der Linie. Ankerpunkt der Shape ist (0;0).</span><br />
+<span class="info">example</span> <span class="text">dx = Math.Abs(x2 - x1)<br />dy = Math.Abs(y2 - y1)<br />l = Math.SquareRoot(dx*dx + dy*dy)<br />w = Math.ArcTan((y2-y1)/(x2-x1))  '-pi/2 bis pi/2</span><br />
+<br />
+<a class="tag" name="ShapesAddRectangle"></a><span class="method">AddRectangle</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein gefülltes Rechteck der angegebenen Breite und Höhe hinzu (Intern: Rectangle#).</span><br />
+<span class="info">width</span> <span class="text">Die Breite des Rechtecks (0/+ Werte, 0 gibt keine Anzeige, LeerRechteck).</span><br />
+<span class="info">height</span> <span class="text">Die Höhe des Rechtecks (0/+ Werte, 0 gibt keine Anzeige, LeerRechteck).</span><br />
+<span class="info">returns</span> <span class="text">Der Shapename des Rechtecks.</span><br />
+<span class="info">example</span> <span class="text">'Rotes Rechteck mit blauem Rahmen<br />GraphicsWindow.BrushColor = "Red"<br />GraphicsWindow.PenColor = "Blue"<br />GraphicsWindow.PenWidth = 20<br />Shapes.AddRectangle(200,100)</span><br />
+<br />
+<a class="tag" name="ShapesAddText"></a><span class="method">AddText</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt Text als Textshape hinzu, die bewegt, rotiert oder als Animation ausgeführt werden kann. Der Text kann mit SetText aktualisiert werden.<br />Texteigenschaften bestimmbar durch vorangehendes BrushColor sowie Font-Eigenschaften, Größe durch Controls-/LDShapes.SetSize und Hintergrundfarbe durch LDShapes.BrushColour.<br />Shapehöhe: 14.5 , Shapebreite/Buchst: 7 (bei FontSize 12).<br />Auch im Hintergrund (Intern: Text#).</span><br />
+<span class="info">text</span> <span class="text">Der Text (linksbündig), der in der Shape angezeigt wird.</span><br />
+<span class="info">returns</span> <span class="text">Der Name der Textshape.</span><br />
+<span class="info">example</span> <span class="text">'Neue leere Text# erstellen<br />Shapes.AddText("")</span><br />
+<br />
+<a class="tag" name="ShapesAddTriangle"></a><span class="method">AddTriangle</span><span class="methodargs">(x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein gefülltes Dreieck anhand der angegebenen Punkte hinzu (Intern: Triangle#).</span><br />
+<span class="info">x1</span> <span class="text">Die x-Koordinate von Punkt 1 (-/0/+).</span><br />
+<span class="info">y1</span> <span class="text">Die y-Koordinate von Punkt 1 (-/0/+).</span><br />
+<span class="info">x2</span> <span class="text">Die x-Koordinate von Punkt 2 (-/0/+).</span><br />
+<span class="info">y2</span> <span class="text">Die y-Koordinate von Punkt 2 (-/0/+).</span><br />
+<span class="info">x3</span> <span class="text">Die x-Koordinate von Punkt 3 (-/0/+).</span><br />
+<span class="info">y3</span> <span class="text">Die y-Koordinate von Punkt 3 (-/0/+).</span><br />
+<span class="info">returns</span> <span class="text">Der Shapename des Dreiecks.</span><br />
+<br />
+<a class="tag" name="ShapesAnimate"></a><span class="method">Animate</span><span class="methodargs">(shapeName,x,y,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt eine angegebene Shape animiert an eine neue Position. Als asynchroner Thread wartet die Programmausführung nicht auf dessen Beendigung. Daher ev. Program.Delay(duration) anschließen. (s. Shapes.Move)</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der zu animierenden Shape.</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate der neuen Position.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate der neuen Position.</span><br />
+<span class="info">duration</span> <span class="text">Die Dauer der Animation [ms] (duration >= 0). 0 verschiebt unmittelbar.</span><br />
+<span class="info">example</span> <span class="text">'Animation über 1/2 Breite, dann Sprung<br />ell = Shapes.AddEllipse(10,10)<br />Shapes.Animate(ell, GraphicsWindow.Width,0, 5000)<br />Program.Delay(2500)<br />Shapes.Animate(ell, GraphicsWindow.Width,0, 0)</span><br />
+<br />
+<a class="tag" name="ShapesGetLeft"></a><span class="method">GetLeft</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die linke Koordinate des Ankerpunktes einer angegebenen Shape. Unbeeinflußt von Shapes.Zoom oder -Rotate. Nicht für Controls, dazu erst ein Shape-Kommando zB. Shapes.Move für Control anwenden.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<span class="info">returns</span> <span class="text">Die linke x-Koordinate [Pxl] der Shape im GW (0 bei Erstellung).</span><br />
+<br />
+<a class="tag" name="ShapesGetOpacity"></a><span class="method">GetOpacity</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Deckkraft [%] einer Shape.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<span class="info">returns</span> <span class="text">Die Deckkraft der Shape von 0 bis 100 [%]. 0 ist völlig transparent, 100 ist deckend.</span><br />
+<span class="info">example</span> <span class="text">Alternativ für Zeichnungen und (Text)Shapes aus deren BrushColor #AARRGGBB, für AA = 00 (transparent) bis FF (deckend).</span><br />
+<br />
+<a class="tag" name="ShapesGetTop"></a><span class="method">GetTop</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die obere Koordinate des Ankerpunktes einer angegebenen Shape. Unbeeinflußt von Shapes.Zoom oder -Rotate. Nicht für Controls, dazu erst ein Shape-Kommando zB. Shapes.Move für Control anwenden.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<span class="info">returns</span> <span class="text">Die obere y-Koordinate [Pxl] der Shape im GW (0 bei Erstellung).</span><br />
+<br />
+<a class="tag" name="ShapesHideShape"></a><span class="method">HideShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet eine bereits hinzugefügte Shape aus (s. Controls.HideControl, Shapeposition bleibt unverändert. Animate, GetLeft/-Top, Move, SetText, Rotate, Zoom funktionieren weiterhin).</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<br />
+<a class="tag" name="ShapesMove"></a><span class="method">Move</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verschiebt die angegebene Shape an ihrem Ankerpunkt unmittelbar an eine neue Position (s. Shapes.Animate, Controls.Move). Auch bei versteckter Shape bzw. verstecktem GW, wenn dieses VOR GW.Hide bereits initialisiert wurde.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der zu verschiebenden Shape.</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate der neuen Position (l.o. Ecke des umgebenden Originalrechtecks).</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate der neuen Position (l.o. Ecke des umgebenden Originalrechtecks).</span><br />
+<br />
+<a class="tag" name="ShapesRemove"></a><span class="method">Remove</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Entfernt eine Shape aus dem GraphicsWindow (Interne # bleibt unverändert).</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der zu entfernenden Shape.</span><br />
+<br />
+<a class="tag" name="ShapesRotate"></a><span class="method">Rotate</span><span class="methodargs">(shapeName,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht die angegebene Shape optisch um den angegebenen Winkel ab Originalposition (um Mittel-/Schwerpunkt der Gesamtshape).</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der zu rotierenden Shape (bzw. Control).</span><br />
+<span class="info">angle</span> <span class="text">Der Winkel [°] um den die Shape/Control ab Originalposition gedreht wird (+/- für im/gegen Uhrzeigersinn).</span><br />
+<span class="info">example</span> <span class="text">Shapes.Rotate(shp, -380)  '20° Linksdrehung ab OrigPos.</span><br />
+<br />
+<a class="tag" name="ShapesSetOpacity"></a><span class="method">SetOpacity</span><span class="methodargs">(shapeName,level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt die Deckkraft [%] einer Shape/Control.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<span class="info">level</span> <span class="text">Die Deckkraft von 0 bis 100 [%]. 0 ist völlig transparent, 100 ist deckend.</span><br />
+<span class="info">example</span> <span class="text">Alternativ für Zeichnungen und (Text)Shapes über deren BrushColor als #AARRGGBB, für AA = 00 (transparent) bis FF (deckend).</span><br />
+<br />
+<a class="tag" name="ShapesSetText"></a><span class="method">SetText</span><span class="methodargs">(shapeName,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt oder ändert den Text in einer Textshape.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Textshape.</span><br />
+<span class="info">text</span> <span class="text">Der zu setzende Text.</span><br />
+<br />
+<a class="tag" name="ShapesShowShape"></a><span class="method">ShowShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt eine ausgeblendete Shape an der zuletzt definierten Position wieder an (s. Controls.ShowControl).</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der Shape.</span><br />
+<br />
+<a class="tag" name="ShapesZoom"></a><span class="method">Zoom</span><span class="methodargs">(shapeName,scaleX,scaleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Vergrößert oder verkleinert eine Shape optisch mittels der angegebenen Zoomwerte von 0.1 bis 20 (s.a. Contols.SetSize, LDShapes.Re-/SetSize).<br />Die Größenänderung erfolgt im Mittelpunkt der Shape nur optisch, dh. dieser, der Ankerpunkt und die tatsächlichen Abmessungen der Basisshape bleiben erhalten.</span><br />
+<span class="info">shapeName</span> <span class="text">Der Name der zu verkleinernden oder vergrößernden Shape.</span><br />
+<span class="info">scaleX</span> <span class="text">Der Zoomfaktor in x-Richtung (0.1 bis 20, <1 verkleinert, >1 vergrößert, neg. Wert -> 0.1).</span><br />
+<span class="info">scaleY</span> <span class="text">Der Zoomfaktor in y-Richtung (0.1 bis 20, <1 verkleinert, >1 vergrößert, neg. Wert -> 0.1).</span><br />
+<br />
+<a class="tag" name="Sound"></a><span class="group">Sound</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Methoden zur Soundwiedergabe. Auch einige Beispiel Sounds sind enthalten.<br />Für SystemBeep (im TW) s. Text.GetCharacter(7).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#SoundPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlay">Play</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayAndWait">PlayAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayBellRing">PlayBellRing</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayBellRingAndWait">PlayBellRingAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChime">PlayChime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayChimeAndWait">PlayChimeAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChimes">PlayChimes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayChimesAndWait">PlayChimesAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundPlayClick">PlayClick</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayClickAndWait">PlayClickAndWait</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#SoundPlayMusic">PlayMusic</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#SoundStop">Stop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="SoundPause"></a><span class="method">Pause</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pausiert das Abspielen einer Audiodatei. Wird die Datei nicht gerade abgespielt, führt diese Operation nichts aus.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Pfad der Audiodatei. zB. C:\Musik\Titel1.mp3 für einen lokalen oder "<a href="http://sounds.com/titel1.wma">http://sounds.com/titel1.wma</a>" für einen Netzwerkpfad.</span><br />
+<br />
+<a class="tag" name="SoundPlay"></a><span class="method">Play</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt eine Audiodatei ab (zB. im Hintergrund). Es kann sich hierbei um eine mp3, wav, wma (bzw. au, flac, m4a, ogg) Datei handeln. Andere Formate hängen von den am Computer installierten Codecs ab.<br />Wenn das Abspielen der Datei bereits angehalten wurde, startet diese Operation das Abspielen erneut. Zum Abspielen für eine bestimmte Dauer ev. weitere Programmausführung anhalten (asynchron).</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Pfad der Audiodatei. zB. "C:\Musik\Titel1.mp3" für einen lokalen oder "<a href="http://sounds.com/titel1.wma">http://sounds.com/titel1.wma</a>" für einen Netzwerkpfad.</span><br />
+<br />
+<a class="tag" name="SoundPlayAndWait"></a><span class="method">PlayAndWait</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt eine Audiodatei ab und wartet, bis der Vorgang abgeschlossen ist. Es kann sich hierbei um eine mp3, wav, wma (bzw. au, flac, m4a, ogg) Datei handeln. Andere Formate hängen von den am Computer installierten Codecs ab.<br />Wenn das Abspielen der Datei bereits angehalten wurde, startet diese Operation das Abspielen erneut.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Pfad der Audiodatei. zB. "C:\Musik\Titel1.mp3" für einen lokalen oder "<a href="http://sounds.com/titel1.wma">http://sounds.com/titel1.wma</a>" für einen Netzwerkpfad.</span><br />
+<br />
+<a class="tag" name="SoundPlayBellRing"></a><span class="method">PlayBellRing</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenzeichen Sound ab (asynchron).</span><br />
+<br />
+<a class="tag" name="SoundPlayBellRingAndWait"></a><span class="method">PlayBellRingAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenzeichen Sound ab und wartet bis Abspielvorgang abgeschlossen ist.</span><br />
+<br />
+<a class="tag" name="SoundPlayChime"></a><span class="method">PlayChime</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenton Sound ab (asynchron).</span><br />
+<br />
+<a class="tag" name="SoundPlayChimeAndWait"></a><span class="method">PlayChimeAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenton Sound ab und wartet bis Abspielvorgang abgeschlossen ist.</span><br />
+<br />
+<a class="tag" name="SoundPlayChimes"></a><span class="method">PlayChimes</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenläuten Sound ab (asynchron).</span><br />
+<br />
+<a class="tag" name="SoundPlayChimesAndWait"></a><span class="method">PlayChimesAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Glockenläuten Sound ab und wartet bis Abspielvorgang abgeschlossen ist.</span><br />
+<br />
+<a class="tag" name="SoundPlayClick"></a><span class="method">PlayClick</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Mausklick Sound ab (asynchron).</span><br />
+<br />
+<a class="tag" name="SoundPlayClickAndWait"></a><span class="method">PlayClickAndWait</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt den Mausklick Sound ab und wartet bis Abspielvorgang abgeschlossen ist.</span><br />
+<br />
+<a class="tag" name="SoundPlayMusic"></a><span class="method">PlayMusic</span><span class="methodargs">(notes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Spielt Musiknoten synchron von einer Zeichenkette ab (nicht für Hintergrund, Programmausführung solange angehalten).<br />Standardinstrument: 1 - Acoustic_Grand_Piano<br /><br />Music Markup Language (MML) Specification<br /><a href="http://xml.coverpages.org/mml-spec19990610.html">http://xml.coverpages.org/mml-spec19990610.html</a></span><br />
+<span class="info">notes</span> <span class="text">Ein String abzuspielender Musiknoten. Format ist Teil der in QBasic unterstützten Music Markup Language (MML).<br />Oktave: O1-O8 (<|> 1 Oktave ab|auf; Std: O4)<br />Note: C,D,E,F,G,A,B (-|+,#  Halbton ab|auf;  . 1.5x Dauer)<br />Länge: L1-L64 (Ln, Std: L4) oder Note+n<br />Pause: R od. P (Länge wie Noten)<br />Leerzeichen werden ignoriert</span><br />
+<span class="info">example</span> <span class="text">Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")</span><br />
+<br />
+<a class="tag" name="SoundStop"></a><span class="method">Stop</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Beendet die Wiedergabe einer Audiodatei. Wird die Datei nicht gerade abgespielt, führt diese Operation nichts aus.</span><br />
+<span class="info">filePath</span> <span class="text">Der volle Pfad der Audiodatei. zB. "C:\Musik\Titel1.mp3" für einen lokalen oder "<a href="http://sounds.com/titel1.wma">http://sounds.com/titel1.wma</a>" für einen Netzwerkpfad.</span><br />
+<br />
+<a class="tag" name="Stack"></a><span class="group">Stack</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Ermöglicht das Zwischenspeichern von Werten (Zahl, String, Var) in einem Stapel. Ein Wert kann zuoberst auf den Stapel abgelegt und von dort wieder abgenommen werden.<br />Es muß ein Wert nach dem anderen wieder vom Stapel abgenommen werden, beginnend mit dem Wert, der zuletzt im Stapel abgelegt wurde (Umgekehrte Reihenfolge, zuletzt rein-zuerst raus).<br />Stackname in "" oder vordefiniert. Exakte Schreibweise einhalten.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#StackGetCount">GetCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#StackPopValue">PopValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#StackPushValue">PushValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="StackGetCount"></a><span class="method">GetCount</span><span class="methodargs">(stackName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Anzahl der Werte im angegebenen Stapel.</span><br />
+<span class="info">stackName</span> <span class="text">Der Name des Stapels (in "" oder vordefiniert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">returns</span> <span class="text">Die Anzahl der Werte im angegebenen Stapel oder 0.</span><br />
+<br />
+<a class="tag" name="StackPopValue"></a><span class="method">PopValue</span><span class="methodargs">(stackName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt (und entfernt) den obersten Wert im angegebenen Stapel (Fehlerabbruch, wenn Stapel leer ist).</span><br />
+<span class="info">stackName</span> <span class="text">Der Name des Stapels (in "" oder vordefiniert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">returns</span> <span class="text">Der entladene, oberste Wert (kann auch "" sein) bei Erfolg, sonst Fehlerabbruch.</span><br />
+<span class="info">example</span> <span class="text">val = Stack.PopValue("st")<br />v2 = Stack.PopValue(123)</span><br />
+<br />
+<a class="tag" name="StackPushValue"></a><span class="method">PushValue</span><span class="methodargs">(stackName,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Lädt/Setzt einen Wert 'oben' in den angegebenen Stapel.</span><br />
+<span class="info">stackName</span> <span class="text">Der Name des Stapels (in "" oder vordefiniert). Exakte Schreibweise einhalten.</span><br />
+<span class="info">value</span> <span class="text">Der zu ladende Wert (auch Leerwerte "" möglich).</span><br />
+<span class="info">example</span> <span class="text">'als Stringname<br />Stack.PushValue("st", 5.5)<br />'als Variablenname<br />st = 123<br />Stack.PushValue(st, "")</span><br />
+<br />
+<a class="tag" name="Text"></a><span class="group">Text</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Stringfunktionen zur Textverarbeitung. Diese unterscheiden zw. GROß-/kleinschreibung (zB. A<>a). zT. auch für Arrays anwendbar (zB. IsSubText usw.).<br />Ein Einzelstring darf auch ein/mehrere "" enthalten, jedoch nicht am Stringbeginn oder -ende.</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/windows/desktop/dd374081.aspx">http://msdn.microsoft.com/library/windows/desktop/dd374081.aspx</a> (Unicode Zeichen)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TextAppend">Append</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextConvertToLowerCase">ConvertToLowerCase</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextConvertToUpperCase">ConvertToUpperCase</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextEndsWith">EndsWith</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetCharacter">GetCharacter</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetCharacterCode">GetCharacterCode</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextGetIndexOf">GetIndexOf</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetLength">GetLength</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextGetSubText">GetSubText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextGetSubTextToEnd">GetSubTextToEnd</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextIsSubText">IsSubText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextStartsWith">StartsWith</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TextAppend"></a><span class="method">Append</span><span class="methodargs">(text1,text2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Verbindet zwei Zeichenfolgen (Texte, Arrays, Variableninhalte) und gibt den Gesamtstring zurück. Nützlich bei Verarbeitung von unbekanntem Text in Variablen, der irrtümlich als Zahl behandelt und addiert werden könnte, anstatt zusammengefügt (Alternativ: '+').</span><br />
+<span class="info">text1</span> <span class="text">Der erste Teilstring.</span><br />
+<span class="info">text2</span> <span class="text">Der zweite Teilstring.</span><br />
+<span class="info">returns</span> <span class="text">Der zusammengefügte String beider Teile.</span><br />
+<span class="info">example</span> <span class="text">'Führende spc/0 (zB. 3-st. Zeilennummer)<br />pre = "  " 'od. "00"<br />For n = 1 To 110<br />  z = Text.GetSubTextToEnd(Text.Append(pre,n), Text.GetLength(n))<br />  TextWindow.WriteLine(z+": "+n)<br />EndFor</span><br />
+<br />
+<a class="tag" name="TextConvertToLowerCase"></a><span class="method">ConvertToLowerCase</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Konvertiert den angegebenen Text (bzw. gesamten Arrayinhalt) zu Kleinbuchstaben.</span><br />
+<span class="info">text</span> <span class="text">Der Text oder Array, der in Kleinbuchstaben umzuwandeln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der angegebene Text bzw. Array in Kleinbuchstaben.</span><br />
+<br />
+<a class="tag" name="TextConvertToUpperCase"></a><span class="method">ConvertToUpperCase</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Konvertiert den angegebenen Text (bzw. gesamten Arrayinhalt) zu Großbuchstaben.</span><br />
+<span class="info">text</span> <span class="text">Der Text oder Array, der in Großbuchstaben umzuwandeln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der angegebene Text bzw. Array in Großbuchstaben.</span><br />
+<br />
+<a class="tag" name="TextEndsWith"></a><span class="method">EndsWith</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob ein Text mit dem angegebenen String (buchstabengetreu) endet.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text.</span><br />
+<span class="info">subText</span> <span class="text">Die gesuchte Zeichenfolge am Textende.</span><br />
+<span class="info">returns</span> <span class="text">"True" wenn die Zeichenfolge am Textende gefunden wurde, sonst "False".</span><br />
+<br />
+<a class="tag" name="TextGetCharacter"></a><span class="method">GetCharacter</span><span class="methodargs">(characterCode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt das entsprechende Zeichen zu einem angegebenen Unicode Zahlencode. Dieses kann dann als normaler Textstring verwendet werden.</span><br />
+<span class="info">characterCode</span> <span class="text">Der dekadische Unicode Zahlencode (UTF-16) für das Zeichen. Hex Unicode Codes (#xxxx) erst konvertieren (max. 65535 = #FFFF).<br />SMP Zeichen >65535 durch Kombination der Surrogate, zB. (55357)+(56459) für 💋 (kiss, 128139 = #1F48B).</span><br />
+<span class="info">returns</span> <span class="text">Das entsprechende Unicode Zeichen ("", "0" oder 0 ergibt ' ' bzw. chr(0)).</span><br />
+<span class="info">example</span> <span class="text">'Umlaute, Smileys<br />arrUml="196=Ä;214=Ö;220=Ü;223=ß;228=ä;246=ö;252=ü;"<br />arrSmil="9785=☹;9786=☺;9787=☻;"<br /><br />  7  SystemBeep (im TW)<br />  8  bs (BackSpace)<br />  9  tab (8 stellig)<br /> 10  lf<br /> 13  cr	  13+10  crlf<br /> 32  space ( )<br /> 34  qu (")<br />160  nbsp ( )<br />175  macron (¯)<br />818  u̲nderl<br />960  pi (π)<br />8364 euro (€)<br />8776 ungefähr (≈)<br />8800 ungleich (≠)<br />8801 identisch (≡)<br />10003 check (✓)<br />10067 quest (❓)<br />65533 repl (�)<br />55357+56524 pin (📌)<br />55357+56590 find (🔎)</span><br />
+<br />
+<a class="tag" name="TextGetCharacterCode"></a><span class="method">GetCharacterCode</span><span class="methodargs">(character)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt den dekadischen Unicode (UTF-16) Zahlencode für ein angegebenes Zeichen. Für mehrere Zeichen oder Zahl, den Unicode Zahlencode des ersten Zeichens/Ziffer.</span><br />
+<span class="info">character</span> <span class="text">Das Zeichen, dessen Unicode Zahlencode zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Der dekadische Unicode Zahlencode für das (erste) Zeichen ("" ergibt 0, bis max. 65535 = #FFFF).<br />Für charCode >= 65536 (#10000) wird Math.Remainder(charCode, 65536) zurückgegeben.<br />Für SMP Zeichen >= U+10000, der dekadische Unicode Zahlencode für das erste/höhere Surrogat.</span><br />
+<span class="info">example</span> <span class="text">'Zeichen -> Code<br />0..9  '48-57<br />A..Z  '65-90<br />a..z  '97-122<br /><br />'Whitespace Zeichen (tab,lf,cr,space)<br />arrWS="1=9;2=10;3=13;4=32;"<br />WS: 9-13,32,133,160,5760,8192-8203,8232,8233,12288,65279</span><br />
+<br />
+<a class="tag" name="TextGetIndexOf"></a><span class="method">GetIndexOf</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die erste Position einer Zeichenfolge (buchstabengetreu) in einem angegebenen Text.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text.</span><br />
+<span class="info">subText</span> <span class="text">Die zu suchende Zeichenfolge, Zeichen oder Zahl.</span><br />
+<span class="info">returns</span> <span class="text">Die erste Position (ab 1) an der die Zeichenfolge im angegebenen Text gefunden wurde, sonst 0.</span><br />
+<br />
+<a class="tag" name="TextGetLength"></a><span class="method">GetLength</span><span class="methodargs">(text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Anzahl der Zeichen in einem angegebenen Text/String oder Zahl.<br />Bzw. Anzahl der Surrogate bei enthaltenen SMP Zeichen (2 / SMP-Zeichen).</span><br />
+<span class="info">text</span> <span class="text">Der Text dessen Länge zu ermitteln ist.</span><br />
+<span class="info">returns</span> <span class="text">Die Zeichenanzahl im angegebenen Text bzw. 0 für "".</span><br />
+<span class="info">example</span> <span class="text">Text.GetLength("False") '5<br />Text.GetLength("-""-") '4<br />Text.GetLength(-123) '4<br />Text.GetLength(-.123) '6 (für -0.123)<br />Text.GetLength(chr) '2 (für SMP chr >= U+10000)</span><br />
+<br />
+<a class="tag" name="TextGetSubText"></a><span class="method">GetSubText</span><span class="methodargs">(text,start,length)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt eine Zeichenfolge innerhalb eines Textes, ab der angegebenen Position (incl.) und der Länge 'length'.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text.</span><br />
+<span class="info">start</span> <span class="text">Die Startposition innerhalb des Textes (ab 1). Bei einem Startwert <1 oder >Textlänge wird "" zurückgegeben.</span><br />
+<span class="info">length</span> <span class="text">Die Länge der Sub-Zeichenfolge (>= 0, ab 'start').</span><br />
+<span class="info">returns</span> <span class="text">Der ermittelte Teilstring oder "".</span><br />
+<span class="info">example</span> <span class="text">Text.GetSubText("12345678", 5,6) ' "5678"</span><br />
+<br />
+<a class="tag" name="TextGetSubTextToEnd"></a><span class="method">GetSubTextToEnd</span><span class="methodargs">(text,start)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt eine Zeichenfolge am Ende eines Textes, ab der angegebenen Position (incl.) bis zum Textende.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text.</span><br />
+<span class="info">start</span> <span class="text">Die Startposition innerhalb des Textes (ab 1). Bei einem Startwert <1 oder >Textlänge wird "" zurückgegeben.</span><br />
+<span class="info">returns</span> <span class="text">Der ermittelte Teilstring am Textende oder "".</span><br />
+<span class="info">example</span> <span class="text">Text.GetSubTextToEnd("12345678", 4) ' "45678"</span><br />
+<br />
+<a class="tag" name="TextIsSubText"></a><span class="method">IsSubText</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob ein Teiltext (buchstabengetreu) in in einem angegebenen Text enthalten ist. Auch Suche nach subText in einem Array.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text. (Für Array erscheinen hier '\' als '\\'.)</span><br />
+<span class="info">subText</span> <span class="text">Die gesuchte Zeichenfolge im Text.</span><br />
+<span class="info">returns</span> <span class="text">"True" wenn die Zeichenfolge im angegebenen Text gefunden wurde, sonst "False".</span><br />
+<span class="info">example</span> <span class="text">'Alternativ:<br />If Text.GetIndexOf(text, subText) > 0</span><br />
+<br />
+<a class="tag" name="TextStartsWith"></a><span class="method">StartsWith</span><span class="methodargs">(text,subText)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt ob ein Text mit dem angegebenen Teiltext (buchstabengetreu) beginnt.</span><br />
+<span class="info">text</span> <span class="text">Der zu durchsuchende Text.</span><br />
+<span class="info">subText</span> <span class="text">Die gesuchte Zeichenfolge am Textanfang.</span><br />
+<span class="info">returns</span> <span class="text">"True" wenn die Zeichenfolge am Textbeginn gefunden wurde, sonst "False".</span><br />
+<br />
+<a class="tag" name="TextWindow"></a><span class="group">TextWindow</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Funktionen für das TextWindow. Hier können Texte oder Zahlen ein- und ausgegeben werden.<br />TextWindow.ReadKey() ist ausgeblendet in IntelliSense.<br />(Standard Fensterbreite/-höhe: 667/402 Pxl)</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TextWindowBackgroundColor">BackgroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowClear">Clear</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowCursorLeft">CursorLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowCursorTop">CursorTop</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowForegroundColor">ForegroundColor</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowLeft">Left</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowPauseIfVisible">PauseIfVisible</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowPauseWithoutMessage">PauseWithoutMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowReadKey">ReadKey</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowReadNumber">ReadNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowTitle">Title</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TextWindowTop">Top</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TextWindowWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TextWindowWriteLine">WriteLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TextWindowBackgroundColor"></a><span class="method">BackgroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt (als Farbname) oder setzt die Hintergrundfarbe der weiteren Textanzeige (Farbname oder -nummer 0-15, s. Color /? in Cmd).<br />Anschließendes TextWindow.Clear() dehnt die Hintergrundfarbe auf gesamtes TextWindow aus.<br />(Standard: Black bzw. 0, nicht als #RRGGBB)</span><br />
+<span class="info">example</span> <span class="text">0=Black		8=DarkGray<br />1=DarkBlue	9=Blue<br />2=DarkGreen	10=Green<br />3=DarkCyan	11=Cyan<br />4=DarkRed	12=Red<br />5=DarkMagenta	13=Magenta<br />6=DarkYellow	14=Yellow<br />7=Gray		15=White<br /><br />(DarkYellow entspricht Olive im GW)</span><br />
+<br />
+<a class="tag" name="TextWindowClear"></a><span class="method">Clear</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Löscht alle Inhalte im TextWindow.</span><br />
+<span class="info">example</span> <span class="text">'Farbe im gesamten TW setzen<br />TextWindow.BackgroundColor = "Farbe"<br />TextWindow.Clear()</span><br />
+<br />
+<a class="tag" name="TextWindowCursorLeft"></a><span class="method">CursorLeft</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Ausgabespalte Cursorposition im TextWindow.<br />(0 bis 89 bzw. s. SBConsole.Width-1, Standard: 0)</span><br />
+<br />
+<a class="tag" name="TextWindowCursorTop"></a><span class="method">CursorTop</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Ausgabezeile Cursorposition im TextWindow.<br />(0 bis 29 ohne Scrollen bzw. s. SBConsole.Height-1, Standard: 0)</span><br />
+<br />
+<a class="tag" name="TextWindowForegroundColor"></a><span class="method">ForegroundColor</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt (als Farbname) oder setzt die Vordergrundfarbe der weiteren Textanzeige (Farbname oder -nummer 0-15, s. Color /? in Cmd).<br />(Standard: Green bzw. 10, nicht als #RRGGBB)</span><br />
+<span class="info">example</span> <span class="text">0=Black		8=DarkGray<br />1=DarkBlue	9=Blue<br />2=DarkGreen	10=Green<br />3=DarkCyan	11=Cyan<br />4=DarkRed	12=Red<br />5=DarkMagenta	13=Magenta<br />6=DarkYellow	14=Yellow<br />7=Gray		15=White<br /><br />(DarkYellow entspricht Olive im GW)</span><br />
+<br />
+<a class="tag" name="TextWindowHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet das TextWindow aus.<br />Ein angezeigter Textinhalt bleibt erhalten und wird beim nächsten TextWindow Aufruf (Show, WriteLine) wieder angezeigt.</span><br />
+<br />
+<a class="tag" name="TextWindowLeft"></a><span class="method">Left</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die linke Position des TextWindow (linker Fensterrand) am Desktop.<br />(Standard: s. Cmd Eigenschaften - Layout - Fensterpos.)</span><br />
+<br />
+<a class="tag" name="TextWindowPause"></a><span class="method">Pause</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Wartet auf Benutzereingabe und hält das TextWindow geöffnet (mit "Press any key to continue...").</span><br />
+<br />
+<a class="tag" name="TextWindowPauseIfVisible"></a><span class="method">PauseIfVisible</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Wartet nur dann auf Benutzereingabe, wenn das TextWindow sichtbar ist (mit "Press any key to continue..."), sonst gleich Weiterausführung.</span><br />
+<br />
+<a class="tag" name="TextWindowPauseWithoutMessage"></a><span class="method">PauseWithoutMessage</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Wartet auf Benutzereingabe (ohne "Press any key to continue..."). Sinnvoll wenn gleichzeitig GW aktiv ist.</span><br />
+<span class="info">example</span> <span class="text">TextWindow.Read() 'Alternat.</span><br />
+<br />
+<a class="tag" name="TextWindowRead"></a><span class="method">Read</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Liest eine Texteingabe aus dem TextWindow. Keine Rückgabe, bis die Eingabetaste gedrückt wurde.<br />Akzeptiert Zahlen, Buchstaben und Sonderzeichen. (s. TextWindow.ReadKey)</span><br />
+<span class="info">returns</span> <span class="text">Der im TextWindow eingegebene Text.</span><br />
+<span class="info">example</span> <span class="text">'warten auf Eingabetaste (vor Beenden)<br />TextWindow.Read()<br />Program.End()</span><br />
+<br />
+<a class="tag" name="TextWindowReadKey"></a><span class="method">ReadKey</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Liest ein einzelnes Tastenzeichen aus dem TextWindow. Sofort und ohne vorherige Eingabetaste.<br />(Ausgeblendet in IntelliSense, s. TextWindow.Read und -ReadNumber)</span><br />
+<span class="info">returns</span> <span class="text">Das Tastenzeichen, das aus dem TextWindow gelesen wurde (GROß-/kleinbuchstabe, Zahl, Sonderzeichen). Funktions- und Steuertasten geben nichts zurück (bzw. CharCode 0).</span><br />
+<span class="info">example</span> <span class="text">While k <> Text.GetCharacter(27) 'Esc<br />  k = TextWindow.ReadKey()<br />  TextWindow.WriteLine(k +":"+ Text.GetCharacterCode(k))<br />  Program.Delay(5)<br />EndWhile</span><br />
+<br />
+<a class="tag" name="TextWindowReadNumber"></a><span class="method">ReadNumber</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Liest eine Zahleneingabe aus dem TextWindow. Keine Rückgabe, bis die Eingabetaste gedrückt wurde.<br />Akzeptiert Ziffern 0 bis 9, ein Komma "." und "-" am Anfang. (s. TextWindow.ReadKey)</span><br />
+<span class="info">returns</span> <span class="text">Die im TextWindow eingegebene Zahl oder 0 bei "".</span><br />
+<br />
+<a class="tag" name="TextWindowShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet das TextWindow (wieder) ein.<br />Ein vor TextWindow.Hide angezeigter Textinhalt bleibt erhalten und wird wieder angezeigt.</span><br />
+<br />
+<a class="tag" name="TextWindowTitle"></a><span class="method">Title</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt den Titel für das TextWindow (Tab funktioniert nicht, Schrifteigenschaften nach Systemstandard, keine Symbole).<br />Das Fenster wird dabei (wieder) angezeigt.<br />(Standard: Voller Dateipfad der aktuellen .exe mit Argumenten)</span><br />
+<br />
+<a class="tag" name="TextWindowTop"></a><span class="method">Top</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die obere Position des TextWindow (Fenster, Oberkante Titelleiste) am Desktop.<br />(Standard: s. Cmd Eigenschaften - Layout - Fensterpos.)</span><br />
+<br />
+<a class="tag" name="TextWindowWrite"></a><span class="method">Write</span><span class="methodargs">(data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Schreibt Text oder eine Zahl in das TextWindow. Im Gegensatz zu WriteLine wird kein Zeilenvorschub angefügt. Die nächste Ausgabe wird daher am Ende derselben Zeile angefügt, fortlaufend mit Umbruch am Zeilenende.</span><br />
+<span class="info">data</span> <span class="text">Der auszugebende Text oder Zahl.</span><br />
+<span class="info">example</span> <span class="text">Write(lf bzw. crlf) '1 Leerzeile bzw. Zeilenvorschub</span><br />
+<br />
+<a class="tag" name="TextWindowWriteLine"></a><span class="method">WriteLine</span><span class="methodargs">(data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Schreibt Text oder eine Zahl in das TextWindow. Ein Zeilenvorschub (cr+lf bzw. chr13+chr10) wird automatisch angefügt, sodaß die nächste Ausgabe in neuer Zeile beginnt.</span><br />
+<span class="info">data</span> <span class="text">Der auszugebende Text oder Zahl.</span><br />
+<span class="info">example</span> <span class="text">WriteLine("") '1 Leerzeile<br />WriteLine(lf od. crlf) '2 Leerzeilen</span><br />
+<br />
+<a class="tag" name="Timer"></a><span class="group">Timer</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Dient dazu einen Vorgang auszuführen, der sich in regelmäßigen Abständen wiederholt. Weiters zum Erstellen asynchroner Parallelthreads.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TimerInterval">Interval</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TimerPause">Pause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TimerResume">Resume</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TimerTick">Tick</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TimerInterval"></a><span class="method">Interval</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt das Intervall [ms] für den Timer. Dieses bestimmt die Zeitabstände in denen der Timer (Zeitgeber) das Tick Ereignis auslöst. Werte von 10 bis 100000000 = 10^8 (Standard).<br />Ein Setzen/Ändern des Intervalls startet gleichzeitig auch den Timer.Tick Ereignisaufruf (wie Timer.Resume).</span><br />
+<br />
+<a class="tag" name="TimerPause"></a><span class="method">Pause</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hält den Timer (Zeitgeber) an. Tick Ereignisse werden nicht ausgelöst.</span><br />
+<br />
+<a class="tag" name="TimerResume"></a><span class="method">Resume</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt den Timer (Zeitgeber) nach einer Pause wieder fort. Tick Ereignisse werden wieder ausgelöst.</span><br />
+<br />
+<a class="tag" name="TimerTick"></a><span class="method">Tick</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignisaufruf wenn der Timer (Zeitgeber) ein neues Zeitintervall beginnt.<br />Funktioniert als einziges Ereignis auch im TextWindow und dient zum Erstellen asynchroner Parallelthreads.</span><br />
+<br />
+<a class="tag" name="Turtle"></a><span class="group">Turtle</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Mit der Schildkröte kann man 'Logo' ähnliche Funktionalität erzielen und Formen zeichnen, indem man die Eigenschaften des Stifts und der Zeichnungsvariablen ändert.<br />Das Turtle Bild ist eine Bildshape (Intern: "_turtle"), die Spur eine Linienshape (Intern: "_turtleLine#") und beide liegen eine Ebene über GW, Linienzeichnungen, gefüllte Formen, Controls und Shapes.<br />Turtle Bildshape anpassbar mit zB. Shapes.SetOpacity("_turtle",Wert) oder Shapes.Zoom("_turtle", faktorX,faktorY).<br />Turtlelinie Shape anpassbar mit PenColor/-Width.<br />s. LDShapes.SetTurtleImage zum Ändern des Turtle Bildes.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#TurtleAngle">Angle</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TurtleHide">Hide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleMoveTo">MoveTo</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtlePenDown">PenDown</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtlePenUp">PenUp</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleShow">Show</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleSpeed">Speed</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#TurtleTurn">Turn</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleTurnLeft">TurnLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleTurnRight">TurnRight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#TurtleX">X</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#TurtleY">Y</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="TurtleAngle"></a><span class="method">Angle</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt den Absolutwinkel [°] für die aktuelle Blickrichtung der Schildkröte. Das Festlegen ändert deren Blickrichtung unmittelbar (blendet Turtle nicht ein).<br />(Standard: 0 für 12h, +/- für im/gegen Uhrzeigersinn)</span><br />
+<br />
+<a class="tag" name="TurtleHide"></a><span class="method">Hide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Blendet die Schildkröte aus (nur Bildshape, Linie nicht) und deaktiviert die Funktion für Turn(Left/Right), Angle und Move(To) weiter moglich.<br />s. LDShapes.ResetTurtle(), Shapes.HideShape("_turtle") bzw. ShowShape("_turtle").</span><br />
+<br />
+<a class="tag" name="TurtleMove"></a><span class="method">Move</span><span class="methodargs">(distance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt die Schildkröte um die angegebene Entfernung (initialisiert Turtle, Programmfortführung wird solange angehalten). Ist der Stift unten, wird mit dieser Bewegung eine Linie gezeichnet (Intern: Shapes.Move("_turtle", x,y)).</span><br />
+<span class="info">distance</span> <span class="text">Die -/+ Entfernung die die Schildkröte in Blickrichtung zurücklegt.</span><br />
+<br />
+<a class="tag" name="TurtleMoveTo"></a><span class="method">MoveTo</span><span class="methodargs">(x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht (in Zielrichtung) und bewegt die Schildkröte zur angegebenen Position (initialisiert Turtle, Programmfortführung wird solange angehalten). Ist der Stift aufgesetzt, wird dabei eine Linie gezeichnet (Intern: Shapes.Move("_turtle", x,y)).<br />Die Blickrichtung bleibt danach erhalten.</span><br />
+<span class="info">x</span> <span class="text">Die x-Koordinate des Zielpunktes.</span><br />
+<span class="info">y</span> <span class="text">Die y-Koordinate des Zielpunktes.</span><br />
+<br />
+<a class="tag" name="TurtlePenDown"></a><span class="method">PenDown</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt den Stift auf, sodaß die Schildkröte bei Bewegung zeichnet (in PenColor/-Width).<br />(Standard: aktiviert)</span><br />
+<br />
+<a class="tag" name="TurtlePenUp"></a><span class="method">PenUp</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hebt den Stift ab, sodaß die Schildkröte bei Bewegung nicht zeichnet.</span><br />
+<br />
+<a class="tag" name="TurtleShow"></a><span class="method">Show</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zeigt die Schildkröte (Bildshape wieder) an, für weitere Interaktion.<br />s. LDShapes.ResetTurtle(), Shapes.HideShape("_turtle") bzw. ShowShape("_turtle").</span><br />
+<br />
+<a class="tag" name="TurtleSpeed"></a><span class="method">Speed</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die Bewegungs-/Drehgeschwindigkeit der Schildkröte (blendet diese nicht ein):<br />1	Min (bzw. <1)<br />5	Standard<br />10	Max (bzw. >10)<br />10 bewegt/dreht die Schildkröte sofort.</span><br />
+<span class="info">example</span> <span class="text">animZeit [ms] = Math.Abs(distance [Pxl] * 320/(Turtle.Speed*Turtle.Speed))<br />'zB. 1280 ms für 100 Pxl bei Speed 5 usw.</span><br />
+<br />
+<a class="tag" name="TurtleTurn"></a><span class="method">Turn</span><span class="methodargs">(angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht die Schildkröte (ab aktueller Blickrichtung) um den angegebenen Winkel (auch wenn ausgeblendet, initialisiert Turtle). Startwinkel (0°) entspricht Richtung 12h.<br />(Intern: Shapes.Rotate("_turtle", grad))</span><br />
+<span class="info">angle</span> <span class="text">Der -/+ Winkel [°] um den die Schildkröte gedreht wird (Standard: 0):<br />+angle  rechts (im Uhrzeigersinn)<br />-angle  links (gegen Uhrzeigersinn)</span><br />
+<span class="info">example</span> <span class="text">'Turtle Kreis(bogen) mit<br />'r = d/w * Math.GetDegrees(1) ~86<br />d = 6   'Teilsehne<br />w = 4   'Teilwinkel [°]<br />e = 270 'Endwinkel [°]<br />GraphicsWindow.PenWidth=1<br />For n = w To e Step w<br />  Turtle.Move(d)<br />  Turtle.Turn(w) '-/+ für L/R<br />EndFor</span><br />
+<br />
+<a class="tag" name="TurtleTurnLeft"></a><span class="method">TurnLeft</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht die Schildkröte um 90° gegen den Uhrzeigersinn (blendet diese ein, Intern: Shapes.Rotate("_turtle",-90)).</span><br />
+<br />
+<a class="tag" name="TurtleTurnRight"></a><span class="method">TurnRight</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht die Schildkröte um 90° im Uhrzeigersinn (blendet diese ein, Intern: Shapes.Rotate("_turtle",90)).</span><br />
+<br />
+<a class="tag" name="TurtleX"></a><span class="method">X</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die aktuelle x-Koordinate der Schildkröte. Das Festlegen ändert deren Position unmittelbar (ohne Linie, blendet Turtle nicht ein).<br />(Standard: 320)</span><br />
+<br />
+<a class="tag" name="TurtleY"></a><span class="method">Y</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ermittelt oder setzt die aktuelle y-Koordinate der Schildkröte. Das Festlegen ändert deren Position unmittelbar (ohne Linie, blendet Turtle nicht ein).<br />(Standard: 240)</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

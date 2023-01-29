@@ -1,0 +1,1318 @@
+﻿<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="msvalidate.01" content="098D0E5302B9A295D09F0CB196743A89" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>LitDev</title>
+    <meta name="description" content="Small Basic extensions by LitDev." />
+    <meta name="keywords" content="Small Basic,litdev,extension" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style type="text/css">
+        .style1 {
+            width: 95%;
+        }
+
+        .style2 {
+            width: 200px;
+        }
+
+        .style3 {
+            width: 70px;
+            text-align: center;
+        }
+
+        .style9 {
+            text-decoration: underline;
+        }
+
+        .style10 {
+            font-size: x-small;
+            background-color: #FFff55;
+        }
+
+        .style11 {
+            width: 110px;
+        }
+
+        .style12 {
+            font-size: x-small;
+        }
+
+        .auto-style1 {
+            width: 105px;
+            text-align: left;
+        }
+
+        .auto-style2 {
+            width: 100%;
+        }
+
+        .auto-style4 {
+            width: 32px;
+        }
+
+        .auto-style5 {
+            width: 161px;
+        }
+
+        .auto-style6 {
+            height: 42px;
+        }
+
+        .auto-style7 {
+            width: 50%;
+        }
+        </style>
+</head>
+<body>
+    <div id="wrapper">
+        <br />
+        <br />
+        <script type="text/javascript" src="header.js"> </script>
+        <div id="content">
+            <div style="text-align: center">
+                <form action="download.php" method="post">
+                    <input class="litdev" type="submit" name="download" value="LitDev_v1.2.zip" /><img alt="" src="images/downloadOver.png" class="hiddenPic" /><br />
+                </form>
+                <br />
+                <br />
+                <a class="menu" href="#Overview">Overview</a>
+                <a class="menu" href="#Usage">How to install</a>
+                <a class="menu" href="#Extensions">Extension downloads</a>
+                <a class="menu" href="#LitDev Extension Documentation">Documentation</a>
+                <a class="menu" href="#Other Resource Downloads">Other resources</a>
+                <a class="menu" href="#Wiki Articles">Wiki</a>
+                <a class="menu" href="#Blog Articles">Blog</a>
+                <br />
+                <br />
+                <br />
+                <form action="sphider/search.php" method="get">
+                    <div style="text-align: center">
+                        <input type="text" name="query" id="query" size="40" action="sphider/include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500" />
+                        <input type="hidden" value="and" name="type" />
+                        <input type="hidden" value="50" name="results" />
+                        <input type="hidden" value="1" name="search" />
+                        <input class="search" type="submit" value=" Search " />
+                    </div>
+                </form>
+                <br />
+            </div>
+            <form action="download.php" method="post">
+                <span id="Overview" class="title">Overview</span>
+                <br />
+                <div>
+                    <br />
+                    Microsoft Small Basic is a free simplified programming language for children and adults to get started learning to program.
+                See the <a class="link" href="http://smallbasic.com/">Small Basic</a> website or preview the <a class="link" href="SmallBasicLibrary.html">Small Basic API</a> for more details.<br />
+                    <br />
+                    Also check out the <a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads/">Forum</a>, <a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/">Blog</a> and <a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/tags/en_2D00_US/small+basic/default.aspx">Wiki</a> articles.<br />
+                    <br />
+                    The LitDev (little developer) extension for Small Basic has loads of extra functionality with over 55 new objects and over 1000 methods, properties and events; including 2D physics, 3D rendering, controls, dialogs, graphing, statistics, matrices, lists, sorting and searching (Regex), faster arrays, USB and COM connection, SQLite, MySQL, SqlServer, OleDb and Odbc databases, webcam, multiple GraphicsWindows, scrollbars, image processing, date and time handling, debugger, client-server interaction, encryption, clipboard, extended music and sound recording, parse xml, file zip and ftp, asynchronous and argument subroutine calls, inline C# and javascript code and lots more.<br />
+                    <br />
+                    As well as the LitDev extension, there are links to download its full source code and the source code for several small demonstration extensions to help you get started writing your own. 
+                <br />
+                    <br />
+                    The extensions
+                are written in C# and use the .Net 3.5 framework for versions of Small Basic up to 1.0.&nbsp; Small Basic version 1.1 onwards and its extensions require .Net 4.5 which is available for Vista onwards and pre-installed on Windows 8 onwards.<br />
+                    <br />
+                    Extensions can be written in any .Net language, and provide a way for Small Basic programmers to develop their own skills
+                and progress from Small Basic to larger programming languages, as well as generating useful features.<br />
+                    <br />
+                    To write your own extension you will need <a class="link" href="http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-windows-desktop">Visual Studio Community</a> which can be downloaded and installed for free.
+                <br />
+                    <br />
+                    To decompile and view the source for other extensions and SmallBasicLibrary.dll you can use <a class="link" href="http://ilspy.net">IlSpy</a>.<br />
+                    <br />
+                    More information on writing your own extension can be found <a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2008/10/27/extending-small-basic.aspx">here</a> and in downloads below.<br />
+                    <br />
+                    If any download links are broken, then please leave a post on this Small Basic forum <a class="link" href="https://social.msdn.microsoft.com/Forums/en-US/fef3c437-7715-4a9f-a783-7f62f768fec0/litdev-extension-updates?forum=smallbasic">thread</a> since larger downloads seem to be periodically deleted by web hoster.<br />
+                    <br />
+                </div>
+                <span id="Usage" class="title">How to Install</span>
+                <br />
+                <div>
+                    <br />
+                    To get the main LitDev extension, click the image below.<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;
+                                <input class="ldphysics" type="submit" name="download" value="LitDev_v1.2.zip" /><img alt="" src="images/downloadOver.png" class="hiddenPic" />
+                    <br />
+                    <br />
+                    Another option is to use Small Basic Extension Manager on <a class="link" href="https://gallery.technet.microsoft.com/Small-Basic-Extension-e54560ce">TechNet Gallery</a>.<br />
+                    <br />
+                    Alternatively, click the appropriate icon next to an extension from those listed in the <a class="link" href="#LitDev Extension Downloads">Extension Downloads</a> section below to download a
+                zip file containing the required files.<br />
+                    <br />
+                    Zip files can be un-zipped using various compression software, including <a class="link" href="http://www.jzip.com/">JZip</a> or <a class="link" href="http://www.7-zip.org/">7Zip</a>.<br />
+                    <br />
+                    As with all Small Basic extensions, copy the extension dll and xml (inside the dll zip) to a lib sub-folder of the Small Basic
+                installation folder, usually in one of the following locations:<br />
+                    <br />
+                    <i>C:\Program Files\Microsoft\Small Basic\lib<br />
+                        C:\Program Files (x86)\Microsoft\Small Basic\lib<br />
+                    </i>
+                    <br />
+                    You may require to create the lib folder if it doesn&#39;t exist.<br />
+                    <br />
+                    Copy all other files (documentation and samples) elsewhere.<br />
+                    <br />
+                    All extensions have to be rebuilt for each Small Basic version.&nbsp; 
+                Only the current versions are maintained on this site in most cases with some selected previous versions also available.&nbsp; Earlier versions can usually be rebuilt from the extension source code.<br />
+                    <br />
+                    If the extension commands fail to appear in Small Basic (type LD and no options appear) then you may need to unblock the downloaded dll.&nbsp; Right click LitDev.dll and select Properties and clear the block if present.&nbsp; 
+                If it fails to unblock, then copy LitDev.dll to a folder where you have write access (e.g. Documents), unblock it there and then move back to the Small Basic lib folder.&nbsp; Alternatively, unblock the downloaded zip file before unzipping the content.<br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;
+                <img alt="" src="images/unblock.png" />
+                    <br />
+                    <br />
+                    Thanks to OzJerry, Pappa Lapub, NaochanON amd Tryhest for helping diagnose this issue.<br />
+                    <br />
+                </div>
+                <span id="Extensions" class="title">Extensions</span>
+                <br />
+                <div>
+                    <br />
+                    Click the DLL
+                <img alt="" src="images/library.png" />, Source
+                <img alt="" src="images/source.png" />
+                    (VS 2010),
+                <img alt="" src="images/source12.png" />
+                    (VS 2012),
+                <img alt="" src="images/source13.png" />
+                    (VS 2013), 
+                <img alt="" src="images/source15.png" />
+                    (VS 2015), 
+                <img alt="" src="images/source17.png" />
+                    (VS 2017), 
+                <img alt="" src="images/source19.png" />
+                    (VS 2019), or Additional Resource
+                <img alt="" src="images/AppIcon_32.png" />
+                    icon next to the required download.<br />
+                    <br />
+                    Please direct any questions, suggestions or problems to the <a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads">Small Basic Forum</a>.<br />
+                    <br />
+                    <span id="LitDev Extension Downloads" class="title" style="font-size: medium">LitDev Extension Downloads</span><br />
+                    <br />
+                    <table class="main" align="center" cellpadding="2">
+                        <tr>
+                            <td class="style11">
+                                <span class="heading">LitDev<br />
+                                </span><span class="title" style="font-size: small">1.2.23.0</span></td>
+                            <td class="style3">
+                                <input title="LitDev 1.2 DLL" class="library" type="submit" name="download" value="LitDev_v1.2.zip" />
+                                <br />
+                                <br />
+                                <input title="LitDev 1.2 Source" class="source17" type="submit" name="download" value="LitDev_Source.zip" />
+                            </td>
+                            <td colspan="2">This extension contains <span class="style9"><strong>all of the useful bits</strong></span> in the demonstration extensions with many additions as well
+                            as lots of other methods, ranging from simple utilities to physics simulation and 3D.<br />
+                                <br />
+                                This version is for the current versiion of Small Basic (1.2).&nbsp;
+                            A pre-release test version is also available below, as well as the last version compatible with Small Basic versions 1.0 and 1.1.<br />
+                                <br />
+                                The current version of the LitDev extension download is also maintained on <a class="link" href="https://gallery.technet.microsoft.com/Small-Basic-LitDev-75827dc5">Technet Gallery</a> and the source code is available on <a class="link" href="https://github.com/litdev1/LitDev">GitHub</a>.<br />
+                                <br />
+                                A <a class="link" href="https://github.com/nonkit/LitDevJa">Japanese language pack</a> (thanks to Nonki) is also available.<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style11">
+                                <span class="heading">LitDev<br />
+                                </span><span class="title" style="font-size: small">Beta Version </span></td>
+                            <td class="style3">
+                                <input title="LitDev 1.2 Beta" class="library" type="submit" name="download" value="LitDev_Test.zip" />
+                            </td>
+                            <td colspan="2">This is a pre-release &#39;beta&#39; version of the LitDev extension updated regularly as things are added for testing or bugs fixed.&nbsp; 
+                It is also a lightweight download of the extension with no samples or additional documentation.<br />
+                                <br />
+                                Use <em>LDUtilities.Version()</em> to view breaking changes.</td>
+                        </tr>
+                        <tr>
+                            <td class="style11">
+                                <span class="heading">LitDev<br />
+                                </span><span class="title" style="font-size: small">1.1.0.8 </span></td>
+                            <td class="style3">
+                                <input title="LitDev 1.1 DLL" class="library" type="submit" name="download" value="LitDev_v1.1.zip" />
+                            </td>
+                            <td colspan="2">This is the last version of the LitDev extension that can be used with version 1.1 of Small Basic.</td>
+                        </tr>
+                        <tr>
+                            <td class="style11">
+                                <span class="heading">LitDev<br />
+                                </span><span class="title" style="font-size: small">1.0.0.133 </span></td>
+                            <td class="style3">
+                                <input title="LitDev 1.0 DLL" class="library" type="submit" name="download" value="LitDev_v1.0.zip" />
+                            </td>
+                            <td colspan="2">This is the last version of the LitDev extension that can be used with version 1.0 of Small Basic.</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <span class="heading">LitDev3D<br />
+                                </span><strong><span class="style10">UNMAINTAINED<br />
+                                </span></strong></td>
+                            <td class="style3">
+                                <input title="DLL" class="library" type="submit" name="download" value="LitDev3D_64bit.zip" /><br />
+                                <br />
+                                &nbsp;<input title="Source" class="source12" type="submit" name="download" value="LitDev3D_Source.zip" />
+                                <br />
+                                <br />
+                                <input title="Media" class="samples" type="submit" name="download" value="Media.zip" />
+                            </td>
+                            <td>A 3D extension using the <a class="link" href="http://irrlicht.sourceforge.net/">irrlicht engine</a> (64 bit only), the dll download targets Small Basic 1.0.<br />
+                                <br />
+                                The associated media files (irrlicht samples) may be useful getting started.<br />
+                                <br />
+                                Another actively maintained 3D method (<strong>LD3DView</strong>) is included in the <em>LitDev</em> extension and works on all PC architectures.</td>
+                            <td>
+                                <img title="LitDev3D" src="images/irrlicht.png" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style1">
+                                <span class="heading">WaveForms<br />
+                                </span><strong><span class="style10">UNMAINTAINED<br />
+                                </span></strong></td>
+                            <td class="style3">
+                                <input title="Source 1.0" class="source" type="submit" name="download" value="WaveForms_v1.0.zip" /><br />
+                                <br />
+                                <input title="Source 1.1" class="source13" type="submit" name="download" value="WaveForms_v1.1.zip" /><br />
+                                <br />
+                                <input title="Source 1.2" class="source13" type="submit" name="download" value="WaveForms_v1.2.zip" />
+                            </td>
+                            <td>This is a 
+                            small extension to create PPM (Pulse Position Modulation) sound signals to control RC (remote control) devices.&nbsp; It can be modified to create any sound wave form.<br />
+                                <br />
+                                See <a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/10/small-basic-pulse-position-modulation-extension/">blog</a> post.&nbsp; Requires installing <a class="link" href="http://slimdx.org/download.php">SlimDX</a> (.Net 2.0 version for SB 1.0 and .Net version 4.0 for SB 1.1 onwards).<br />
+                                <br />
+                                This object is now included and extended in the <em>LitDev</em> extension.</td>
+                            <td>
+                                <img src="images/ppm_dx7.png" title="LitDev3D" /></td>
+                        </tr>
+                    </table>
+                    <br />
+                    <span id="LitDev Extension Documentation" class="title" style="font-size: medium">LitDev Extension Documentation</span><br />
+                    <br />
+                    Preview <a class="link" href="LitDev.html">LitDev Extension API</a> or <a class="link" href="LitDev.De.html">(<span id="result_box" class="short_text" lang="de"><span class="hps">Deutsch</span></span>)</a> - translation by Pappa Lapub<br />
+                    <br />
+                    Preview <a class="link" href="ChangeLog.html">LitDev Extension Change Log</a> (View this version and previous version changes and new features)<br />
+                    <br />
+                    Preview <em>LDPhysics</em> <a class="link" href="Physics-GettingStartedGuide.pdf">Getting Started Guide</a><br />
+                    <br />
+                    Preview <a class="link" href="LitDev3D.html">LitDev3D Extension API</a> or <a class="link" href="LitDev3D.De.html">(<span id="Span1" class="short_text" lang="de"><span class="hps">Deutsch</span></span>)</a><br />
+                    <br />
+                    Preview <a class="link" href="SmallBasicLibrary.html">Small Basic API</a> or <a class="link" href="SmallBasicLibrary.De.html">(<span id="Span1" class="short_text" lang="de"><span class="hps">Deutsch</span></span>)</a><br />
+                    <br />
+                    <div>
+                        <span id="LitDev Extension Details" class="title" style="font-size: medium">LitDev Extension Details</span><br />
+                        <br />
+                        The <em>LitDev</em> extension is actively developed and is updated periodically on this site and also uploaded to <a class="link" href="https://gallery.technet.microsoft.com/Small-Basic-LitDev-75827dc5">Technet Gallery</a>.&nbsp;
+                    <br />
+                        <br />
+                        The full source code is maintained on <a class="link" href="https://github.com/litdev1/LitDev">GitHub</a>.<br />
+                        <br />
+                        All of the objects in this combined extension start with <em>LD</em> to isolate them from other similarly named objects.
+                    <br />
+                        <br />
+                        There are many samples ranging from simple demonstrations to full programs included in the dll zip.<br />
+                        <br />
+                        A detailed change log and current version check can be viewed by running <em>LDUtilities.Version()</em>, or see preview above.<br />
+                        <br />
+                        The following is a brief summary of the <em>LitDev</em> extension objects, for the full API (functionality and syntax) see preview above.<br />
+                        <br />
+                        <table class="main" align="center" cellpadding="2">
+                            <tr>
+                                <td class="style2">
+                                    <strong>LD3DView</strong></td>
+                                <td>A 3D modelling set of methods for the GraphicsWindow.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDArray</strong></td>
+                                <td>A faster array method for large 1D arrays with 1000+ elements using integer indexing.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDBits</strong></td>
+                                <td>Bitwise logic to store binary flags in a single variable as bits.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDBlueTooth</strong></td>
+                                <td>Bluetooth connections.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDCall</strong></td>
+                                <td>Call a subroutine as a function with arguments and optional return value. Call any extension method asynchronously or make a call from another pre-compiled Small Basic program.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDChart</strong></td>
+                                <td>Customisable chart control, including pie, doughnut, bubble, bar and column charts.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDClient</strong></td>
+                                <td>The client methods for a client server multi-PC application.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDClipboard</strong></td>
+                                <td>Methods to set and get data to and from the clipboard.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDController</strong></td>
+                                <td>Get input from one or more USB attached controllers (e.g. gamepad or joystick).</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDControls</strong></td>
+                                <td>Additional controls for the GraphicsWindow, including TreeView, RichTextBox, WebBrowser, ListBox, ComboBox, CheckBox, RadioButtons, MediaPlayer, 
+                                Slider, ProgressBar, PasswordBox, DocumentViewer, Menu, ListView and DataView. 
+                                Right-click context control menus for any shape or control. Drag and drop for some controls.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDCursors</strong></td>
+                                <td>Set cursors in the GraphicsWindow.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDDataBase</strong></td>
+                                <td>Create, access and query SQLite, MySQL, 
+                                SqlServer, Oledb or Odbc databases.&nbsp; See <a class="link" href="http://zetcode.com/db/sqlite">zetcode</a> for SQLite primer.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDDateTime</strong>
+                                </td>
+                                <td>Utilities to manipulate and calculate date and time differences, i.e. manipulate past and future dates.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDDebug</strong></td>
+                                <td>A debugging tool and auto instrumentation to create breakpoints.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDDialogs</strong></td>
+                                <td>Additional dialog utilities, including a blocking popup waiting dialog, tooltips, calendar, font, colours, GraphicsWindow right-click context menu 
+                                and multi button message box.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDDictionary</strong></td>
+                                <td>Fix for broken Dictionary object in version 1.0 (also includes Spanish dictionary).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDEffects</strong></td>
+                                <td>Set visual effects to any shape or control.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDEncryption</strong></td>
+                                <td>Encrypt and decrypt some text or create a password hash.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDEmail</strong></td>
+                                <td>Send email using an smtp server.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDFastArray</strong></td>
+                                <td>Fast 1D, 2D and 3D arrays with CSV file access.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDFastShapes</strong></td>
+                                <td>Methods to modify shapes by integer index and batch update (faster).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDFigures</strong></td>
+                                <td>Add some shapes like arcs, polygons, callouts and arrows. </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDFile</strong></td>
+                                <td>File utilities like read and write CSV (comma separated value) files, read files to an array, file length, music file
+                                play time, print a file, get system folder paths, read non-UTF8 encodings like ANSI and save/read all variables. </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDftp</strong></td>
+                                <td>Upload, download, 
+                                delete and list files by ftp, including binary and text files with an option to transfer asynchronously</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDGeography</strong></td>
+                                <td>Geography web based data.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDGraph</strong></td>
+                                <td>Graph plotting methods including export to Excel and CSV.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDGraphicsWindow<br />
+                                        <span class="style12">(formerly in LDUtilities and LDShapes)</span></strong></td>
+                                <td>Export of GraphicsWindow to image files or print, and other utilities like pause and resume GraphicsWindow updates, GraphicsWindow icon, minimise/maximise the GraphicsWindow, transparent GraphicsWindow, over-ride GraphicsWindow close, disable window close buttons and Flood Fill regions.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDHashTable</strong></td>
+                                <td>The hashtable provides a fast and efficient way of storing key-value pairs.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDHID</strong></td>
+                                <td>A low level generic USB Human Interface Device (HID) interface.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDIcon</strong></td>
+                                <td>Create an icon file from an image.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDImage</strong></td>
+                                <td>Extends ImageList to include image processing.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDInline</strong></td>
+                                <td>Include C#, VB or JScript methods, properties and events to compile and call from your Small Basic code.&nbsp; 
+                                It can also create dlls or extensions and use or probe other .Net dlls.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDIOWarrior</strong></td>
+                                <td>Access IOWarrior USB devices (see <a class="link" href="http://www.codemercs.com/io-warrior/?L=1">Code Mercenaries IO-Warrior</a>).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDList</strong></td>
+                                <td>A data storage object similar to arrays 
+                                where indices are automatically maintained.&nbsp; It is much faster than Small Basic arrays and has other useful features.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDLogic</strong></td>
+                                <td>Logical operations.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDMathX</strong></td>
+                                <td>Extended math, including FFT.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDMatrix</strong>
+                                </td>
+                                <td>Matrix algebra, for example to solve linear systems of equations.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDMusic</strong></td>
+                                <td>Extends Sounds.PlayMusic to include additional instruments and notes can also be played synchronously (chords).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDNetwork &#8224</strong></td>
+                                <td>Web methods, including a method to store and retrieve game high scores and store game data.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDPhysics</strong></td>
+                                <td>A larger set of methods to simulate Dynamic Collision Physics using the <a class="link" href="http://www.box2d.org">Box2D</a> engine. This is the same physics engine used for Angry Birds.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDQueue</strong></td>
+                                <td>A data storage object similar to a stack, except that values are stored first-in first-out.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDRegex<br />
+                                        <span class="style12">(formerly in LDUtilities)</span></strong></td>
+                                <td>Regex operations.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDResources</strong></td>
+                                <td>Save and load images, sounds, files and text/variables to a single file to provide with your program.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDScrollBars</strong></td>
+                                <td>GraphicsWindow ScrollBars, careful use allows a scrolling type game.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDSearch</strong></td>
+                                <td>Web base Bing searches.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDServer</strong></td>
+                                <td>The server methods for a client server multi-PC application.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDSettings</strong></td>
+                                <td>Store and retrieve settings for your programs.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDShell</strong></td>
+                                <td>Extended shell file methods (code by Pappa Lapub).</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDSort</strong></td>
+                                <td>Array sorting by index and value, with number and string sorting supported.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDSound</strong></td>
+                                <td>Record and save sounds from a microphone. Play system sounds.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDStatistics</strong>
+                                </td>
+                                <td>Statistics on a 1D array of numbers and random sample generation with normal, binomial, uniform and triangular distributions.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDStopwatch</strong></td>
+                                <td>Accurate system stopwaches.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDText</strong></td>
+                                <td>Text utilities, including, split, compare, trim, replace and find-all.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDTextWindow</strong></td>
+                                <td>TextWindow utilities, including low level key events, interruptable Read or ReadNumber, capture and print TextWindow, set more TextWindow colours,.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDTimer</strong></td>
+                                <td>Additional timers.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDTranslate <span class="style10">UPDATED</span></strong></td>
+                                <td>Language translation.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDUnits</strong></td>
+                                <td>A general purpose unt conversion system.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDUtilities <span class="style10">UPDATED</span></strong></td>
+                                <td>List of available fonts or colours, culture number conversions and some assorted utilities.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDVector</strong></td>
+                                <td>3D vector algebra methods.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDWaveForm</strong></td>
+                                <td>Create PPM (Pulse Position Modulation) sound signals to control RC (remote control) devices and simple sound waveforms.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDWebCam</strong></td>
+                                <td>A webcam object for the GraphicsWindow, with some simple effects.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDWindows</strong></td>
+                                <td>Create additional GraphicsWindows.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDxml</strong></td>
+                                <td>Methods to parse xml files.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDZip<br />
+                                        <span class="style12">(formerly in LDUtilities)</span></strong></td>
+                                <td>File Zip archiving.</td>
+                            </tr>
+                        </table>
+                        <hr width="700" size="1" noshade>
+                        <table class="main" align="center" cellpadding="2">
+                            <tr>
+                                <td class="style2">
+                                    <strong>LDColours<br />
+                                        LDCommPort<br />
+                                        LDEvents<br />
+                                        LDFocus<br />
+                                        LDProcess<br />
+                                        LDShapes<br />
+                                        LDSpeech<br />
+                                        LDMath<span class="style12"><br />
+                                            (formerly LDTrig) </span></strong></td>
+                                <td>Maintained and in some cases significantly extended versions of the demonstration extensions are also included.
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        &#8224 The php files in the folders gamedata and highscore on this website are those used by the LDNetwork extension methods. You may use these with your own web site.&nbsp; Since the php files are both called server.php you should keep the gamedata and highscore file structure.&nbsp; To use the LitDev extension commands in LDNetwork with these php files (see download below) on your web site, you must first set the network location using the property LDUtilities.NetworkURL in your Small Basic code.&nbsp; The default value is 
+                    &quot;http://litdev.co.uk&quot; where the folders gamedata and highscore are located.
+                    <br />
+                        <br />
+                        <span id="LitDev Extension Screenshots" class="title" style="font-size: medium">LitDev Extension Screenshots<br />
+                        </span>
+                        <br />
+                        <table class="style1" align="center">
+                            <tr>
+                                <td align="center">
+                                    <img alt="" title="LDPhysics" src="images/physics-1.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDPhysics" src="images/physics-2.png" />
+                                </td>
+                                <td align="center" rowspan="2">
+                                    <img alt="" title="LDDebug" src="images/debug.png" style="margin-top: 0px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img alt="" title="LDMusic" src="images/music.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDGraph" src="images/graph.png" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img alt="" title="LD3DView" src="images/3dview.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDShapes" src="images/gradients.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDControls" src="images/treeview.png" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img alt="" title="LDDatabase" src="images/database.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDWebcam" src="images/webcam.png" />
+                                </td>
+                                <td align="center">
+                                    <img alt="" title="LDChart" src="images/chart.png" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                    <div>
+                        <span id="Demonstration Extension Downloads" class="title" style="font-size: medium">Demonstration Extension Downloads<br />
+                        </span>
+                        <br />
+                        The following smaller extensions are provided with full source code for demonstration purposes for you to start building your own. They are no
+                    longer actively developed, but still show how various operations can be performed and interact with SmallBasicLibrary.dll.<br />
+                        <br />
+                        All of the functionality in the demonstration extensions is contained in the <em>LitDev</em> extension, therefore there is no no need to download these unless you are
+                    interested in how they are made.<br />
+                        <br />
+                        Download the source and unzip to a folder somewhere, open the solution (*.sln) in Visual Studio and build the solution. Copy the resulting dll and xml files to the Small Basic lib folder to then become available for Small Basic.<br />
+                        <br />
+                        You may need to update the reference to where SmallBasicLibrary.dll is installed on your PC inside the References section of Solution Explorer in Visual Studio.<br />
+                        <br />
+                        If you have any questions, then check out the 'Guide to writing extensions' below or ask on the <a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads">Small Basic forum</a>.<br />
+                        <br />
+                        <table class="main" align="center" cellpadding="2">
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">Colours</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="Colours_Source.zip" />
+                                </td>
+                                <td>Get SmallBasic colours by name.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">Music</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="Music_Source.zip" />
+                                </td>
+                                <td>Get a music file play time.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">SerialPort</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="SerialPort_Source.zip" />
+                                </td>
+                                <td>Access the serial port (original code by Nino Carrillo.</td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">Spawn</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="Spawn_Source.zip" />
+                                </td>
+                                <td>Access system process information and start external processes.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">Speech</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="Speech_Source.zip" />
+                                </td>
+                                <td>Use a speech synthesizer to speak text.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">TextBoxFocus</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="TextBoxFocus_Source.zip" />
+                                </td>
+                                <td>Set and get the focus for Controls and Textboxes.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">Events</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="Events_Source.zip" />
+                                </td>
+                                <td>Sample creating event extension (display change).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">ShapesExtension</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="ShapesExtension_Source.zip" />
+                                </td>
+                                <td>A method to move a line shape and manipulate Shapes such as dashed pens, Z-index layering and some basic collision detection.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2">
+                                    <span class="heading">TrigD</span>
+                                </td>
+                                <td class="style3">&nbsp;<input title="Source" class="source" type="submit" name="download" value="TrigD_Source.zip" />
+                                </td>
+                                <td>Trig functions using degrees.
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                    </div>
+                </div>
+                <span id="Other Resource Downloads" class="title">Other Resource Downloads</span>
+                <br />
+                For the following downloads, where multiple versions are available they refer to compatibility with Small Basic versions.<br />
+                <div>
+                    <br />
+                    <span id="Samples" class="heading">Samples</span>
+                    <input title="Samples" class="samples" type="submit" name="download" value="samples.zip" />
+                    <br />
+                    Some Small Basic samples that don't use extensions, but demonstrate a range of features.<br />
+                    <br />
+                    <span id="Small Basic API" class="heading">Small Basic API</span>
+                    <input title="API" class="samples" type="submit" name="download" value="SmallBasicLibrary.zip" />
+                    <br />
+                    A printable and editable copy of the Small Basic API (commands and their syntax) created from SmallBasicLibrary.xml.<br />
+                    <br />
+                    <span id="Previous versions" class="heading">Previous versions</span>
+                    <input title="Version 0.8" class="samples" type="submit" name="download" value="SmallBasic-v0.8.msi" />
+                    <input title="Version 0.9" class="samples" type="submit" name="download" value="SmallBasic-v0.9.msi" />
+                    <input title="Version 0.95" class="samples" type="submit" name="download" value="SmallBasic-v0.95.msi" />
+                    <input title="Version 1.0" class="samples" type="submit" name="download" value="SmallBasic-v1.0.msi" />
+                    <input title="Version 1.1" class="samples" type="submit" name="download" value="SmallBasic-v1.1.msi" />
+                    <input title="Version 1.2" class="samples" type="submit" name="download" value="SmallBasic-v1.2.msi" />
+                    <br />
+                    A previous msi installer may be required to correctly uninstall Small Basic before installing the current version.<br />
+                    <br />
+                    <span id="Hello World test" class="heading">Hello World test</span>
+                    <input title="Hello World test 1.0" class="samples" type="submit" name="download" value="hello-world-test_v1.0.zip" />
+                    <input title="Hello World test 1.1" class="samples" type="submit" name="download" value="hello-world-test_v1.1.zip" />
+                    <input title="Hello World test 1.2" class="samples" type="submit" name="download" value="hello-world-test_v1.2.zip" /><br />
+                    A very simple compiled Small Basic program that can be used to test .Net if an installation of Small Basic fails.<br />
+                    <br />
+                    <span id="Guide to writing extensions" class="heading">Guide to writing extensions</span>
+                    <input title="Extension Guide" class="samples" type="submit" name="download" value="WritingExtensionGuide.zip" />
+                    <br />
+                    Guides to setting up and compiling an extension using VS 2010 Express in C# and VB.  This is very similar to using more recent versions of VS, where the guides are also applicable.<br />
+                    <br />
+                    <span id="XML converter" class="heading">XML converter</span>
+                    <input title="XML converter" class="samples" type="submit" name="download" value="LitDevUtilities.zip" />
+                    <input title="XML converter Source" class="source13" type="submit" name="download" value="LitDevUtilities_Source.zip" />
+                    <br />
+                    Utility program to convert Small Basic and extension xml files to rtf and html documents. This tool was used to create the rtf files provided
+                with extensions on this site as well as the Small Basic API above and html API previews. Tool also contains some other utilities. It requires .Net 4.5 which installer will detect and install if you want this tool.<br />
+                    <br />
+                    <span id="Small Basic extension compiler" class="heading">Small Basic extension compiler</span>
+                    <input title="Extension compiler 1.0" class="samples" type="submit" name="download" value="SmallBasicExtensionCompiler_v1.0.zip" />
+                    <input title="Extension compiler 1.1" class="samples" type="submit" name="download" value="SmallBasicExtensionCompiler_v1.1.zip" />
+                    <input title="Extension compiler 1.2" class="samples" type="submit" name="download" value="SmallBasicExtensionCompiler_v1.2.zip" />
+                    <br />
+                    Compile an extension in Small Basic (simple example included). Code by Fremy Company, recompiled with permission for current
+                version. See <a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/thread/1a3f54f3-8412-40ff-a06b-08dc65a49530">here</a> and <a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/thread/b94494ee-7104-4a7d-bc6f-2bdbf885a327">here</a> for more details.<br />
+                    <br />
+                    <span id="LDNetwork php files" class="heading">LDNetwork php files</span>
+                    <input title="LDNetwork php files" class="samples" type="submit" name="download" value="server.zip" />
+                    <br />
+                    Theses are the php files required to use LDNetwork methods on your own web area.
+                    <br />
+                    <br />
+                    <span id="Extension template" class="heading">Extension template</span>
+                    <input title="Extension template" class="source15" type="submit" name="download" value="SBExtension.zip" /><br />
+                    Add a C# Visual Studio 2015 Small Basic Extension template.&nbsp; Download and copy the zip (don&#39;t unzip it) to <em>Documents\Visual Studio 2015\Templates\ProjectTemplates</em>.&nbsp; It assumes <em>SmallBasicLibrary.dll</em> is in <em>C:\Program Files (x86)\Microsoft\Small Basic</em>.&nbsp; To create an extension using this template goto <em>File-&gt;New-&gt;Project...</em> select <em>SBExtension</em> from the Installed Templates Visual C# folder, compile and copy <em>SBExtension.dll</em> and <em>SBExtension.xml</em> from <em>SBExtension\bin\Release</em> to the Small Basic lib folder.<br />
+                    <br />
+                    <span id="SB-IDE" class="heading">SB-Prime : Extended Small Basic development environment</span>
+                    <input title="SB-Prime" class="samples" type="submit" name="download0" value="SB-Prime.zip" /><br />
+                    This is a Small Basic development environment (IDE) with debugger, flow chart visualisation, shapes and controls editor, extension management, extended editing as well as all of the features present in the standard Small Basic IDE.<br />
+                    <br />
+                    It should work with any installed version of Small Basic (<em>C:\Program Files (x86)\Microsoft\Small Basic</em> or <em>C:\Program Files\Microsoft\Small Basic</em>).<br />
+                    <br />
+                    The debugging functions do require Small Basic version 1.1 or later since it uses .Net 4.5 features present in this version onwards.<br />
+                    <br />
+                    Feedback welcome...<br />
+                    <br />
+                    See the main <a class="link" href="https://social.msdn.microsoft.com/Forums/en-US/05f9c212-fa4d-4ae2-b4f0-11e8039c49af/new-sbide?forum=smallbasic">Small Basic forum thread for SB-Prime</a> for additional questions/requests/bugs etc.<br />
+                    <br />
+                    <strong>
+                    Installation</strong>
+<ol>
+<li>Download and save the zip somewhere </li>
+<li>Unblock the downloaded zip file (this allows the unzipped exe and dlls to be used): Locate the downloaded zip in File Explorer, then right click -&gt; Properties -&gt; General -&gt; Unblock </li>
+<li>Unzip the contents of the zip somewhere, maybe an empty folder in Documents or in the SB installation folder (not the lib folder) </li>
+<li>Run SB-Prime.exe </li>
+</ol>
+<strong>Documentation<br />
+                    <br />
+                    </strong>A short guide to debugging with SB-Prime (<a class="link" href="http://litdev.co.uk/forum/HowToDebug.pdf">How to Debug</a>).<br />
+                    <strong>
+                    <br />
+                    Plugins<br />
+                    <br />
+                    </strong>Plugins may be written for SB-Prime.<br />
+                    <br />
+                    A sample VS 2017 project to get you started may be downloaded from <a href="http://litdev.co.uk/downloads/SBSamplePlugin.zip">litdev.co.uk/downloads/SBSamplePlugin.zip</a>.<br />
+                    <br />
+                    A GitHub version of the plugin sample source code is also available from <a class="link" class="link" href="https://github.com/litdev1/SBSamplePlugin">https://github.com/litdev1/SBSamplePlugin</a>.<br />
+                    <br />
+                    Plugin dlls should be unblocked if downloaded, then placed in a subfolder of the SB-Prime.exe location, called 'plugins'.<br />
+                    <br />
+                    Using the plugin sample, <span style="text-decoration: underline;">only</span> the <em>SBSamplePlugin.dll</em> file should be placed in the plugins folder.<br />
+                    <br />
+                    The dlls in the plugins folder will be auto detected and loaded to a new ribbon button if they are are correctly created.<br />
+                    <strong>
+                    <br />
+                    ScreenShot<br />
+                    <br />
+                    </strong>&nbsp;<img src="images/SB-Prime.png" alt="" width="550" height="287" /><br />
+                    <strong>
+                    <br />
+                    Updates (recent at top)<br />
+                    <br />
+                    </strong>To update SB-Prime select the Advanced ribbon tab, and then click Update from the Settings group. Upgrade will persist your settings.
+<ul>
+<li>Interface localisation, initially russian (Version 1.1.7) </li>
+<li>Minimum window sizes set </li>
+<li>Lexing issues fixed and space indent option added </li>
+<li>Shapes Editor - fix for 'action' keys when textbox has focus </li>
+<li>Improved printing </li>
+<li>Decompile .Net assemblies to C# (Advanced tab) </li>
+<li>Various cummulative updates (Version 1.1.6) </li>
+<li>Extended hotkeys to closely resemble Small Basic behaviour </li>
+<li>Single click update added in Advanced|Options </li>
+<li>Renamed SB-Prime (Version 1.1.5) </li>
+<li>Shapes editor tool added </li>
+<li>Flow chart visualisation added (Version 1.1.4) </li>
+<li>Program details and rating added </li>
+<li>Various minor improvements </li>
+<li>First stable version (Version 1.1.3) </li>
+</ul>                    <span id="Extension Manager" class="heading">Extension manager</span>
+                    <input title="Extension Manager" class="samples" type="submit" name="download" value="ExtensionManager.zip" />&nbsp;<br />
+                    This contains an application to manage your Small Basic extensions.&nbsp; 
+                    It is available within SB-Prime, therefore there is not point downloading both.&nbsp; Download and extract the zip somewhere and run <em>SBExtensionManager.exe</em>.<br />
+                    <br />
+                    <img src="images/extensionmanager.png" />
+                    <br />
+                    <br />
+                    <span id="Translation" class="heading">Translation</span>
+                    <input title="Translate XML" class="samples" type="submit" name="download" value="TranslateXML.zip" />&nbsp;<br />
+                    I found a way to easily do automatic translation packs for Small Basic.&nbsp; The tranlation is by software so it will not be perfect.&nbsp; It consists of tranlations of <em>SmallBasicLibrary.xx,xml</em> (for intellisense) and <em>Strings.xx,resx</em> (for IDE), where <em>xx</em> is the language code.&nbsp; All extension packs are for Small Basic version 1.2.<br />
+                    <br />
+                    Both files should be downloaded and copied to the Small Basic installation folder (not the lib folder).&nbsp; You can edit some bad translation manually in these files if you want and even let me know what the better translation should be.<br />
+                    <br />
+                    Downloads to the conversions I have done are below, if you want others then leave a post on this <a class="link" href="https://social.msdn.microsoft.com/Forums/en-US/23a787f6-2421-4b5f-bcb2-1677fc03e85b/regarding-the-possibility-of-creating-a-norwegian-translation-of-small-basic?forum=smallbasic">Small Basic Forum Thread</a>.<br />
+                    <br />
+                    You can start Small Basic with any available language from a command window or bat file in the Small Basic installation folder using a launguage code of the form <em>xx-xx</em>, e.g. <em>no-no</em> for Norwegian.<br />
+                    <br />
+                    <em>C:\Program Files (x86)\Microsoft\Small Basic\SB.exe /lang:no-no</em><br />
+                    <br />
+                    <table class="auto-style2">
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="Norwegian Language Pack" class="samples" type="submit" name="download" value="../languages/lang-no.zip" />
+                                Norwegian Language Pack (no-no)</td>
+                            <td class="auto-style7">
+                                <input title="Greek Language Pack" class="samples" type="submit" name="download" value="../languages/lang-el.zip" />
+                                Greek Language Pack (el-el)</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="Hindi Language Pack" class="samples" type="submit" name="download" value="../languages/lang-hi.zip" />
+                                Hindi Language Pack (hi-hi)</td>
+                            <td class="auto-style7">
+                                <input title="Urdu Language Pack" class="samples" type="submit" name="download" value="../languages/lang-ur.zip" />
+                                Urdu Language Pack (ur-ur)</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="Estonian Language Pack" class="samples" type="submit" name="download" value="../languages/lang-et.zip" />
+                                Estonian Language Pack (et-et)</td>
+                            <td class="auto-style7">
+                                <input title="Bulgarian Language Pack" class="samples" type="submit" name="download" value="../languages/lang-bg.zip" />
+                                Bulgarian Language Pack (bg-bg)</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="Hebrew Language Pack" class="samples" type="submit" name="download" value="../languages/lang-iw.zip" />
+                                Hebrew Language Pack (iw-iw)</td>
+                            <td class="auto-style7">
+                                <input title="Indonesian Language Pack" class="samples" type="submit" name="download" value="../languages/lang-id.zip" />
+                                Indonesian Language Pack (id-id)</td>
+</td>
+                        </tr>
+                    </table>
+                    <br />
+                    Below are links for machine translations of the LitDev extension xml (these are not updated for every version release - you can create your own with the translation tool).<br />
+                    <br />
+                    <table class="auto-style2">
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="Spannish LitDev xml" class="samples" type="submit" name="download" value="../languages/LitDev.es.zip" /> Spannish (LitDev.es.xml)</td>
+                            <td class="auto-style7">
+                                <input title="Russian LitDev xml" class="samples" type="submit" name="download" value="../languages/LitDev.ru.zip" /> Russian (LitDev.ru.xml)</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style7">
+                                <input title="French LitDev xml" class="samples" type="submit" name="download" value="../languages/LitDev.fr.zip" /> French (LitDev.fr.xml)</td>
+                            <td class="auto-style7">
+                                <input title="Japanese LitDev xml" class="samples" type="submit" name="download" value="../languages/LitDev.ja.zip" /> Japanese (LitDev.ja.xml)
+                                [ <a class="link" href="https://github.com/nonkit/LitDevJa">Refined by Nonki on GitHub</a> ]</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <span id="Wiki Articles" class="title">Wiki Articles</span>
+                    <br />
+                    <br />
+                    <table class="auto-style2">
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15081.small-basic-programming-tips.aspx">Programming Tips</a></td>
+                            <td>This article covers the basic ideas of structured programming, or some tips for writing better programs in Small Basic</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/20290.small-basic-grammar-basics.aspx">Grammar Basics</a></td>
+                            <td>This article describes the main language elements or &#39;grammar&#39; used by the Small Basic language and gives some suggestions for further study</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/16003.small-basic-text-basics.aspx">Text Basics</a></td>
+                            <td>This article covers the basics of text manipulation in Small Basic using the Text object</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15062.small-basic-array-basics.aspx">Array Basics</a></td>
+                            <td>This article covers the basic use of the Small Basic Arrays</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15066.small-basic-stack-basics.aspx">Stack Basics</a></td>
+                            <td>This article covers the basic use of the Small Basic Stack, with an example recursively finding all jpg image files in and below an initial directory</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15059.small-basic-graphicswindow-basics.aspx">GraphicsWindow Basics</a></td>
+                            <td>This article covers the basic use of the Small Basic GraphicsWindow</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15060.small-basic-event-basics.aspx">Event Basics</a></td>
+                            <td>This article covers the basic use of events in Small Basic</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/15967.small-basic-graduate-to-c.aspx">Graduate to C#</a></td>
+                            <td>This article considers how to Graduate a Small Basic program to C#</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/20865.small-basic-dynamic-graphics.aspx">Dynamic Graphics</a></td>
+                            <td>This article is an introduction to graphical game programming using Small Basic.  It includes the basics of program design, movement, user interaction with keys and mouse, collision detection and introduces some more advanced ideas at the end. </td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/22264.small-basic-threading.aspx">Threading</a></td>
+                            <td>This article covers the basics of threading in Small Basic. </td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/24857.small-basic-sprite-arrays.aspx">Sprite Arrays</a></td>
+                            <td>This article describes using arrays of sprites in a Small Basic program.</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/tips.png" /></td>
+                            <td class="auto-style5"><a class="link" href="http://social.technet.microsoft.com/wiki/contents/articles/24946.small-basic-list-extension.aspx">List Extension</a></td>
+                            <td>This article describes how Small Basic arrays are handled internally.  It describes the advantages and disadvantages of the approach used, and introduces an alternative extension method 'LDList'. </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <span id="Blog Articles" class="title">Selected Blog Articles</span>
+                    <br />
+                    <br />
+                    <table class="auto-style2">
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2018/04/27/small-basic-prime-extended-ide/">Small Basic Prime – Extended IDE</a></td>
+                            <td class="auto-style4">
+                                &nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2017/02/11/small-basic-language-packs/">Small Basic – Language Packs</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2016/07/03/small-basic-talking-to-raspberry-pi/">Small Basic – Talking to Raspberry Pi</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2016/04/30/small-basic-extension-manager">Small Basic Extension Manager</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2016/06/19/3d-visualisation/">Small Basic - 3D Visualisation</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2016/03/22/small-basic-arduino">Small Basic - Arduino</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2016/03/12/small-basic-chord-sounds">Small Basic - Chord Sounds</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2015/10/15/small-basic-featured-program-database-sample">Small Basic Featured Program - Database Sample</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2015/01/25/turtle-maze-challenge">Turtle Maze Challenge</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/12/20/merry-christmas">Merry Christmas</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/11/29/small-basic-featured-program-solar-system">Small Basic Featured Program - Solar System</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/11/22/small-basic-mouse-position">Small Basic - Mouse Position</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/11/15/small-basic-chart-extension">Small Basic - Chart Extension</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/10/25/small-basic-webcam-motion-detection">Small Basic - WebCam Motion Detection</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/10/18/small-basic-featured-program-boxing-game">Small Basic Featured Program - Boxing Game</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/09/27/small-basic-flood-fill">Small Basic - Flood Fill</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/09/20/small-basic-featured-program-gravity-simulator">Small Basic Featured Program - Gravity Simulator</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/09/13/small-basic-getsettingsfilepath">Small Basic - GetSettingsFilePath</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/09/06/small-basic-traffic-light-challenge">Small Basic - Traffic Light Challenge</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/08/30/small-basic-transparent-graphicswindow">Small Basic - Transparent GraphicsWindow</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/08/23/small-basic-physics-for-marionette-challenge">Small Basic - Physics for Marionette Challenge</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/08/16/small-basic-textwindow-cursor-positioning">Small Basic - TextWindow Cursor Positioning</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/08/02/small-basic-controls-are-shapes">Small Basic - Controls are Shapes</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/07/26/small-basic-clearing-turtle-trails">Small Basic - Clearing Turtle Trails</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/07/19/small-basic-triangle-challenge">Small Basic - Triangle Challenge</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/07/13/small-basic-random-numbers">Small Basic - Random Numbers</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/07/05/small-basic-colors">Small Basic - Colors</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/06/28/sprite-arrays-featured-article">Sprite Arrays - Featured Article</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/06/21/small-basic-hammer-and-nails">Small Basic - Hammer and Nails</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/06/14/small-basic-about-monthly-challenges">Small Basic - About Monthly Challenges</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/06/07/small-basic-box2d-physics-extension">Small Basic - Box2D Physics Extension</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/31/small-basic-dudesons-smoke">Small Basic - Dudeson's Smoke</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/24/small-basic-database-extension">Small Basic - Database Extension</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/20/sidescroller-small-basic-featured-program">Small Basic Featured Program - SideScroller</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/17/why-johnny-can-t-code">Why Johnny Can't Code</a></td>
+                        </tr>
+                        <tr class="auto-style6">
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/10/small-basic-pulse-position-modulation-extension">Small Basic - Pulse Position Modulation Extension</a></td>
+                            <td class="auto-style4">
+                                <img src="images/blog.jpg" /></td>
+                            <td><a class="link" href="https://blogs.msdn.microsoft.com/smallbasic/2014/05/03/small-basic-types/">Small Basic Types</a></td>
+                        </tr>
+                    </table>
+                    <br />
+                </div>
+            </form>
+        </div>
+        <a href="http://www.arvixe.com" target="_blank">Hosted By Arvixe</a>
+        <script type="text/javascript" src="footer.js"> </script>
+    </div>
+</body>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-28519634-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>

@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDServer"></a><span class="group">LDServer</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Server and Client communication between computers.<br />Separate programs are required for the server and client - this is for the server.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDServerAutoMessages">AutoMessages</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerBroadcast">Broadcast</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDServerClientConnected">ClientConnected</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDServerClientDisconnected">ClientDisconnected</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDServerClientMessage">ClientMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDServerClose">Close</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDServerCloseDelay">CloseDelay</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerDisconnect">Disconnect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDServerGetClients">GetClients</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDServerIP">IP</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerLastClient">LastClient</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerLastClientConnected">LastClientConnected</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDServerLastClientDisconnected">LastClientDisconnected</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerLastClientMessage">LastClientMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDServerPort">Port</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDServerSendMessage">SendMessage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDServerStart">Start</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDServerStop">Stop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDServerAutoMessages"></a><span class="method">AutoMessages</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Show TextWindow connection messages when in auto mode "True" (default) or "False".</span><br />
+<br />
+<a class="tag" name="LDServerBroadcast"></a><span class="method">Broadcast</span><span class="methodargs">(message)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Send a message to all clients.</span><br />
+<span class="info">message</span> <span class="text">The message may be any variable including an array.</span><br />
+<span class="info">returns</span> <span class="text">A array of values "SUCCESS", "NOT_CONNECTED", "NO_CLIENT" or "FAILED" with the Client Name being the index.</span><br />
+<br />
+<a class="tag" name="LDServerClientConnected"></a><span class="method">ClientConnected</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a client connects.</span><br />
+<br />
+<a class="tag" name="LDServerClientDisconnected"></a><span class="method">ClientDisconnected</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a client disconnects.</span><br />
+<br />
+<a class="tag" name="LDServerClientMessage"></a><span class="method">ClientMessage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a client sends a message to the server.</span><br />
+<br />
+<a class="tag" name="LDServerClose"></a><span class="method">Close</span><span class="methodargs">(clientName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect and close (End) a client.</span><br />
+<span class="info">clientName</span> <span class="text">The client name, usually Client1, Client2 etc.<br />A list of current clients can be obtained from the method GetClients or found from the ClientConnected event.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS", "NOT_CONNECTED", "NO_CLIENT" or "FAILED"</span><br />
+<br />
+<a class="tag" name="LDServerCloseDelay"></a><span class="method">CloseDelay</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A delay in ms (default 100) when disconnecting to allow a message to be sent before connection closed (Stop, Disconnect and Close).<br />This delay should also be set for clients in LDClient.CloseDelay.</span><br />
+<br />
+<a class="tag" name="LDServerDisconnect"></a><span class="method">Disconnect</span><span class="methodargs">(clientName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect a client.</span><br />
+<span class="info">clientName</span> <span class="text">The client name, usually Client1, Client2 etc.<br />A list of current clients can be obtained from the method GetClients or found from the ClientConnected event.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS", "NOT_CONNECTED", "NO_CLIENT" or "FAILED"</span><br />
+<br />
+<a class="tag" name="LDServerGetClients"></a><span class="method">GetClients</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of current connected clients.</span><br />
+<span class="info">returns</span> <span class="text">An array of current client names or "" for none.</span><br />
+<br />
+<a class="tag" name="LDServerIP"></a><span class="method">IP</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The IP address of the server (it is defaulted to the current LAN IP).<br />If you want to use over the internet, then a web IP will be needed.</span><br />
+<br />
+<a class="tag" name="LDServerLastClient"></a><span class="method">LastClient</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last client name.</span><br />
+<br />
+<a class="tag" name="LDServerLastClientConnected"></a><span class="method">LastClientConnected</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last client connected name.</span><br />
+<br />
+<a class="tag" name="LDServerLastClientDisconnected"></a><span class="method">LastClientDisconnected</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last client disconnected name.</span><br />
+<br />
+<a class="tag" name="LDServerLastClientMessage"></a><span class="method">LastClientMessage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last client message.</span><br />
+<br />
+<a class="tag" name="LDServerPort"></a><span class="method">Port</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The windows port to use (default 100).</span><br />
+<br />
+<a class="tag" name="LDServerSendMessage"></a><span class="method">SendMessage</span><span class="methodargs">(clientName,message)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Send a message to a client.</span><br />
+<span class="info">clientName</span> <span class="text">The client name, usually Client1, Client2 etc.<br />A list of current clients can be obtained from the method GetClients or found from the ClientConnected event.</span><br />
+<span class="info">message</span> <span class="text">The message may be any variable including an array.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS", "NOT_CONNECTED", "NO_CLIENT" or "FAILED"</span><br />
+<br />
+<a class="tag" name="LDServerStart"></a><span class="method">Start</span><span class="methodargs">(auto)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Start the server.</span><br />
+<span class="info">auto</span> <span class="text">Enable auto message passing "True" or "False".<br />If this is used (recommended) then all client data is passed via server to all other clients, <br />and no processing of send and receive events is required.<br />The data is updated to arrays of data (indexed by client name) that is returned from the client Update methods.<br />The auto option should be the same for server and all clients.</span><br />
+<span class="info">returns</span> <span class="text">The current connection parameter ip:port (e.g. "192.168.1.60:100"), or "FAILED".<br />This is the parameter to use to connect from the client.</span><br />
+<br />
+<a class="tag" name="LDServerStop"></a><span class="method">Stop</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stop the current server and close all clients.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED"</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

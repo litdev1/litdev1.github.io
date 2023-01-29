@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDMusic"></a><span class="group">LDMusic</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Extends the Sound.PlayMusic method to include a variety of instrument sounds.<br />Also, multi-channel music can be created.<br />Due to the large number of instrument names, it is easy to miss the following properties:<br />Instrument, Velocity, Volume, Pan and Channel.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDMusicChannel">Channel</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMusicEndNote">EndNote</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMusicInstrument">Instrument</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMusicInstrumentName">InstrumentName</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMusicPan">Pan</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMusicPlayMusic">PlayMusic</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMusicPlayMusic2">PlayMusic2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMusicPlayNote">PlayNote</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDMusicReset">Reset</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDMusicVelocity">Velocity</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDMusicVolume">Volume</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDMusicChannel"></a><span class="method">Channel</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the MIDI channel (1 to 16, default 1).<br />Used by PlayMusic, Instrument, Velocity, Volume and Pan.</span><br />
+<br />
+<a class="tag" name="LDMusicEndNote"></a><span class="method">EndNote</span><span class="methodargs">(value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stop a note being played.</span><br />
+<span class="info">value</span> <span class="text">The note to stop (this is the value returned by PlayNote when the note was started).</span><br />
+<br />
+<a class="tag" name="LDMusicInstrument"></a><span class="method">Instrument</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the musical instrument (1 to 128).<br />1	Acoustic_Grand_Piano<br />2	Bright_Acoustic_Piano<br />3	Electric_Grand_Piano<br />4	Honky_tonk_Piano<br />5	Electric_Piano_1<br />6	Electric_Piano_2<br />7	Harpsichord<br />8	Clavi<br />9	Celesta<br />10	Glockenspiel<br />11	Music_Box<br />12	Vibraphone<br />13	Marimba<br />14	Xylophone<br />15	Tubular_Bells<br />16	Dulcimer<br />17	Drawbar_Organ<br />18	Percussive_Organ<br />19	Rock_Organ<br />20	Church_Organ<br />21	Reed_Organ<br />22	Accordion<br />23	Harmonica<br />24	Tango_Accordion<br />25	Acoustic_Guitar_nylon<br />26	Acoustic_Guitar_steel<br />27	Electric_Guitar_jazz<br />28	Electric_Guitar_clean<br />29	Electric_Guitar_muted<br />30	Overdriven_Guitar<br />31	Distortion_Guitar<br />32	Guitar_harmonics<br />33	Acoustic_Bass<br />34	Electric_Bass_finger<br />35	Electric_Bass_pick<br />36	Fretless_Bass<br />37	Slap_Bass_1<br />38	Slap_Bass_2<br />39	Synth_Bass_1<br />40	Synth_Bass_2<br />41	Violin<br />42	Viola<br />43	Cello<br />44	Contrabass<br />45	Tremolo_Strings<br />46	Pizzicato_Strings<br />47	Orchestral_Harp<br />48	Timpani<br />49	String_Ensemble_1<br />50	String_Ensemble_2<br />51	SynthStrings_1<br />52	SynthStrings_2<br />53	Choir_Aahs<br />54	Voice_Oohs<br />55	Synth_Voice<br />56	Orchestra_Hit<br />57	Trumpet<br />58	Trombone<br />59	Tuba<br />60	Muted_Trumpet<br />61	French_Horn<br />62	Brass_Section<br />63	SynthBrass_1<br />64	SynthBrass_2<br />65	Soprano_Sax<br />66	Alto_Sax<br />67	Tenor_Sax<br />68	Baritone_Sax<br />69	Oboe<br />70	English_Horn<br />71	Bassoon<br />72	Clarinet<br />73	Piccolo<br />74	Flute<br />75	Recorder<br />76	Pan_Flute<br />77	Blown_Bottle<br />78	Shakuhachi<br />79	Whistle<br />80	Ocarina<br />81	Lead_1_square<br />82	Lead_2_sawtooth<br />83	Lead_3_calliope<br />84	Lead_4_chiff<br />85	Lead_5_charang<br />86	Lead_6_voice<br />87	Lead_7_fifths<br />88	Lead_8_bass_lead<br />89	Pad_1_new_age<br />90	Pad_2_warm<br />91	Pad_3_polysynth<br />92	Pad_4_choir<br />93	Pad_5_bowed<br />94	Pad_6_metallic<br />95	Pad_7_halo<br />96	Pad_8_sweep<br />97	FX_1_rain<br />98	FX_2_soundtrack<br />99	FX_3_crystal<br />100	FX_4_atmosphere<br />101	FX_5_brightness<br />102	FX_6_goblins<br />103	FX_7_echoes<br />104	FX_8_sci_fi<br />105	Sitar<br />106	Banjo<br />107	Shamisen<br />108	Koto<br />109	Kalimba<br />110	Bag_pipe<br />111	Fiddle<br />112	Shanai<br />113	Tinkle_Bell<br />114	Agogo<br />115	Steel_Drums<br />116	Woodblock<br />117	Taiko_Drum<br />118	Melodic_Tom<br />119	Synth_Drum<br />120	Reverse_Cymbal<br />121	Guitar_Fret_Noise<br />122	Breath_Noise<br />123	Seashore<br />124	Bird_Tweet<br />125	Telephone_Ring<br />126	Helicopter<br />127	Applause<br />128	Gunshot</span><br />
+<br />
+<a class="tag" name="LDMusicInstrumentName"></a><span class="method">InstrumentName</span><span class="methodargs">(instrument)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an instrument name from its number.</span><br />
+<span class="info">instrument</span> <span class="text">The instrument number.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LDMusicPan"></a><span class="method">Pan</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the key pan balance left (-100) or right (100) (default 0).</span><br />
+<br />
+<a class="tag" name="LDMusicPlayMusic"></a><span class="method">PlayMusic</span><span class="methodargs">(notes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays musical notes.</span><br />
+<span class="info">notes</span> <span class="text">A set of musical notes to play.  The format is a subset of the Music Markup Language supported by QBasic.</span><br />
+<span class="info">example</span> <span class="info">code</span> <span class="text">LDMusic.Instrument = LDMusic.Xylophone<br />LDMusic.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C2")</span><br />
+<br />
+<a class="tag" name="LDMusicPlayMusic2"></a><span class="method">PlayMusic2</span><span class="methodargs">(notes,instrument,velocity,volume,pan,channel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Plays musical notes with specified instrument and MDI channel.<br />Also set volume, pan (balance) and velocity (key hit speed).</span><br />
+<span class="info">notes</span> <span class="text">A set of musical notes to play.  The format is a subset of the Music Markup Language supported by QBasic.</span><br />
+<span class="info">instrument</span> <span class="text">The instrument number.</span><br />
+<span class="info">velocity</span> <span class="text">The key velocity (1 to 128, default 100).</span><br />
+<span class="info">volume</span> <span class="text">Volume (0 to 100, default 50).</span><br />
+<span class="info">pan</span> <span class="text">Pan left (-100) or right (100) (default 0).</span><br />
+<span class="info">channel</span> <span class="text">The MIDI channel (1 to 16).</span><br />
+<br />
+<a class="tag" name="LDMusicPlayNote"></a><span class="method">PlayNote</span><span class="methodargs">(octave,note,channel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play an individual note (allows multi-channel instruments).</span><br />
+<span class="info">octave</span> <span class="text">The octave (0 to 8).</span><br />
+<span class="info">note</span> <span class="text">The note ("A","F#","B-" etc).</span><br />
+<span class="info">channel</span> <span class="text">The MIDI channel (1 to 16).</span><br />
+<span class="info">returns</span> <span class="text">The note value being played.</span><br />
+<br />
+<a class="tag" name="LDMusicReset"></a><span class="method">Reset</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset (stop all music on all channels).</span><br />
+<br />
+<a class="tag" name="LDMusicVelocity"></a><span class="method">Velocity</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the key velocity (1 to 128).<br />This is how hard a key was pressed (default 100).</span><br />
+<br />
+<a class="tag" name="LDMusicVolume"></a><span class="method">Volume</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the key volume (0 to 100, default 50).</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

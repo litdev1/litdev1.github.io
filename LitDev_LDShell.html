@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDShell"></a><span class="group">LDShell</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Functions for extended file infos, LNK/URL shortcuts and Shell apps. (All code and methods provided by Pappa Lapub).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDShellAllDetails">AllDetails</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShellApplyVerbOn">ApplyVerbOn</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellCascadeWindows">CascadeWindows</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellDateTimeSettings">DateTimeSettings</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellDTIconsHide">DTIconsHide</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellDTIconsOn">DTIconsOn</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellDTIconsShow">DTIconsShow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellDTIconsToggle">DTIconsToggle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellExploreFolder">ExploreFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellGetAllDetailNamesFor">GetAllDetailNamesFor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellGetAllDetailsFor">GetAllDetailsFor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellGetAllVerbsFor">GetAllVerbsFor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellGetDetail">GetDetail</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellGetSetting">GetSetting</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellGetSystemInfo">GetSystemInfo</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellLinkCreate">LinkCreate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellLinkGetProperty">LinkGetProperty</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellLinkSetProperty">LinkSetProperty</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellName">Name</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShellOpenFolder">OpenFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellRestoreWindows">RestoreWindows</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellRunBox">RunBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellSelectFolder">SelectFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellShellLink">ShellLink</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellShellLinkGet">ShellLinkGet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellShellLinkSet">ShellLinkSet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellShowDesktop">ShowDesktop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellShowFileProperties">ShowFileProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellSpecialFolderConstants">SpecialFolderConstants</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShellSpecialFolderList">SpecialFolderList</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellSpecialFolderPaths">SpecialFolderPaths</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShellSpecialFolders">SpecialFolders</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShellStartSettings">StartSettings</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellSwitch3D">Switch3D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellTileAllHoriz">TileAllHoriz</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellTileAllVert">TileAllVert</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShellToggleDesktop">ToggleDesktop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShellVersion">Version</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDShellAllDetails"></a><span class="method">AllDetails</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets all available extended properties as Array ("idx=property name;", where -1=Infotip, 0=Name, .. up to 286=Total bitrate (or ev. ?Full bitrate? on engl systems)).</span><br />
+<br />
+<a class="tag" name="LDShellApplyVerbOn"></a><span class="method">ApplyVerbOn</span><span class="methodargs">(path,verb)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Apply the given Verb (contextmenu item) for the given file or folder.<br />List of available Verbs (for a filetype or folder) under 'GetAllVerbsFor'.</span><br />
+<span class="info">path</span> <span class="text">The full file- or folder path.</span><br />
+<span class="info">verb</span> <span class="text">The Verb to apply (case- and '&' insensitive).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellCascadeWindows"></a><span class="method">CascadeWindows</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Orders all opended windows in cascades on the desktop (Revert with RestoreWindows).</span><br />
+<br />
+<a class="tag" name="LDShellDateTimeSettings"></a><span class="method">DateTimeSettings</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the dialog for date- and time settings.</span><br />
+<br />
+<a class="tag" name="LDShellDTIconsHide"></a><span class="method">DTIconsHide</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hides all desktop icons.</span><br />
+<br />
+<a class="tag" name="LDShellDTIconsOn"></a><span class="method">DTIconsOn</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets weather the desktop icons are currently visible ("True" or "False").</span><br />
+<br />
+<a class="tag" name="LDShellDTIconsShow"></a><span class="method">DTIconsShow</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows all hidden desktop icons again.</span><br />
+<br />
+<a class="tag" name="LDShellDTIconsToggle"></a><span class="method">DTIconsToggle</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Toggles the view of all desktop icons automatically (On/Off).</span><br />
+<br />
+<a class="tag" name="LDShellExploreFolder"></a><span class="method">ExploreFolder</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Opens a specified folder in a Windows Explorer window. (parent folder for existing file path). In new tab in QTTabBar.</span><br />
+<span class="info">path</span> <span class="text">The folder path to open in explorer (file path opens parent folder). The folder must exist.</span><br />
+<br />
+<a class="tag" name="LDShellGetAllDetailNamesFor"></a><span class="method">GetAllDetailNamesFor</span><span class="methodargs">(path,step1)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the names of all available extended properties for a given file or folder as Array (up to max. 316, w/o -1=Infotip).</span><br />
+<span class="info">path</span> <span class="text">The full file- or folder path.</span><br />
+<span class="info">step1</span> <span class="text">Indizes in speps by 1?  "True" or "False" (default, real property ID).</span><br />
+<span class="info">returns</span> <span class="text">The names of all available extended properties as Array ("idx=property name;...", w/o Infotip) on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellGetAllDetailsFor"></a><span class="method">GetAllDetailsFor</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets all available extended properties for the given file or folder as Array (up to max. 316, without -1=Infotip).</span><br />
+<span class="info">path</span> <span class="text">The full file- or folder path.</span><br />
+<span class="info">returns</span> <span class="text">All available extended properties as Array ("property name=value;...", without Infotip) on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellGetAllVerbsFor"></a><span class="method">GetAllVerbsFor</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets all available Verbs (contextmenu items) for a given filetype or folder as Array.<br />Applying of a Verb on file/folder under see 'ApplyVerbOn'.</span><br />
+<span class="info">path</span> <span class="text">The full file- or folder path.</span><br />
+<span class="info">returns</span> <span class="text">All available Verbs as Array ("idx=verb;...", w/o '&') on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellGetDetail"></a><span class="method">GetDetail</span><span class="methodargs">(path,infoType)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the value of an extended property for a given file or folder.</span><br />
+<span class="info">path</span> <span class="text">The full file- or folder path.</span><br />
+<span class="info">infoType</span> <span class="text">The ID number or name of the property (eg. -1="Infotip"/"", 0="Name", 1="Size", etc.)<br />ID numbers and names of available properties under s. 'AllDetails'.</span><br />
+<span class="info">returns</span> <span class="text">The value of the property if available, else "". "FAILED" on failure (eg. missing path).<br />Infotip lines separated by lf and ending with crlf.</span><br />
+<br />
+<a class="tag" name="LDShellGetSetting"></a><span class="method">GetSetting</span><span class="methodargs">(value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets values for global Shell settings (s. folder opions-view, CheckedStatus).</span><br />
+<span class="info">value</span> <span class="text">An integer constant for the value to get (eg. 1, 2, 4, "8", "32" etc.).</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False" on success, else "FAILED".</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/windows/desktop/gg537739.aspx">http://msdn.microsoft.com/library/windows/desktop/gg537739.aspx</a><br />ShowAllObjects = SBShell.GetSetting(1)<br />ShowExtensions = SBShell.GetSetting(2)<br />ShowInfoTip = SBShell.GetSetting(8192)<br />ShowSuperHidden = SBShell.GetSetting(262144)</span><br />
+<br />
+<a class="tag" name="LDShellGetSystemInfo"></a><span class="method">GetSystemInfo</span><span class="methodargs">(info)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets a given Systeminformation.</span><br />
+<span class="info">info</span> <span class="text">The name of the value to get. Options:<br />"DirectoryServiceAvailable", "DoubleClickTime", "ProcessorLevel", "ProcessorSpeed", "ProcessorArchitecture", "PhysicalMemoryInstalled", "IsOS_DomainMember"<br />(Only XP: "IsOS_Professional", "IsOS_Personal").</span><br />
+<span class="info">returns</span> <span class="text">The queried value on success, else "" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellLinkCreate"></a><span class="method">LinkCreate</span><span class="methodargs">(shortcut,target)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a new lnk/url shortcut (Shell32). Further editing with 'LinkSetProperty'.</span><br />
+<span class="info">shortcut</span> <span class="text">The full path for the new lnk/url shortcut file.</span><br />
+<span class="info">target</span> <span class="text">The full path of the target file/-folder resp. URL address.</span><br />
+<span class="info">returns</span> <span class="text">The full file path of the created shortcut on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellLinkGetProperty"></a><span class="method">LinkGetProperty</span><span class="methodargs">(shortcut,property)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets properties of a lnk/url shortcut link, like target pfad, arguments etc.</span><br />
+<span class="info">shortcut</span> <span class="text">The full path of the lnk/url shortcut link file.</span><br />
+<span class="info">property</span> <span class="text">The property to get (case independent, * for Urls) like:<br />"Target"  target path *<br />"Args"    arguments<br />"Folder"  working directory<br />"Desc"    comment *<br />"HotKey"  shortcut key comb * (default: 0)<br />"Style"   window style * (1 normal, 3 max, 7 min)<br />"Icon"    icon path</span><br />
+<span class="info">returns</span> <span class="text">The value of the property if available or "". "FAILED" on failure.</span><br />
+<br />
+<a class="tag" name="LDShellLinkSetProperty"></a><span class="method">LinkSetProperty</span><span class="methodargs">(shortcut,target,args,folder,desc,icoPath,icoIdx,hotkey,style)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modifies properties of an existing lnk/url shortcut link, like target path, arguments etc. (* for Urls).</span><br />
+<span class="info">shortcut</span> <span class="text">The full path of an existing lnk/url shortcut link file.</span><br />
+<span class="info">target</span> <span class="text">* The full path of the target file/-folder resp. URL address.</span><br />
+<span class="info">args</span> <span class="text">Startparameter when launching the shortcut or "" (for url).</span><br />
+<span class="info">folder</span> <span class="text">The full path of the start folder or "" (for url).</span><br />
+<span class="info">desc</span> <span class="text">* Comment or description for the shortcut or "".</span><br />
+<span class="info">icoPath</span> <span class="text">* Full path of the icon file for the shortcut or "".</span><br />
+<span class="info">icoIdx</span> <span class="text">* Index of the icon in the icon file (default: 0, for .ico).</span><br />
+<span class="info">hotkey</span> <span class="text">* keys combination to launch the shortcut link (default: 0).</span><br />
+<span class="info">style</span> <span class="text">* Window style when launching the shortcut (default: 1 normal, 3 max, 7 min).</span><br />
+<span class="info">returns</span> <span class="text">The full file path of the modified shortcut on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellName"></a><span class="method">Name</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the name of the executing assembly for this extension.</span><br />
+<br />
+<a class="tag" name="LDShellOpenFolder"></a><span class="method">OpenFolder</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Opens explorer with the given file-/folder path (parent folder for existing file path). In new tab in QTTabBar.</span><br />
+<span class="info">path</span> <span class="text">Opens the specified folder (file path opens parent folder). The folder must exist.</span><br />
+<br />
+<a class="tag" name="LDShellRestoreWindows"></a><span class="method">RestoreWindows</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Restores all minimized windows in the taskbar (after ShowDesktop, TileAll.., CascadeWindows) again.</span><br />
+<br />
+<a class="tag" name="LDShellRunBox"></a><span class="method">RunBox</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the Run(box) Dialog.</span><br />
+<br />
+<a class="tag" name="LDShellSelectFolder"></a><span class="method">SelectFolder</span><span class="methodargs">(title,initDir)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows a folder selection dialog.</span><br />
+<span class="info">title</span> <span class="text">The title to show on the dialog.</span><br />
+<span class="info">initDir</span> <span class="text">The start folder when the dialog opens or "" for last selected folder (default: Computer).</span><br />
+<span class="info">returns</span> <span class="text">The full folder path after selection or "" when canceled, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellShellLink"></a><span class="method">ShellLink</span><span class="methodargs">(shortcut,target)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a new lnk/url shortcut (IWshRuntimeLibrary). Further editing with 'ShellLinkSet'.</span><br />
+<span class="info">shortcut</span> <span class="text">The full path for the new lnk/url shortcut file.</span><br />
+<span class="info">target</span> <span class="text">The full path of the target file/-folder resp. URL address.</span><br />
+<span class="info">returns</span> <span class="text">The full file path of the created shortcut on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellShellLinkGet"></a><span class="method">ShellLinkGet</span><span class="methodargs">(shortcut,property)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets properties of a lnk/url shortcut link, like target pfad, arguments etc. (IWshRuntimeLibrary).</span><br />
+<span class="info">shortcut</span> <span class="text">The full path of the lnk/url shortcut link file.</span><br />
+<span class="info">property</span> <span class="text">The property to get (case independent, * for Urls) like:<br />"Target"   target path *<br />"Args"    arguments<br />"Folder"  working directory<br />"Desc"    comment *<br />"HotKey"   shortcut key comb * (default: 0)<br />"Style"   window style * (1 normal, 3 max, 7 min)<br />"Icon"    icon path,Idx (default: ,0)</span><br />
+<span class="info">returns</span> <span class="text">The value of the property if available or "". "FAILED" on failure.</span><br />
+<br />
+<a class="tag" name="LDShellShellLinkSet"></a><span class="method">ShellLinkSet</span><span class="methodargs">(shortcut,target,args,folder,desc,icon,hotkey,style)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modifies properties of an existing lnk/url shortcut link, like target path, arguments etc. (* for Urls) (IWshRuntimeLibrary).</span><br />
+<span class="info">shortcut</span> <span class="text">The full path of an existing lnk/url shortcut link file.</span><br />
+<span class="info">target</span> <span class="text">* The full path of the target file/-folder resp. URL address.</span><br />
+<span class="info">args</span> <span class="text">Startparameter when launching the shortcut or "" (for url).</span><br />
+<span class="info">folder</span> <span class="text">The full path of the start folder or "" (for url).</span><br />
+<span class="info">desc</span> <span class="text">* Comment or description for the shortcut or "".</span><br />
+<span class="info">icon</span> <span class="text">* The full path (resp. path,Idx) of the icon for the shortcut link or "". 'Idx' is Index of the icon in in the file (default: 0, for .ico).</span><br />
+<span class="info">hotkey</span> <span class="text">* keys combination to launch the shortcut link (default: 0).</span><br />
+<span class="info">style</span> <span class="text">* Window style when launching the shortcut (default: 1 normal, 3 max, 7 min).</span><br />
+<span class="info">returns</span> <span class="text">The full file path of the modified shortcut on success, else "FAILED".</span><br />
+<br />
+<a class="tag" name="LDShellShowDesktop"></a><span class="method">ShowDesktop</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Minimizes all opened windows into the taskbar and showes the desktop (Revert with RestoreWindows).</span><br />
+<br />
+<a class="tag" name="LDShellShowFileProperties"></a><span class="method">ShowFileProperties</span><span class="methodargs">(filePath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Opens the shell properties dialog for a given file or folder path (GW is needed for that, not available from TW or Console).</span><br />
+<span class="info">filePath</span> <span class="text">The full file- or folder path.</span><br />
+<br />
+<a class="tag" name="LDShellSpecialFolderConstants"></a><span class="method">SpecialFolderConstants</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets a list of all CSIDL numbers and their according special System-/Shell folder names as Array ("csidl=folder name;").</span><br />
+<br />
+<a class="tag" name="LDShellSpecialFolderList"></a><span class="method">SpecialFolderList</span><span class="methodargs">(csidl)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets all items in a special system/shell folder (upper level only).</span><br />
+<span class="info">csidl</span> <span class="text">The CSIDL number of the system folder (0 to 47, constants and names of available folders under s. SpecialFolderConstants).</span><br />
+<span class="info">returns</span> <span class="text">The names of all objects in the system folder as Array (only upper level) on success, else "FAILED".</span><br />
+<span class="info">example</span> <span class="text"><a href="http://msdn.microsoft.com/library/bb774096.aspx">http://msdn.microsoft.com/library/bb774096.aspx</a><br />eg. CSIDL for:<br /> 3 Control panel<br /> 5 my documents<br /> 8 Recent<br /> 9 SendTo<br />10 RecBin<br />16 Desktop folder<br />17 Computer<br />20 Fonts<br />32 Temp Inet Files</span><br />
+<br />
+<a class="tag" name="LDShellSpecialFolderPaths"></a><span class="method">SpecialFolderPaths</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets a list of all special System-/Shell folder names and their according folder paths as Array ("folder name=path;").</span><br />
+<br />
+<a class="tag" name="LDShellSpecialFolders"></a><span class="method">SpecialFolders</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets a list of all special System folders as Array ("folder name=path;"). For Shell folders s. 'SpecialFolderPaths'.</span><br />
+<br />
+<a class="tag" name="LDShellStartSettings"></a><span class="method">StartSettings</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shows the dialog for startmenü/taskbar settings.</span><br />
+<br />
+<a class="tag" name="LDShellSwitch3D"></a><span class="method">Switch3D</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Orders all opended windows in a 3D stack on the desktop to select through (with arrow keys).</span><br />
+<br />
+<a class="tag" name="LDShellTileAllHoriz"></a><span class="method">TileAllHoriz</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Orders all opened windows horizontally tiled on the desktop (Revert with RestoreWindows).</span><br />
+<br />
+<a class="tag" name="LDShellTileAllVert"></a><span class="method">TileAllVert</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Orders all opened windows vertically tiled on the desktop (Revert with RestoreWindows).</span><br />
+<br />
+<a class="tag" name="LDShellToggleDesktop"></a><span class="method">ToggleDesktop</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Toggles the view of the (windowless) desktop on and off (s. ShowDesktop/RestoreWindows).</span><br />
+<br />
+<a class="tag" name="LDShellVersion"></a><span class="method">Version</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current file version of this extension (else 0.0.0.0).</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

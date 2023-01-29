@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFastArray"></a><span class="group">LDFastArray</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">This object provides another faster way of storing values in an Array.<br />It can handle 1, 2, 3 and higher dimensional arrays and has methods to read and write arrays to files, including in CSV format.<br />It is also possible for different rows in an array to have different dimensions or numbers of elements (jagged array), just like Small Basic arrays.<br />Internally it uses lists that allow the sizes to grow so that the array dimension or size doesn't need to be set at the start.<br />The indexing is by integer starting from 1.<br />For 1D arrays it is recommended to use LDList since it has additional sort methods.<br />Elements in arrays with dimension greater than 3 are indexed by a comma separated list of indices or index variable names.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDFastArrayAdd">Add</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayCollapse">Collapse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayCopy">Copy</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArrayCreateFromIndices">CreateFromIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayCreateFromValues">CreateFromValues</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayDimension">Dimension</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArrayGet">Get</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayGet1D">Get1D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayGet2D">Get2D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArrayGet3D">Get3D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayReadCSV">ReadCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArrayRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySet">Set</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySet1D">Set1D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArraySet2D">Set2D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySet3D">Set3D</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySize">Size</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArraySize1">Size1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySize2">Size2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArraySize3">Size3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFastArrayToArray">ToArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFastArrayWriteCSV">WriteCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFastArrayAdd"></a><span class="method">Add</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new array.<br />This is a general array that can be used as a 1D, 2D, 3D or higher dimension array, depending on the data set.</span><br />
+<span class="info">returns</span> <span class="text">The array name.</span><br />
+<br />
+<a class="tag" name="LDFastArrayCollapse"></a><span class="method">Collapse</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove all empty "" entries in an array.<br />Note that indices or even dimensions may change if internal entries are removed.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<br />
+<a class="tag" name="LDFastArrayCopy"></a><span class="method">Copy</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy an array.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">A copy of the array.</span><br />
+<br />
+<a class="tag" name="LDFastArrayCreateFromIndices"></a><span class="method">CreateFromIndices</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a SmallBasic array (up to 3 dimensions) to a FastArray array.<br />This method creates an array only containing the Small Basic array indices.</span><br />
+<span class="info">sbArray</span> <span class="text">The Small Basic array.</span><br />
+<span class="info">returns</span> <span class="text">A new FastArray or "".</span><br />
+<br />
+<a class="tag" name="LDFastArrayCreateFromValues"></a><span class="method">CreateFromValues</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a SmallBasic array to a FastArray array.<br />All indices in the Small Basic array are replaced with consecutive integer indices.</span><br />
+<span class="info">sbArray</span> <span class="text">The Small Basic array.</span><br />
+<span class="info">returns</span> <span class="text">A new FastArray or "".</span><br />
+<br />
+<a class="tag" name="LDFastArrayDimension"></a><span class="method">Dimension</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the dimension of an array.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">The array dimension.</span><br />
+<br />
+<a class="tag" name="LDFastArrayGet"></a><span class="method">Get</span><span class="methodargs">(arrayName,indices)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a value.<br />Get1D, Get2D or Get3D methods are marginally faster for lower dimension arrays.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">indices</span> <span class="text">A comma (or space) separated list of index values (slower) or index variable names (faster).<br />e.g. "3,2,6" or "i,j,k"<br />If this is set to "", then previously set index variables are used.</span><br />
+<span class="info">returns</span> <span class="text">The array value or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDFastArrayGet1D"></a><span class="method">Get1D</span><span class="methodargs">(arrayName,index1)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a 1D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">returns</span> <span class="text">The array value or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDFastArrayGet2D"></a><span class="method">Get2D</span><span class="methodargs">(arrayName,index1,index2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a 2D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">index2</span> <span class="text">The second dimension integer index.</span><br />
+<span class="info">returns</span> <span class="text">The array value or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDFastArrayGet3D"></a><span class="method">Get3D</span><span class="methodargs">(arrayName,index1,index2,index3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a 3D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">index2</span> <span class="text">The second dimension integer index.</span><br />
+<span class="info">index3</span> <span class="text">The third dimension integer index.</span><br />
+<span class="info">returns</span> <span class="text">The array value or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDFastArrayRead"></a><span class="method">Read</span><span class="methodargs">(fileName,binary)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new array and initialise it from a file.<br />If the file is text based and doesn't have the same indexing format as Write, then a 1D array with each line is created.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">binary</span> <span class="text">Binary ("True") or text ("False") formatted file.</span><br />
+<span class="info">returns</span> <span class="text">The array name.</span><br />
+<br />
+<a class="tag" name="LDFastArrayReadCSV"></a><span class="method">ReadCSV</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a CSV (comma separated values) file into a 2D FastArray array.<br />The deliminator may be changed from a comma using Utilities.CSVDeliminator</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the CSV file.</span><br />
+<span class="info">returns</span> <span class="text">A 2D FastArray with CSV file imported or "".</span><br />
+<br />
+<a class="tag" name="LDFastArrayRemove"></a><span class="method">Remove</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete an array.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<br />
+<a class="tag" name="LDFastArraySet"></a><span class="method">Set</span><span class="methodargs">(arrayName,indices,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a value.<br />Set1D, Set2D or Set3D methods are marginally faster for lower dimension arrays.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">indices</span> <span class="text">A comma (or space) separated list of index values (slower) or index variable names (faster).<br />e.g. "3,2,6" or "i,j,k"<br />If this is set to "", then previously set index variables are used.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<br />
+<a class="tag" name="LDFastArraySet1D"></a><span class="method">Set1D</span><span class="methodargs">(arrayName,index1,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a 1D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<br />
+<a class="tag" name="LDFastArraySet2D"></a><span class="method">Set2D</span><span class="methodargs">(arrayName,index1,index2,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a 2D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">index2</span> <span class="text">The second dimension integer index.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<br />
+<a class="tag" name="LDFastArraySet3D"></a><span class="method">Set3D</span><span class="methodargs">(arrayName,index1,index2,index3,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a 3D value.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first dimension integer index.</span><br />
+<span class="info">index2</span> <span class="text">The second dimension integer index.</span><br />
+<span class="info">index3</span> <span class="text">The third dimension integer index.</span><br />
+<span class="info">value</span> <span class="text">The value to set.</span><br />
+<br />
+<a class="tag" name="LDFastArraySize"></a><span class="method">Size</span><span class="methodargs">(arrayName,indices)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current size of a dimension.<br />Size1, Size2 or Size3 methods are marginally faster for lower dimension arrays.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">indices</span> <span class="text">A comma (or space) separated list of indices.<br />e.g. "" for first dimension or "3" for second dimension of 3rd element in first dimension.</span><br />
+<span class="info">returns</span> <span class="text">The dimension size.</span><br />
+<br />
+<a class="tag" name="LDFastArraySize1"></a><span class="method">Size1</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current size of the first dimension.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">The dimension size.</span><br />
+<br />
+<a class="tag" name="LDFastArraySize2"></a><span class="method">Size2</span><span class="methodargs">(arrayName,index1)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current size of the second dimension.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first index to get the size of, may be 1 if all rows have the same size.</span><br />
+<span class="info">returns</span> <span class="text">The dimension size.</span><br />
+<br />
+<a class="tag" name="LDFastArraySize3"></a><span class="method">Size3</span><span class="methodargs">(arrayName,index1,index2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current size of the third dimension.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">index1</span> <span class="text">The first index to get the size of, may be 1 if all rows have the same size.</span><br />
+<span class="info">index2</span> <span class="text">The second index to get the size of, may be 1 if all rows have the same size.</span><br />
+<span class="info">returns</span> <span class="text">The dimension size.</span><br />
+<br />
+<a class="tag" name="LDFastArrayToArray"></a><span class="method">ToArray</span><span class="methodargs">(arrayName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert a FastArray array to a Small Basic array.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">A Small Basic array or "".</span><br />
+<br />
+<a class="tag" name="LDFastArrayWrite"></a><span class="method">Write</span><span class="methodargs">(arrayName,fileName,binary)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save an array to a file.<br />If the array is 1D and written as a text, then each entry is just written to a line with no indexing.</span><br />
+<span class="info">arrayName</span> <span class="text">The array name.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">binary</span> <span class="text">Binary ("True") or text ("False") formatted file.</span><br />
+<br />
+<a class="tag" name="LDFastArrayWriteCSV"></a><span class="method">WriteCSV</span><span class="methodargs">(arrayName,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write a 2D FastArray array to a CSV (comma separated values) file.<br />The deliminator may be changed from a comma using Utilities.CSVDeliminator</span><br />
+<span class="info">arrayName</span> <span class="text">The 2D array name.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the CSV file.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

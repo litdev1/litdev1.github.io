@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev3D API</title>
+ <meta name="description" content="SmallBasic LitDev3D extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDev3Dextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev3D Extension API
+<p class="links">
+&nbsp;<a href="index.html">Return to Main Page</a><br />
+
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="#LD3D">LD3D</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LD3D"></a><span class="group">LD3D</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Eine 3D Engine für SB, welche die Irrlicht Engine (<a href="http://irrlicht.sourceforge.net/">http://irrlicht.sourceforge.net/</a>) verwendet.<br /><br /> Das Koordinatensystem ist X (links nach rechts), Y (unten nach oben) und Z (vorne nach hinten).<br /> Bewegung mit den Pfeiltasten oder W,S,A,D und Escape zum Beenden.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LD3DAddAnimatedMesh">AddAnimatedMesh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddBillBoard">AddBillBoard</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddCloudySkydome">AddCloudySkydome</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAddCube">AddCube</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddDungeonMesh">AddDungeonMesh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddFog">AddFog</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAddLight">AddLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddMountainSkybox">AddMountainSkybox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddMountainTerrain">AddMountainTerrain</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAddNinja">AddNinja</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddQuakeMesh">AddQuakeMesh</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddSkybox">AddSkybox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAddSkydome">AddSkydome</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddSphere">AddSphere</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAddTerrain">AddTerrain</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAddZip">AddZip</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAmbientLight">AmbientLight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAnimateCircle">AnimateCircle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAnimateOnTerrainRelative">AnimateOnTerrainRelative</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAnimateOnTerrainTo">AnimateOnTerrainTo</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAnimateRelative">AnimateRelative</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DAnimateRotation">AnimateRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DAnimateTo">AnimateTo</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DClick">Click</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DClickObject">ClickObject</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LD3DCollision">Collision</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LD3DCollisionObject1">CollisionObject1</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DCollisionObject2">CollisionObject2</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LD3DConsoleMessages">ConsoleMessages</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LD3DGetCameraDirection">GetCameraDirection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DGetCameraPosition">GetCameraPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DGetPosition">GetPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DGetTerrainHeight">GetTerrainHeight</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DGetType">GetType</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DRemoveAnimators">RemoveAnimators</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DResetAllKeyDown">ResetAllKeyDown</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetCameraProperties">SetCameraProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetGlow">SetGlow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DSetGravity">SetGravity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetPosition">SetPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetRotation">SetRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DSetScale">SetScale</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetShininess">SetShininess</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetTexture">SetTexture</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DSetType">SetType</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetup">Setup</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DSetVisible">SetVisible</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DStart">Start</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LD3DTimer">Timer</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LD3DtimerThread">timerThread</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LD3DWasKeyDown">WasKeyDown</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LD3DAddAnimatedMesh"></a><span class="method">AddAnimatedMesh</span><span class="methodargs">(mesh,startFrame,endFrame,fps)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein allgemeines animiertes Gitternetz Objekt (*.b3d) hinzu.</span><br />
+<span class="info">mesh</span> <span class="info">startFrame</span> <span class="text">Der Startframe für das animierte Objekt.</span><br />
+<span class="info">endFrame</span> <span class="text">Der Endframe für das animierte Objekt.</span><br />
+<span class="info">fps</span> <span class="text">Anzahl Frames/sec für die Gitternetz Animation.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddBillBoard"></a><span class="method">AddBillBoard</span><span class="methodargs">(width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hinzufügen einer 2D Anschlagtafel die stets vor der Kamera liegt.</span><br />
+<span class="info">width</span> <span class="text">Die Breite der Anschlagtafel.</span><br />
+<span class="info">height</span> <span class="text">Die Höhe der Anschlagtafel.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddCloudySkydome"></a><span class="method">AddCloudySkydome</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt einen Standard bewölkten SkyDome hinzu.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAddCube"></a><span class="method">AddCube</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein allgemeines Würfel/Kubus Objekt hinzu.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddDungeonMesh"></a><span class="method">AddDungeonMesh</span><span class="methodargs">(gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ein Standard Quake Gitternetz hinzufügen.</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Spielers (0 für Flug, 10 für normale Anziehung).</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddFog"></a><span class="method">AddFog</span><span class="methodargs">(colour,density)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt einen Nebeleffekt hinzu.</span><br />
+<span class="info">colour</span> <span class="text">Die Nebelfarbe</span><br />
+<span class="info">density</span> <span class="text">Die Nebeldichte.</span><br />
+<br />
+<a class="tag" name="LD3DAddLight"></a><span class="method">AddLight</span><span class="methodargs">(X,Y,Z,colour,radius)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein Licht hinzu.</span><br />
+<span class="info">X</span> <span class="text">Die X Koordinate des Lichtes.</span><br />
+<span class="info">Y</span> <span class="text">Die Y Koordinate des Lichtes.</span><br />
+<span class="info">Z</span> <span class="text">Die Z Koordinate des Lichtes.</span><br />
+<span class="info">colour</span> <span class="text">Die Lichtfarbe.</span><br />
+<span class="info">radius</span> <span class="text">Der Lichtradius.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddMountainSkybox"></a><span class="method">AddMountainSkybox</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt eine Standard Gebirge SkyBox hinzu.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAddMountainTerrain"></a><span class="method">AddMountainTerrain</span><span class="methodargs">(gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ein Standard Terrain.</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Spielers (0 für Flug, 10 für normale Anziehung).</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddNinja"></a><span class="method">AddNinja</span><span class="methodargs">(colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ein Standard Ninja animiertes Gitternetz Objekt.</span><br />
+<span class="info">colour</span> <span class="text">"Red" oder "Blue"</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddQuakeMesh"></a><span class="method">AddQuakeMesh</span><span class="methodargs">(mesh,gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Eine Quake Gitternetz Datei innerhalb der Gitternetz-Datei zip hinzufügen.</span><br />
+<span class="info">mesh</span> <span class="text">Die Quake Gitternetzt Datei (*.bsp)</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Spielers (0 für Flug, 10 für normale Anziehung).</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddSkybox"></a><span class="method">AddSkybox</span><span class="methodargs">(up,down,left,right,front,back)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt eine SkyBox hinzu. 6 Bilder sind erforderlich.</span><br />
+<span class="info">up</span> <span class="text">Das obere Bild.</span><br />
+<span class="info">down</span> <span class="text">Das untere Bild.</span><br />
+<span class="info">left</span> <span class="text">Das linke Bild.</span><br />
+<span class="info">right</span> <span class="text">Das rechte Bild.</span><br />
+<span class="info">front</span> <span class="text">Das vordere Bild.</span><br />
+<span class="info">back</span> <span class="text">Das hintere Bild.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAddSkydome"></a><span class="method">AddSkydome</span><span class="methodargs">(sky)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt einen SkyDome hinzu.</span><br />
+<span class="info">sky</span> <span class="text">Bild für den SkyDome (Die obere Bildhälfte ist über dem Horizont, die untere Hälfte darunter).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAddSphere"></a><span class="method">AddSphere</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein allgemeines Sphere Objekt hinzu.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddTerrain"></a><span class="method">AddTerrain</span><span class="methodargs">(height,terrain,detail,gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fügt ein allgemeines Terrain hinzu.</span><br />
+<span class="info">height</span> <span class="text">Ein Höhe Bitmap (*.bmp)</span><br />
+<span class="info">terrain</span> <span class="text">Das Haupt Terrainbild (*.jpg).</span><br />
+<span class="info">detail</span> <span class="text">Ein Detail Terrainbild (*.jpg).</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Spielers (0 für Flug, 10 für normale Anziehung).</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Objektes.</span><br />
+<br />
+<a class="tag" name="LD3DAddZip"></a><span class="method">AddZip</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Hinzufügen eines zip für Gitternetz Geometrieen.</span><br />
+<span class="info">name</span> <span class="text">Die zip Gitternetz Datei (*.pk3)</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAmbientLight"></a><span class="method">AmbientLight</span><span class="methodargs">(colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Umgebungslichtstärke und Farbe (beeinflußt the Helligkeit von Objekten indirekt, beleuchtet durch Licht).</span><br />
+<span class="info">colour</span> <span class="text">Die Umgebungsfarbe (Standard 'White').</span><br />
+<br />
+<a class="tag" name="LD3DAnimateCircle"></a><span class="method">AnimateCircle</span><span class="methodargs">(name,radius,speed)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Animiert ein Objekt zum Flug in horizontalem Kreis um sein Zentrum mit dem angegebenen Radius.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">radius</span> <span class="text">Der Radius der Kreisdrehung.</span><br />
+<span class="info">speed</span> <span class="text">Die Rotationsgeschwindigkeit (Grad/sec).</span><br />
+<br />
+<a class="tag" name="LD3DAnimateOnTerrainRelative"></a><span class="method">AnimateOnTerrainRelative</span><span class="methodargs">(name,X,Z,time)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt ein Objekt am Boden relativ zu seiner aktuellen Position.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern position.</span><br />
+<span class="info">time</span> <span class="text">Die Animationsdauer (ms).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAnimateOnTerrainTo"></a><span class="method">AnimateOnTerrainTo</span><span class="methodargs">(name,X,Z,time)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt ein Objekt am Boden zu absoluten Kooordinaten.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Position.</span><br />
+<span class="info">time</span> <span class="text">Die Animationsdauer (ms).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAnimateRelative"></a><span class="method">AnimateRelative</span><span class="methodargs">(name,X,Y,Z,time)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt ein Objekt relativ zu seiner aktuellen Position.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Y</span> <span class="text">Unten-Oben Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Position.</span><br />
+<span class="info">time</span> <span class="text">Die Animationsdauer (ms).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAnimateRotation"></a><span class="method">AnimateRotation</span><span class="methodargs">(name,X,Y,Z)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Dreht ein Objekt kontinuierlich.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Rotation um die X Achse in Grad/sec.</span><br />
+<span class="info">Y</span> <span class="text">Rotation um die Y Achse in Grad/sec.</span><br />
+<span class="info">Z</span> <span class="text">Rotation um die Z Achse in Grad/sec.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DAnimateTo"></a><span class="method">AnimateTo</span><span class="methodargs">(name,X,Y,Z,time)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bewegt an Objekt zu absoluten Kooordinaten.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Y</span> <span class="text">Unten-Oben Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Position.</span><br />
+<span class="info">time</span> <span class="text">Die Animationsdauer (ms).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DClick"></a><span class="method">Click</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignis welches stattfindet, wenn ein Objekt vor der Kamera per Mauszeiger angeklickt wird.<br />Der Objektname wird mittels ClickObject abgerufen.</span><br />
+<br />
+<a class="tag" name="LD3DClickObject"></a><span class="method">ClickObject</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Das zuletzt angeklickte Objekt.</span><br />
+<br />
+<a class="tag" name="LD3DCollision"></a><span class="method">Collision</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignis welches stattfindet wenn zwei Objekte kollidieren.<br />Um für dieses Ereignis mehrfaches Auslösen zu vermeiden, wird eine kurze Verzögerung (zB. 100ms) am Ende dieser Ereignis-Sub empfohlen.<br />Die Objektnamen werden mittels CollisionObject1 und CollisionObject2 abgerufen in der Reihenfolge in der sie hinzugefügt wurden.<br />Nur hinzugefügte Objekte werden erkannt, nicht zB. Kollision mit Terrain.</span><br />
+<br />
+<a class="tag" name="LD3DCollisionObject1"></a><span class="method">CollisionObject1</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Das erste kollidierte Objekt.</span><br />
+<br />
+<a class="tag" name="LD3DCollisionObject2"></a><span class="method">CollisionObject2</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Das zweite kollidierte Objekt.</span><br />
+<br />
+<a class="tag" name="LD3DConsoleMessages"></a><span class="method">ConsoleMessages</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Ausgabe von Fehler und Warnungen an die Konsole ("True" oder "False").</span><br />
+<br />
+<a class="tag" name="LD3DGetCameraDirection"></a><span class="method">GetCameraDirection</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Blickrichtung der Kamera bezogen auf die Längeneinheit.</span><br />
+<span class="info">returns</span> <span class="text">Array des X, Y, Z Vektors.</span><br />
+<br />
+<a class="tag" name="LD3DGetCameraPosition"></a><span class="method">GetCameraPosition</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Position der Kamera.</span><br />
+<span class="info">returns</span> <span class="text">Array der X, Y, Z Koordinaten.</span><br />
+<br />
+<a class="tag" name="LD3DGetPosition"></a><span class="method">GetPosition</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt die Position eines Objektes.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">returns</span> <span class="text">Ein Array mit X, Y, Z Koordinaten.</span><br />
+<br />
+<a class="tag" name="LD3DGetTerrainHeight"></a><span class="method">GetTerrainHeight</span><span class="methodargs">(X,Z)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt das Bodenniveau.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Position.</span><br />
+<span class="info">returns</span> <span class="text">Das Bodenniveau.</span><br />
+<br />
+<a class="tag" name="LD3DGetType"></a><span class="method">GetType</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ermittelt einen String mit einer Beschreibung für den Objekttyp.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">returns</span> <span class="text">Die Objekttyp-Beschreibung.</span><br />
+<br />
+<a class="tag" name="LD3DRemove"></a><span class="method">Remove</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Entfernt ein Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DRemoveAnimators"></a><span class="method">RemoveAnimators</span><span class="methodargs">(name)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Entfernt alle Animationen vom Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DResetAllKeyDown"></a><span class="method">ResetAllKeyDown</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zurücksetzen des 'Gedrückt' Status aller Tasten auf "False".</span><br />
+<br />
+<a class="tag" name="LD3DSetCameraProperties"></a><span class="method">SetCameraProperties</span><span class="methodargs">(speed,farfield,gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt einige Eigenschaften der FPS Kamera.</span><br />
+<span class="info">speed</span> <span class="text">Die Geschwindigkeit (Standardwert 500).</span><br />
+<span class="info">farfield</span> <span class="text">Die Sichtweite im Diffusfeld (Standardwert 10000).</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Spielers (0 für Flug, 10 für normale Anziehung).</span><br />
+<br />
+<a class="tag" name="LD3DSetGlow"></a><span class="method">SetGlow</span><span class="methodargs">(name,colour,radius)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt einen Glüheffekt für ein Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">colour</span> <span class="text">Die Glühfarbe.</span><br />
+<span class="info">radius</span> <span class="text">Der Radius des Glühens.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetGravity"></a><span class="method">SetGravity</span><span class="methodargs">(name,gravity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzen der Schwerkraft für ein Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">gravity</span> <span class="text">Die Schwerkraft des Objektes (0 für Flug, 10 für normale Anziehung).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetPosition"></a><span class="method">SetPosition</span><span class="methodargs">(name,X,Y,Z)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt die Position eines Objektes.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Position.</span><br />
+<span class="info">Y</span> <span class="text">Unten-Oben Position.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Position.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetRotation"></a><span class="method">SetRotation</span><span class="methodargs">(name,X,Y,Z)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bestimmt die Drehung eines Objektes.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Rotation (Grad).</span><br />
+<span class="info">Y</span> <span class="text">Unten-Oben Rotation (Grad).</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Rotation (Grad).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetScale"></a><span class="method">SetScale</span><span class="methodargs">(name,X,Y,Z)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt die Abmessungen für ein Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">X</span> <span class="text">Links-Rechts Abmessung.</span><br />
+<span class="info">Y</span> <span class="text">Unten-Oben Abmessung.</span><br />
+<span class="info">Z</span> <span class="text">Nahe-Fern Abmessung.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetShininess"></a><span class="method">SetShininess</span><span class="methodargs">(name,shininess)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt die Größe von Glanzlichtern für ein Objekt (shininess).</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">shininess</span> <span class="text">Der Glanz, 20 ist ein guter Wert (0.5 bis 128).</span><br />
+<br />
+<a class="tag" name="LD3DSetTexture"></a><span class="method">SetTexture</span><span class="methodargs">(name,texture)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt die Textur für ein Objekt.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">texture</span> <span class="text">Das Texturbild (*.bmp).</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetType"></a><span class="method">SetType</span><span class="methodargs">(name,type)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Setzt einen Beschreibungsstring für den Objekttyp zum Ersetzen des Standardwertes.<br />Hilfreich zur Erkennung zB. spezieller Kollisionskombinationen.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">type</span> <span class="text">Die Objekttyp Beschreibung.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DSetup"></a><span class="method">Setup</span><span class="methodargs">(fullScreen,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Aufsetzen der 3D Umgebung (Aufruf vor allen weiteren LD3D Befehlen).</span><br />
+<span class="info">fullScreen</span> <span class="text">"True" oder "False".</span><br />
+<span class="info">colour</span> <span class="text">Die Hintergrund (Sky) Farbe.</span><br />
+<span class="info">returns</span> <span class="text">Der Name des hinzugefügten Kameraobjektes.</span><br />
+<br />
+<a class="tag" name="LD3DSetVisible"></a><span class="method">SetVisible</span><span class="methodargs">(name,visible)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Bestimmt die Sichtbarkeit eines Objektes.</span><br />
+<span class="info">name</span> <span class="text">Der Objektname.</span><br />
+<span class="info">visible</span> <span class="text">"True" oder "False"</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LD3DStart"></a><span class="method">Start</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Startet die LD3D Irrlicht Anzeige.</span><br />
+<br />
+<a class="tag" name="LD3DTimer"></a><span class="method">Timer</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Ereignis welches alle 100ms auftritt. Zur Kontrolle des Spielablaufes.</span><br />
+<br />
+<a class="tag" name="LD3DtimerThread"></a><span class="method">timerThread</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Den Timer Aufruf asynchron durchführen, um die Animation am Laufen zu halten und 'Clashing' zu vermeiden wenn der Aufruf vor dem nächsten Aufruf nicht beendet ist.</span><br />
+<br />
+<a class="tag" name="LD3DWasKeyDown"></a><span class="method">WasKeyDown</span><span class="methodargs">(key)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">War die genannte Taste gedrückt, seit sie zuletzt geprüft wurde.<br />Ein 'Taste gedrückt' Status wird nur auf "False" zurückgesetzt, nachdem er explizit mit diesem Befehl überprüft wurde oder ResetAllKeyDown() aufgerufen wurde.<br />Nur alphanumerische, Funktion (Fn), Leertaste, Eingabe und Umschalt/Strg Tasten werden unterstützt.</span><br />
+<span class="info">key</span> <span class="text">Der Tastenname.</span><br />
+<span class="info">returns</span> <span class="text">"True" oder "False"</span><br />
+<br />
+<div id="footer">
+<hr style="height: 2px; width: 100%;" />
+<a style="position: relative; float: left;" href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="Website Translation Widget" style="border:0;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" /></script>
+<a style="position: relative; float: right;" href="http://www.000webhost.com/" target="_blank"><img src="http://www.000webhost.com/images/80x15_powered.gif" alt="Web Hosting" width="80" height="15" border="0" /></a>
+</div>
+</div>
+</div>
+</body>
+<script>
+(function (i, s, o, g, r, a, m) {
+ i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+  (i[r].q = i[r].q || []).push(arguments)
+ }, i[r].l = 1 * new Date(); a = s.createElement(o),
+ m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-28519634-1', 'auto');
+ga('send', 'pageview');
+</script>
+</html>

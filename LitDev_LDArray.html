@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDArray"></a><span class="group">LDArray</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">A 1-Dimensional array method that is much faster than the standard SmallBasic arrays.<br /><br />Useful for arrays with greater than 100 to 1000 elements.<br />An error will result in a return value "FAILED";</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDArrayCopy">Copy</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayCopyNew">CopyNew</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayCopyToSBArray">CopyToSBArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDArrayCount">Count</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayCreate">Create</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayCreateFromIndices">CreateFromIndices</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDArrayCreateFromValues">CreateFromValues</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayDelete">Delete</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayGetIndex">GetIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDArrayGetValue">GetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArrayLoad">Load</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArraySave">Save</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDArraySearch">Search</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArraySetValue">SetValue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDArraySort">Sort</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDArraySortIndex">SortIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDArrayCopy"></a><span class="method">Copy</span><span class="methodargs">(array1,array2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy one array to another array.<br />The dimensions of the 2 arrays must be the same.</span><br />
+<span class="info">array1</span> <span class="text">The array to copy from.</span><br />
+<span class="info">array2</span> <span class="text">The array to copy to.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "" for success.</span><br />
+<br />
+<a class="tag" name="LDArrayCopyNew"></a><span class="method">CopyNew</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy one array to a new array.</span><br />
+<span class="info">array</span> <span class="text">The array to copy.</span><br />
+<span class="info">returns</span> <span class="text">A copy of the array or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayCopyToSBArray"></a><span class="method">CopyToSBArray</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy LDArray type to SmallBasic array type.<br /><br />The reverse operation (SmallBasic to LDArray) isn't possible becuase the SmallBasic indexes are not necessarily contiguous integers.<br />Note also that a SmallBasic array cannot hold an empty string value, so these will not be copied.</span><br />
+<span class="info">array</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">The SmallBasic array or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayCount"></a><span class="method">Count</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the number of non-empty "" elements in the array.</span><br />
+<span class="info">array</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">The number of non-empty values in the array.</span><br />
+<br />
+<a class="tag" name="LDArrayCreate"></a><span class="method">Create</span><span class="methodargs">(maxSize)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new array (can be used for numbers or character strings).</span><br />
+<span class="info">maxSize</span> <span class="text">The maximum number of elements in the array.</span><br />
+<span class="info">returns</span> <span class="text">The array name or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayCreateFromIndices"></a><span class="method">CreateFromIndices</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new array from the indices of a Small Basic array.</span><br />
+<span class="info">sbArray</span> <span class="text">The SB array.</span><br />
+<span class="info">returns</span> <span class="text">The new array or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayCreateFromValues"></a><span class="method">CreateFromValues</span><span class="methodargs">(sbArray)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new array from the values of a Small Basic array.</span><br />
+<span class="info">sbArray</span> <span class="text">The SB array.</span><br />
+<span class="info">returns</span> <span class="text">The new array or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayDelete"></a><span class="method">Delete</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete an existing array (not generally required, but can save memory if lots of arrays are created).</span><br />
+<span class="info">array</span> <span class="text">The array name.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "" for success.</span><br />
+<br />
+<a class="tag" name="LDArrayGetIndex"></a><span class="method">GetIndex</span><span class="methodargs">(sbArray,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the index of the first occurance of a value in an SB array.</span><br />
+<span class="info">sbArray</span> <span class="text">The SB array.</span><br />
+<span class="info">value</span> <span class="text">The value to find.</span><br />
+<span class="info">returns</span> <span class="text">The index of value in the array, "" if not present or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayGetValue"></a><span class="method">GetValue</span><span class="methodargs">(array,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get value in array.</span><br />
+<span class="info">array</span> <span class="text">The array name.</span><br />
+<span class="info">index</span> <span class="text">The index at which to get the value (indexed starting from 1).</span><br />
+<span class="info">returns</span> <span class="text">The value or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDArrayLoad"></a><span class="method">Load</span><span class="methodargs">(array,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Load an array from a file.</span><br />
+<span class="info">array</span> <span class="text">The array to load the data into.<br />The array must already exist.</span><br />
+<span class="info">fileName</span> <span class="text">The file path to load the array from.</span><br />
+<span class="info">returns</span> <span class="text">The number of elements loaded.</span><br />
+<br />
+<a class="tag" name="LDArraySave"></a><span class="method">Save</span><span class="methodargs">(array,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save an array to a file.</span><br />
+<span class="info">array</span> <span class="text">The array to save.</span><br />
+<span class="info">fileName</span> <span class="text">The file path to save the file to.</span><br />
+<span class="info">returns</span> <span class="text">The number of elements saved.</span><br />
+<br />
+<a class="tag" name="LDArraySearch"></a><span class="method">Search</span><span class="methodargs">(array,searchstring,match)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Obtain an array of the indices that have values that contain searchstring.<br />The search is case in-sensitive.<br />The input array is unchanged and the match array must be previously created with the same size as the array to check.</span><br />
+<span class="info">array</span> <span class="text">The array to check for matches.</span><br />
+<span class="info">searchstring</span> <span class="text">The string to search for.</span><br />
+<span class="info">match</span> <span class="text">An array to hold the index of matched values.</span><br />
+<span class="info">returns</span> <span class="text">The number of matches found.</span><br />
+<br />
+<a class="tag" name="LDArraySetValue"></a><span class="method">SetValue</span><span class="methodargs">(array,index,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set value in array.</span><br />
+<span class="info">array</span> <span class="text">The array name.</span><br />
+<span class="info">index</span> <span class="text">The index at which to add the value (indexed starting from 1).</span><br />
+<span class="info">value</span> <span class="text">The value.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "" for success.</span><br />
+<br />
+<a class="tag" name="LDArraySort"></a><span class="method">Sort</span><span class="methodargs">(array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a sort on an LDArray.  <br /><br />By default the sort is by string value, therefore 10 comes before 2.<br />To sort by number value, all values must be a number (or empty).<br /><br />Empty values are placed at the end of the sort.<br />The input array is replaced by the sorted array.</span><br />
+<span class="info">array</span> <span class="text">The array to sort.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "" for success.</span><br />
+<br />
+<a class="tag" name="LDArraySortIndex"></a><span class="method">SortIndex</span><span class="methodargs">(array,index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Obtain an array of the indices in sort order of an array.<br /><br />By default the sort is by string value, therefore 10 comes before 2.<br />To sort by number value, all values must be a number (or empty).<br /><br />Empty values are placed at the end of the sort.<br />The input array is unchanged and the index array must be previously created with the same size as the array to sort.</span><br />
+<span class="info">array</span> <span class="text">The array to obtain an index order sort.</span><br />
+<span class="info">index</span> <span class="text">An array to hold the index order of the sorted array.</span><br />
+<span class="info">returns</span> <span class="text">"FAILED" or "" for success.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

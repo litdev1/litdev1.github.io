@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFile"></a><span class="group">LDFile</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">File utilities.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDFileAccessTime">AccessTime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileANSItoUTF8">ANSItoUTF8</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileAppDataFolder">AppDataFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileCopyDirectory">CopyDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileCreationTime">CreationTime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileCSVplaceholder">CSVplaceholder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileDocumentsFolder">DocumentsFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDFileExists">Exists</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileGetAllDirectories">GetAllDirectories</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileGetExtension">GetExtension</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileGetFile">GetFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileGetFolder">GetFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileLength">Length</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileLoadAllVariables">LoadAllVariables</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileModifiedTime">ModifiedTime</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileMusicFolder">MusicFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDFilePicturesFolder">PicturesFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDFilePrintFile">PrintFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFilePublicFolder">PublicFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDFileReadANSI">ReadANSI</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileReadANSIToArray">ReadANSIToArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileReadByteArray">ReadByteArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileReadCSV">ReadCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileReadCSVTransposed">ReadCSVTransposed</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileReadToArray">ReadToArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileRenameDirectory">RenameDirectory</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileRenameFile">RenameFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileSaveAllVariables">SaveAllVariables</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileSize">Size</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileTempFolder">TempFolder</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDFileUserName">UserName</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDFileWriteByteArray">WriteByteArray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDFileWriteCSV">WriteCSV</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDFileAccessTime"></a><span class="method">AccessTime</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the last time a file was accessed.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">The last access time of the file or directory ("" on failure).</span><br />
+<br />
+<a class="tag" name="LDFileANSItoUTF8"></a><span class="method">ANSItoUTF8</span><span class="methodargs">(fileName,BOM)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Convert an ANSI encoded text file to UTF8.<br />It should also work for any other encoding.<br />UTF8 is the default text file encoding used by Small Basic.</span><br />
+<span class="info">fileName</span> <span class="text">The file path to convert.</span><br />
+<span class="info">BOM</span> <span class="text">Include Byte Order Mark (BOM) in UTF8 file ("True" or "False", no BOM is usual).</span><br />
+<span class="info">returns</span> <span class="text">The converted file path (-UTF8.txt) or "" for failure (the encoding may not have been detected correctly).</span><br />
+<br />
+<a class="tag" name="LDFileAppDataFolder"></a><span class="method">AppDataFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the ApplicationData folder path.</span><br />
+<br />
+<a class="tag" name="LDFileCopyDirectory"></a><span class="method">CopyDirectory</span><span class="methodargs">(directoryFrom,directoryTo)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Recursively copy a directory and all contents including sub-directories.</span><br />
+<span class="info">directoryFrom</span> <span class="text">The full path to the directory to copy from.</span><br />
+<span class="info">directoryTo</span> <span class="text">The full path to the directory to copy to.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDFileCreationTime"></a><span class="method">CreationTime</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the creation time of a file.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">The creation time of the file or directory ("" on failure).</span><br />
+<br />
+<a class="tag" name="LDFileCSVplaceholder"></a><span class="method">CSVplaceholder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Character to use in place of empty values in the imported array when reading CSV files.<br />A SmallBasic array cannot hold an empty value i.e. "".<br /><br />Default is the empty string "" (no array entries created for empty values in the CSV file).</span><br />
+<br />
+<a class="tag" name="LDFileDocumentsFolder"></a><span class="method">DocumentsFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the Documents folder path.</span><br />
+<br />
+<a class="tag" name="LDFileExists"></a><span class="method">Exists</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Check if a file path is an existing file or directory.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file or directory.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDFileGetAllDirectories"></a><span class="method">GetAllDirectories</span><span class="methodargs">(path)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Recursively get all sub-directories in directory.</span><br />
+<span class="info">path</span> <span class="text">The full path to the root dircetory.</span><br />
+<span class="info">returns</span> <span class="text">An array of all sub-directories or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDFileGetExtension"></a><span class="method">GetExtension</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the file extension for a file.</span><br />
+<span class="info">fileName</span> <span class="text">The file name with extension (may include folder path or not).</span><br />
+<span class="info">returns</span> <span class="text">The extension of the file (without the '.') or "" if no extension.</span><br />
+<br />
+<a class="tag" name="LDFileGetFile"></a><span class="method">GetFile</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the file for a full file path.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of a file.</span><br />
+<span class="info">returns</span> <span class="text">The file name part of the file path (without the folder or the extension).</span><br />
+<br />
+<a class="tag" name="LDFileGetFolder"></a><span class="method">GetFolder</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the folder for a full file path.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of a file.</span><br />
+<span class="info">returns</span> <span class="text">The folder part of the file path.</span><br />
+<br />
+<a class="tag" name="LDFileLength"></a><span class="method">Length</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the number of lines in a text file.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">The number of lines in the file (-1 on failure).</span><br />
+<br />
+<a class="tag" name="LDFileLoadAllVariables"></a><span class="method">LoadAllVariables</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Restore the values of all variables that were previously stored using SaveAllVariables.</span><br />
+<span class="info">fileName</span> <span class="text">The full path to a file with stored variable values.</span><br />
+<br />
+<a class="tag" name="LDFileModifiedTime"></a><span class="method">ModifiedTime</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the last time a file was modified.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">The last modified time of the file or directory ("" on failure).</span><br />
+<br />
+<a class="tag" name="LDFileMusicFolder"></a><span class="method">MusicFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the Music folder path.</span><br />
+<br />
+<a class="tag" name="LDFilePicturesFolder"></a><span class="method">PicturesFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the Pictures folder path.</span><br />
+<br />
+<a class="tag" name="LDFilePrintFile"></a><span class="method">PrintFile</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Print a file.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file to print.</span><br />
+<br />
+<a class="tag" name="LDFilePublicFolder"></a><span class="method">PublicFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the Public folder path.</span><br />
+<br />
+<a class="tag" name="LDFileReadANSI"></a><span class="method">ReadANSI</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read an ANSI encoded text file.<br />It should also work for any other encoding including UTF8.<br />UTF8 is the default text file encoding used by Small Basic.</span><br />
+<span class="info">fileName</span> <span class="text">The file path to read.</span><br />
+<span class="info">returns</span> <span class="text">The contents of the file or "" for failure (the encoding may not have been detected correctly).</span><br />
+<br />
+<a class="tag" name="LDFileReadANSIToArray"></a><span class="method">ReadANSIToArray</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a text file with ANSI encoding into an array with one element for each line in the file.<br />It should also work for any other encoding including UTF8.<br />Blank lines are included as an element in the array with one blank space.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">An array with one element for each line in the file or "" for failure (the encoding may not have been detected correctly).</span><br />
+<br />
+<a class="tag" name="LDFileReadByteArray"></a><span class="method">ReadByteArray</span><span class="methodargs">(filePath,hexMode)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a file into an array of bytes [0,255].</span><br />
+<span class="info">filePath</span> <span class="text">The full path of the file.</span><br />
+<span class="info">hexMode</span> <span class="text">If this varaible is set to "True", then a single comma deliminated variable of hex values is returned in place of an anrray..</span><br />
+<span class="info">returns</span> <span class="text">An array of byte values indexed from 1, or single string variable of hex values, or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDFileReadCSV"></a><span class="method">ReadCSV</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a CSV (comma separated values) file into an array.<br />The deliminator may be changed from a comma using Utilities.CSVDeliminator</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the CSV file.</span><br />
+<span class="info">returns</span> <span class="text">A 2D array with CSV file imported.</span><br />
+<br />
+<a class="tag" name="LDFileReadCSVTransposed"></a><span class="method">ReadCSVTransposed</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read a CSV (comma separated values) file into an array. and transpose (swap rows and columns).<br />The deliminator may be changed from a comma using Utilities.CSVDeliminator</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the CSV file.</span><br />
+<span class="info">returns</span> <span class="text">2D array with transposed CSV file imported.</span><br />
+<br />
+<a class="tag" name="LDFileReadToArray"></a><span class="method">ReadToArray</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reads a text file into an array with one element for each line in the file.<br /><br />Blank lines are included as an element in the array with one blank space.</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the file.</span><br />
+<span class="info">returns</span> <span class="text">An array with one element for each line in the file.</span><br />
+<br />
+<a class="tag" name="LDFileRenameDirectory"></a><span class="method">RenameDirectory</span><span class="methodargs">(directoryFrom,directoryTo)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rename or move a directory.</span><br />
+<span class="info">directoryFrom</span> <span class="text">The full path to the directory to rename.</span><br />
+<span class="info">directoryTo</span> <span class="text">The full path to the new name for the directory.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDFileRenameFile"></a><span class="method">RenameFile</span><span class="methodargs">(fileFrom,fileTo)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rename or move a file.</span><br />
+<span class="info">fileFrom</span> <span class="text">The full path to the file to rename.</span><br />
+<span class="info">fileTo</span> <span class="text">The full path to the new name for the file.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDFileSaveAllVariables"></a><span class="method">SaveAllVariables</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save all of the current variables to a file.<br />This is the complete current state of your program.<br />May be useful to store a game state, or for debugging.</span><br />
+<span class="info">fileName</span> <span class="text">The full path to store the variables and their values.<br />This file will be over-written.</span><br />
+<br />
+<a class="tag" name="LDFileSize"></a><span class="method">Size</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the size of a file in bytes.</span><br />
+<span class="info">fileName</span> <span class="text">The full path to the file to get the size of.</span><br />
+<span class="info">returns</span> <span class="text">The number of bytes in the file or -1 on error.</span><br />
+<br />
+<a class="tag" name="LDFileTempFolder"></a><span class="method">TempFolder</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the Temp folder path.</span><br />
+<br />
+<a class="tag" name="LDFileUserName"></a><span class="method">UserName</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Gets the current user name.</span><br />
+<br />
+<a class="tag" name="LDFileWriteByteArray"></a><span class="method">WriteByteArray</span><span class="methodargs">(filePath,byteArray,startPos)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Writes an Array of bytes to an (existing) file.</span><br />
+<span class="info">filePath</span> <span class="text">The full path of the file. A non existing file will be created.</span><br />
+<span class="info">byteArray</span> <span class="text">The 1D Array (from 1, continously) with byte values [0,255].<br />A single comma or sapce separated variable may also be used using hex notation, eg 3D,1F,00.</span><br />
+<span class="info">startPos</span> <span class="text">The byte position (incl., from 1) in an existing file to start writing (ignored for non existing file, will be written from beginning).<br /><=1, from file start<br />>file length, append after file end</span><br />
+<span class="info">returns</span> <span class="text">The number of written bytes on success, else "FAILED".</span><br />
+<span class="info">example</span> <span class="text">'(over)writes from file start<br />WriteByteArray(path, arr, 1)<br />'SB© after 4th byte<br />WriteByteArray(path, "1=83;2=66;3=169;",5)</span><br />
+<br />
+<a class="tag" name="LDFileWriteCSV"></a><span class="method">WriteCSV</span><span class="methodargs">(fileName,array)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write a 2D array to a CSV (comma separated values) file.<br />The deliminator may be changed from a comma using Utilities.CSVDeliminator</span><br />
+<span class="info">fileName</span> <span class="text">The full path of the CSV file.</span><br />
+<span class="info">array</span> <span class="text">The array to export.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

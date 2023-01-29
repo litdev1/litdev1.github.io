@@ -1,0 +1,1033 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDImage"></a><span class="group">LDImage</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Provides methods to modify and image process images stored in ImageList.<br />Any effect parameter can be defaulted to "".</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDImageAdd">Add</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageAddImages">AddImages</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageAddText">AddText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageCloseWorkingImage">CloseWorkingImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageColorMatrix">ColorMatrix</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageCopy">Copy</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageCrop">Crop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageDifferenceImages">DifferenceImages</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectAccent">EffectAccent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectBlocks">EffectBlocks</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectBlue">EffectBlue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectBulge">EffectBulge</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectCartoon">EffectCartoon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectCharcoal">EffectCharcoal</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectContrast">EffectContrast</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectCyan">EffectCyan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectDefaults">EffectDefaults</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDImageEffectEdge">EffectEdge</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectFishEye">EffectFishEye</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectFuzzy">EffectFuzzy</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectGamma">EffectGamma</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectGray">EffectGray</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectGreen">EffectGreen</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectHue">EffectHue</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectInverse">EffectInverse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectJagged">EffectJagged</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectLightness">EffectLightness</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectMagenta">EffectMagenta</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectNoiseRemoval">EffectNoiseRemoval</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectOilPaint">EffectOilPaint</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectPixelate">EffectPixelate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectPosterise">EffectPosterise</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectRed">EffectRed</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectReflect">EffectReflect</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectRotate">EffectRotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectSaturation">EffectSaturation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectSepia">EffectSepia</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectSketch">EffectSketch</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectSnow">EffectSnow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageEffectSolarise">EffectSolarise</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectSwirl">EffectSwirl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageEffectYellow">EffectYellow</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageGetEffects">GetEffects</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageGetImagePixels">GetImagePixels</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageGetPixel">GetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageGetWorkingImagePixel">GetWorkingImagePixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageGetWorkingImagePixelARGB">GetWorkingImagePixelARGB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageHeightMap2NormalMap">HeightMap2NormalMap</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageHistogram">Histogram</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageLoadSVG">LoadSVG</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageMakeTransparent">MakeTransparent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageMetaData">MetaData</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageMultiply">Multiply</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageNewImage">NewImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageNormalMap">NormalMap</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageOpenWorkingImage">OpenWorkingImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageRemove">Remove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageReplaceColour">ReplaceColour</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageResize">Resize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageSave">Save</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageSaveAs">SaveAs</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageSetImagePixels">SetImagePixels</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageSetPixel">SetPixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageSetWorkingImagePixel">SetWorkingImagePixel</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageSplitImage">SplitImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDImageStatistics">Statistics</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageTo32bitARGB">To32bitARGB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDImageUseFastPixelMethods">UseFastPixelMethods</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDImageAdd"></a><span class="method">Add</span><span class="methodargs">(image,red,green,blue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add colour values to image.<br />An image has pixels with R,G,B in the range 0 to 255.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">red</span> <span class="text">Red value to add.</span><br />
+<span class="info">green</span> <span class="text">Geen value to add.</span><br />
+<span class="info">blue</span> <span class="text">Blue value to add.</span><br />
+<br />
+<a class="tag" name="LDImageAddImages"></a><span class="method">AddImages</span><span class="methodargs">(image1,image2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add 2 images together.<br />An image has pixels with R,G,B in the range 0 to 255.<br />Both images must be the same dimension.</span><br />
+<span class="info">image1</span> <span class="text">The first ImageList image to add.</span><br />
+<span class="info">image2</span> <span class="text">The second ImageList image to add.</span><br />
+<span class="info">returns</span> <span class="text">A new ImageList image with the result or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDImageAddText"></a><span class="method">AddText</span><span class="methodargs">(imageName,text,x,y,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Annotate an image with text, using current GraphicsWindow font.</span><br />
+<span class="info">imageName</span> <span class="text">An existing ImageList image.</span><br />
+<span class="info">text</span> <span class="text">The text to add</span><br />
+<span class="info">x</span> <span class="text">The left position of the text.</span><br />
+<span class="info">y</span> <span class="text">The Top position of the text.</span><br />
+<span class="info">colour</span> <span class="text">The text colour.</span><br />
+<br />
+<a class="tag" name="LDImageCloseWorkingImage"></a><span class="method">CloseWorkingImage</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Close and reset the image from a temporary working image.</span><br />
+<span class="info">image</span> <span class="text">The working image, previously opened with OpenWorkingImage.</span><br />
+<br />
+<a class="tag" name="LDImageColorMatrix"></a><span class="method">ColorMatrix</span><span class="methodargs">(image,matrix)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Performs a colour matrix transformation on an image.<br />This can be used for all sorts of colour transformations.<br />See <a href="http://msdn.microsoft.com/en-us/library/a7xw19wh%28v=vs.110%29.aspx.">http://msdn.microsoft.com/en-us/library/a7xw19wh%28v=vs.110%29.aspx.</a></span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">matrix</span> <span class="text">A 5*5 2D matrix.<br />Sepia Example:<br />matrix[1] = "1=0.393;2=0.349;3=0.272;4=0;5=0"<br />matrix[2] = "1=0.769;2=0.686;3=0.534;4=0;5=0"<br />matrix[3] = "1=0.189;2=0.168;3=0.131;4=0;5=0"<br />matrix[4] = "1=0;2=0;3=0;4=1;5=0"<br />matrix[5] = "1=0;2=0;3=0;4=0;5=1"</span><br />
+<br />
+<a class="tag" name="LDImageCopy"></a><span class="method">Copy</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Copy an image from the ImageList.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to copy.</span><br />
+<span class="info">returns</span> <span class="text">A new ImageList image or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDImageCrop"></a><span class="method">Crop</span><span class="methodargs">(image,x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Crop an image from the ImageList.<br />The crop region must be entirely within the target image.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to crop.</span><br />
+<span class="info">x</span> <span class="text">The left position of the cropped image in pixels (indexed from 0).</span><br />
+<span class="info">y</span> <span class="text">The top position of the cropped image in pixels (indexed from 0).</span><br />
+<span class="info">width</span> <span class="text">The width of the cropped image in pixels.</span><br />
+<span class="info">height</span> <span class="text">The height of the cropped image in pixels.</span><br />
+<br />
+<a class="tag" name="LDImageDifferenceImages"></a><span class="method">DifferenceImages</span><span class="methodargs">(image1,image2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Difference 2 images.<br />An image has pixels with R,G,B in the range 0 to 255.<br />Both images must be the same dimension.</span><br />
+<span class="info">image1</span> <span class="text">The first ImageList image to difference.</span><br />
+<span class="info">image2</span> <span class="text">The second ImageList image to difference.</span><br />
+<span class="info">returns</span> <span class="text">A new ImageList image with the result or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDImageEffectAccent"></a><span class="method">EffectAccent</span><span class="methodargs">(image,hue,range)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to colour accent effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">hue</span> <span class="text">Accent Hue (0 o 360, default 0 (red)).</span><br />
+<span class="info">range</span> <span class="text">Accent range (default 40).</span><br />
+<br />
+<a class="tag" name="LDImageEffectBlocks"></a><span class="method">EffectBlocks</span><span class="methodargs">(image,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to block effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">size</span> <span class="text">Blocking size factor (default 5).</span><br />
+<br />
+<a class="tag" name="LDImageEffectBlue"></a><span class="method">EffectBlue</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to blue colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectBulge"></a><span class="method">EffectBulge</span><span class="methodargs">(image,factor)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to bulge effect (similar to FishEye).</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">factor</span> <span class="text">Bulge factor, may be less than 1 for pinch effect (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageEffectCartoon"></a><span class="method">EffectCartoon</span><span class="methodargs">(image,radius,levels,inverse)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to cartoon effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">radius</span> <span class="text">Cartoon radius (odd number, default 7).</span><br />
+<span class="info">levels</span> <span class="text">Cartoon levels (default 10).</span><br />
+<span class="info">inverse</span> <span class="text">Cartoon inverse threshold (default 40).</span><br />
+<br />
+<a class="tag" name="LDImageEffectCharcoal"></a><span class="method">EffectCharcoal</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to charcoal effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectContrast"></a><span class="method">EffectContrast</span><span class="methodargs">(image,contrast)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to high contrast effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">contrast</span> <span class="text">Contrast factor (default 2), less than 1 reduces contrast.</span><br />
+<br />
+<a class="tag" name="LDImageEffectCyan"></a><span class="method">EffectCyan</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to cyan colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectDefaults"></a><span class="method">EffectDefaults</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get or set an array of default effect parameters.</span><br />
+<br />
+<a class="tag" name="LDImageEffectEdge"></a><span class="method">EffectEdge</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to Prewitt edge effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectFishEye"></a><span class="method">EffectFishEye</span><span class="methodargs">(image,factor)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to fisheye effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">factor</span> <span class="text">FishEye factor, should be greater than 1 (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageEffectFuzzy"></a><span class="method">EffectFuzzy</span><span class="methodargs">(image,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to fuzzy effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">size</span> <span class="text">Pixel region to make fuzzy (default 4).</span><br />
+<br />
+<a class="tag" name="LDImageEffectGamma"></a><span class="method">EffectGamma</span><span class="methodargs">(image,gamma)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to gamma effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">gamma</span> <span class="text">Gamma factor, values less than 1 lighten and greater than 1 darken (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageEffectGray"></a><span class="method">EffectGray</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to gray scale.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectGreen"></a><span class="method">EffectGreen</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to green colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectHue"></a><span class="method">EffectHue</span><span class="methodargs">(image,hue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to modify Hue.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">hue</span> <span class="text">Hue shift (0 to 360, default 180).</span><br />
+<br />
+<a class="tag" name="LDImageEffectInverse"></a><span class="method">EffectInverse</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to inverse colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectJagged"></a><span class="method">EffectJagged</span><span class="methodargs">(image,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to jagged effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">size</span> <span class="text">Pixel region size to make jagged (default 4).</span><br />
+<br />
+<a class="tag" name="LDImageEffectLightness"></a><span class="method">EffectLightness</span><span class="methodargs">(image,lightness)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to modify Lightness.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">lightness</span> <span class="text">Lightness multiplier (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageEffectMagenta"></a><span class="method">EffectMagenta</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to magenta colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectNoiseRemoval"></a><span class="method">EffectNoiseRemoval</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to noise removal effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectOilPaint"></a><span class="method">EffectOilPaint</span><span class="methodargs">(image,radius,levels)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to oil paint effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">radius</span> <span class="text">Oil paint radius (odd number, default 7).</span><br />
+<span class="info">levels</span> <span class="text">Oil paint levels (default 20).</span><br />
+<br />
+<a class="tag" name="LDImageEffectPixelate"></a><span class="method">EffectPixelate</span><span class="methodargs">(image,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to pixelate effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">size</span> <span class="text">Pixelating size factor (default 16).</span><br />
+<br />
+<a class="tag" name="LDImageEffectPosterise"></a><span class="method">EffectPosterise</span><span class="methodargs">(image,level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to posterise effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">level</span> <span class="text">Posterise level (default 50).</span><br />
+<br />
+<a class="tag" name="LDImageEffectRed"></a><span class="method">EffectRed</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to red colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectReflect"></a><span class="method">EffectReflect</span><span class="methodargs">(image,flip)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to X or Y reflection effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">flip</span> <span class="text">0 to flip X and 1 to flip Y (default 0).</span><br />
+<br />
+<a class="tag" name="LDImageEffectRotate"></a><span class="method">EffectRotate</span><span class="methodargs">(image,rotation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to 90 degree rotation effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">rotation</span> <span class="text">0 for +90, 1 for 180 and 2 for 270(-90) degree rotation (default 0).</span><br />
+<br />
+<a class="tag" name="LDImageEffectSaturation"></a><span class="method">EffectSaturation</span><span class="methodargs">(image,saturation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to modify Saturation.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">saturation</span> <span class="text">Saturation multiplier (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageEffectSepia"></a><span class="method">EffectSepia</span><span class="methodargs">(image,threshold)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to sepia effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">threshold</span> <span class="text">Sepia threshold (default 30).</span><br />
+<br />
+<a class="tag" name="LDImageEffectSketch"></a><span class="method">EffectSketch</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to pen sketch effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageEffectSnow"></a><span class="method">EffectSnow</span><span class="methodargs">(image,level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to snow effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">level</span> <span class="text">1 in level pixels are randomly snow (default 25).</span><br />
+<br />
+<a class="tag" name="LDImageEffectSolarise"></a><span class="method">EffectSolarise</span><span class="methodargs">(image,power)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to solarise effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">power</span> <span class="text">Solarise power (default 2, quadratic).</span><br />
+<br />
+<a class="tag" name="LDImageEffectSwirl"></a><span class="method">EffectSwirl</span><span class="methodargs">(image,factor)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to swirl effect.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">factor</span> <span class="text">Swirl factor (default 1).</span><br />
+<br />
+<a class="tag" name="LDImageEffectYellow"></a><span class="method">EffectYellow</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts to yellow colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<br />
+<a class="tag" name="LDImageGetEffects"></a><span class="method">GetEffects</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of the available image and webcam effects.</span><br />
+<span class="info">returns</span> <span class="text">An array of effects, indexed by the effect number.</span><br />
+<br />
+<a class="tag" name="LDImageGetImagePixels"></a><span class="method">GetImagePixels</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a 2D array filled with all the pixels in an image.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">returns</span> <span class="text">An array of hex based image pixel colours indexed by [x][y].</span><br />
+<br />
+<a class="tag" name="LDImageGetPixel"></a><span class="method">GetPixel</span><span class="methodargs">(image,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a pixel colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">x</span> <span class="text">The x pixel (indexed from 1).</span><br />
+<span class="info">y</span> <span class="text">The y pixel (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The pixel colour.</span><br />
+<br />
+<a class="tag" name="LDImageGetWorkingImagePixel"></a><span class="method">GetWorkingImagePixel</span><span class="methodargs">(image,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the colour of a pixel from a temporary working image.</span><br />
+<span class="info">image</span> <span class="text">The working image, previously opened with OpenWorkingImage.</span><br />
+<span class="info">x</span> <span class="text">The x pixel coordinate (indexed from 1).</span><br />
+<span class="info">y</span> <span class="text">The y pixel coordinate (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The pixel colour or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDImageGetWorkingImagePixelARGB"></a><span class="method">GetWorkingImagePixelARGB</span><span class="methodargs">(image,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the colour of a pixel from a temporary working image.</span><br />
+<span class="info">image</span> <span class="text">The working image, previously opened with OpenWorkingImage.</span><br />
+<span class="info">x</span> <span class="text">The x pixel coordinate (indexed from 1).</span><br />
+<span class="info">y</span> <span class="text">The y pixel coordinate (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The pixel colour, an array of A,R,G,B components indexed by "A", "R", "G", "B" or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDImageHeightMap2NormalMap"></a><span class="method">HeightMap2NormalMap</span><span class="methodargs">(image,scale)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a normal map image from a height map.  The height is given by the brightness of each pixel.</span><br />
+<span class="info">image</span> <span class="text">The height map ImageList image.</span><br />
+<span class="info">scale</span> <span class="text">A scale factor for the elevation (default 1).</span><br />
+<span class="info">returns</span> <span class="text">A new ImageList image with the resulting normal map.</span><br />
+<br />
+<a class="tag" name="LDImageHistogram"></a><span class="method">Histogram</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get histograms of colour pixel values.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">returns</span> <span class="text">An array of colour histograms, indexed by 1,2,3 for R,G,B and 0 to 255.</span><br />
+<br />
+<a class="tag" name="LDImageLoadSVG"></a><span class="method">LoadSVG</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Load an SVG file as an ImageList image.</span><br />
+<span class="info">fileName</span> <span class="text">The SVG file.</span><br />
+<span class="info">returns</span> <span class="text">The ImageList image.</span><br />
+<br />
+<a class="tag" name="LDImageMakeTransparent"></a><span class="method">MakeTransparent</span><span class="methodargs">(image,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modify an ImageList image to make a selected colour transparent.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">colour</span> <span class="text">The colour to make transparent.</span><br />
+<br />
+<a class="tag" name="LDImageMetaData"></a><span class="method">MetaData</span><span class="methodargs">(imageFile)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of image metadata.</span><br />
+<span class="info">imageFile</span> <span class="text">The image file (not an ImageList image).</span><br />
+<span class="info">returns</span> <span class="text">An array of metadata values indexed by hex id (Use quotes for indices with a to f in the hex values).<br />See https://msdn.microsoft.com/en-us/library/System.Drawing.Imaging.propertyitem.id%28v=vs.110%29.aspx for a list of ids.</span><br />
+<br />
+<a class="tag" name="LDImageMultiply"></a><span class="method">Multiply</span><span class="methodargs">(image,red,green,blue)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Multiply colour values of image.<br />An image has pixels with R,G,B in the range 0 to 255.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">red</span> <span class="text">Red value to multiply by.</span><br />
+<span class="info">green</span> <span class="text">Geen value to multiply by.</span><br />
+<span class="info">blue</span> <span class="text">Blue value to multiply by.</span><br />
+<br />
+<a class="tag" name="LDImageNewImage"></a><span class="method">NewImage</span><span class="methodargs">(width,height,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new single colored 32bitARGB image in ImageList.</span><br />
+<span class="info">width</span> <span class="text">The width of the new image.</span><br />
+<span class="info">height</span> <span class="text">The height of the new image.</span><br />
+<span class="info">colour</span> <span class="text">The colour of the new image.</span><br />
+<span class="info">returns</span> <span class="text">The Name of the new created ImageList image on success, else "".</span><br />
+<br />
+<a class="tag" name="LDImageNormalMap"></a><span class="method">NormalMap</span><span class="methodargs">(shapeName,sourceX,sourceY,sourceZ,texture,ambient,intensity)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modify an image to show a gray scale (or modified image if texture is set) shadow effect based on a normal map image.</span><br />
+<span class="info">shapeName</span> <span class="text">An image shape normal map (R,G,B colours represent normal vecors of a 3D image).<br />This is an image shape created using Shapes.AddImage containing the normal map image.</span><br />
+<span class="info">sourceX</span> <span class="text">The x position of a light source relative to the image.</span><br />
+<span class="info">sourceY</span> <span class="text">The y position of a light source relative to the image.</span><br />
+<span class="info">sourceZ</span> <span class="text">The z position of a light source relative to the image, this is the height abouve the image.<br />This can be used to alter the effective contrast of the shadow effect.</span><br />
+<span class="info">texture</span> <span class="text">An optional ImageList image or "" with texture (colour) to modify, it should be the same dimensions as the normal map image.<br />The texture image may be changed on subsequent calls.</span><br />
+<span class="info">ambient</span> <span class="text">Optional ambient light intensity if texture is set (default 0.3).</span><br />
+<span class="info">intensity</span> <span class="text">Optional light intensity if texture is set (default 2).</span><br />
+<br />
+<a class="tag" name="LDImageOpenWorkingImage"></a><span class="method">OpenWorkingImage</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Open a temporary working image for fast pixel level manipulation.<br />After the temporary working image is finished with it should be set to the image using CloseWorkingImage.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to open as a temporary working image.</span><br />
+<br />
+<a class="tag" name="LDImageRemove"></a><span class="method">Remove</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove an image from the ImageList.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to delete.</span><br />
+<br />
+<a class="tag" name="LDImageReplaceColour"></a><span class="method">ReplaceColour</span><span class="methodargs">(image,colourFrom,colourTo,tolerance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Replace one colour in an ImageList image with another.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">colourFrom</span> <span class="text">The colour to replace.</span><br />
+<span class="info">colourTo</span> <span class="text">The replacement colour to apply.</span><br />
+<span class="info">tolerance</span> <span class="text">A tolerance for the colour to match (default 0 - exact match).<br />ARGB pixel values all within the tolerance will be replaced.</span><br />
+<br />
+<a class="tag" name="LDImageResize"></a><span class="method">Resize</span><span class="methodargs">(image,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resize an image from the ImageList.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to resize.</span><br />
+<span class="info">width</span> <span class="text">The width in pixels.</span><br />
+<span class="info">height</span> <span class="text">The height in pixels.</span><br />
+<br />
+<a class="tag" name="LDImageRotate"></a><span class="method">Rotate</span><span class="methodargs">(image,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate an image.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to modify.</span><br />
+<span class="info">angle</span> <span class="text">The angle to rotate the image clockwise by in degrees.</span><br />
+<br />
+<a class="tag" name="LDImageSave"></a><span class="method">Save</span><span class="methodargs">(image,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save an image from the ImageList as a jpg.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to save.</span><br />
+<span class="info">fileName</span> <span class="text">The file to save the image as.</span><br />
+<br />
+<a class="tag" name="LDImageSaveAs"></a><span class="method">SaveAs</span><span class="methodargs">(image,fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Save an image from the ImageList in different formats set by the file extension.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image to save.</span><br />
+<span class="info">fileName</span> <span class="text">The file to save the image as.<br />Accepted file type extensions include *.bmp, *.gif, *.jpg, *.png, *.tiff or *.ico.</span><br />
+<br />
+<a class="tag" name="LDImageSetImagePixels"></a><span class="method">SetImagePixels</span><span class="methodargs">(pixels)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a new image from a 2D array of pixel colour values - see GetImagePixels for format of pixels.</span><br />
+<span class="info">pixels</span> <span class="text">An array of hex based image pixel colours indexed by [x][y].</span><br />
+<span class="info">returns</span> <span class="text">An ImageList image created from the pixels.</span><br />
+<br />
+<a class="tag" name="LDImageSetPixel"></a><span class="method">SetPixel</span><span class="methodargs">(image,x,y,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a pixel colour.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">x</span> <span class="text">The x pixel (indexed from 1).</span><br />
+<span class="info">y</span> <span class="text">The y pixel (indexed from 1).</span><br />
+<span class="info">colour</span> <span class="text">The colour to set the pixel.</span><br />
+<br />
+<a class="tag" name="LDImageSetWorkingImagePixel"></a><span class="method">SetWorkingImagePixel</span><span class="methodargs">(image,x,y,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the colour of a pixel in a temporary working image.</span><br />
+<span class="info">image</span> <span class="text">The working image, previously opened with OpenWorkingImage.</span><br />
+<span class="info">x</span> <span class="text">The x pixel coordinate (indexed from 1).</span><br />
+<span class="info">y</span> <span class="text">The y pixel coordinate (indexed from 1).</span><br />
+<span class="info">colour</span> <span class="text">The colour to set the pixel to.</span><br />
+<br />
+<a class="tag" name="LDImageSplitImage"></a><span class="method">SplitImage</span><span class="methodargs">(imageName,countX,countY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates an array of subdivided images from an input image.</span><br />
+<span class="info">imageName</span> <span class="text">The image file (local or network) to load.<br />Can also be an ImageList image.</span><br />
+<span class="info">countX</span> <span class="text">The number of sub-images in the X direction.</span><br />
+<span class="info">countY</span> <span class="text">The number of sub-images in the Y direction.</span><br />
+<span class="info">returns</span> <span class="text">A 2D array of resulting images saved in ImageList.</span><br />
+<br />
+<a class="tag" name="LDImageStatistics"></a><span class="method">Statistics</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the minimum, maximum, mean and STD for colour pixel values.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">returns</span> <span class="text">An array of statistics values (0 to 255), indexed by "Min", "Max", "Mean", "STD" and 1,2,3 for R,G,B.</span><br />
+<br />
+<a class="tag" name="LDImageTo32bitARGB"></a><span class="method">To32bitARGB</span><span class="methodargs">(image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts an ImageList image to Format ARGB (Alphachannel with 32bit/Pxl) if needed.</span><br />
+<span class="info">image</span> <span class="text">The ImageList image.</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED".</span><br />
+<br />
+<a class="tag" name="LDImageUseFastPixelMethods"></a><span class="method">UseFastPixelMethods</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Use a fast pixel manipulation method (default "True").<br />This method can be turned off using this property.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

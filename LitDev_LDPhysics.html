@@ -1,0 +1,1154 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDPhysics"></a><span class="group">LDPhysics</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Physics extension using Box2D engine.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDPhysicsAddChain">AddChain</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAddExplosion">AddExplosion</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAddFixedAnchor">AddFixedAnchor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsAddFixedShape">AddFixedShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAddInactiveShape">AddInactiveShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAddMovingAnchor">AddMovingAnchor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsAddMovingShape">AddMovingShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAddRope">AddRope</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAttachShapes">AttachShapes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsAttachShapesWithJoint">AttachShapesWithJoint</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsAttachShapesWithRotation">AttachShapesWithRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsBoxShape">BoxShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsBrakeTire">BrakeTire</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsChainColour">ChainColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsDetachJoint">DetachJoint</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsDetachShapes">DetachShapes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsDisconnectShape">DisconnectShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsDoTimestep">DoTimestep</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsFollowShapeX">FollowShapeX</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsFollowShapeY">FollowShapeY</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetAllShapesAt">GetAllShapesAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsGetAngle">GetAngle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetCollisions">GetCollisions</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetContacts">GetContacts</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsGetInertia">GetInertia</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetMass">GetMass</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetPan">GetPan</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsGetPosition">GetPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetRotation">GetRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetShapeAt">GetShapeAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsGetTireInformation">GetTireInformation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetTireProperties">GetTireProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsGetVelocity">GetVelocity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsGroupShapes">GroupShapes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsHelp">Help</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsLoadImagesAsCircles">LoadImagesAsCircles</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsMaxPolygonVertices">MaxPolygonVertices</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsMaxProxies">MaxProxies</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsMoveTire">MoveTire</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsPanView">PanView</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsPositionIterations">PositionIterations</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsRayCast">RayCast</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsReadJson">ReadJson</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsRemoveChain">RemoveChain</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsRemoveFrozen">RemoveFrozen</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsRemoveRope">RemoveRope</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsRemoveShape">RemoveShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsReset">Reset</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsRopeColour">RopeColour</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsScaling">Scaling</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetAABB">SetAABB</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetAngle">SetAngle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetBoundaries">SetBoundaries</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetBullet">SetBullet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetDamping">SetDamping</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetForce">SetForce</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetGravity">SetGravity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetGroup">SetGroup</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetImpulse">SetImpulse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetJointMotor">SetJointMotor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetPosition">SetPosition</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetRotation">SetRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetShapeGravity">SetShapeGravity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetTire">SetTire</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetTireProperties">SetTireProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsSetTorque">SetTorque</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsSetVelocity">SetVelocity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsTimeStep">TimeStep</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsTimestepControl">TimestepControl</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsToggleMoving">ToggleMoving</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsToggleRotation">ToggleRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsToggleSensor">ToggleSensor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsTurnTire">TurnTire</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsUngroupShapes">UngroupShapes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDPhysicsUnsetBullet">UnsetBullet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsVelocityIterations">VelocityIterations</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsVelocityThreshold">VelocityThreshold</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDPhysicsWakeAll">WakeAll</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDPhysicsWriteJson">WriteJson</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDPhysicsAddChain"></a><span class="method">AddChain</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a chain between two existing shapes.</span><br />
+<span class="info">shape1</span> <span class="text">First shape.</span><br />
+<span class="info">shape2</span> <span class="text">Second shape.</span><br />
+<span class="info">returns</span> <span class="text">The chain name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddExplosion"></a><span class="method">AddExplosion</span><span class="methodargs">(posX,posY,power,damping,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Make an explosion, which consists of 50x20kg particles blast apart over 500ms.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate of the explosion.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate of the explosion.</span><br />
+<span class="info">power</span> <span class="text">The explosion force, this is the initial velocity of the blast particles.</span><br />
+<span class="info">damping</span> <span class="text">A damping for the blast, the smaller this value the larger the blast range (default 10).</span><br />
+<span class="info">colour</span> <span class="text">An optional colour of the explosion particles ("" for none).</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddFixedAnchor"></a><span class="method">AddFixedAnchor</span><span class="methodargs">(posX,posY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a new small, transparent shape to be used as a fixed anchor point.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate of the anchor.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate of the anchor.</span><br />
+<span class="info">returns</span> <span class="text">The anchor shape name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddFixedShape"></a><span class="method">AddFixedShape</span><span class="methodargs">(shapeName,friction,restitution)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an existing SmallBasic shape to the physics engine as a fixed (non-dynamic) shape with friction and restitution that affects shapes that hit it.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">friction</span> <span class="text">The shape friction (usually 0 to 1).</span><br />
+<span class="info">restitution</span> <span class="text">The shape restitution or bounciness (usually 0 to 1).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddInactiveShape"></a><span class="method">AddInactiveShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an existing SmallBasic shape to the physics engine as an inactive (non-dynamic and non-interacting) shape which only moves with the PanView method.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddMovingAnchor"></a><span class="method">AddMovingAnchor</span><span class="methodargs">(posX,posY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a new small, transparent and high density shape to be used as a moving anchor point.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate of the anchor.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate of the anchor.</span><br />
+<span class="info">returns</span> <span class="text">The anchor shape name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddMovingShape"></a><span class="method">AddMovingShape</span><span class="methodargs">(shapeName,friction,restitution,density)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add an existing SmallBasic shape to the physics engine as a moving (dynamic) shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">friction</span> <span class="text">The shape friction (usually 0 to 1).</span><br />
+<span class="info">restitution</span> <span class="text">The shape restitution or bounciness (usually 0 to 1).<br />If a negative value is set for restitution, then the shape will be added with a very small size which may be used to add an inactive image that can be grouped within an irregular compound shape that matches the image boundary.</span><br />
+<span class="info">density</span> <span class="text">The shape density (default 1).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAddRope"></a><span class="method">AddRope</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Add a rope between two existing shapes.</span><br />
+<span class="info">shape1</span> <span class="text">First shape.</span><br />
+<span class="info">shape2</span> <span class="text">Second shape.</span><br />
+<span class="info">returns</span> <span class="text">The rope name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAttachShapes"></a><span class="method">AttachShapes</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Connect two shapes to move together as one.  The shapes are connected with a distance joint and may wobble a bit if they are hit.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAttachShapesWithJoint"></a><span class="method">AttachShapesWithJoint</span><span class="methodargs">(shape1,shape2,type,collide,parameters)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Connect two shapes to move together as one with one of several joint types.<br /> These can be advanced and require reference to Box2D manual.<br /> In many cases it is best to prevent shape rotation for the joints to behave as desired.<br /> Multiple joints may also be applied to shapes.<br /> The methods use the initial shape positions, so set these first.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">type</span> <span class="text">One of the following joint types.<br /> <br /> "Distance" - maintain a fixed distance between the shapes.<br /> "Gear" - link Prismatic or Revolute joints (previously created) of 2 shapes.<br /> "Line" - move the shapes along a line initially connecting the shapes.<br /> "Mouse" - move the shape to follow the mouse (both shape names should be the same).<br /> "Prismatic_H" - move shapes vertically along a line between the two shapes.<br /> "Prismatic_V" - move shapes horizontally along a line between the two shapes.<br /> "Pulley" - a pulley system, one shape moves up as the other moves down - position the shapes initially at the extreme points of the pulley motion.<br /> "Revolute" - the shapes can rotate about each other.</span><br />
+<span class="info">collide</span> <span class="text">The connected shapes can interact with each other "True" or "False" (default).</span><br />
+<span class="info">parameters</span> <span class="text">Optional parameters (default ""), multiple parameters are in an array.<br /><br /> "Distance" - damping ratio (default 0)<br /> "Gear" - gear ratio, first joint, second joint (default 1, auto detect joints)<br /> "Line" - X direction, Y direction, lower translation, upper translation (default line connecting shapes, no limits)<br /> "Mouse" - max acceleration, damping ratio (default 10000, 0.7)<br /> "Prismatic_H" - X direction, Y direction, lower translation, upper translation (default 1,0, no limits)<br /> "Prismatic_V" - X direction, Y direction, lower translation, upper translation  (default 0,1, no limits)<br /> "Pulley" - pulley ratio (block and tackle) (default 1)<br /> "Revolute" - lower angle, upper angle (default no limits)</span><br />
+<span class="info">returns</span> <span class="text">The joint name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsAttachShapesWithRotation"></a><span class="method">AttachShapesWithRotation</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Connect two shapes to move together as one, but allow the shapes to rotate about each other.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsBoxShape"></a><span class="method">BoxShape</span><span class="methodargs">(shapeName,x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to remain within a box within the view.<br />This is similar to PanView, except that the view pans automatically to keep the specified shape within a box region of the GraphicsWindow.<br />Only one shape can be boxed.  To unset shape box, set the shapeName to "".</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to box or "".</span><br />
+<span class="info">x1</span> <span class="text">The left x coordinate of the box.</span><br />
+<span class="info">y1</span> <span class="text">The top y coordinate of the box.</span><br />
+<span class="info">x2</span> <span class="text">The right x coordinate of the box.</span><br />
+<span class="info">y2</span> <span class="text">The bottom y coordinate of the box.</span><br />
+<br />
+<a class="tag" name="LDPhysicsBrakeTire"></a><span class="method">BrakeTire</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Apply a brake to a tire shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape to brake.</span><br />
+<br />
+<a class="tag" name="LDPhysicsChainColour"></a><span class="method">ChainColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The colour to be used for chains.</span><br />
+<br />
+<a class="tag" name="LDPhysicsDetachJoint"></a><span class="method">DetachJoint</span><span class="methodargs">(jointName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect two shapes that were previously joined with a joint.</span><br />
+<span class="info">jointName</span> <span class="text">The joint name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsDetachShapes"></a><span class="method">DetachShapes</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect two shapes that were previously attached.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsDisconnectShape"></a><span class="method">DisconnectShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect shape from the physics engine without deleting the shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsDoTimestep"></a><span class="method">DoTimestep</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Perform a time-step update.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsFollowShapeX"></a><span class="method">FollowShapeX</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to remain stationary at X position in the view.<br />This is similar to PanView, except that the view pans automatically to keep the specified shape at a constant visual X location.<br />Only one shape can be followed in X direction.  To unset shape following, set the shapeName to "".</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to follow or "".</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsFollowShapeY"></a><span class="method">FollowShapeY</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to remain stationary at Y position in the view.<br />This is similar to PanView, except that the view pans automatically to keep the specified shape at a constant visual Y location.<br />Only one shape can be followed in Y direction.  To unset shape following, set the shapeName to "".</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to follow or "".</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetAllShapesAt"></a><span class="method">GetAllShapesAt</span><span class="methodargs">(posX,posY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of all the physics engine shapes (if any) at the input coordinates.<br />The coordinates for this method are the physics engine coordinates if panning is present.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate.</span><br />
+<span class="info">returns</span> <span class="text">An array of shape names or "".</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetAngle"></a><span class="method">GetAngle</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the angle of rotation for the shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">The angle of rotation in degrees.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetCollisions"></a><span class="method">GetCollisions</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of all the shapes that the specified shape collided with during the last DoTimestep().</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to check for collisions.</span><br />
+<span class="info">returns</span> <span class="text">An array of all the shapes collided with (may be empty "" or "Wall" for a static obstacle).</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetContacts"></a><span class="method">GetContacts</span><span class="methodargs">(posX,posY,distance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of shapes that collided within a distance of a specified contact point.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate of a contact position to check.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate of a contact position to check.</span><br />
+<span class="info">distance</span> <span class="text">A maximum distance from the contact point for the contact.</span><br />
+<span class="info">returns</span> <span class="text">An array of contacts, with each contact being an array of 2 shape names.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetInertia"></a><span class="method">GetInertia</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the moment of inertia of a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">The inertia of the shape.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetMass"></a><span class="method">GetMass</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the mass of a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">The mass of the shape.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetPan"></a><span class="method">GetPan</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the current pan offset, see PanView, FollowShapeX(Y) and BoxShape.<br />World coordinates = screen coordinates + pan offset.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the current pan offset.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetPosition"></a><span class="method">GetPosition</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the centre of the shape coordinates.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the shape centre position.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetRotation"></a><span class="method">GetRotation</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the shape rotation speed.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">The angular rotation speed degrees/s.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetShapeAt"></a><span class="method">GetShapeAt</span><span class="methodargs">(posX,posY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the shape (if any) at the input coordinates.<br />The coordinates for this method are the screen coordinates if panning is present.</span><br />
+<span class="info">posX</span> <span class="text">The X coordinate.</span><br />
+<span class="info">posY</span> <span class="text">The Y coordinate.</span><br />
+<span class="info">returns</span> <span class="text">The shape name at the input position or "".</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetTireInformation"></a><span class="method">GetTireInformation</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get tire information, it includes:<br /><br />Skid (if this value exceeds the property AntiSkid, then the tire is skidding)<br />Crash (the value is the speed of the impact)</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape.</span><br />
+<span class="info">returns</span> <span class="text">An array of information, indexed by the information name, e.g. "Skid".</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetTireProperties"></a><span class="method">GetTireProperties</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get tire properties, they include:<br /><br />AntiSkid (higher value reduces skid)<br />Drag (higher value increases forward/backward drag)<br />Brake (higher value increases braking power)<br />Straighten (higher value restores steering more quickly)<br />BrakeStraighten (higher value restores steering more quickly while braking)</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape.</span><br />
+<span class="info">returns</span> <span class="text">An array of properties, indexed by the property name, e.g. "AntiSkid".</span><br />
+<br />
+<a class="tag" name="LDPhysicsGetVelocity"></a><span class="method">GetVelocity</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the velocity of the shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">A 2 element array with the shape velocity.</span><br />
+<br />
+<a class="tag" name="LDPhysicsGroupShapes"></a><span class="method">GroupShapes</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Solidly group two shapes to move together as one.  Shape1 is added to shape2 to act as one shape.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsHelp"></a><span class="method">Help</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">This function is just to display this help.<br /><br />The extension uses Box2D (<a href="http://box2d.org">http://box2d.org</a>) as an engine and provides an interface between it and the graphics capabilities of SmallBasic.<br /><br />Only shapes that are connected to the physics engine take part in the motion physics, for example you may add normal shapes (e.g. a gun and not connect it to the physics engine).  Once a shape is connected to the engine, it is best to only interact with it through the methods provided by the extension.  All positions are in the SmallBasic GraphicsWindow pixels and refer to shape centres.<br /><br />Image and text shapes are treated as rectangles, and ellipses as circles; there is also triangle and convex polygon support, but not lines.  Images may be treated as circles by setting the property LoadImagesAsCircles to "True".<br /><br />One issue that Box2D has difficulty with is small fast moving objects that can 'tunnel' through other shapes without being deflected (see the SetBullet option).<br /><br />Another problem is shapes of very different size and hence mass, especially large shapes when they are connected together.  It may be necessary to modify the density for these (the Anchor options are an attempt to automate this a bit), otherwise the default density of 1 is good.  Resist the temptation to connect too many shapes together.<br /><br />It may be possible to improve the stability of some 'difficult' models using the TimestepControl settings, but the defaults look good for most cases.<br /><br />Do not call the physics methods inside SmallBasic event subroutines directly, rather set flags that can be processed in a main game loop.<br /><br />There are sample SmallBasic programs and a Getting Started Guide that comes with the extension dll - this is the best place to start.<br /><br />Report bugs and problems to the SmallBasic forum (<a href="http://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads">http://social.msdn.microsoft.com/Forums/en-US/smallbasic/threads</a>), but first simplify your SmallBasic code to isolate the issue before providing a short 'runnable' code sample.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsLoadImagesAsCircles"></a><span class="method">LoadImagesAsCircles</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Toggle whether image shapes will be loaded as circles - "True" or "False" (default is "False").</span><br />
+<br />
+<a class="tag" name="LDPhysicsMaxPolygonVertices"></a><span class="method">MaxPolygonVertices</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine maximum number of vertices on convex polygons (default 8).</span><br />
+<br />
+<a class="tag" name="LDPhysicsMaxProxies"></a><span class="method">MaxProxies</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine maximum number of objects 'proxies' (default 1024).</span><br />
+<br />
+<a class="tag" name="LDPhysicsMoveTire"></a><span class="method">MoveTire</span><span class="methodargs">(shapeName,force)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Move a tire shape, apply a forward or backward force.</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape to move.</span><br />
+<span class="info">force</span> <span class="text">The force to apply, positive is forward, negative is backward.</span><br />
+<br />
+<a class="tag" name="LDPhysicsPanView"></a><span class="method">PanView</span><span class="methodargs">(panHorizontal,panVertical)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pan the camera view, including window boundaries.</span><br />
+<span class="info">panHorizontal</span> <span class="text">Pan in the horizontal direction (negative is left).</span><br />
+<span class="info">panVertical</span> <span class="text">Pan in the vertical direction (negative is up).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsPositionIterations"></a><span class="method">PositionIterations</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine position iterations (default 2).</span><br />
+<br />
+<a class="tag" name="LDPhysicsRayCast"></a><span class="method">RayCast</span><span class="methodargs">(shapeName,angle,distance)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cast an invisible ray to detect the proximity of shapes.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to cast the ray from.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees to check, this can also be an array of angles.</span><br />
+<span class="info">distance</span> <span class="text">A maximum distance to check.</span><br />
+<span class="info">returns</span> <span class="text">An array of results, indexed by the shape name ("Wall" for a static obstacle) with a value equal to its distance.<br />The shapes are sorted to list them nearest first.<br />If an array of input angles is used, then only the nearest shape for each angle is returned and the value is the angle, not the distance.</span><br />
+<br />
+<a class="tag" name="LDPhysicsReadJson"></a><span class="method">ReadJson</span><span class="methodargs">(fileName,scale,reverseY,stationary,offsetX,offsetY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read in a json script compatible with R.U.B.E. and create a LDPhysics model.<br />See https://www.iforce2d.net/rube for more details.</span><br />
+<span class="info">fileName</span> <span class="text">The full path to the json file to read.</span><br />
+<span class="info">scale</span> <span class="text">Scale all shapes, default 1 (no scaling).</span><br />
+<span class="info">reverseY</span> <span class="text">Reverse the Y direction up to down ("True" or "False").</span><br />
+<span class="info">stationary</span> <span class="text">Set all shapes to be initially at rest, joint motors are still enabled ("True" or "False").</span><br />
+<span class="info">offsetX</span> <span class="text">Add an x coordinate offset to all shapes.</span><br />
+<span class="info">offsetY</span> <span class="text">Add a y coordinate offset to all shapes, especially useful when reverseY is set.</span><br />
+<span class="info">returns</span> <span class="text">A text array containing the LDPhysics commands used to create the model.</span><br />
+<br />
+<a class="tag" name="LDPhysicsRemoveChain"></a><span class="method">RemoveChain</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove a chain.</span><br />
+<span class="info">shapeName</span> <span class="text">The chain name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsRemoveFrozen"></a><span class="method">RemoveFrozen</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Removes all frozen shapes - outside the AABB for the engine.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsRemoveRope"></a><span class="method">RemoveRope</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove a rope.</span><br />
+<span class="info">shapeName</span> <span class="text">The rope name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsRemoveShape"></a><span class="method">RemoveShape</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsReset"></a><span class="method">Reset</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset (delete all physics engine attached shapes).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsRopeColour"></a><span class="method">RopeColour</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The colour to be used for ropes.</span><br />
+<br />
+<a class="tag" name="LDPhysicsScaling"></a><span class="method">Scaling</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine scaling (pixel/m, default 10).  It is not recommended to change this.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetAABB"></a><span class="method">SetAABB</span><span class="methodargs">(minX,maxX,minY,maxY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">The physics engine AABB (axis-aligned bounding box). The units are the engine units of m.  A Reset is required after setting.  It is not recommended to change this.</span><br />
+<span class="info">minX</span> <span class="text">The left coordinate of the universe (default -100).</span><br />
+<span class="info">maxX</span> <span class="text">The right coordinate of the universe (default 200).</span><br />
+<span class="info">minY</span> <span class="text">The top coordinate of the universe (default -100).</span><br />
+<span class="info">maxY</span> <span class="text">The bottom coordinate of the universe (default 200).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetAngle"></a><span class="method">SetAngle</span><span class="methodargs">(shapeName,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset the angle of rotation for a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">angle</span> <span class="text">The angle of rotation in degrees.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetBoundaries"></a><span class="method">SetBoundaries</span><span class="methodargs">(left,right,top,bottom)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set solid boundaries (positioning a boundary outside the GraphicsWindow removes it).</span><br />
+<span class="info">left</span> <span class="text">The left boundary X value.</span><br />
+<span class="info">right</span> <span class="text">The right boundary X value.</span><br />
+<span class="info">top</span> <span class="text">The top boundary Y value.</span><br />
+<span class="info">bottom</span> <span class="text">The bottom (ground) boundary Y value.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetBullet"></a><span class="method">SetBullet</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape as a bullet.  This prevents 'tunnelling' of fast moving small objects at the expense of performance.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetDamping"></a><span class="method">SetDamping</span><span class="methodargs">(shapeName,linear,angular)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a damping factor for a shape (default 0).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">linear</span> <span class="text">Linear damping factor.</span><br />
+<span class="info">angular</span> <span class="text">Angular damping factor.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetForce"></a><span class="method">SetForce</span><span class="methodargs">(shapeName,forceX,forceY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a force to apply to a shape (Remember F = ma).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">forceX</span> <span class="text">X component of the force.</span><br />
+<span class="info">forceY</span> <span class="text">Y component of the force.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetGravity"></a><span class="method">SetGravity</span><span class="methodargs">(gravX,gravY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the gravity direction and magnitude (default 0,100).</span><br />
+<span class="info">gravX</span> <span class="text">The X component of gravity.</span><br />
+<span class="info">gravY</span> <span class="text">The Y component of gravity.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetGroup"></a><span class="method">SetGroup</span><span class="methodargs">(shapeName,group,mask)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Control which sprites interact (collide) with other shapes.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">group</span> <span class="text">The group that the current shape belongs to (default 0).  This should be an integer between 0 and 15.</span><br />
+<span class="info">mask</span> <span class="text">An array of groups that this shape will collide with (default all groups 0,1,2,..,14,15).<br />To allow the shape to only interact with groups 0, 1 and 4 would be "1=0;2=1;3=4;".</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetImpulse"></a><span class="method">SetImpulse</span><span class="methodargs">(shapeName,impulseX,impulseY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set an impulse to a shape (a kick).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">impulseX</span> <span class="text">X component of the impulse.</span><br />
+<span class="info">impulseY</span> <span class="text">Y component of the impulse.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetJointMotor"></a><span class="method">SetJointMotor</span><span class="methodargs">(jointName,speed,maxForce)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a motor for selected joints (Line, Prismatic_H, Prismatic_V and Revolute).</span><br />
+<span class="info">jointName</span> <span class="text">The joint name.</span><br />
+<span class="info">speed</span> <span class="text">The desired motor speed.</span><br />
+<span class="info">maxForce</span> <span class="text">The maximum motor force (torque for Revolute).<br />A zero value turns motor off.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetPosition"></a><span class="method">SetPosition</span><span class="methodargs">(shapeName,posX,posY,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset shape position.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">posX</span> <span class="text">X component shape centre.</span><br />
+<span class="info">posY</span> <span class="text">Y component shape centre.</span><br />
+<span class="info">angle</span> <span class="text">The angle of rotation in degrees.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetRotation"></a><span class="method">SetRotation</span><span class="methodargs">(shapeName,rotation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape rotation speed.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">rotation</span> <span class="text">The angular rotation speed degrees/s.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetShapeGravity"></a><span class="method">SetShapeGravity</span><span class="methodargs">(shapeName,gravX,gravY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the gravity direction and magnitude for an individual shape (default 0,100).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">gravX</span> <span class="text">The X component of gravity.</span><br />
+<span class="info">gravY</span> <span class="text">The Y component of gravity.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetTire"></a><span class="method">SetTire</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set an object to act as a drivable tire for a top down game.<br />Usually gravity will be 0 and the shape should already be added to the engine.<br />The object should be initially positioned facing forward up on the display.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to make a tire.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetTireProperties"></a><span class="method">SetTireProperties</span><span class="methodargs">(shapeName,properties)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set tire properties, they include:<br /><br />AntiSkid (higher value reduces skid)<br />Drag (higher value increases forward/backward drag)<br />Brake (higher value increases braking power)<br />Straighten (higher value restores stearing more quickly)<br />BrakeStraighten (higher value restores stearing more quickly while braking)</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape.</span><br />
+<span class="info">properties</span> <span class="text">An array of one or more properties to set.<br />The index is one of the properties (case sensitive) and the value is the property value.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetTorque"></a><span class="method">SetTorque</span><span class="methodargs">(shapeName,torque)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a torque to a shape (a rotational kick).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">torque</span> <span class="text">The torque to apply.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsSetVelocity"></a><span class="method">SetVelocity</span><span class="methodargs">(shapeName,velX,velY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the velocity of a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape to modify.</span><br />
+<span class="info">velX</span> <span class="text">X component of the velocity.</span><br />
+<span class="info">velY</span> <span class="text">Y component of the velocity.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsTimeStep"></a><span class="method">TimeStep</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine timestep size (default 0.025).</span><br />
+<br />
+<a class="tag" name="LDPhysicsTimestepControl"></a><span class="method">TimestepControl</span><span class="methodargs">(timestep,velocityIterations,positionIterations)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Modify default timestep control parameters - also can be set using individual parameters.</span><br />
+<span class="info">timestep</span> <span class="text">Time-step (default 0.025).</span><br />
+<span class="info">velocityIterations</span> <span class="text">Velocity iterations (default 6).</span><br />
+<span class="info">positionIterations</span> <span class="text">Position iterations (default 2).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsToggleMoving"></a><span class="method">ToggleMoving</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Toggle a moving shape to be fixed and vice-versa.<br />This method also sets the rotation to be on or off to match if it is moving or fixed.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsToggleRotation"></a><span class="method">ToggleRotation</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Toggle a shape to not rotate and vice-versa.<br />This method toggles the rotation property for fixed and moving shapes.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsToggleSensor"></a><span class="method">ToggleSensor</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Toggle a shape to act as a sensor and vice-versa.<br />A sensor shape does not interact with other shapes, but still provides collision data.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<br />
+<a class="tag" name="LDPhysicsTurnTire"></a><span class="method">TurnTire</span><span class="methodargs">(shapeName,torque)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Turn a tire shape, steer left or right.</span><br />
+<span class="info">shapeName</span> <span class="text">The tire shape to turn.</span><br />
+<span class="info">torque</span> <span class="text">The torque, rotation force to apply, positive is turn right, negative is turn left.</span><br />
+<br />
+<a class="tag" name="LDPhysicsUngroupShapes"></a><span class="method">UngroupShapes</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove shape group pairing.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsUnsetBullet"></a><span class="method">UnsetBullet</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Unset a shape as a bullet.  This reverts the shape to normal collision detection.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsVelocityIterations"></a><span class="method">VelocityIterations</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine velocity iterations (default 6).</span><br />
+<br />
+<a class="tag" name="LDPhysicsVelocityThreshold"></a><span class="method">VelocityThreshold</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The physics engine velocity threshold for inelastic collisions 'sticky walls' (default 1).</span><br />
+<br />
+<a class="tag" name="LDPhysicsWakeAll"></a><span class="method">WakeAll</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Wake all sleeping shapes - shapes sleep due to no applied forces or contacts.  They wake automatically on any contact or applied force, so this action is rarely required.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDPhysicsWriteJson"></a><span class="method">WriteJson</span><span class="methodargs">(fileName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write out a json script compatible with R.U.B.E. from current LDPhysics model.<br />See https://www.iforce2d.net/rube for more details.</span><br />
+<span class="info">fileName</span> <span class="text">The full path to the json file to create.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

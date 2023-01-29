@@ -1,0 +1,993 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDShapes"></a><span class="group">LDShapes</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Shapes extension utilities.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDShapesAddAnimatedGif">AddAnimatedGif</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAddAnimatedImage">AddAnimatedImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAddPolygon">AddPolygon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesAddRegularPolygon">AddRegularPolygon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAddStar">AddStar</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAnimateOpacity">AnimateOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesAnimateRotation">AnimateRotation</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAnimateZoom">AnimateZoom</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAnimationCount">AnimationCount</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesAnimationInterval">AnimationInterval</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShapesAnimationPause">AnimationPause</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesAnimationResume">AnimationResume</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesAnimationSet">AnimationSet</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushColour">BrushColour</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushEllipse">BrushEllipse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesBrushGradient">BrushGradient</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushImage">BrushImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushPolygon">BrushPolygon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesBrushRectangle">BrushRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushRoundedRectangle">BrushRoundedRectangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesBrushShape">BrushShape</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesBrushText">BrushText</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesCentre">Centre</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesFastMove">FastMove</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesFont">Font</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetAllShapes">GetAllShapes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetAllShapesAt">GetAllShapesAt</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesGetColour">GetColour</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetLeft">GetLeft</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetOpacity">GetOpacity</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesGetProperties">GetProperties</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetProperty">GetProperty</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesGetTop">GetTop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesHeight">Height</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesLastEventShape">LastEventShape</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShapesLastEventType">LastEventType</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesMove">Move</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesMoveLine">MoveLine</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesMovePolygon">MovePolygon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesMoveTriangle">MoveTriangle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesOverlap">Overlap</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesOverlapBox">OverlapBox</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesOverlapCircle">OverlapCircle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesOverlapDetail">OverlapDetail</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDShapesPenColour">PenColour</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesPenStyle">PenStyle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesPenWidth">PenWidth</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesRasteriseTurtleLines">RasteriseTurtleLines</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesRemoveTurtleLines">RemoveTurtleLines</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesResetTurtle">ResetTurtle</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesReSize">ReSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesRotateAbout">RotateAbout</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesSetImage">SetImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesSetProperty">SetProperty</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesSetShapeEvent">SetShapeEvent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesSetSize">SetSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesSetTurtleImage">SetTurtleImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesShapeEvent">ShapeEvent</a>
+ <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+</td>
+<td>
+<a href="#LDShapesSkew">Skew</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesWidth">Width</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDShapesZIndex">ZIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDShapesZoomAll">ZoomAll</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDShapesAddAnimatedGif"></a><span class="method">AddAnimatedGif</span><span class="methodargs">(imageName,repeat)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates an animated gif shape.  <br />Do not add a very large number of these or performance may be degraded.</span><br />
+<span class="info">imageName</span> <span class="text">The animated gif file (local or network) to load.</span><br />
+<span class="info">repeat</span> <span class="text">Continuously repeat the animation "True" or "False".</span><br />
+<span class="info">returns</span> <span class="text">The animated gif shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAddAnimatedImage"></a><span class="method">AddAnimatedImage</span><span class="methodargs">(imageName,repeat,countX,countY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates an animation from a single image with multiple images on one layer.  <br />Do not add a very large number of these or performance may be degraded.</span><br />
+<span class="info">imageName</span> <span class="text">The image file (local or network) to load.<br />Can also be an ImageList image.</span><br />
+<span class="info">repeat</span> <span class="text">Continuously repeat the animation "True" or "False".</span><br />
+<span class="info">countX</span> <span class="text">The number of sub-images in the X direction.</span><br />
+<span class="info">countY</span> <span class="text">The number of sub-images in the Y direction.</span><br />
+<span class="info">returns</span> <span class="text">The animated shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAddPolygon"></a><span class="method">AddPolygon</span><span class="methodargs">(points)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a polygon shape.</span><br />
+<span class="info">points</span> <span class="text">An array of coordinates for the polygon corners with the form points[i][1] = x, points[i][2] = y.<br /><br />The number of points must be 3 or more.</span><br />
+<span class="info">returns</span> <span class="text">The polygon shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAddRegularPolygon"></a><span class="method">AddRegularPolygon</span><span class="methodargs">(numPoint,radius)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a regular polygon shape.</span><br />
+<span class="info">numPoint</span> <span class="text">The number of polygon sides.</span><br />
+<span class="info">radius</span> <span class="text">The centre to corner distance.</span><br />
+<span class="info">returns</span> <span class="text">The regular polygon shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAddStar"></a><span class="method">AddStar</span><span class="methodargs">(numPoint,innerRadius,outerRadius)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates a star shape.<br />Fun effects can be created with negative distances.</span><br />
+<span class="info">numPoint</span> <span class="text">The number of star points.</span><br />
+<span class="info">innerRadius</span> <span class="text">The centre to inner points' distance.</span><br />
+<span class="info">outerRadius</span> <span class="text">The centre to outer points' distance.</span><br />
+<span class="info">returns</span> <span class="text">The star shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimateOpacity"></a><span class="method">AnimateOpacity</span><span class="methodargs">(shapeName,interval,count)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to animate opacity, flash (fade out and in).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control to flash.</span><br />
+<span class="info">interval</span> <span class="text">The interval in ms for a complete flash cycle.<br />A value of 0 will stop the flashing.</span><br />
+<span class="info">count</span> <span class="text">The number of flashes.<br />A value of 0 will flash continuously.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimateRotation"></a><span class="method">AnimateRotation</span><span class="methodargs">(shapeName,interval,count)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to animate rotation (rotate continuously).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control to rotate.</span><br />
+<span class="info">interval</span> <span class="text">The interval in ms for a complete 360 degree rotation.<br />A value of 0 will stop the rotation.<br />A value less than 0 will rotate anti-clockwise.</span><br />
+<span class="info">count</span> <span class="text">The number of rotations.<br />A value of 0 will rotate continuously.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimateZoom"></a><span class="method">AnimateZoom</span><span class="methodargs">(shapeName,interval,count,scaleX,scaleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape to animate zooming (in and out).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control to zoom.</span><br />
+<span class="info">interval</span> <span class="text">The interval in ms for a complete zoom cycle.<br />A value of 0 will stop the zooming.</span><br />
+<span class="info">count</span> <span class="text">The number of zoom cycles.<br />A value of 0 will zoom continuously.</span><br />
+<span class="info">scaleX</span> <span class="text">The X zoom scale factor.</span><br />
+<span class="info">scaleY</span> <span class="text">The Y zoom scale factor.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimationCount"></a><span class="method">AnimationCount</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the number of images in an animated image.</span><br />
+<span class="info">shapeName</span> <span class="text">The animated image shape name.</span><br />
+<span class="info">returns</span> <span class="text">The number of images in the animated image.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimationInterval"></a><span class="method">AnimationInterval</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The update interval for animated images in ms (default 100).<br />A value of zero will pause all animated image updates, for example allowing AnimationSet to set images as required.<br />This is an internal timer that applies to all animated images that are not paused or completed a non-repeating cycle.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimationPause"></a><span class="method">AnimationPause</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pause an animated image.<br />Paused images can still be updated using AnimationSet</span><br />
+<span class="info">shapeName</span> <span class="text">The animated image shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimationResume"></a><span class="method">AnimationResume</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resume a previously paused animated image.</span><br />
+<span class="info">shapeName</span> <span class="text">The animated image shape name.</span><br />
+<br />
+<a class="tag" name="LDShapesAnimationSet"></a><span class="method">AnimationSet</span><span class="methodargs">(shapeName,image)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset animated image to a selected image.</span><br />
+<span class="info">shapeName</span> <span class="text">The animated image shape name.</span><br />
+<span class="info">image</span> <span class="text">The selected animated image number (indexed from 1).</span><br />
+<br />
+<a class="tag" name="LDShapesBrushColour"></a><span class="method">BrushColour</span><span class="methodargs">(shapeName,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape Brush colour.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">colour</span> <span class="text">The new brush colour.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushEllipse"></a><span class="method">BrushEllipse</span><span class="methodargs">(brush,x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draw an ellipse filled with a gradient of colours.</span><br />
+<span class="info">brush</span> <span class="text">A previously created gradient or image brush (LDShapes.BrushGradient LDShapes.BrushImage).</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the ellipse.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the ellipse.</span><br />
+<span class="info">width</span> <span class="text">The width of the ellipse.</span><br />
+<span class="info">height</span> <span class="text">The height of the ellipse.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushGradient"></a><span class="method">BrushGradient</span><span class="methodargs">(colours,orientation)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a linear or radial gradient brush.</span><br />
+<span class="info">colours</span> <span class="text">An array of colours to apply to the shape in a gradient.</span><br />
+<span class="info">orientation</span> <span class="text">The orientation for the gradient.<br />"H" horizontal.<br />"V" vertical.<br />"DU" diagonally up.<br />"DD" diagonally down.<br />"R"  radial (default if "")</span><br />
+<span class="info">returns</span> <span class="text">The gradient brush name.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushImage"></a><span class="method">BrushImage</span><span class="methodargs">(imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create an image brush.<br />These brushes should work anywhere that BrushGradient can be used.</span><br />
+<span class="info">imageName</span> <span class="text">The image to load to the brush.<br />Value returned from ImageList.LoadImage or local or network image file.</span><br />
+<span class="info">returns</span> <span class="text">The image brush name.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushPolygon"></a><span class="method">BrushPolygon</span><span class="methodargs">(brush,points)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draw a polygon filled with a gradient of colours.</span><br />
+<span class="info">brush</span> <span class="text">A previously created gradient or image brush (LDShapes.BrushGradient LDShapes.BrushImage).</span><br />
+<span class="info">points</span> <span class="text">An array of coordinates for the polygon corners with the form points[i][1] = x, points[i][2] = y.<br /><br />The number of points must be 3 or more.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushRectangle"></a><span class="method">BrushRectangle</span><span class="methodargs">(brush,x,y,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draw a rectangle filled with a gradient of colours.</span><br />
+<span class="info">brush</span> <span class="text">A previously created gradient or image brush (LDShapes.BrushGradient LDShapes.BrushImage).</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the rectangle.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the rectangle.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushRoundedRectangle"></a><span class="method">BrushRoundedRectangle</span><span class="methodargs">(brush,x,y,width,height,radius)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Draw a rounded rectangle filled with a gradient of colours.</span><br />
+<span class="info">brush</span> <span class="text">A previously created gradient or image brush (LDShapes.BrushGradient LDShapes.BrushImage).</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the rectangle.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the rectangle.</span><br />
+<span class="info">width</span> <span class="text">The width of the rectangle.</span><br />
+<span class="info">height</span> <span class="text">The height of the rectangle.</span><br />
+<span class="info">radius</span> <span class="text">The radius of the rounded corners.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushShape"></a><span class="method">BrushShape</span><span class="methodargs">(shapeName,brush)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape Brush style as a gradient of colours.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">brush</span> <span class="text">A previously created gradient or image brush (LDShapes.BrushGradient LDShapes.BrushImage).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesBrushText"></a><span class="method">BrushText</span><span class="methodargs">(text,background,foreground)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a text brush.<br />These brushes should work anywhere that BrushGradient can be used.</span><br />
+<span class="info">text</span> <span class="text">The text to add to the brush.<br />The current GraphicsWindow font is used.</span><br />
+<span class="info">background</span> <span class="text">The background colour.</span><br />
+<span class="info">foreground</span> <span class="text">The foreground (pen) colour.</span><br />
+<span class="info">returns</span> <span class="text">The text brush name.</span><br />
+<br />
+<a class="tag" name="LDShapesCentre"></a><span class="method">Centre</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Centre the shape on a point, also works for zoomed shapes.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">x</span> <span class="text">The x coordinate of the centre.</span><br />
+<span class="info">y</span> <span class="text">The y coordinate of the centre.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesFastMove"></a><span class="method">FastMove</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves the shape with the specified name to a new position.<br />This method is maximally optimised for speed.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to move.</span><br />
+<span class="info">x</span> <span class="text">The x co-ordinate of the new position.</span><br />
+<span class="info">y</span> <span class="text">The y co-ordinate of the new position.</span><br />
+<br />
+<a class="tag" name="LDShapesFont"></a><span class="method">Font</span><span class="methodargs">(shapeName,family,size,bold,italic)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape Font.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">family</span> <span class="text">The new font family name<br />See LDUtilities.FontList() for available font families.</span><br />
+<span class="info">size</span> <span class="text">The new font size.</span><br />
+<span class="info">bold</span> <span class="text">The new font bold state ("True" or "False").</span><br />
+<span class="info">italic</span> <span class="text">The new font italic state ("True" or "False").</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesGetAllShapes"></a><span class="method">GetAllShapes</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of all currently created shapes.</span><br />
+<span class="info">returns</span> <span class="text">An array of shape names.</span><br />
+<br />
+<a class="tag" name="LDShapesGetAllShapesAt"></a><span class="method">GetAllShapesAt</span><span class="methodargs">(x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of all of the shapes (if any) at the specified coordinates.<br />The coordinates could be the mouse coordinates for example.</span><br />
+<span class="info">x</span> <span class="text">The X coordinate</span><br />
+<span class="info">y</span> <span class="text">The Y coordinate</span><br />
+<span class="info">returns</span> <span class="text">An array of shape names or "False".<br />For multiple shapes, the returned array is ordered from top visual layer to bottom.</span><br />
+<br />
+<a class="tag" name="LDShapesGetColour"></a><span class="method">GetColour</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get shape Brush and Pen colours.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">A 3 element array<br />1) shape brush (or background) colour in hex format<br />2) shape opacity (0 to 100)<br />3) shape pen (or foreground) colour in hex format</span><br />
+<br />
+<a class="tag" name="LDShapesGetLeft"></a><span class="method">GetLeft</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the left position of a shape (works for triangles, polygons and lines).<br />Also works for shapes while animating.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">The x coordinate of the left edge of the shape.</span><br />
+<br />
+<a class="tag" name="LDShapesGetOpacity"></a><span class="method">GetOpacity</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the opacity of a shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape.</span><br />
+<span class="info">returns</span> <span class="text">The opacity of the object as a value between 0 and 100.  0 is completely transparent and 100 is completely opaque.</span><br />
+<br />
+<a class="tag" name="LDShapesGetProperties"></a><span class="method">GetProperties</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a list of shape properties.  These are .Net UIElement properties.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">An array of properties and their values.</span><br />
+<br />
+<a class="tag" name="LDShapesGetProperty"></a><span class="method">GetProperty</span><span class="methodargs">(shapeName,property)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a shape property.  This is a .Net UIElement property.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">property</span> <span class="text">The property name to get.</span><br />
+<span class="info">returns</span> <span class="text">The value of the property.</span><br />
+<br />
+<a class="tag" name="LDShapesGetTop"></a><span class="method">GetTop</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the top position of a shape (works for triangles, polygons and lines).<br />Also works for shapes while animating.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">The y coordinate of the top edge of the shape.</span><br />
+<br />
+<a class="tag" name="LDShapesHeight"></a><span class="method">Height</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the shape's visible (including zoom) height.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">The shape visible height.</span><br />
+<br />
+<a class="tag" name="LDShapesLastEventShape"></a><span class="method">LastEventShape</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last shape for which an event occured (ShapeEvent).</span><br />
+<br />
+<a class="tag" name="LDShapesLastEventType"></a><span class="method">LastEventType</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The last shape event type which an event occured (ShapeEvent).  May be one of the following.<br />"MouseDown"<br />"MouseUp"<br />"MouseEnter"<br />"MouseLeave"<br />"GotFocus"<br />"LostFocus"</span><br />
+<br />
+<a class="tag" name="LDShapesMove"></a><span class="method">Move</span><span class="methodargs">(shapeName,x,y)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves a triangle or polygon top-left position.<br />This method also works for lines (Shapes.AddLine).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name (a triangle, polygon or line shape).</span><br />
+<span class="info">x</span> <span class="text">The X (left) coordinate for the triangle, polygon or line.</span><br />
+<span class="info">y</span> <span class="text">The Y (top) coordinate for the triangle, polygon or line.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesMoveLine"></a><span class="method">MoveLine</span><span class="methodargs">(shapeName,x1,y1,x2,y2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves a line shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name (a line created with Shapes.AddLine).</span><br />
+<span class="info">x1</span> <span class="text">The first X coordinate to move the line to.</span><br />
+<span class="info">y1</span> <span class="text">The first Y coordinate to move the line to.</span><br />
+<span class="info">x2</span> <span class="text">The second X coordinate to move the line to.</span><br />
+<span class="info">y2</span> <span class="text">The second Y coordinate to move the line to.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesMovePolygon"></a><span class="method">MovePolygon</span><span class="methodargs">(shapeName,points)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves a polygon shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name (a polygon created with LDShapes.AddPolygon).</span><br />
+<span class="info">points</span> <span class="text">An array of new coordinates for the polygon corners with the form points[i][1] = x, points[i][2] = y.<br /><br />The number of points must be 3 or more and can change with each call.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesMoveTriangle"></a><span class="method">MoveTriangle</span><span class="methodargs">(shapeName,x1,y1,x2,y2,x3,y3)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Moves a triangle shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name (a triangle created with Shapes.AddTriangle).</span><br />
+<span class="info">x1</span> <span class="text">The first X coordinate to move the triangle to.</span><br />
+<span class="info">y1</span> <span class="text">The first Y coordinate to move the triangle to.</span><br />
+<span class="info">x2</span> <span class="text">The second X coordinate to move the triangle to.</span><br />
+<span class="info">y2</span> <span class="text">The second Y coordinate to move the triangle to.</span><br />
+<span class="info">x3</span> <span class="text">The third X coordinate to move the triangle to.</span><br />
+<span class="info">y3</span> <span class="text">The third Y coordinate to move the triangle to.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesOverlap"></a><span class="method">Overlap</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks for shape overlap (collision detection for any ellipse or rectangle shape types).<br />The first shape should be unZoomed and unRotated.</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDShapesOverlapBox"></a><span class="method">OverlapBox</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks for shape overlap of bounding boxes (collision detection).</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDShapesOverlapCircle"></a><span class="method">OverlapCircle</span><span class="methodargs">(shape1,shape2)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Checks for shape overlap of bounding circles (collision detection).</span><br />
+<span class="info">shape1</span> <span class="text">The first shape name.</span><br />
+<span class="info">shape2</span> <span class="text">The second shape name.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False".</span><br />
+<br />
+<a class="tag" name="LDShapesOverlapDetail"></a><span class="method">OverlapDetail</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Following a call to an Overlap method, this property provides additional detail abut the intersection.<br />Result may be one of:<br />"Empty" - no intersection<br />"FullyContains" - shape1 is completely inside shape2<br />"Intersects" - overlap but neither is fully contained<br />"FullyInside" - shape2 is completely inside shape1</span><br />
+<br />
+<a class="tag" name="LDShapesPenColour"></a><span class="method">PenColour</span><span class="methodargs">(shapeName,colour)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape Pen colour.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">colour</span> <span class="text">The new pen colour.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesPenStyle"></a><span class="method">PenStyle</span><span class="methodargs">(shapeName,dash,space)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape Pen style (dash, dot etc).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">dash</span> <span class="text">The dash length.</span><br />
+<span class="info">space</span> <span class="text">The space length.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesPenWidth"></a><span class="method">PenWidth</span><span class="methodargs">(shapeName,width)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape Pen width.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">width</span> <span class="text">The new pen width.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesRasteriseTurtleLines"></a><span class="method">RasteriseTurtleLines</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rasterise all turtle trail lines.<br />When the number of turtle trails is large the program may slow due to the number of line shapes (trails) present.<br />This converts the turtle trails from line shapes to background drawings.</span><br />
+<br />
+<a class="tag" name="LDShapesRemoveTurtleLines"></a><span class="method">RemoveTurtleLines</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Remove all turtle trail lines.</span><br />
+<br />
+<a class="tag" name="LDShapesResetTurtle"></a><span class="method">ResetTurtle</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset the Turtle after a GraphicsWindow.Clear().</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesReSize"></a><span class="method">ReSize</span><span class="methodargs">(shapeName,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Resize shape width and height (an absolute version of zoom).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">width</span> <span class="text">The shape width.</span><br />
+<span class="info">height</span> <span class="text">The shape height.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesRotateAbout"></a><span class="method">RotateAbout</span><span class="methodargs">(shapeName,x,y,angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Rotate a shape about a point.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape name.</span><br />
+<span class="info">x</span> <span class="text">The X coordinate to rotate the shape about.</span><br />
+<span class="info">y</span> <span class="text">The Y coordinate to rotate the shape about.</span><br />
+<span class="info">angle</span> <span class="text">The angle in degrees to rotate the shape.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesSetImage"></a><span class="method">SetImage</span><span class="methodargs">(shapeName,imageName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set or change an image in a button or image shape.</span><br />
+<span class="info">shapeName</span> <span class="text">The image or button name.</span><br />
+<span class="info">imageName</span> <span class="text">The image to load.<br />Value returned from ImageList.LoadImage or local or network image file.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesSetProperty"></a><span class="method">SetProperty</span><span class="methodargs">(shapeName,property,value)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set a shape property.  This is a .Net UIElement property.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">property</span> <span class="text">The property name to set.</span><br />
+<span class="info">value</span> <span class="text">The value to set the property to.</span><br />
+<br />
+<a class="tag" name="LDShapesSetShapeEvent"></a><span class="method">SetShapeEvent</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Register a shape to record mouse events: MouseDown, MouseUp, MouseEnter, MouseLeave, GotFocus and LostFocus.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control to add.</span><br />
+<br />
+<a class="tag" name="LDShapesSetSize"></a><span class="method">SetSize</span><span class="methodargs">(shapeName,width,height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Reset the size of a shape as if it was created with the new size.<br />The position (top left point) is unchanged.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">width</span> <span class="text">The shape width.</span><br />
+<span class="info">height</span> <span class="text">The shape height.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesSetTurtleImage"></a><span class="method">SetTurtleImage</span><span class="methodargs">(imageName,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the turtle to an image.</span><br />
+<span class="info">imageName</span> <span class="text">The image to load for the turtle.<br />Value returned from ImageList.LoadImage or local or network image file.</span><br />
+<span class="info">size</span> <span class="text">The size to scale the turtle to (default turtle is 16).</span><br />
+<br />
+<a class="tag" name="LDShapesShapeEvent"></a><span class="method">ShapeEvent</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseEvent.png" />
+<br />
+<span class="text">Event when a shape event occurs to a registered shape (SetShapeEvent)</span><br />
+<br />
+<a class="tag" name="LDShapesSkew"></a><span class="method">Skew</span><span class="methodargs">(shapeName,angleX,angleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Skews the shape with the specified name by the specified angles.</span><br />
+<span class="info">shapeName</span> <span class="text">The name of the shape to skew.</span><br />
+<span class="info">angleX</span> <span class="text">The angle to skew the shape in the X direction.</span><br />
+<span class="info">angleY</span> <span class="text">The angle to skew the shape in the Y direction.</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesWidth"></a><span class="method">Width</span><span class="methodargs">(shapeName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the shape's visible (including zoom) width.</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">returns</span> <span class="text">The shape visible width.</span><br />
+<br />
+<a class="tag" name="LDShapesZIndex"></a><span class="method">ZIndex</span><span class="methodargs">(shapeName,z_index)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set shape z index (layer position negative are background and positive are foreground - default 0).</span><br />
+<span class="info">shapeName</span> <span class="text">The shape or control name.</span><br />
+<span class="info">z_index</span> <span class="text">The z-index (zero, positive or negative interger).</span><br />
+<span class="info">returns</span> <span class="text">None.</span><br />
+<br />
+<a class="tag" name="LDShapesZoomAll"></a><span class="method">ZoomAll</span><span class="methodargs">(scaleX,scaleY)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Zoom all shapes.</span><br />
+<span class="info">scaleX</span> <span class="text">The x-axis zoom level.</span><br />
+<span class="info">scaleY</span> <span class="text">The y-axis zoom level.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1460 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDIcon"></a><span class="group">LDIcon</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Create an icon (*.ico) or cursor (*.cur) file from an image.</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDIconAddImages">AddImages</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconBlurring">Blurring</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconBMatrix">BMatrix</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconCartoon">Cartoon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconCartoon">Cartoon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconcmyk2rgb">cmyk2rgb</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconCMYKLayers">CMYKLayers</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconcolor2greyscale">color2greyscale</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconColorAccent">ColorAccent</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconColorFiltration">ColorFiltration</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconContrastStretching">ContrastStretching</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconContrastStretching">ContrastStretching</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconCreateCursor">CreateCursor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconCreateIcon">CreateIcon</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconDFT">DFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconDFT">DFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconGammaCorrection">GammaCorrection</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconGammaCorrectionGS">GammaCorrectionGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconGF1">GF1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconGF2">GF2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconGF3">GF3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconGMatrix">GMatrix</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconHistogram">Histogram</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconHistogramShift">HistogramShift</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconHistoramEqualization">HistoramEqualization</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconHPF1">HPF1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconHPF2">HPF2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconHPF3">HPF3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconHPF4">HPF4</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconhsv2rgb">hsv2rgb</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconiDFT">iDFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconiDFT2">iDFT2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageCloseGS">ImageCloseGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageCloseGS">ImageCloseGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageDilatationFilterGS">ImageDilatationFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageDilatationFilterGS">ImageDilatationFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageErosionFilterGS">ImageErosionFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageErosionFilterGS">ImageErosionFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageFilterColor">ImageFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageFilterColor">ImageFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageFilterColor">ImageFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageFilterGS">ImageFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageFilterGS">ImageFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageFilterGS">ImageFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageKuwaharaFilterColor">ImageKuwaharaFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageKuwaharaFilterGS">ImageKuwaharaFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageMedianFilterColor">ImageMedianFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageMedianFilterGS">ImageMedianFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageOpenGS">ImageOpenGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageOpenGS">ImageOpenGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImagePrewittFilterColor">ImagePrewittFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImagePrewittFilterGS">ImagePrewittFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageSDROMFilterColor">ImageSDROMFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageSDROMFilterColor">ImageSDROMFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageSDROMFilterGS">ImageSDROMFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageSDROMFilterGS">ImageSDROMFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconImageSobelFilterColor">ImageSobelFilterColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconImageSobelFilterGS">ImageSobelFilterGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconInverseImage">InverseImage</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconiSDFT">iSDFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconiSDFT2">iSDFT2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLaplaceF1">LaplaceF1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLaplaceF2">LaplaceF2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconLaplaceF3">LaplaceF3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLaplaceF4">LaplaceF4</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLogaritmicScaling">LogaritmicScaling</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconLPF1">LPF1</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLPF2">LPF2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconLPF3">LPF3</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconLPF4">LPF4</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconMagnitude">Magnitude</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconMatrix2Image">Matrix2Image</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconMatrix2Image">Matrix2Image</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconMatrix2ImageLog">Matrix2ImageLog</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconMatrix2ImageMax">Matrix2ImageMax</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconMaxBrightness">MaxBrightness</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconMinBrightness">MinBrightness</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconNegativeImageColor">NegativeImageColor</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconNegativeImageGS">NegativeImageGS</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconOilPaint">OilPaint</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconPhase">Phase</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconResize">Resize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconResize2">Resize2</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconrgb2cmyk">rgb2cmyk</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconrgb2hsv">rgb2hsv</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconRGBHistogram">RGBHistogram</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconRGBLayers">RGBLayers</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconRGBMatrix">RGBMatrix</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconRMatrix">RMatrix</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconRotate">Rotate</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconSDFT">SDFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconSDFT">SDFT</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconSepia">Sepia</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconSetSizes">SetSizes</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconShift">Shift</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconShift">Shift</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconSketch">Sketch</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconSketchCharcoal">SketchCharcoal</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconSquareImage">SquareImage</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDIconSubtractImages">SubtractImages</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconTiltShift">TiltShift</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconToBlackwhite">ToBlackwhite</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconToBlackwhiteInverse">ToBlackwhiteInverse</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconToGreyscale">ToGreyscale</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIconToGreyscaleAVG">ToGreyscaleAVG</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIconToGreyscaleLightness">ToGreyscaleLightness</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDIconAddImages"></a><span class="method">AddImages</span><span class="methodargs">(Left,Right)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and adds</span><br />
+<span class="info">Left</span> <span class="text">Image</span><br />
+<span class="info">Right</span> <span class="text">Image</span><br />
+<span class="info">returns</span> <span class="text">Product of addition</span><br />
+<br />
+<a class="tag" name="LDIconBlurring"></a><span class="method">Blurring</span><span class="methodargs">(OriginalImage,X,Y,r)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image bluring</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">X</span> <span class="text">Horizontal coordinate</span><br />
+<span class="info">Y</span> <span class="text">Vertical coordinate</span><br />
+<span class="info">r</span> <span class="text">Sharp region radius</span><br />
+<span class="info">returns</span> <span class="text">Blurred image</span><br />
+<br />
+<a class="tag" name="LDIconBMatrix"></a><span class="method">BMatrix</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Separates blue color layer</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Blue color layer</span><br />
+<br />
+<a class="tag" name="LDIconCartoon"></a><span class="method">Cartoon</span><span class="methodargs">(OriginalImage,R,Level,InverseThreshold,EdgeFilter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cartoon effect received by combining oil paint algorithm and edge detecting</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">R</span> <span class="text">Radius of oil paint algorithm</span><br />
+<span class="info">Level</span> <span class="text">Available levels of intensity</span><br />
+<span class="info">InverseThreshold</span> <span class="text">Inverse threshold</span><br />
+<span class="info">EdgeFilter</span> <span class="text">Edge detecting mask</span><br />
+<span class="info">returns</span> <span class="text">Cartoon effect result</span><br />
+<br />
+<a class="tag" name="LDIconCartoon"></a><span class="method">Cartoon</span><span class="methodargs">(OriginalImage,R,Level,InverseThreshold)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Cartoon effect received by combining oil paint algorithm and Sobel edge detecting</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">R</span> <span class="text">Radius of oil paint algorithm</span><br />
+<span class="info">Level</span> <span class="text">Available levels of intensity</span><br />
+<span class="info">InverseThreshold</span> <span class="text">Inverse threshold</span><br />
+<span class="info">returns</span> <span class="text">Cartoon effect result</span><br />
+<br />
+<a class="tag" name="LDIconcmyk2rgb"></a><span class="method">cmyk2rgb</span><span class="methodargs">(cmyk)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Transforms CMYK color model to RGB</span><br />
+<span class="info">cmyk</span> <span class="text">CMYK values [C, M, Y, K]</span><br />
+<span class="info">returns</span> <span class="text">RGB color</span><br />
+<br />
+<a class="tag" name="LDIconCMYKLayers"></a><span class="method">CMYKLayers</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Creates CMYK layesr from RGB image</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">CMYK layers as RGB bitmaps</span><br />
+<br />
+<a class="tag" name="LDIconcolor2greyscale"></a><span class="method">color2greyscale</span><span class="methodargs">(pixel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts RGB pixel to greyscale using luminance method</span><br />
+<span class="info">pixel</span> <span class="text">RGB pixel</span><br />
+<span class="info">returns</span> <span class="text">Greyscale pixel</span><br />
+<br />
+<a class="tag" name="LDIconColorAccent"></a><span class="method">ColorAccent</span><span class="methodargs">(OriginalImage,h,range)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Color accent filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">h</span> <span class="text">Hue of accented color</span><br />
+<span class="info">range</span> <span class="text">Range of acceptance</span><br />
+<span class="info">returns</span> <span class="text">Color accent filtration</span><br />
+<br />
+<a class="tag" name="LDIconColorFiltration"></a><span class="method">ColorFiltration</span><span class="methodargs">(OriginalImage,color)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image color filtration with defined color filter</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">color</span> <span class="text">Color filter. Available color filters are: Magenta, Yellow, Cyan, Magenta-Yellow, Cyan-Magenta, Yellow-Cyan</span><br />
+<span class="info">returns</span> <span class="text">Result of color filtration</span><br />
+<br />
+<a class="tag" name="LDIconContrastStretching"></a><span class="method">ContrastStretching</span><span class="methodargs">(OriginalImage,RMinSet,RMaxSet)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and brighten using contrast stretching method.<br />Brightness minimum and maximum available values are by default 0 and 255.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">RMinSet</span> <span class="text">Minimum available brightness value</span><br />
+<span class="info">RMaxSet</span> <span class="text">Maximum available brightness value</span><br />
+<span class="info">returns</span> <span class="text">Brigthen greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconContrastStretching"></a><span class="method">ContrastStretching</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">onverts ARGB images to greyscale using luminance method and brighten using contrast stretching method.<br />Brightness minimum and maximum available values are by default 0 and 255.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Brigthen greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconCreateCursor"></a><span class="method">CreateCursor</span><span class="methodargs">(imageName,cursorPath,size,xHotSpot,yHotSpot)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create a cursor file.</span><br />
+<span class="info">imageName</span> <span class="text">The file path or ImageList image to create cursor from.  Best results will be obtained from a square image.</span><br />
+<span class="info">cursorPath</span> <span class="text">The full path to save the cursor file (using extension *.cur).</span><br />
+<span class="info">size</span> <span class="text">The pixel size of cursor.</span><br />
+<span class="info">xHotSpot</span> <span class="text">Pixel from left of cursor hot spot, indexed from 0.<br />For images where the aspect ratio is maintained, the xHotSpot is also scaled.</span><br />
+<span class="info">yHotSpot</span> <span class="text">Pixel from top of cursor hot spot, indexed from 0.</span><br />
+<span class="info">returns</span> <br />
+<a class="tag" name="LDIconCreateIcon"></a><span class="method">CreateIcon</span><span class="methodargs">(imageName,iconPath)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Create an icon file with 16*16, 24*24, 32*32, 64*64, 128*128 and 256*256 embedded images.<br />To change these defaults use SetSizes method.</span><br />
+<span class="info">imageName</span> <span class="text">The file path or ImageList image to create icon from.  Best results will be obtained from a square image.</span><br />
+<span class="info">iconPath</span> <span class="text">The full path to save the icon file (using extension *.ico).</span><br />
+<span class="info">returns</span> <span class="text">"SUCCESS" or "FAILED"</span><br />
+<br />
+<a class="tag" name="LDIconDFT"></a><span class="method">DFT</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Discrete Fourier Transform of image</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Image spectrum</span><br />
+<br />
+<a class="tag" name="LDIconDFT"></a><span class="method">DFT</span><span class="methodargs">(Data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Discrete Fourier Transform of two-dimensional signal</span><br />
+<span class="info">Data</span> <span class="text">Two-dimensional signal</span><br />
+<span class="info">returns</span> <span class="text">Spectrum</span><br />
+<br />
+<a class="tag" name="LDIconGammaCorrection"></a><span class="method">GammaCorrection</span><span class="methodargs">(OriginalImage,Gamma)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts image to greyscale and perform gamma correction</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Gamma</span> <span class="text">Gamma correction coefficient</span><br />
+<span class="info">returns</span> <span class="text">Gamma corrected image</span><br />
+<br />
+<a class="tag" name="LDIconGammaCorrectionGS"></a><span class="method">GammaCorrectionGS</span><span class="methodargs">(OriginalImage,Gamma)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gamma correction</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Gamma</span> <span class="text">Gamma correction coefficient</span><br />
+<span class="info">returns</span> <span class="text">Gamma corrected image</span><br />
+<br />
+<a class="tag" name="LDIconGF1"></a><span class="method">GF1</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gausian filter</span><br />
+<span class="info">returns</span> <span class="text">Gausian filter</span><br />
+<br />
+<a class="tag" name="LDIconGF2"></a><span class="method">GF2</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gausian filter</span><br />
+<span class="info">returns</span> <span class="text">Gausian filter</span><br />
+<br />
+<a class="tag" name="LDIconGF3"></a><span class="method">GF3</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gausian filter</span><br />
+<span class="info">returns</span> <span class="text">Gausian filter</span><br />
+<br />
+<a class="tag" name="LDIconGMatrix"></a><span class="method">GMatrix</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Separates green color layer</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Green color layer</span><br />
+<br />
+<a class="tag" name="LDIconHistogram"></a><span class="method">Histogram</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and returns histogram</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Image histogram (each list position corresponds to brightness level)</span><br />
+<br />
+<a class="tag" name="LDIconHistogramShift"></a><span class="method">HistogramShift</span><span class="methodargs">(OriginalImage,offset)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and shifts its histogram with respect to given offset.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">offset</span> <span class="text">Shift offset</span><br />
+<span class="info">returns</span> <span class="text">Shifted greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconHistoramEqualization"></a><span class="method">HistoramEqualization</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and enhances contrast using equalization method.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Greyscaled contrast-enhances image</span><br />
+<br />
+<a class="tag" name="LDIconHPF1"></a><span class="method">HPF1</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">High pass filter</span><br />
+<span class="info">returns</span> <span class="text">High pass filter</span><br />
+<br />
+<a class="tag" name="LDIconHPF2"></a><span class="method">HPF2</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">High pass filter</span><br />
+<span class="info">returns</span> <span class="text">High pass filter</span><br />
+<br />
+<a class="tag" name="LDIconHPF3"></a><span class="method">HPF3</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">High pass filter</span><br />
+<span class="info">returns</span> <span class="text">High pass filter</span><br />
+<br />
+<a class="tag" name="LDIconHPF4"></a><span class="method">HPF4</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">High pass filter</span><br />
+<span class="info">returns</span> <span class="text">High pass filter</span><br />
+<br />
+<a class="tag" name="LDIconhsv2rgb"></a><span class="method">hsv2rgb</span><span class="methodargs">(hsv)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Transforms HSV color model to RGB</span><br />
+<span class="info">hsv</span> <span class="text">HSV values [H, S, V]</span><br />
+<span class="info">returns</span> <span class="text">RGB color</span><br />
+<br />
+<a class="tag" name="LDIconiDFT"></a><span class="method">iDFT</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Inverse Discrete Fourier Transform</span><br />
+<span class="info">Spectrum</span> <span class="text">Image spectrum</span><br />
+<span class="info">returns</span> <span class="text">Image</span><br />
+<br />
+<a class="tag" name="LDIconiDFT2"></a><span class="method">iDFT2</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Inverse Discrete Fourier Transform</span><br />
+<span class="info">Spectrum</span> <span class="text">Signal spectrum</span><br />
+<span class="info">returns</span> <span class="text">Signal</span><br />
+<br />
+<a class="tag" name="LDIconImageCloseGS"></a><span class="method">ImageCloseGS</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image to greyscale convertion and opening with element of given size</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Opening element size</span><br />
+<span class="info">returns</span> <span class="text">Result of opening operation</span><br />
+<br />
+<a class="tag" name="LDIconImageCloseGS"></a><span class="method">ImageCloseGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image to greyscale convertion and closing with 3x3 element</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Result of closing operation</span><br />
+<br />
+<a class="tag" name="LDIconImageDilatationFilterGS"></a><span class="method">ImageDilatationFilterGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with dilatation mask of 3 x 3 dimension.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageDilatationFilterGS"></a><span class="method">ImageDilatationFilterGS</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with dilatation mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Dilatation mask dimension</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageErosionFilterGS"></a><span class="method">ImageErosionFilterGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with erosion mask of 3 x 3 dimension.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageErosionFilterGS"></a><span class="method">ImageErosionFilterGS</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with erosion mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Erosion mask dimension</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterColor"></a><span class="method">ImageFilterColor</span><span class="methodargs">(OriginalImage,Filter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates image convolution with given filter mask.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterColor"></a><span class="method">ImageFilterColor</span><span class="methodargs">(OriginalImage,Filter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates image convolution with given filter mask.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterColor"></a><span class="method">ImageFilterColor</span><span class="methodargs">(OriginalImage,Filter,Coef)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates image convolution with given filter mask.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">Coef</span> <span class="text">Normalization coefficient</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterGS"></a><span class="method">ImageFilterGS</span><span class="methodargs">(OriginalImage,Filter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image convolution with given filter mask.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">returns</span> <span class="text">Filtered greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterGS"></a><span class="method">ImageFilterGS</span><span class="methodargs">(OriginalImage,Filter,Coef)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image convolution with given filter mask.<br />Normalization using given coefficient.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">Coef</span> <span class="text">Normalization coefficient</span><br />
+<span class="info">returns</span> <span class="text">Filtered greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconImageFilterGS"></a><span class="method">ImageFilterGS</span><span class="methodargs">(OriginalImage,Filter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image convolution with given filter mask.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Filter</span> <span class="text">Filter mask</span><br />
+<span class="info">returns</span> <span class="text">Filtered greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconImageKuwaharaFilterColor"></a><span class="method">ImageKuwaharaFilterColor</span><span class="methodargs">(OriginalImage,FilterSize)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Kuwahara filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">FilterSize</span> <span class="text">Kuwahara filter size</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageKuwaharaFilterGS"></a><span class="method">ImageKuwaharaFilterGS</span><span class="methodargs">(OriginalImage,FilterSize)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image to greyscale convertion and kuwahara filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">FilterSize</span> <span class="text">Kuwahara filter size</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageMedianFilterColor"></a><span class="method">ImageMedianFilterColor</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates image filtartion with median mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Median mask dimension</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageMedianFilterGS"></a><span class="method">ImageMedianFilterGS</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with median mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Median mask dimension</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageOpenGS"></a><span class="method">ImageOpenGS</span><span class="methodargs">(OriginalImage,size)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image to greyscale convertion and opening with element of given size</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">Opening element size</span><br />
+<span class="info">returns</span> <span class="text">Result of opening operation</span><br />
+<br />
+<a class="tag" name="LDIconImageOpenGS"></a><span class="method">ImageOpenGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image to greyscale convertion and opening with 3x3 element</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Result of opening operation</span><br />
+<br />
+<a class="tag" name="LDIconImagePrewittFilterColor"></a><span class="method">ImagePrewittFilterColor</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates module of image convolution with Prewitt operators (horizontal and vertical axis)</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImagePrewittFilterGS"></a><span class="method">ImagePrewittFilterGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates module of image convolution with Prewitt operators (horizontal and vertical axis)</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageSDROMFilterColor"></a><span class="method">ImageSDROMFilterColor</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Ccalculates image filtartion with SD-ROM mask of size 3.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageSDROMFilterColor"></a><span class="method">ImageSDROMFilterColor</span><span class="methodargs">(OriginalImage,size,thresholds)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates image filtartion with SD-ROM mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">SD-ROM mask size</span><br />
+<span class="info">thresholds</span> <span class="text">Array of thresholds</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageSDROMFilterGS"></a><span class="method">ImageSDROMFilterGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with SD-ROM mask of size 3.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageSDROMFilterGS"></a><span class="method">ImageSDROMFilterGS</span><span class="methodargs">(OriginalImage,size,thresholds)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates image filtartion with SD-ROM mask of given size.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Orignal ARGB image</span><br />
+<span class="info">size</span> <span class="text">SD-ROM mask size</span><br />
+<span class="info">thresholds</span> <span class="text">Array of thresholds</span><br />
+<span class="info">returns</span> <span class="text">Filtred image</span><br />
+<br />
+<a class="tag" name="LDIconImageSobelFilterColor"></a><span class="method">ImageSobelFilterColor</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates module of image convolution with Sobel operators (horizontal and vertical axis)</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconImageSobelFilterGS"></a><span class="method">ImageSobelFilterGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and calculates module of image convolution with Sobel operators (horizontal and vertical axis)</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Filtered image</span><br />
+<br />
+<a class="tag" name="LDIconInverseImage"></a><span class="method">InverseImage</span><span class="methodargs">(OriginalImage,threshold)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to greyscale using luminance method and inverses it with respect to given threshold</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">threshold</span> <span class="text">Inverse threshold</span><br />
+<span class="info">returns</span> <span class="text">Inversed image</span><br />
+<br />
+<a class="tag" name="LDIconiSDFT"></a><span class="method">iSDFT</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Inverse shifted Discrete Fourier Transform</span><br />
+<span class="info">Spectrum</span> <span class="text">Image spectrum</span><br />
+<span class="info">returns</span> <span class="text">Image</span><br />
+<br />
+<a class="tag" name="LDIconiSDFT2"></a><span class="method">iSDFT2</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Inverse shifted Discrete Fourier Transform</span><br />
+<span class="info">Spectrum</span> <span class="text">Signal spectrum</span><br />
+<span class="info">returns</span> <span class="text">Signal</span><br />
+<br />
+<a class="tag" name="LDIconLaplaceF1"></a><span class="method">LaplaceF1</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Laplace filter</span><br />
+<span class="info">returns</span> <span class="text">Laplace filter</span><br />
+<br />
+<a class="tag" name="LDIconLaplaceF2"></a><span class="method">LaplaceF2</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Laplace filter</span><br />
+<span class="info">returns</span> <span class="text">Laplace filter</span><br />
+<br />
+<a class="tag" name="LDIconLaplaceF3"></a><span class="method">LaplaceF3</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Laplace filter</span><br />
+<span class="info">returns</span> <span class="text">Laplace filter</span><br />
+<br />
+<a class="tag" name="LDIconLaplaceF4"></a><span class="method">LaplaceF4</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Laplace filter</span><br />
+<span class="info">returns</span> <span class="text">Laplace filter</span><br />
+<br />
+<a class="tag" name="LDIconLogaritmicScaling"></a><span class="method">LogaritmicScaling</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image histogram normalization using 10-base logarithm scaling</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original AGB image</span><br />
+<span class="info">returns</span> <span class="text">Normalized image</span><br />
+<br />
+<a class="tag" name="LDIconLPF1"></a><span class="method">LPF1</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Low pass filter</span><br />
+<span class="info">returns</span> <span class="text">Low pass filter</span><br />
+<br />
+<a class="tag" name="LDIconLPF2"></a><span class="method">LPF2</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Low pass filter</span><br />
+<span class="info">returns</span> <span class="text">Low pass filter</span><br />
+<br />
+<a class="tag" name="LDIconLPF3"></a><span class="method">LPF3</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Low pass filter</span><br />
+<span class="info">returns</span> <span class="text">Low pass filter</span><br />
+<br />
+<a class="tag" name="LDIconLPF4"></a><span class="method">LPF4</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Low pass filter</span><br />
+<span class="info">returns</span> <span class="text">Low pass filter</span><br />
+<br />
+<a class="tag" name="LDIconMagnitude"></a><span class="method">Magnitude</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates array of magnitudes from array of complex elements</span><br />
+<span class="info">Spectrum</span> <span class="text">Complex values array</span><br />
+<span class="info">returns</span> <span class="text">Magnitudes values array</span><br />
+<br />
+<a class="tag" name="LDIconMatrix2Image"></a><span class="method">Matrix2Image</span><span class="methodargs">(Matrix)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts array elements into pixel values (without normalization)</span><br />
+<span class="info">Matrix</span> <span class="text">Array</span><br />
+<span class="info">returns</span> <span class="text">Greyscale image</span><br />
+<br />
+<a class="tag" name="LDIconMatrix2Image"></a><span class="method">Matrix2Image</span><span class="methodargs">(Matrix)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts array elements into pixel values (without normalization)</span><br />
+<span class="info">Matrix</span> <span class="text">Array</span><br />
+<span class="info">returns</span> <span class="text">Greyscale image</span><br />
+<br />
+<a class="tag" name="LDIconMatrix2ImageLog"></a><span class="method">Matrix2ImageLog</span><span class="methodargs">(Matrix)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts array elements into pixel values (values normalized using 10-base logarithm)</span><br />
+<span class="info">Matrix</span> <span class="text">Array</span><br />
+<span class="info">returns</span> <span class="text">Greyscale image</span><br />
+<br />
+<a class="tag" name="LDIconMatrix2ImageMax"></a><span class="method">Matrix2ImageMax</span><span class="methodargs">(Matrix)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts array elements into pixel values (values normalized using maximum element)</span><br />
+<span class="info">Matrix</span> <span class="text">Array</span><br />
+<span class="info">returns</span> <span class="text">Greyscale image</span><br />
+<br />
+<a class="tag" name="LDIconMaxBrightness"></a><span class="method">MaxBrightness</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns image maximum brightness level</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Maximum brightness level in given image</span><br />
+<br />
+<a class="tag" name="LDIconMinBrightness"></a><span class="method">MinBrightness</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns image minimum brightness level</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Minimum brightness level in given image</span><br />
+<br />
+<a class="tag" name="LDIconNegativeImageColor"></a><span class="method">NegativeImageColor</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculate image negative</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Negative</span><br />
+<br />
+<a class="tag" name="LDIconNegativeImageGS"></a><span class="method">NegativeImageGS</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to greyscale using luminance method and calculates its negative</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Negative</span><br />
+<br />
+<a class="tag" name="LDIconOilPaint"></a><span class="method">OilPaint</span><span class="methodargs">(OriginalImage,R,Level)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Oil paint filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">original ARGB image</span><br />
+<span class="info">R</span> <span class="text">Radius of oil paint algorithm</span><br />
+<span class="info">Level</span> <span class="text">Available levels of intensity</span><br />
+<span class="info">returns</span> <span class="text">Oil paint filtred image</span><br />
+<br />
+<a class="tag" name="LDIconPhase"></a><span class="method">Phase</span><span class="methodargs">(Spectrum)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Calculates array of phases from array of complex elements</span><br />
+<span class="info">Spectrum</span> <span class="text">Complex values array</span><br />
+<span class="info">returns</span> <span class="text">Phases values array</span><br />
+<br />
+<a class="tag" name="LDIconResize"></a><span class="method">Resize</span><span class="methodargs">(OriginalImage,Width,Height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image resize using nearest neighbour method</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original image</span><br />
+<span class="info">Width</span> <span class="text">Output width</span><br />
+<span class="info">Height</span> <span class="text">Output height</span><br />
+<span class="info">returns</span> <span class="text">Resized image</span><br />
+<br />
+<a class="tag" name="LDIconResize2"></a><span class="method">Resize2</span><span class="methodargs">(OriginalImage,Width,Height)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image resize using bilinear interpolation method</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original image</span><br />
+<span class="info">Width</span> <span class="text">Output width</span><br />
+<span class="info">Height</span> <span class="text">Output height</span><br />
+<span class="info">returns</span> <span class="text">Resized image</span><br />
+<br />
+<a class="tag" name="LDIconrgb2cmyk"></a><span class="method">rgb2cmyk</span><span class="methodargs">(pixel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Transforms RGB color model to CMYK</span><br />
+<span class="info">pixel</span> <span class="text">RGB color</span><br />
+<span class="info">returns</span> <span class="text">CMYK values [C, M, Y, K]</span><br />
+<br />
+<a class="tag" name="LDIconrgb2hsv"></a><span class="method">rgb2hsv</span><span class="methodargs">(pixel)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Transforms RGB color model to HSV</span><br />
+<span class="info">pixel</span> <span class="text">RGB color</span><br />
+<span class="info">returns</span> <span class="text">HSV values [H, S, V]</span><br />
+<br />
+<a class="tag" name="LDIconRGBHistogram"></a><span class="method">RGBHistogram</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Returns color image histogram</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Image histogram (dimension 0 corresponds to color code (0 ->Red, 1 -> Green, 2 -> Blue), dimension 1 - each position corresponds to brightness level)</span><br />
+<br />
+<a class="tag" name="LDIconRGBLayers"></a><span class="method">RGBLayers</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Seperates values of each RGB layer</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">[Red, Green, Blue] image layers as Bitmaps</span><br />
+<br />
+<a class="tag" name="LDIconRGBMatrix"></a><span class="method">RGBMatrix</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Seperates values of each RGB layer</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">[Red, Green, Blue] image layers</span><br />
+<br />
+<a class="tag" name="LDIconRMatrix"></a><span class="method">RMatrix</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Separates red color layer</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Red color layer</span><br />
+<br />
+<a class="tag" name="LDIconRotate"></a><span class="method">Rotate</span><span class="methodargs">(OriginalImage,Angle,xCenter,yCenter)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image rotation</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original image</span><br />
+<span class="info">Angle</span> <span class="text">Rotate angle in degrees</span><br />
+<span class="info">xCenter</span> <span class="text">X Center</span><br />
+<span class="info">yCenter</span> <span class="text">Y Center</span><br />
+<span class="info">returns</span> <span class="text">Rotated image</span><br />
+<br />
+<a class="tag" name="LDIconRotate"></a><span class="method">Rotate</span><span class="methodargs">(OriginalImage,Angle)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Image rotation</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original image</span><br />
+<span class="info">Angle</span> <span class="text">Rotate angle in degrees</span><br />
+<span class="info">returns</span> <span class="text">Rotated image</span><br />
+<br />
+<a class="tag" name="LDIconSDFT"></a><span class="method">SDFT</span><span class="methodargs">(Data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shifted Discrete Fourier Transform of two-dimensional signal</span><br />
+<span class="info">Data</span> <span class="text">Two-dimensional signal</span><br />
+<span class="info">returns</span> <span class="text">Shifted spectrum</span><br />
+<br />
+<a class="tag" name="LDIconSDFT"></a><span class="method">SDFT</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shifted Discrete Fourier Transform of image.</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Shifted image spectrum</span><br />
+<br />
+<a class="tag" name="LDIconSepia"></a><span class="method">Sepia</span><span class="methodargs">(OriginalImage,Coef)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Sepia filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">Coef</span> <span class="text">Sepia level</span><br />
+<span class="info">returns</span> <span class="text">Sepia image</span><br />
+<br />
+<a class="tag" name="LDIconSetSizes"></a><span class="method">SetSizes</span><span class="methodargs">(sizes)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Set the default icon sizes.  This should be called before CreateIcon.</span><br />
+<span class="info">sizes</span> <span class="text">A space separated list of integer icon sizes, default is "16 24 32 64 128 256".<br />An array of integer icon sizes may also be used.<br />The maximum size is 256.</span><br />
+<br />
+<a class="tag" name="LDIconShift"></a><span class="method">Shift</span><span class="methodargs">(Data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Shifts array components</span><br />
+<span class="info">Data</span> <span class="text">Original array</span><br />
+<span class="info">returns</span> <span class="text">Shifted array</span><br />
+<br />
+<a class="tag" name="LDIconShift"></a><span class="method">Shift</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Transforms image into to shifted array of doubles</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Shifted array</span><br />
+<br />
+<a class="tag" name="LDIconSketch"></a><span class="method">Sketch</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Pen sketch effect received by combining laplace edge detecting, black and white transformation with inversion on point 35 and SDROM filter to eliminate smaller artefacts</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Sketch effect image</span><br />
+<br />
+<a class="tag" name="LDIconSketchCharcoal"></a><span class="method">SketchCharcoal</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Charcoal sketch effect received by combining median filtration with mask size of 5, Sobel edge detecting, image inversion on point 80</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Sketch effect image</span><br />
+<br />
+<a class="tag" name="LDIconSquareImage"></a><span class="method">SquareImage</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Scale images to keep the aspect ratio of images square (width = height), "True" (default) or "False".<br />If set to "False" then the width of the icon or cursor will be scaled to maintain the image aspect ratio, while maintaining the set height.</span><br />
+<br />
+<a class="tag" name="LDIconSubtractImages"></a><span class="method">SubtractImages</span><span class="methodargs">(Left,Right)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB images to greyscale using luminance method and subtracts</span><br />
+<span class="info">Left</span> <span class="text">Minuend image</span><br />
+<span class="info">Right</span> <span class="text">Subtrahend image</span><br />
+<span class="info">returns</span> <span class="text">Product of subtraction</span><br />
+<br />
+<a class="tag" name="LDIconTiltShift"></a><span class="method">TiltShift</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Tilt shift filtration</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Tilt shifted image</span><br />
+<br />
+<a class="tag" name="LDIconToBlackwhite"></a><span class="method">ToBlackwhite</span><span class="methodargs">(OriginalImage,threshold)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to black and white and inverses it with respect to given threshold</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">threshold</span> <span class="text">Threshold</span><br />
+<span class="info">returns</span> <span class="text">Balck and white image</span><br />
+<br />
+<a class="tag" name="LDIconToBlackwhiteInverse"></a><span class="method">ToBlackwhiteInverse</span><span class="methodargs">(OriginalImage,threshold)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to black and white and inverses it with respect to given threshold</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">threshold</span> <span class="text">Threshold</span><br />
+<span class="info">returns</span> <span class="text">Balck and white image</span><br />
+<br />
+<a class="tag" name="LDIconToGreyscale"></a><span class="method">ToGreyscale</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to greyscale using luminance method</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconToGreyscaleAVG"></a><span class="method">ToGreyscaleAVG</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to greyscale using average method</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Greyscaled image</span><br />
+<br />
+<a class="tag" name="LDIconToGreyscaleLightness"></a><span class="method">ToGreyscaleLightness</span><span class="methodargs">(OriginalImage)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Converts ARGB image to greyscale using lightness method</span><br />
+<span class="info">OriginalImage</span> <span class="text">Original ARGB image</span><br />
+<span class="info">returns</span> <span class="text">Greyscaled image</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

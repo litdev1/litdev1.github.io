@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDUtilities"></a><span class="group">LDUtilities</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">General</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDUtilitiesAvailableCultures">AvailableCultures</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesCleanTemp">CleanTemp</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesColourList">ColourList</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesCSVDeliminator">CSVDeliminator</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesCurrentCulture">CurrentCulture</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesDPIX">DPIX</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesDPIY">DPIY</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesFixFlickr">FixFlickr</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesFontList">FontList</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesForceInvoke">ForceInvoke</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesGetCultureInvariantNumber">GetCultureInvariantNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesGetCurrentCultureNumber">GetCurrentCultureNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesGetNextMapIndex">GetNextMapIndex</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesIsNumber">IsNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDUtilitiesKeyDown">KeyDown</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesNetworkURL">NetworkURL</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesPriority">Priority</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesSendClick">SendClick</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesShowErrors">ShowErrors</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesShowFileErrors">ShowFileErrors</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesShowNoShapeErrors">ShowNoShapeErrors</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesShowPrintPreview">ShowPrintPreview</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesUseDispatcher">UseDispatcher</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDUtilitiesUseExpression">UseExpression</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDUtilitiesVersion">Version</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDUtilitiesAvailableCultures"></a><span class="method">AvailableCultures</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of available cultures.</span><br />
+<span class="info">returns</span> <span class="text">An array indexed by culture names, with the value set to a description.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesCleanTemp"></a><span class="method">CleanTemp</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Delete all Small Basic related files from the temp folder.<br />These are files with extensions tmp, pdb and dll.<br />Other applications may also use these, so best to use with no other apps running.</span><br />
+<span class="info">returns</span> <span class="text">The number of files deleted.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesColourList"></a><span class="method">ColourList</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of available colour names.</span><br />
+<span class="info">returns</span> <span class="text">An array of colour names.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesCSVDeliminator"></a><span class="method">CSVDeliminator</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">A single character deliminator for reading and writing CSV files<br />Default ","</span><br />
+<br />
+<a class="tag" name="LDUtilitiesCurrentCulture"></a><span class="method">CurrentCulture</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get or set the current culture.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesDPIX"></a><span class="method">DPIX</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get the display device X DPI (dots per inch) resolution.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesDPIY"></a><span class="method">DPIY</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Get the display device Y DPI (dots per inch) resolution.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesFixFlickr"></a><span class="method">FixFlickr</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Fix the Flickr object</span><br />
+<br />
+<a class="tag" name="LDUtilitiesFontList"></a><span class="method">FontList</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get an array of available font names.</span><br />
+<span class="info">returns</span> <span class="text">An array of font names.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesForceInvoke"></a><span class="method">ForceInvoke</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Experimental option to speed some interactions with SmallBasicLibrary objects.<br />0 no force (default), 1 force Invoke (serial), 2 force BeginInvoke (async)</span><br />
+<br />
+<a class="tag" name="LDUtilitiesGetCultureInvariantNumber"></a><span class="method">GetCultureInvariantNumber</span><span class="methodargs">(input)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a number expressed in the culture invariant form.<br />A number must be culture invariant in order to be treated as a number in calculations.<br />A current culture number is how it is input or output.<br />For example "3.14" is culture invariant, while "3,14" is French culture.</span><br />
+<span class="info">input</span> <span class="text">A number expressed in the current culture.</span><br />
+<span class="info">returns</span> <span class="text">The number expressed in culture invariant form or input on failure.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesGetCurrentCultureNumber"></a><span class="method">GetCurrentCultureNumber</span><span class="methodargs">(input)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get a number expressed in the current culture.<br />A number must be culture invariant in order to be treated as a number in calculations.<br />A current culture number is how it is input or output.<br />For example "3.14" is culture invariant, while "3,14" is French culture.</span><br />
+<span class="info">input</span> <span class="text">A culture invariant number.</span><br />
+<span class="info">returns</span> <span class="text">The number expressed in the current culture or input on failure.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesGetNextMapIndex"></a><span class="method">GetNextMapIndex</span><span class="methodargs">(listName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the next integer for object names.<br />For example Buttons are labeled "Button1", "Button2" etc.<br />This method returns the integer index that would be used for the next object added.</span><br />
+<span class="info">listName</span> <span class="text">The map (list) type, valid listNames (Case sensitive) are:<br />"Button"<br />"TextBox"<br />"ImageList"<br />"Ellipse"<br />"Image"<br />"Line"<br />"Rectangle"<br />"Text"<br />"Triangle"<br />"Polygon"<br />"Control"</span><br />
+<span class="info">returns</span> <span class="text">The next object index to be used (0 on failure).</span><br />
+<br />
+<a class="tag" name="LDUtilitiesIsNumber"></a><span class="method">IsNumber</span><span class="methodargs">(input)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Test if the input will be treated by SmallBasic as a number.<br />This is a culture invariant number, e.g. "3.14", but not "3,14" or "24x".</span><br />
+<span class="info">input</span> <span class="text">The input to test.</span><br />
+<span class="info">returns</span> <span class="text">"True" or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesKeyDown"></a><span class="method">KeyDown</span><span class="methodargs">(key)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get if a key is down.<br />Useful for simplified keyboard game control.</span><br />
+<span class="info">key</span> <span class="text">The key to get down state, eg "Space".</span><br />
+<span class="info">returns</span> <span class="text">The key down state ("True" or "False")</span><br />
+<br />
+<a class="tag" name="LDUtilitiesNetworkURL"></a><span class="method">NetworkURL</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Set the web address for use with LDNetwork if gamedata and highscore methods are handled on another server.</span><br />
+<br />
+<a class="tag" name="LDUtilitiesPriority"></a><span class="method">Priority</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Experimental option to speed some dispatcher interactions with SmallBasicLibrary objects.<br />1 to 10, (default 7, Render)</span><br />
+<br />
+<a class="tag" name="LDUtilitiesSendClick"></a><span class="method">SendClick</span><span class="methodargs">(x,y,button)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Send a mouse click at the specified screen location.  Note this is Mouse.MouseX/Y, not GraphicsWindow.MouseX/Y.</span><br />
+<span class="info">x</span> <span class="text">The screen x position to click, -1 uses current mouse position.</span><br />
+<span class="info">y</span> <span class="text">The screen y position to click, -1 uses current mouse position.</span><br />
+<span class="info">button</span> <span class="text">The button to press ("Left", "Right" or "Middle")</span><br />
+<br />
+<a class="tag" name="LDUtilitiesShowErrors"></a><span class="method">ShowErrors</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Report any detected errors to TextWindow "True" (default) or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesShowFileErrors"></a><span class="method">ShowFileErrors</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Report any detected file not found errors to TextWindow "True" (default) or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesShowNoShapeErrors"></a><span class="method">ShowNoShapeErrors</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Report any detected shapeName not found in method "True" (default) or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesShowPrintPreview"></a><span class="method">ShowPrintPreview</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Show the print preview window when printing with LDGraphicsWindow.Print and LDTextWindow.Print ("True" or "False")<br />Default "True"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesUseDispatcher"></a><span class="method">UseDispatcher</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Experimental option to speed some interactions with SmallBasicLibrary objects.<br />"True" (default) or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesUseExpression"></a><span class="method">UseExpression</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Experimental option to speed some interactions with SmallBasicLibrary objects.<br />"True" (default) or "False"</span><br />
+<br />
+<a class="tag" name="LDUtilitiesVersion"></a><span class="method">Version</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Gets the current version of the extension and displays a window with this information and a changelog.</span><br />
+<span class="info">returns</span> <span class="text">The current version.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

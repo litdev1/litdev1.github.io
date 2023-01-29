@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDWaveForm"></a><span class="group">LDWaveForm</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Create PPM (Pulse Position Modulation) sound signals to control RC (remote control) devices.<br />See <a href="http://blogs.msdn.com/b/smallbasic/archive/2014/05/10/smallbasic-pulse-position-modulation-extension.aspx.">http://blogs.msdn.com/b/smallbasic/archive/2014/05/10/smallbasic-pulse-position-modulation-extension.aspx.</a><br />Additonally create simple sound waveforms, which can be played asynchronously at the same time.<br /><br />SlimDX runtme for .Net 4.0 requires to be installed before this object can be used (<a href="http://slimdx.org/download.php">http://slimdx.org/download.php</a>).</span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDWaveFormAmplitude">Amplitude</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDWaveFormAsync">Async</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDWaveFormLoop">Loop</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDWaveFormPan">Pan</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDWaveFormPlayDX7">PlayDX7</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDWaveFormPlayHarmonics">PlayHarmonics</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDWaveFormPlaySineWave">PlaySineWave</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDWaveFormPlaySquareWave">PlaySquareWave</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDWaveFormPlayWave">PlayWave</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDWaveFormPlayWavFile">PlayWavFile</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDWaveFormStop">Stop</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDWaveFormVolume">Volume</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDWaveFormAmplitude"></a><span class="method">Amplitude</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Signal amplitude (maximum is 2^15 = 32768, default is 20262).</span><br />
+<br />
+<a class="tag" name="LDWaveFormAsync"></a><span class="method">Async</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Play the sound asynchronously (return before sound completes), "True" or "False" default.</span><br />
+<br />
+<a class="tag" name="LDWaveFormLoop"></a><span class="method">Loop</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">Continuously loop the sound, "True" or "False" default.<br />Lopping sounds can be stopped by calling Stop method as they are playing.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPan"></a><span class="method">Pan</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The left (-100) to right (100) stereo panning, (default 0).</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlayDX7"></a><span class="method">PlayDX7</span><span class="methodargs">(channels)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play DX7.</span><br />
+<span class="info">channels</span> <span class="text">An array of values for each channel (values between 0 and 1, usually 8 channels).</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlayHarmonics"></a><span class="method">PlayHarmonics</span><span class="methodargs">(frequency,duration,harmonics)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play a user defined wave form as a sum of harmonics.</span><br />
+<span class="info">frequency</span> <span class="text">Frequency (HZ).</span><br />
+<span class="info">duration</span> <span class="text">Duration (ms).  If this is negative then the waveform is repeated (-duration) times.</span><br />
+<span class="info">harmonics</span> <span class="text">Harmonic amplitudes.<br />This is an array, where the index is a harmonic multiple of the base frequency (2, 3, etc) and the value is the relative amplitude of the harmonic.<br />A square wave can be formed by (https://en.wikipedia.org/wiki/Square_wave):<br />For i = 3 To 21 Step 2<br />  harmonics[i] = 1/i<br />EndFor<br />squareWave = LDWaveForm.PlayHarmonics(256,1000,harmonics)</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlaySineWave"></a><span class="method">PlaySineWave</span><span class="methodargs">(frequency,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play a Sine wave form.</span><br />
+<span class="info">frequency</span> <span class="text">Frequency (HZ).</span><br />
+<span class="info">duration</span> <span class="text">Duration (ms).  If this is negative then the waveform is repeated (-duration) times.</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlaySquareWave"></a><span class="method">PlaySquareWave</span><span class="methodargs">(frequency,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play a square wave form.</span><br />
+<span class="info">frequency</span> <span class="text">Frequency (HZ).</span><br />
+<span class="info">duration</span> <span class="text">Duration (ms).  If this is negative then the waveform is repeated (-duration) times.</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlayWave"></a><span class="method">PlayWave</span><span class="methodargs">(frequency,duration,waveform)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play a user defined wave form.</span><br />
+<span class="info">frequency</span> <span class="text">Frequency (HZ).</span><br />
+<span class="info">duration</span> <span class="text">Duration (ms).  If this is negative then the waveform is repeated (-duration) times.</span><br />
+<span class="info">waveform</span> <span class="text">Form for the repeating wave.<br />This is an array, where the index is an increasing relative time (the actual value is normalised to the frequency) and the value is an amplitude (-1 to 1).<br />Example of a triangular wave would be "0=-1;1=1;2=-1;"</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormPlayWavFile"></a><span class="method">PlayWavFile</span><span class="methodargs">(fileName,duration)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Play a wav file.</span><br />
+<span class="info">fileName</span> <span class="text">The *.wav file.</span><br />
+<span class="info">duration</span> <span class="text">Duration (ms).  If this is negative then the waveform is repeated (-duration) times.</span><br />
+<span class="info">returns</span> <span class="text">The wave name or "" on failure.</span><br />
+<br />
+<a class="tag" name="LDWaveFormStop"></a><span class="method">Stop</span><span class="methodargs">(waveName)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Stop a playing sound.</span><br />
+<span class="info">waveName</span> <span class="text">The sound wave name.</span><br />
+<br />
+<a class="tag" name="LDWaveFormVolume"></a><span class="method">Volume</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The volume to play the waveform (0 to 100).</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>

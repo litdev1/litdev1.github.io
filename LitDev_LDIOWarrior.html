@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <title>LitDev API</title>
+ <meta name="description" content="SmallBasic LitDev extension API" />
+ <meta name="keywords" content="SmallBasic,litdev,LitDevextension" />
+ <link rel="stylesheet" type="text/css" href="styleAPI.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<div id="wrapper">
+<div id="content">
+
+<p class="assembly">LitDev Extension API
+<table class="table" cellpadding="4">
+<tr>
+<td>
+<a href="LitDev_Geography.html">Geography</a>
+</td>
+<td>
+<a href="LitDev_LD3DView.html">LD3DView</a>
+</td>
+<td>
+<a href="LitDev_LDArray.html">LDArray</a>
+</td>
+<td>
+<a href="LitDev_LDBits.html">LDBits</a>
+</td>
+<td>
+<a href="LitDev_LDBlueTooth.html">LDBlueTooth</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCall.html">LDCall</a>
+</td>
+<td>
+<a href="LitDev_LDChart.html">LDChart</a>
+</td>
+<td>
+<a href="LitDev_LDClient.html">LDClient</a>
+</td>
+<td>
+<a href="LitDev_LDClipboard.html">LDClipboard</a>
+</td>
+<td>
+<a href="LitDev_LDColours.html">LDColours</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDCommPort.html">LDCommPort</a>
+</td>
+<td>
+<a href="LitDev_LDController.html">LDController</a>
+</td>
+<td>
+<a href="LitDev_LDControls.html">LDControls</a>
+</td>
+<td>
+<a href="LitDev_LDCursors.html">LDCursors</a>
+</td>
+<td>
+<a href="LitDev_LDDataBase.html">LDDataBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDDateTime.html">LDDateTime</a>
+</td>
+<td>
+<a href="LitDev_LDDebug.html">LDDebug</a>
+</td>
+<td>
+<a href="LitDev_LDDialogs.html">LDDialogs</a>
+</td>
+<td>
+<a href="LitDev_LDDictionary.html">LDDictionary</a>
+</td>
+<td>
+<a href="LitDev_LDEffect.html">LDEffect</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDEmail.html">LDEmail</a>
+</td>
+<td>
+<a href="LitDev_LDEncryption.html">LDEncryption</a>
+</td>
+<td>
+<a href="LitDev_LDEvents.html">LDEvents</a>
+</td>
+<td>
+<a href="LitDev_LDFastArray.html">LDFastArray</a>
+</td>
+<td>
+<a href="LitDev_LDFastShapes.html">LDFastShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDFigures.html">LDFigures</a>
+</td>
+<td>
+<a href="LitDev_LDFile.html">LDFile</a>
+</td>
+<td>
+<a href="LitDev_LDFocus.html">LDFocus</a>
+</td>
+<td>
+<a href="LitDev_LDftp.html">LDftp</a>
+</td>
+<td>
+<a href="LitDev_LDGeography.html">LDGeography</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDGraph.html">LDGraph</a>
+</td>
+<td>
+<a href="LitDev_LDGraphicsWindow.html">LDGraphicsWindow</a>
+</td>
+<td>
+<a href="LitDev_LDHashTable.html">LDHashTable</a>
+</td>
+<td>
+<a href="LitDev_LDHID.html">LDHID</a>
+</td>
+<td>
+<a href="LitDev_LDIcon.html">LDIcon</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDImage.html">LDImage</a>
+</td>
+<td>
+<a href="LitDev_LDInline.html">LDInline</a>
+</td>
+<td>
+<a href="LitDev_LDIOWarrior.html">LDIOWarrior</a>
+</td>
+<td>
+<a href="LitDev_LDList.html">LDList</a>
+</td>
+<td>
+<a href="LitDev_LDLogic.html">LDLogic</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDMath.html">LDMath</a>
+</td>
+<td>
+<a href="LitDev_LDMathX.html">LDMathX</a>
+</td>
+<td>
+<a href="LitDev_LDMatrix.html">LDMatrix</a>
+</td>
+<td>
+<a href="LitDev_LDMusic.html">LDMusic</a>
+</td>
+<td>
+<a href="LitDev_LDNetwork.html">LDNetwork</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDPhysics.html">LDPhysics</a>
+</td>
+<td>
+<a href="LitDev_LDProcess.html">LDProcess</a>
+</td>
+<td>
+<a href="LitDev_LDQueue.html">LDQueue</a>
+</td>
+<td>
+<a href="LitDev_LDRegex.html">LDRegex</a>
+</td>
+<td>
+<a href="LitDev_LDResources.html">LDResources</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDScrollBars.html">LDScrollBars</a>
+</td>
+<td>
+<a href="LitDev_LDSearch.html">LDSearch</a>
+</td>
+<td>
+<a href="LitDev_LDServer.html">LDServer</a>
+</td>
+<td>
+<a href="LitDev_LDSettings.html">LDSettings</a>
+</td>
+<td>
+<a href="LitDev_LDShapes.html">LDShapes</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDShell.html">LDShell</a>
+</td>
+<td>
+<a href="LitDev_LDSort.html">LDSort</a>
+</td>
+<td>
+<a href="LitDev_LDSound.html">LDSound</a>
+</td>
+<td>
+<a href="LitDev_LDSpeech.html">LDSpeech</a>
+</td>
+<td>
+<a href="LitDev_LDStatistics.html">LDStatistics</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDStopwatch.html">LDStopwatch</a>
+</td>
+<td>
+<a href="LitDev_LDText.html">LDText</a>
+</td>
+<td>
+<a href="LitDev_LDTextWindow.html">LDTextWindow</a>
+</td>
+<td>
+<a href="LitDev_LDTimer.html">LDTimer</a>
+</td>
+<td>
+<a href="LitDev_LDTranslate.html">LDTranslate</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDUnits.html">LDUnits</a>
+</td>
+<td>
+<a href="LitDev_LDUtilities.html">LDUtilities</a>
+</td>
+<td>
+<a href="LitDev_LDVector.html">LDVector</a>
+</td>
+<td>
+<a href="LitDev_LDWaveForm.html">LDWaveForm</a>
+</td>
+<td>
+<a href="LitDev_LDWebCam.html">LDWebCam</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="LitDev_LDWindows.html">LDWindows</a>
+</td>
+<td>
+<a href="LitDev_LDxml.html">LDxml</a>
+</td>
+<td>
+<a href="LitDev_LDZip.html">LDZip</a>
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDIOWarrior"></a><span class="group">LDIOWarrior</span> <img alt="" height="24px" src="images/IntellisenseObject.png" />
+<br />
+<span class="text">Access IO-Warrior devices.<br />See <a href="http://www.codemercs.com/io-warrior/?L=1">http://www.codemercs.com/io-warrior/?L=1</a></span><br />
+<br />
+<table class="table"  cellpadding="4">
+<tr>
+<td>
+<a href="#LDIOWarriorDetatch">Detatch</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorGetName">GetName</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorGetPID">GetPID</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIOWarriorGetReportSize">GetReportSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorGetSerialNumber">GetSerialNumber</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorGetSpecialReportSize">GetSpecialReportSize</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIOWarriorGetVersion">GetVersion</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorGetVID">GetVID</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorInitialise">Initialise</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIOWarriorLastError">LastError</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorLCDWrite">LCDWrite</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+<td>
+<a href="#LDIOWarriorRead">Read</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+<tr>
+<td>
+<a href="#LDIOWarriorTimeout">Timeout</a>
+ <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+</td>
+<td>
+<a href="#LDIOWarriorWrite">Write</a>
+ <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+</td>
+</tr>
+</table>
+<br />
+<a class="tag" name="LDIOWarriorDetatch"></a><span class="method">Detatch</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Disconnect all IO-Warrior devices.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetName"></a><span class="method">GetName</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the device name.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The device name or "".</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetPID"></a><span class="method">GetPID</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the device PID.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The device PID (hex) or 0.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetReportSize"></a><span class="method">GetReportSize</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the report size.<br />Number of bytes in a Read/Write.<br />This the report size for channel 0.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The report size or 0.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetSerialNumber"></a><span class="method">GetSerialNumber</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the device serial number.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The device serial number or "".</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetSpecialReportSize"></a><span class="method">GetSpecialReportSize</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the special report size.<br />Number of bytes in a special Read/Write.<br />This the report size for channel 1.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The special report size or 0.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetVersion"></a><span class="method">GetVersion</span><span class="methodargs">(id)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the device firmware version.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">returns</span> <span class="text">The device firmware version or 0.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorGetVID"></a><span class="method">GetVID</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the device VID (Common to all IOWarrior types).</span><br />
+<span class="info">returns</span> <span class="text">The device VID (hex) or 0.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorInitialise"></a><span class="method">Initialise</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Initialise IO-Warrior devices.</span><br />
+<span class="info">returns</span> <span class="text">The number of devices.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorLastError"></a><span class="method">LastError</span><span class="methodargs">()</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Get the last system error message.<br />"" for no error (probably only useful for detailed error analysis of underlying system calls).</span><br />
+<span class="info">returns</span> <span class="text">Last error number.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorLCDWrite"></a><span class="method">LCDWrite</span><span class="methodargs">(id,text)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write text to the LCD (untested).</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">text</span> <span class="text">The text to write.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorRead"></a><span class="method">Read</span><span class="methodargs">(id,channel,blocking,count)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Read from the IO-Warrior device.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">channel</span> <span class="text">The channel to read (indexed from 0).</span><br />
+<span class="info">blocking</span> <span class="text">"True" (return after the state changes) or "False" (return with current state).</span><br />
+<span class="info">count</span> <span class="text">The number of bytes to read (if zero, then the ReportSize is used if channel is 0 or SpecialReportSize if channel is 1).<br />See GetReportSize and GetSpecialReportSize.</span><br />
+<span class="info">returns</span> <span class="text">An array of read bytes [0 to 255].</span><br />
+<br />
+<a class="tag" name="LDIOWarriorTimeout"></a><span class="method">Timeout</span><span class="methodargs"></span> <img alt="" height="20px" src="images/IntellisenseProperty.png" />
+<br />
+<span class="text">The timeout for read and writes in ms.<br />Default 1000.</span><br />
+<br />
+<a class="tag" name="LDIOWarriorWrite"></a><span class="method">Write</span><span class="methodargs">(id,channel,data)</span> <img alt="" height="20px" src="images/IntellisenseMethod.png" />
+<br />
+<span class="text">Write to the IO-Warrior device.</span><br />
+<span class="info">id</span> <span class="text">The device number (indexed from 1).</span><br />
+<span class="info">channel</span> <span class="text">The channel to write to (indexed from 0).</span><br />
+<span class="info">data</span> <span class="text">An array of bytes to send [0 to 255].<br />The array size should be ReportSize for channel 0 and SpecialReportSize for channel 1.<br />See GetReportSize and GetSpecialReportSize.</span><br />
+<span class="info">returns</span> <span class="text">The number of bytes successfully written.</span><br />
+<br />
+</div>
+</div>
+</body>
+</html>
