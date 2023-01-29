@@ -7,12 +7,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
-      <API>http://litdev.co.uk/LitDev.html</API>
-      <ChangeLog>http://litdev.co.uk/ChangeLog.html</ChangeLog>
+      <WebSite>http://litdev1.github.io/</WebSite>
+      <API>http://litdev1.github.io/LitDev.html</API>
+      <ChangeLog>http://litdev1.github.io/ChangeLog.html</ChangeLog>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.2.7.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -41,12 +41,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <API />
       <ChangeLog />
       <SBVersion>1.1.0.0</SBVersion>
       <ExtVersion>1.1.0.8</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.1.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.1.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -75,12 +75,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <API />
       <ChangeLog />
       <SBVersion>1.0.0.0</SBVersion>
       <ExtVersion>1.0.0.133</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.0.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.0.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -109,10 +109,10 @@
       <Name>LitDev3D</Name>
       <Description>Depreciated 3D Extension using irrlicht engine</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <SBVersion>1.0.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev3D_64bit.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev3D_64bit.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -148,7 +148,7 @@
       <API />
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>0.4.2.1</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/ESL.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/ESL.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -179,7 +179,7 @@
       <Author>gungan37</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/SB Joystick.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/SB Joystick.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -207,7 +207,7 @@
       <Author>Fremy Company</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>2.3.1.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/FC.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/FC.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -235,7 +235,7 @@
       <Author>Zock77</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/OculusSB.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/OculusSB.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -298,7 +298,7 @@
       <API />
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>0.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/QRCodemaker.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/QRCodemaker.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -329,7 +329,7 @@
       <Author>Zock77</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/Zock77.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/Zock77.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>

@@ -7,12 +7,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
-      <API>http://litdev.co.uk/LitDev.html</API>
-      <ChangeLog>http://litdev.co.uk/ChangeLog.html</ChangeLog>
+      <WebSite>http://litdev1.github.io/</WebSite>
+      <API>http://litdev1.github.io/LitDev.html</API>
+      <ChangeLog>http://litdev1.github.io/ChangeLog.html</ChangeLog>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.2.23.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -41,12 +41,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <API />
       <ChangeLog />
       <SBVersion>1.1.0.0</SBVersion>
       <ExtVersion>1.1.0.8</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.1.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.1.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -75,12 +75,12 @@
       <Name>LitDev</Name>
       <Description>General Purpose Extension</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <API />
       <ChangeLog />
       <SBVersion>1.0.0.0</SBVersion>
       <ExtVersion>1.0.0.133</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev_v1.0.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev_v1.0.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -109,10 +109,10 @@
       <Name>LitDev3D</Name>
       <Description>Depreciated 3D Extension using irrlicht engine</Description>
       <Author>LitDev</Author>
-      <WebSite>http://litdev.co.uk/</WebSite>
+      <WebSite>http://litdev1.github.io/</WebSite>
       <SBVersion>1.0.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/downloads/LitDev3D_64bit.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/downloads/LitDev3D_64bit.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -148,7 +148,7 @@
       <API />
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>0.4.2.1</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/ESL_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/ESL_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -179,7 +179,7 @@
       <Author>gungan37</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/SB Joystick_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/SB Joystick_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -207,7 +207,7 @@
       <Author>Fremy Company</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>2.3.1.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/FC_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/FC_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -235,7 +235,7 @@
       <Author>Zock77</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/OculusSB_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/OculusSB_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -298,7 +298,7 @@
       <API />
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>0.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/QRCodemaker_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/QRCodemaker_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>2</numFile>
         <Files>
@@ -329,7 +329,7 @@
       <Author>Zock77</Author>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/Zock77_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/Zock77_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -358,7 +358,7 @@
       <WebSite>https://social.msdn.microsoft.com/Forums/en-US/918fcd6d-ded4-4118-a303-3039026b3a91/sayplus-extension-v132-open-source?forum=smallbasic</WebSite>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.2.0.1</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/SayPlus_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/SayPlus_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -390,7 +390,7 @@
       <WebSite>https://social.msdn.microsoft.com/Forums/en-US/3ca1336b-4e72-4cce-9bd7-8301120b703d/power-array-extension-high-performance-array-handling-for-small-basic?forum=smallbasic</WebSite>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/PowerArray_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/PowerArray_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -422,7 +422,7 @@
       <WebSite>https://social.msdn.microsoft.com/Forums/en-US/6bd8075b-691e-4761-ad33-0ba8c2635d15/neural-network-extension</WebSite>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/SmallBasicANN_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/SmallBasicANN_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -451,7 +451,7 @@
       <WebSite>https://archive.codeplex.com/?p=excel4smallbasic</WebSite>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.2.1.2</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/Excel4SmallBasic_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/Excel4SmallBasic_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>1</numFile>
         <Files>
@@ -480,7 +480,7 @@
       <WebSite>https://social.msdn.microsoft.com/Forums/en-US/8a206925-8c0b-4d3c-939d-31cea582ff9e/new-extension-io-extension?forum=smallbasic#557b885f-92a3-4e89-ac82-7ea6fd4823aa</WebSite>
       <SBVersion>1.2.0.0</SBVersion>
       <ExtVersion>1.0.0.0</ExtVersion>
-      <ZipLocation>http://litdev.co.uk/extensions/IOExtension_v1.2.zip</ZipLocation>
+      <ZipLocation>http://litdev1.github.io/extensions/IOExtension_v1.2.zip</ZipLocation>
       <dllFiles>
         <numFile>6</numFile>
         <Files>
